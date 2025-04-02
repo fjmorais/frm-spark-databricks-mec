@@ -123,7 +123,7 @@ spark-submit visualizar_campos.py
 
 Vamos criar uma aplicação PySpark simples para processar dados de usuários e executá-la com `spark-submit`. Este exemplo utiliza o arquivo `data/entities/mongodb_users.json`.
 
-### Crie um arquivo Python chamado `processar_usuarios.py`:
+### Crie um arquivo Python chamado `pr-3-app.py`:
 
 ```python
 from pyspark.sql import SparkSession
@@ -153,8 +153,8 @@ spark.stop()
 
 ```shell
 spark-submit \
-  --master local[*] \
-  processar_usuarios.py
+  --master local \
+  pr-3-app.py
 ```
 
 Este exemplo simples demonstra:
