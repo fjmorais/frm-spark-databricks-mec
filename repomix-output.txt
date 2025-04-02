@@ -1,0 +1,432 @@
+This file is a merged representation of the entire codebase, combined into a single document by Repomix.
+
+================================================================
+File Summary
+================================================================
+
+Purpose:
+--------
+This file contains a packed representation of the entire repository's contents.
+It is designed to be easily consumable by AI systems for analysis, code review,
+or other automated processes.
+
+File Format:
+------------
+The content is organized as follows:
+1. This summary section
+2. Repository information
+3. Directory structure
+4. Multiple file entries, each consisting of:
+  a. A separator line (================)
+  b. The file path (File: path/to/file)
+  c. Another separator line
+  d. The full contents of the file
+  e. A blank line
+
+Usage Guidelines:
+-----------------
+- This file should be treated as read-only. Any changes should be made to the
+  original repository files, not this packed version.
+- When processing this file, use the file path to distinguish
+  between different files in the repository.
+- Be aware that this file may contain sensitive information. Handle it with
+  the same level of security as you would the original repository.
+
+Notes:
+------
+- Some files may have been excluded based on .gitignore rules and Repomix's configuration
+- Binary files are not included in this packed representation. Please refer to the Repository Structure section for a complete list of file paths, including binary files
+- Files matching patterns in .gitignore are excluded
+- Files matching default ignore patterns are excluded
+
+Additional Info:
+----------------
+
+================================================================
+Directory Structure
+================================================================
+entities/
+  events.json
+  kafka_orders.json
+  kafka_status.json
+  mongodb_users.json
+  mssql_users.json
+  mysql_ratings.json
+  mysql_restaurants.json
+  postgres_drivers.json
+src/
+  spark/
+    mod-1/
+      data/
+        users.json
+      scripts/
+        pr-3-app.py
+    pr-1.md
+    pr-2.md
+.gitignore
+readme.md
+
+================================================================
+Files
+================================================================
+
+================
+File: entities/events.json
+================
+{"op":"c","payload":{"before":null,"after":{"id":"f69fd641-13f8-2670-6b78-906542efc609","firstName":"Steven","lastName":"Altenwerth","email":"delois.marquardt@hotmail.com"}}}
+{"op":"d","payload":{"before":{"id":"f69fd641-13f8-2670-6b78-906542efc609","firstName":"Steven","lastName":"Altenwerth","email":"delois.marquardt@hotmail.com"},"after":null}}
+{"op":"c","payload":{"before":null,"after":{"id":"16908aff-1b1b-f694-4e79-0fc1c69f3e8b","firstName":"Waneta","lastName":"Heller","email":"wilbur.macejkovic@gmail.com"}}}
+{"op":"c","payload":{"before":null,"after":{"id":"f69fd641-13f8-2670-6b78-906542efc609","firstName":"Angelika","lastName":"McDermott","email":"armando.ryan@hotmail.com"}}}
+{"op":"u","payload":{"before":{"id":"16908aff-1b1b-f694-4e79-0fc1c69f3e8b","firstName":"Waneta","lastName":"Heller","email":"wilbur.macejkovic@gmail.com"},"after":{"id":"16908aff-1b1b-f694-4e79-0fc1c69f3e8b","firstName":"Jerome","lastName":"Lueilwitz","email":"dominga.labadie@yahoo.com"}}}
+{"op":"u","payload":{"before":{"id":"f69fd641-13f8-2670-6b78-906542efc609","firstName":"Angelika","lastName":"McDermott","email":"armando.ryan@hotmail.com"},"after":{"id":"f69fd641-13f8-2670-6b78-906542efc609","firstName":"Alvaro","lastName":"Cummings","email":"alyse.romaguera@gmail.com"}}}
+{"op":"c","payload":{"before":null,"after":{"id":"3e497017-e62c-2476-9e2f-d5b4937e839a","firstName":"Laci","lastName":"Sanford","email":"particia.greenfelder@gmail.com"}}}
+{"op":"d","payload":{"before":{"id":"16908aff-1b1b-f694-4e79-0fc1c69f3e8b","firstName":"Jerome","lastName":"Lueilwitz","email":"dominga.labadie@yahoo.com"},"after":null}}
+
+================
+File: entities/kafka_orders.json
+================
+{"order_id":"5a6a2098-ed7c-07bb-34cc-b87a14aff99e","user_key":"156.627.189-91","restaurant_key":"29.578.481/5887-90","driver_key":"of3682798","order_date":"2021-03-29 23:41:15.729000","total_amount":57.41,"payment_id":"96b40849-80af-c08f-3c85-9b58f4c43429","dt_current_timestamp":"2025-02-05 21:50:46.006"}
+
+================
+File: entities/kafka_status.json
+================
+{"status_id":1,"order_identifier":"bf2304cd-107b-0a67-6a42-4c5848ca0e0b","status":{"status_name":"Order Placed","timestamp":1738792248012},"dt_current_timestamp":"2025-02-05 21:50:48.012"}
+{"status_id":2,"order_identifier":"4b9cef32-9090-5cfd-9321-45b8e2d97604","status":{"status_name":"In Analysis","timestamp":1.738793015296E12},"dt_current_timestamp":"2025-02-05 21:50:48.053"}
+{"status_id":3,"order_identifier":"687585d6-5881-c5f4-f882-0d63bbc3188f","status":{"status_name":"Accepted","timestamp":1.738792248038E12},"dt_current_timestamp":"2025-02-05 21:50:48.088"}
+{"status_id":4,"order_identifier":"20a4b5fa-77c0-0115-29bb-b09cc8681c5a","status":{"status_name":"Preparing","timestamp":1.738792596247E12},"dt_current_timestamp":"2025-02-05 21:50:48.093"}
+{"status_id":5,"order_identifier":"2f0d910b-9532-ae0f-ab74-885d65efe201","status":{"status_name":"Ready for Pickup","timestamp":1.738793871107E12},"dt_current_timestamp":"2025-02-05 21:50:48.108"}
+{"status_id":6,"order_identifier":"e3e0df15-8353-e8b6-7329-b7d1610cd45f","status":{"status_name":"Picked Up","timestamp":1.738795776758E12},"dt_current_timestamp":"2025-02-05 21:50:48.126"}
+
+================
+File: entities/mongodb_users.json
+================
+{"user_id":1,"country":"BR","city":"Palmas","phone_number":"(51) 4463-9821","email":"ofelia.barbosa@bol.com.br","uuid":"94a1eff2-4dce-c26e-cea4-3c55b1f8418b","delivery_address":"Sobrado 76 0225 Viela Pérola, Córrego do Bom Jesus, AL 13546-174","user_identifier":"709.528.582-65","dt_current_timestamp":"2025-02-05 21:50:45.932"}
+
+================
+File: entities/mssql_users.json
+================
+{"user_id":1,"country":"BR","birthday":"2113-10-25","job":"Fabricante de Design","phone_number":"(53) 5048-3739","uuid":"3716e4d6-c6cb-7272-3dcc-19f8c84c462e","last_name":"Alves","first_name":"João","cpf":"019.266.934-95","company_name":"da Rosa, dos Reis e Ouriques","dt_current_timestamp":"2025-02-05 21:50:45.209"}
+
+================
+File: entities/mysql_ratings.json
+================
+{"rating_id":1,"uuid":"846f93b3-d8a1-c383-1073-845f00d8ad23","restaurant_identifier":"76.419.043/7841-74","rating":2,"timestamp":"2024-12-21 00:53:38","dt_current_timestamp":"2025-02-05 21:50:46.005"}
+
+================
+File: entities/mysql_restaurants.json
+================
+{"country":"BR","city":"Jerônimo Monteiro","restaurant_id":1,"phone_number":"(93) 4673-4190","cnpj":"49.703.439/0063-04","average_rating":1.9,"name":"Jesus, Raia e Laranjeira Restaurante","uuid":"60394cc6-638c-17fa-f5ab-61a67d1d3bc4","address":"s/n Rodovia Luiz Gustavo Moraes\nPinhal - MG\n70399-901","opening_time":"11:00 AM","cuisine_type":"Italian","closing_time":"06:00 PM","num_reviews":3101,"dt_current_timestamp":"2025-02-05 21:50:45.201"}
+
+================
+File: entities/postgres_drivers.json
+================
+{"country":"BR","date_birth":"2149-05-24","city":"São João do Manteninha","vehicle_year":2006,"phone_number":"(45) 5913-6499","license_number":"zn1278552","vehicle_make":"Cardoso, Brum e da Penha","uuid":"61eb2d3e-59b0-fc50-1b28-30b70aa80c4a","vehicle_model":"Enormous Paper Car","driver_id":1,"last_name":"Guedes","first_name":"Ana Vitória","vehicle_license_plate":"poq545","vehicle_type":"Scooter","dt_current_timestamp":"2025-02-05 21:50:45.054"}
+
+================
+File: src/spark/mod-1/data/users.json
+================
+{"user_id":1,"country":"BR","city":"Palmas","phone_number":"(51) 4463-9821","email":"ofelia.barbosa@bol.com.br","uuid":"94a1eff2-4dce-c26e-cea4-3c55b1f8418b","delivery_address":"Sobrado 76 0225 Viela Pérola, Córrego do Bom Jesus, AL 13546-174","user_identifier":"709.528.582-65","dt_current_timestamp":"2025-02-05 21:50:45.932"}
+
+================
+File: src/spark/mod-1/scripts/pr-3-app.py
+================
+from pyspark.sql import SparkSession
+
+spark = SparkSession.builder \
+    .appName("pr-3-app") \
+    .getOrCreate()
+
+df_users = spark.read.json("data/users.json")
+count = df_users.count()
+df_users.show(3)
+
+spark.stop()
+
+================
+File: src/spark/pr-1.md
+================
+# pr-1: Local Spark Installation
+
+This guide covers installing Apache Spark locally on **Windows**, **macOS**, and **Linux**. Follow the steps for your operating system to set up Spark.
+
+---
+
+## Prerequisites
+
+- **Java 8 or 11**: Spark requires Java.
+- **Python 3.6+**: For PySpark compatibility.
+- **Terminal**: Command Prompt (Windows), Terminal (macOS/Linux).
+
+---
+
+## Windows
+
+### Step 1: Install Java
+1. Download OpenJDK 11 from [AdoptOpenJDK](https://adoptopenjdk.net/) (`.msi` installer).
+2. Run the installer.
+3. Set `JAVA_HOME`:
+   - Open "Edit the system environment variables" from the Start menu.
+   - Add a new system variable:
+     - Name: `JAVA_HOME`
+     - Value: `C:\Program Files\AdoptOpenJDK\jdk-11.0.11.9-hotspot` (adjust path as needed).
+   - Edit `Path`, add: `%JAVA_HOME%\bin`.
+4. Verify: In a new Command Prompt, run `java -version`.
+
+### Step 2: Install Python
+1. Download Python 3.6+ from [python.org](https://www.python.org/downloads/).
+2. Run the installer, checking "Add Python to PATH."
+3. Verify: In a new Command Prompt, run `python --version`.
+
+### Step 3: Install Spark
+1. Download Spark 3.5.5 (Hadoop 3.x) from [spark.apache.org](https://spark.apache.org/downloads.html) (`.tgz` file).
+2. Extract to `C:\spark-3.5.5-bin-hadoop3` using [7-Zip](https://www.7-zip.org/).
+3. Set `SPARK_HOME`:
+   - Add a new system variable:
+     - Name: `SPARK_HOME`
+     - Value: `C:\spark-3.5.5-bin-hadoop3`.
+   - Edit `Path`, add: `%SPARK_HOME%\bin`.
+4. Install `winutils`:
+   - Download `winutils.exe` for Hadoop 3.x from [this GitHub repo](https://github.com/cdarlint/winutils).
+   - Place in `C:\hadoop\bin`.
+   - Set variable:
+     - Name: `HADOOP_HOME`
+     - Value: `C:\hadoop`.
+   - Add `%HADOOP_HOME%\bin` to `Path`.
+
+### Step 4: Verify
+- In a new Command Prompt, run `spark-shell`. Look for the Spark logo. Exit with `:q`.
+
+---
+
+## macOS
+
+### Step 1: Install Java
+1. Install Homebrew: `/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"` (if not installed).
+2. Run `brew install openjdk@11`.
+3. Set `JAVA_HOME`:
+   - Add to `~/.zshrc` or `~/.bash_profile`:
+     ```bash
+     export JAVA_HOME=$(/usr/libexec/java_home -v 11)
+     ```
+   - Run `source ~/.zshrc` (or appropriate file).
+4. Verify: Run `java -version`.
+
+### Step 2: Install Python
+1. Run `brew install python`.
+2. Verify: Run `python3 --version`.
+
+### Step 3: Install Spark
+1. Run `brew install apache-spark` (installs the latest version, e.g., 3.5.5).
+2. Alternatively, download manually:
+   - Get Spark 3.5.5 (Hadoop 3.x) from [spark.apache.org](https://spark.apache.org/downloads.html).
+   - Extract: `tar -xzf spark-3.5.5-bin-hadoop3.tgz`.
+   - Move to `/usr/local/spark-3.5.5-bin-hadoop3`.
+   - Add to `~/.zshrc`:
+     ```bash
+     export SPARK_HOME=/usr/local/spark-3.5.5-bin-hadoop3
+     export PATH=$SPARK_HOME/bin:$PATH
+     ```
+   - Run `source ~/.zshrc`.
+
+### Step 4: Verify
+- Run `spark-shell`. Look for the Spark logo. Exit with `:q`.
+
+---
+
+## Linux (Ubuntu/Debian-based)
+
+### Step 1: Install Java
+1. Update packages: `sudo apt update`.
+2. Install: `sudo apt install openjdk-11-jdk`.
+3. Set `JAVA_HOME`:
+   - Add to `~/.bashrc`:
+     ```bash
+     export JAVA_HOME=/usr/lib/jvm/java-11-openjdk-amd64
+     export PATH=$JAVA_HOME/bin:$PATH
+     ```
+   - Run `source ~/.bashrc`.
+4. Verify: Run `java -version`.
+
+### Step 2: Install Python
+1. Install: `sudo apt install python3 python3-pip`.
+2. Verify: Run `python3 --version`.
+
+### Step 3: Install Spark
+1. Download Spark 3.5.5 (Hadoop 3.x) from [spark.apache.org](https://spark.apache.org/downloads.html):
+   ```bash
+   wget https://downloads.apache.org/spark/spark-3.5.5/spark-3.5.5-bin-hadoop3.tgz
+   tar -xzf spark-3.5.5-bin-hadoop3.tgz
+   sudo mv spark-3.5.5-bin-hadoop3 /opt/spark
+   ```
+2. Set environment:
+   - Add to `~/.bashrc`:
+     ```bash
+     export SPARK_HOME=/opt/spark
+     export PATH=$SPARK_HOME/bin:$PATH
+     ```
+   - Run `source ~/.bashrc`.
+
+### Step 4: Verify
+- Run `spark-shell`. Look for the Spark logo. Exit with `:q`.
+
+================
+File: src/spark/pr-2.md
+================
+# pr-2: First Steps with Spark-Shell
+
+Now that you’ve installed Apache Spark 3.5.5 (see `pr-1.md`), let’s explore the Spark Shell—a powerful interactive tool for running Spark commands. This guide introduces the Scala-based `spark-shell` and the Python-based `pyspark` shell, showing you how to perform basic operations. We’ll also connect this to the project by loading sample data.
+
+---
+
+## Prerequisites
+
+- Spark 3.5.5 installed locally (Windows, macOS, or Linux).
+- Terminal access: Command Prompt (Windows), Terminal (macOS/Linux).
+- Optional: The project’s `src/spark/mod-1/data/users.json` file for testing.
+
+---
+
+## Launching Spark Shell
+
+### Scala Shell (`spark-shell`)
+1. Open your terminal.
+2. Run:
+   ```bash
+   spark-shell
+   ```
+3. You’ll see the Spark logo and a Scala prompt (`scala>`). This is the interactive Scala shell for Spark.
+
+### Python Shell (`pyspark`)
+1. In your terminal, run:
+   ```bash
+   pyspark
+   ```
+2. You’ll see a Python prompt (`>>>`) with Spark initialized. This is the PySpark shell.
+
+**Note**: Use `spark-shell` for Scala or `pyspark` for Python, depending on your preference. The project’s `pr-3-app.py` uses Python, so `pyspark` aligns with that.
+
+---
+
+## Basic Commands
+
+### Scala Shell Examples
+1. **Check Spark Version**:
+   ```scala
+   scala> spark.version
+   ```
+   Output: `"3.5.5"`
+
+2. **Create a Simple Dataset**:
+   ```scala
+   scala> val data = Seq((1, "Alice"), (2, "Bob"))
+   scala> val df = spark.createDataFrame(data).toDF("id", "name")
+   scala> df.show()
+   ```
+   Output:
+   ```
+   +---+-----+
+   | id| name|
+   +---+-----+
+   |  1|Alice|
+   |  2|  Bob|
+   +---+-----+
+   ```
+
+3. **Exit**:
+   ```scala
+   scala> :q
+   ```
+
+### PySpark Shell Examples
+1. **Check Spark Version**:
+   ```python
+   >>> spark.version
+   ```
+   Output: `'3.5.5'`
+
+2. **Create a Simple Dataset**:
+   ```python
+   >>> data = [(1, "Alice"), (2, "Bob")]
+   >>> df = spark.createDataFrame(data, ["id", "name"])
+   >>> df.show()
+   ```
+   Output:
+   ```
+   +---+-----+
+   | id| name|
+   +---+-----+
+   |  1|Alice|
+   |  2|  Bob|
+   +---+-----+
+   ```
+
+3. **Exit**:
+   ```python
+   >>> exit()
+   ```
+
+---
+
+## Working with Project Data
+
+Let’s load the `users.json` file from the project (`src/spark/mod-1/data/users.json`) to see Spark in action.
+
+1. **Copy the File**:
+   - Place `users.json` in an accessible directory (e.g., `C:\spark-data` on Windows, `/home/user/spark-data` on macOS/Linux).
+
+2. **Load in Scala Shell**:
+   ```scala
+   scala> val df = spark.read.json("C:/spark-data/users.json")  // Windows path
+   scala> val df = spark.read.json("/home/user/spark-data/users.json")  // macOS/Linux path
+   scala> df.show(1)
+   ```
+   Output (partial):
+   ```
+   +--------------------+----+-----+--------------------+--------------------+--------------------+---------+--------------------+--------------------+
+   |    delivery_address|city|country|               email|         phone_number|                uuid|  user_id|    user_identifier| dt_current_timestamp|
+   +--------------------+----+-----+--------------------+--------------------+--------------------+---------+--------------------+--------------------+
+   |Sobrado 76 0225 V...|Palmas|   BR|ofelia.barbosa@bo...|(51) 4463-9821|94a1eff2-4dce-c26...|        1|    709.528.582-65|2025-02-05 21:50:...|
+   +--------------------+----+-----+--------------------+--------------------+--------------------+---------+--------------------+--------------------+
+   ```
+
+3. **Load in PySpark Shell**:
+   ```python
+   >>> df = spark.read.json("C:/spark-data/users.json")  # Windows path
+   >>> df = spark.read.json("/home/user/spark-data/users.json")  # macOS/Linux path
+   >>> df.show(1)
+   ```
+   Output: Same as above.
+
+4. **Count Rows**:
+   - Scala: `df.count()`
+   - Python: `df.count()`
+   Output: `1` (since `users.json` has one record).
+
+---
+
+## Tips
+- **Paths**: Use forward slashes (`/`) in file paths, even on Windows, or escape backslashes (e.g., `C:\\spark-data\\users.json`).
+- **Errors**: If you get a `FileNotFoundException`, double-check the file path.
+- **Stop Spark**: After exiting, Spark stops automatically in the shell.
+
+================
+File: .gitignore
+================
+.venv
+venv
+.idea/
+.DS_Store
+src/utils/__pycache__/
+src/__pycache__/
+logs/spark.log
+
+================
+File: readme.md
+================
+# frm-spark-databricks-mec
+
+
+
+================================================================
+End of Codebase
+================================================================
