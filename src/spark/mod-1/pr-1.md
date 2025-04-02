@@ -1,16 +1,4 @@
-## Próximos Passos
-
-- Explorar interfaces web do Spark (http://localhost:4040 quando em execução)
-- Configurar IDEs como PyCharm, VSCode ou Jupyter para uso com PySpark
-- Familiarizar-se com a documentação oficial: https://spark.apache.org/docs/latest/# Instalação Local do Apache Spark
-
-Este guia apresenta os passos para instalar Apache Spark localmente nos principais sistemas operacionais. Esta é a primeira aula prática da nossa formação.
-
-## Pré-requisitos
-
-- Java JDK 8 ou superior
-- Python 3.6+ (opcional, para PySpark)
-- Conexão com a internet
+# Instalação Local do Spark
 
 ## Windows
 
