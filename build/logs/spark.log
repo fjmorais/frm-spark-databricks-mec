@@ -137,3 +137,15 @@
 2025-04-02T15:01:51,018 [dispatcher-event-loop-7] INFO  org.apache.spark.deploy.worker.Worker [] - Successfully registered with master spark://07562851e9bf:7077
 2025-04-02T15:01:51,022 [dispatcher-event-loop-5] INFO  org.apache.spark.deploy.worker.Worker [] - Successfully registered with master spark://07562851e9bf:7077
 2025-04-02T15:01:51,023 [dispatcher-event-loop-6] INFO  org.apache.spark.deploy.worker.Worker [] - Successfully registered with master spark://07562851e9bf:7077
+2025-04-02T15:03:55,689 [dispatcher-event-loop-7] INFO  org.apache.spark.deploy.master.Master [] - 172.18.0.3:52472 got disassociated, removing it.
+2025-04-02T15:03:55,693 [dispatcher-event-loop-7] INFO  org.apache.spark.deploy.master.Master [] - 172.18.0.5:34318 got disassociated, removing it.
+2025-04-02T15:03:55,693 [dispatcher-event-loop-7] INFO  org.apache.spark.deploy.master.Master [] - 172.18.0.4:42794 got disassociated, removing it.
+2025-04-02T15:03:55,694 [dispatcher-event-loop-7] INFO  org.apache.spark.deploy.master.Master [] - 172.18.0.4:33947 got disassociated, removing it.
+2025-04-02T15:03:55,695 [dispatcher-event-loop-7] INFO  org.apache.spark.deploy.master.Master [] - Removing worker worker-20250402150150-172.18.0.4-33947 on 172.18.0.4:33947
+2025-04-02T15:03:55,697 [dispatcher-event-loop-7] INFO  org.apache.spark.deploy.master.Master [] - Telling app of lost worker: worker-20250402150150-172.18.0.4-33947
+2025-04-02T15:03:55,699 [dispatcher-event-loop-7] INFO  org.apache.spark.deploy.master.Master [] - 172.18.0.5:39551 got disassociated, removing it.
+2025-04-02T15:03:55,700 [dispatcher-event-loop-7] INFO  org.apache.spark.deploy.master.Master [] - Removing worker worker-20250402150150-172.18.0.5-39551 on 172.18.0.5:39551
+2025-04-02T15:03:55,700 [dispatcher-event-loop-7] INFO  org.apache.spark.deploy.master.Master [] - Telling app of lost worker: worker-20250402150150-172.18.0.5-39551
+2025-04-02T15:03:55,700 [dispatcher-event-loop-7] INFO  org.apache.spark.deploy.master.Master [] - 172.18.0.3:42425 got disassociated, removing it.
+2025-04-02T15:03:55,701 [dispatcher-event-loop-7] INFO  org.apache.spark.deploy.master.Master [] - Removing worker worker-20250402150150-172.18.0.3-42425 on 172.18.0.3:42425
+2025-04-02T15:03:55,701 [dispatcher-event-loop-7] INFO  org.apache.spark.deploy.master.Master [] - Telling app of lost worker: worker-20250402150150-172.18.0.3-42425
