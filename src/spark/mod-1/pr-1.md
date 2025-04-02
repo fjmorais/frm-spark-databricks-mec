@@ -76,9 +76,10 @@
      ```
    - Adicione as seguintes linhas ao arquivo:
      ```
-     export JAVA_HOME=$(/usr/libexec/java_home)
-     export SPARK_HOME=/usr/local/Cellar/apache-spark/3.X.X/libexec
+     export JAVA_HOME=$(/usr/libexec/java_home -v 11)
+     export SPARK_HOME=/opt/homebrew/Cellar/apache-spark/3.X.X/libexec
      export PATH=$PATH:$SPARK_HOME/bin
+     export PATH=$JAVA_HOME/bin:$PATH
      ```
      (Substitua 3.X.X pela versão do Spark instalada)
    - Salve o arquivo (Ctrl+O, Enter, Ctrl+X)
