@@ -55,6 +55,11 @@ docker logs spark-worker-2
 docker logs spark-history-server
 ```
 
+### 8. Stop Spark Cluster
+```bash
+docker-compose down
+```
+
 ## Cluster Components
 - **Spark Master**: Runs on port 8080
 - **Spark Workers**: 3 workers configured

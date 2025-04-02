@@ -1,0 +1,139 @@
+2025-04-02T15:01:49,646 [main] INFO  org.apache.spark.deploy.master.Master [] - Started daemon with process name: 62@07562851e9bf
+2025-04-02T15:01:49,650 [main] INFO  org.apache.spark.util.SignalUtils [] - Registering signal handler for TERM
+2025-04-02T15:01:49,651 [main] INFO  org.apache.spark.util.SignalUtils [] - Registering signal handler for HUP
+2025-04-02T15:01:49,652 [main] INFO  org.apache.spark.util.SignalUtils [] - Registering signal handler for INT
+2025-04-02T15:01:49,677 [main] INFO  org.apache.spark.deploy.worker.Worker [] - Started daemon with process name: 60@68f3e7a714d1
+2025-04-02T15:01:49,686 [main] INFO  org.apache.spark.util.SignalUtils [] - Registering signal handler for TERM
+2025-04-02T15:01:49,689 [main] INFO  org.apache.spark.util.SignalUtils [] - Registering signal handler for HUP
+2025-04-02T15:01:49,690 [main] INFO  org.apache.spark.util.SignalUtils [] - Registering signal handler for INT
+2025-04-02T15:01:49,791 [main] INFO  org.apache.spark.deploy.worker.Worker [] - Started daemon with process name: 60@bc42895a3022
+2025-04-02T15:01:49,797 [main] INFO  org.apache.spark.util.SignalUtils [] - Registering signal handler for TERM
+2025-04-02T15:01:49,798 [main] INFO  org.apache.spark.util.SignalUtils [] - Registering signal handler for HUP
+2025-04-02T15:01:49,798 [main] INFO  org.apache.spark.util.SignalUtils [] - Registering signal handler for INT
+2025-04-02T15:01:49,806 [main] INFO  org.apache.spark.deploy.worker.Worker [] - Started daemon with process name: 60@b568520b94cf
+2025-04-02T15:01:49,810 [main] INFO  org.apache.spark.util.SignalUtils [] - Registering signal handler for TERM
+2025-04-02T15:01:49,811 [main] INFO  org.apache.spark.util.SignalUtils [] - Registering signal handler for HUP
+2025-04-02T15:01:49,811 [main] INFO  org.apache.spark.util.SignalUtils [] - Registering signal handler for INT
+2025-04-02T15:01:49,827 [main] INFO  org.apache.spark.SecurityManager [] - Changing view acls to: spark
+2025-04-02T15:01:49,828 [main] INFO  org.apache.spark.SecurityManager [] - Changing modify acls to: spark
+2025-04-02T15:01:49,828 [main] INFO  org.apache.spark.SecurityManager [] - Changing view acls groups to: 
+2025-04-02T15:01:49,829 [main] INFO  org.apache.spark.SecurityManager [] - Changing modify acls groups to: 
+2025-04-02T15:01:49,829 [main] INFO  org.apache.spark.SecurityManager [] - SecurityManager: authentication disabled; ui acls disabled; users with view permissions: spark; groups with view permissions: EMPTY; users with modify permissions: spark; groups with modify permissions: EMPTY
+2025-04-02T15:01:49,834 [main] INFO  org.apache.spark.SecurityManager [] - Changing view acls to: spark
+2025-04-02T15:01:49,836 [main] INFO  org.apache.spark.SecurityManager [] - Changing modify acls to: spark
+2025-04-02T15:01:49,836 [main] INFO  org.apache.spark.SecurityManager [] - Changing view acls groups to: 
+2025-04-02T15:01:49,837 [main] INFO  org.apache.spark.SecurityManager [] - Changing modify acls groups to: 
+2025-04-02T15:01:49,840 [main] INFO  org.apache.spark.SecurityManager [] - SecurityManager: authentication disabled; ui acls disabled; users with view permissions: spark; groups with view permissions: EMPTY; users with modify permissions: spark; groups with modify permissions: EMPTY
+2025-04-02T15:01:49,992 [main] INFO  org.apache.spark.SecurityManager [] - Changing view acls to: spark
+2025-04-02T15:01:49,996 [main] WARN  org.apache.hadoop.util.NativeCodeLoader [] - Unable to load native-hadoop library for your platform... using builtin-java classes where applicable
+2025-04-02T15:01:49,994 [main] INFO  org.apache.spark.SecurityManager [] - Changing modify acls to: spark
+2025-04-02T15:01:50,003 [main] INFO  org.apache.spark.SecurityManager [] - Changing view acls groups to: 
+2025-04-02T15:01:50,009 [main] INFO  org.apache.spark.SecurityManager [] - Changing view acls to: spark
+2025-04-02T15:01:50,018 [main] INFO  org.apache.spark.SecurityManager [] - Changing modify acls groups to: 
+2025-04-02T15:01:50,018 [main] INFO  org.apache.spark.SecurityManager [] - Changing modify acls to: spark
+2025-04-02T15:01:50,023 [main] INFO  org.apache.spark.SecurityManager [] - SecurityManager: authentication disabled; ui acls disabled; users with view permissions: spark; groups with view permissions: EMPTY; users with modify permissions: spark; groups with modify permissions: EMPTY
+2025-04-02T15:01:50,026 [main] INFO  org.apache.spark.SecurityManager [] - Changing view acls groups to: 
+2025-04-02T15:01:50,034 [main] INFO  org.apache.spark.SecurityManager [] - Changing modify acls groups to: 
+2025-04-02T15:01:50,039 [main] INFO  org.apache.spark.SecurityManager [] - SecurityManager: authentication disabled; ui acls disabled; users with view permissions: spark; groups with view permissions: EMPTY; users with modify permissions: spark; groups with modify permissions: EMPTY
+2025-04-02T15:01:50,067 [main] WARN  org.apache.hadoop.util.NativeCodeLoader [] - Unable to load native-hadoop library for your platform... using builtin-java classes where applicable
+2025-04-02T15:01:50,282 [main] WARN  org.apache.hadoop.util.NativeCodeLoader [] - Unable to load native-hadoop library for your platform... using builtin-java classes where applicable
+2025-04-02T15:01:50,306 [main] WARN  org.apache.hadoop.util.NativeCodeLoader [] - Unable to load native-hadoop library for your platform... using builtin-java classes where applicable
+2025-04-02T15:01:50,448 [main] INFO  org.apache.spark.util.Utils [] - Successfully started service 'sparkMaster' on port 7077.
+2025-04-02T15:01:50,450 [main] INFO  org.apache.spark.util.Utils [] - Successfully started service 'sparkWorker' on port 42425.
+2025-04-02T15:01:50,452 [main] INFO  org.apache.spark.deploy.worker.Worker [] - Worker decommissioning not enabled.
+2025-04-02T15:01:50,468 [dispatcher-event-loop-1] INFO  org.apache.spark.deploy.master.Master [] - Starting Spark master at spark://07562851e9bf:7077
+2025-04-02T15:01:50,474 [dispatcher-event-loop-1] INFO  org.apache.spark.deploy.master.Master [] - Running Spark version 3.5.5
+2025-04-02T15:01:50,493 [dispatcher-event-loop-1] INFO  org.sparkproject.jetty.util.log [] - Logging initialized @1805ms to org.sparkproject.jetty.util.log.Slf4jLog
+2025-04-02T15:01:50,513 [main] INFO  org.apache.spark.util.Utils [] - Successfully started service 'sparkWorker' on port 33947.
+2025-04-02T15:01:50,516 [main] INFO  org.apache.spark.deploy.worker.Worker [] - Worker decommissioning not enabled.
+2025-04-02T15:01:50,532 [dispatcher-event-loop-1] INFO  org.apache.spark.ui.JettyUtils [] - Start Jetty 0.0.0.0:8080 for MasterUI
+2025-04-02T15:01:50,537 [main] INFO  org.apache.spark.util.Utils [] - Successfully started service 'sparkWorker' on port 39551.
+2025-04-02T15:01:50,540 [main] INFO  org.apache.spark.deploy.worker.Worker [] - Worker decommissioning not enabled.
+2025-04-02T15:01:50,542 [dispatcher-event-loop-1] INFO  org.sparkproject.jetty.server.Server [] - jetty-9.4.56.v20240826; built: 2024-08-26T17:15:05.868Z; git: ec6782ff5ead824dabdcf47fa98f90a4aedff401; jvm 17.0.14+10-LTS
+2025-04-02T15:01:50,572 [dispatcher-event-loop-1] INFO  org.apache.spark.deploy.worker.Worker [] - Starting Spark worker 172.18.0.3:42425 with 2 cores, 3.0 GiB RAM
+2025-04-02T15:01:50,573 [dispatcher-event-loop-1] INFO  org.sparkproject.jetty.server.Server [] - Started @1884ms
+2025-04-02T15:01:50,581 [dispatcher-event-loop-1] INFO  org.apache.spark.deploy.worker.Worker [] - Running Spark version 3.5.5
+2025-04-02T15:01:50,582 [dispatcher-event-loop-1] INFO  org.apache.spark.deploy.worker.Worker [] - Spark home: /opt/bitnami/spark
+2025-04-02T15:01:50,609 [dispatcher-event-loop-1] INFO  org.apache.spark.resource.ResourceUtils [] - ==============================================================
+2025-04-02T15:01:50,610 [dispatcher-event-loop-1] INFO  org.apache.spark.resource.ResourceUtils [] - No custom resources configured for spark.worker.
+2025-04-02T15:01:50,611 [dispatcher-event-loop-1] INFO  org.apache.spark.resource.ResourceUtils [] - ==============================================================
+2025-04-02T15:01:50,629 [dispatcher-event-loop-1] INFO  org.sparkproject.jetty.server.AbstractConnector [] - Started ServerConnector@b12b344{HTTP/1.1, (http/1.1)}{0.0.0.0:8080}
+2025-04-02T15:01:50,630 [dispatcher-event-loop-1] INFO  org.apache.spark.util.Utils [] - Successfully started service 'MasterUI' on port 8080.
+2025-04-02T15:01:50,642 [dispatcher-event-loop-1] INFO  org.sparkproject.jetty.util.log [] - Logging initialized @1872ms to org.sparkproject.jetty.util.log.Slf4jLog
+2025-04-02T15:01:50,652 [dispatcher-event-loop-1] INFO  org.apache.spark.deploy.worker.Worker [] - Starting Spark worker 172.18.0.4:33947 with 2 cores, 3.0 GiB RAM
+2025-04-02T15:01:50,660 [dispatcher-event-loop-1] INFO  org.apache.spark.deploy.worker.Worker [] - Running Spark version 3.5.5
+2025-04-02T15:01:50,660 [dispatcher-event-loop-1] INFO  org.apache.spark.deploy.worker.Worker [] - Spark home: /opt/bitnami/spark
+2025-04-02T15:01:50,663 [dispatcher-event-loop-1] INFO  org.sparkproject.jetty.server.handler.ContextHandler [] - Started o.s.j.s.ServletContextHandler@3a8f3f7d{/app,null,AVAILABLE,@Spark}
+2025-04-02T15:01:50,666 [dispatcher-event-loop-1] INFO  org.sparkproject.jetty.server.handler.ContextHandler [] - Started o.s.j.s.ServletContextHandler@59ddca39{/app/json,null,AVAILABLE,@Spark}
+2025-04-02T15:01:50,668 [dispatcher-event-loop-1] INFO  org.sparkproject.jetty.server.handler.ContextHandler [] - Started o.s.j.s.ServletContextHandler@f0c030b{/,null,AVAILABLE,@Spark}
+2025-04-02T15:01:50,669 [dispatcher-event-loop-1] INFO  org.sparkproject.jetty.server.handler.ContextHandler [] - Started o.s.j.s.ServletContextHandler@40c0c815{/json,null,AVAILABLE,@Spark}
+2025-04-02T15:01:50,672 [dispatcher-event-loop-1] INFO  org.apache.spark.deploy.worker.Worker [] - Starting Spark worker 172.18.0.5:39551 with 2 cores, 3.0 GiB RAM
+2025-04-02T15:01:50,673 [dispatcher-event-loop-1] INFO  org.sparkproject.jetty.server.handler.ContextHandler [] - Started o.s.j.s.ServletContextHandler@2b57827f{/static,null,AVAILABLE,@Spark}
+2025-04-02T15:01:50,673 [dispatcher-event-loop-1] INFO  org.apache.spark.resource.ResourceUtils [] - ==============================================================
+2025-04-02T15:01:50,674 [dispatcher-event-loop-1] INFO  org.apache.spark.resource.ResourceUtils [] - No custom resources configured for spark.worker.
+2025-04-02T15:01:50,674 [dispatcher-event-loop-1] INFO  org.apache.spark.resource.ResourceUtils [] - ==============================================================
+2025-04-02T15:01:50,674 [dispatcher-event-loop-1] INFO  org.sparkproject.jetty.server.handler.ContextHandler [] - Started o.s.j.s.ServletContextHandler@28ac9723{/app/kill,null,AVAILABLE,@Spark}
+2025-04-02T15:01:50,676 [dispatcher-event-loop-1] INFO  org.apache.spark.deploy.worker.Worker [] - Running Spark version 3.5.5
+2025-04-02T15:01:50,676 [dispatcher-event-loop-1] INFO  org.sparkproject.jetty.server.handler.ContextHandler [] - Started o.s.j.s.ServletContextHandler@70c7f9ab{/driver/kill,null,AVAILABLE,@Spark}
+2025-04-02T15:01:50,677 [dispatcher-event-loop-1] INFO  org.apache.spark.deploy.worker.Worker [] - Spark home: /opt/bitnami/spark
+2025-04-02T15:01:50,678 [dispatcher-event-loop-1] INFO  org.sparkproject.jetty.server.handler.ContextHandler [] - Started o.s.j.s.ServletContextHandler@1cc9caaa{/workers/kill,null,AVAILABLE,@Spark}
+2025-04-02T15:01:50,680 [dispatcher-event-loop-1] INFO  org.apache.spark.ui.JettyUtils [] - Start Jetty 0.0.0.0:8081 for WorkerUI
+2025-04-02T15:01:50,681 [dispatcher-event-loop-1] INFO  org.apache.spark.deploy.master.ui.MasterWebUI [] - Bound MasterWebUI to 0.0.0.0, and started at http://07562851e9bf:8080
+2025-04-02T15:01:50,690 [dispatcher-event-loop-1] INFO  org.sparkproject.jetty.server.Server [] - jetty-9.4.56.v20240826; built: 2024-08-26T17:15:05.868Z; git: ec6782ff5ead824dabdcf47fa98f90a4aedff401; jvm 17.0.14+10-LTS
+2025-04-02T15:01:50,698 [dispatcher-event-loop-1] INFO  org.apache.spark.resource.ResourceUtils [] - ==============================================================
+2025-04-02T15:01:50,698 [dispatcher-event-loop-1] INFO  org.apache.spark.resource.ResourceUtils [] - No custom resources configured for spark.worker.
+2025-04-02T15:01:50,699 [dispatcher-event-loop-1] INFO  org.apache.spark.resource.ResourceUtils [] - ==============================================================
+2025-04-02T15:01:50,710 [dispatcher-event-loop-1] INFO  org.sparkproject.jetty.util.log [] - Logging initialized @1914ms to org.sparkproject.jetty.util.log.Slf4jLog
+2025-04-02T15:01:50,710 [dispatcher-event-loop-1] INFO  org.sparkproject.jetty.server.Server [] - Started @1941ms
+2025-04-02T15:01:50,733 [dispatcher-event-loop-1] INFO  org.sparkproject.jetty.util.log [] - Logging initialized @1938ms to org.sparkproject.jetty.util.log.Slf4jLog
+2025-04-02T15:01:50,740 [dispatcher-event-loop-1] INFO  org.apache.spark.ui.JettyUtils [] - Start Jetty 0.0.0.0:8081 for WorkerUI
+2025-04-02T15:01:50,741 [dispatcher-event-loop-1] INFO  org.sparkproject.jetty.server.AbstractConnector [] - Started ServerConnector@f224e17{HTTP/1.1, (http/1.1)}{0.0.0.0:8081}
+2025-04-02T15:01:50,742 [dispatcher-event-loop-1] INFO  org.apache.spark.util.Utils [] - Successfully started service 'WorkerUI' on port 8081.
+2025-04-02T15:01:50,764 [dispatcher-event-loop-1] INFO  org.sparkproject.jetty.server.Server [] - jetty-9.4.56.v20240826; built: 2024-08-26T17:15:05.868Z; git: ec6782ff5ead824dabdcf47fa98f90a4aedff401; jvm 17.0.14+10-LTS
+2025-04-02T15:01:50,779 [dispatcher-event-loop-1] INFO  org.apache.spark.ui.JettyUtils [] - Start Jetty 0.0.0.0:8081 for WorkerUI
+2025-04-02T15:01:50,786 [dispatcher-event-loop-1] INFO  org.sparkproject.jetty.server.Server [] - Started @1991ms
+2025-04-02T15:01:50,785 [dispatcher-event-loop-1] INFO  org.sparkproject.jetty.server.handler.ContextHandler [] - Started o.s.j.s.ServletContextHandler@316d2907{/logPage,null,AVAILABLE,@Spark}
+2025-04-02T15:01:50,791 [dispatcher-event-loop-1] INFO  org.sparkproject.jetty.server.handler.ContextHandler [] - Started o.s.j.s.ServletContextHandler@64ca7b3c{/logPage/json,null,AVAILABLE,@Spark}
+2025-04-02T15:01:50,793 [dispatcher-event-loop-1] INFO  org.sparkproject.jetty.server.Server [] - jetty-9.4.56.v20240826; built: 2024-08-26T17:15:05.868Z; git: ec6782ff5ead824dabdcf47fa98f90a4aedff401; jvm 17.0.14+10-LTS
+2025-04-02T15:01:50,793 [dispatcher-event-loop-1] INFO  org.sparkproject.jetty.server.handler.ContextHandler [] - Started o.s.j.s.ServletContextHandler@3644aba7{/metrics/master/json,null,AVAILABLE,@Spark}
+2025-04-02T15:01:50,794 [dispatcher-event-loop-1] INFO  org.sparkproject.jetty.server.handler.ContextHandler [] - Started o.s.j.s.ServletContextHandler@1b03e088{/,null,AVAILABLE,@Spark}
+2025-04-02T15:01:50,795 [dispatcher-event-loop-1] INFO  org.sparkproject.jetty.server.handler.ContextHandler [] - Started o.s.j.s.ServletContextHandler@44bd3784{/metrics/applications/json,null,AVAILABLE,@Spark}
+2025-04-02T15:01:50,796 [dispatcher-event-loop-1] INFO  org.sparkproject.jetty.server.handler.ContextHandler [] - Started o.s.j.s.ServletContextHandler@217e4d76{/json,null,AVAILABLE,@Spark}
+2025-04-02T15:01:50,803 [dispatcher-event-loop-1] INFO  org.sparkproject.jetty.server.handler.ContextHandler [] - Started o.s.j.s.ServletContextHandler@3261b7be{/static,null,AVAILABLE,@Spark}
+2025-04-02T15:01:50,806 [dispatcher-event-loop-1] INFO  org.sparkproject.jetty.server.Server [] - Started @2011ms
+2025-04-02T15:01:50,808 [dispatcher-event-loop-1] INFO  org.sparkproject.jetty.server.handler.ContextHandler [] - Started o.s.j.s.ServletContextHandler@e2d614f{/log,null,AVAILABLE,@Spark}
+2025-04-02T15:01:50,808 [dispatcher-event-loop-1] INFO  org.apache.spark.deploy.master.Master [] - I have been elected leader! New state: ALIVE
+2025-04-02T15:01:50,811 [dispatcher-event-loop-1] INFO  org.apache.spark.deploy.worker.ui.WorkerWebUI [] - Bound WorkerWebUI to 0.0.0.0, and started at http://68f3e7a714d1:8081
+2025-04-02T15:01:50,815 [worker-register-master-threadpool-0] INFO  org.apache.spark.deploy.worker.Worker [] - Connecting to master spark-master:7077...
+2025-04-02T15:01:50,821 [dispatcher-event-loop-1] INFO  org.sparkproject.jetty.server.AbstractConnector [] - Started ServerConnector@2128c8f0{HTTP/1.1, (http/1.1)}{0.0.0.0:8081}
+2025-04-02T15:01:50,823 [dispatcher-event-loop-1] INFO  org.apache.spark.util.Utils [] - Successfully started service 'WorkerUI' on port 8081.
+2025-04-02T15:01:50,834 [dispatcher-event-loop-1] INFO  org.sparkproject.jetty.server.AbstractConnector [] - Started ServerConnector@4a6457b6{HTTP/1.1, (http/1.1)}{0.0.0.0:8081}
+2025-04-02T15:01:50,835 [dispatcher-event-loop-1] INFO  org.apache.spark.util.Utils [] - Successfully started service 'WorkerUI' on port 8081.
+2025-04-02T15:01:50,840 [dispatcher-event-loop-1] INFO  org.sparkproject.jetty.server.handler.ContextHandler [] - Started o.s.j.s.ServletContextHandler@1e371437{/metrics/json,null,AVAILABLE,@Spark}
+2025-04-02T15:01:50,848 [dispatcher-event-loop-1] INFO  org.sparkproject.jetty.server.handler.ContextHandler [] - Started o.s.j.s.ServletContextHandler@48cebe6d{/logPage,null,AVAILABLE,@Spark}
+2025-04-02T15:01:50,850 [dispatcher-event-loop-1] INFO  org.sparkproject.jetty.server.handler.ContextHandler [] - Started o.s.j.s.ServletContextHandler@ec419dc{/logPage/json,null,AVAILABLE,@Spark}
+2025-04-02T15:01:50,853 [dispatcher-event-loop-1] INFO  org.sparkproject.jetty.server.handler.ContextHandler [] - Started o.s.j.s.ServletContextHandler@1510a7a4{/,null,AVAILABLE,@Spark}
+2025-04-02T15:01:50,856 [dispatcher-event-loop-1] INFO  org.sparkproject.jetty.server.handler.ContextHandler [] - Started o.s.j.s.ServletContextHandler@77936a8a{/json,null,AVAILABLE,@Spark}
+2025-04-02T15:01:50,859 [dispatcher-event-loop-1] INFO  org.sparkproject.jetty.server.handler.ContextHandler [] - Started o.s.j.s.ServletContextHandler@dd56c43{/logPage,null,AVAILABLE,@Spark}
+2025-04-02T15:01:50,863 [dispatcher-event-loop-1] INFO  org.sparkproject.jetty.server.handler.ContextHandler [] - Started o.s.j.s.ServletContextHandler@7e7739fd{/static,null,AVAILABLE,@Spark}
+2025-04-02T15:01:50,866 [dispatcher-event-loop-1] INFO  org.sparkproject.jetty.server.handler.ContextHandler [] - Started o.s.j.s.ServletContextHandler@524756b{/log,null,AVAILABLE,@Spark}
+2025-04-02T15:01:50,867 [dispatcher-event-loop-1] INFO  org.apache.spark.deploy.worker.ui.WorkerWebUI [] - Bound WorkerWebUI to 0.0.0.0, and started at http://bc42895a3022:8081
+2025-04-02T15:01:50,869 [dispatcher-event-loop-1] INFO  org.sparkproject.jetty.server.handler.ContextHandler [] - Started o.s.j.s.ServletContextHandler@63f0fc5{/logPage/json,null,AVAILABLE,@Spark}
+2025-04-02T15:01:50,873 [dispatcher-event-loop-1] INFO  org.sparkproject.jetty.server.handler.ContextHandler [] - Started o.s.j.s.ServletContextHandler@36ab0bcd{/,null,AVAILABLE,@Spark}
+2025-04-02T15:01:50,870 [worker-register-master-threadpool-0] INFO  org.apache.spark.deploy.worker.Worker [] - Connecting to master spark-master:7077...
+2025-04-02T15:01:50,875 [dispatcher-event-loop-1] INFO  org.sparkproject.jetty.server.handler.ContextHandler [] - Started o.s.j.s.ServletContextHandler@6acdf2d1{/json,null,AVAILABLE,@Spark}
+2025-04-02T15:01:50,876 [netty-rpc-connection-0] INFO  org.apache.spark.network.client.TransportClientFactory [] - Successfully created connection to spark-master/172.18.0.2:7077 after 33 ms (0 ms spent in bootstraps)
+2025-04-02T15:01:50,880 [dispatcher-event-loop-1] INFO  org.sparkproject.jetty.server.handler.ContextHandler [] - Started o.s.j.s.ServletContextHandler@6f4905e1{/static,null,AVAILABLE,@Spark}
+2025-04-02T15:01:50,881 [dispatcher-event-loop-1] INFO  org.sparkproject.jetty.server.handler.ContextHandler [] - Started o.s.j.s.ServletContextHandler@6d471fe3{/log,null,AVAILABLE,@Spark}
+2025-04-02T15:01:50,886 [dispatcher-event-loop-1] INFO  org.apache.spark.deploy.worker.ui.WorkerWebUI [] - Bound WorkerWebUI to 0.0.0.0, and started at http://b568520b94cf:8081
+2025-04-02T15:01:50,890 [worker-register-master-threadpool-0] INFO  org.apache.spark.deploy.worker.Worker [] - Connecting to master spark-master:7077...
+2025-04-02T15:01:50,900 [dispatcher-event-loop-1] INFO  org.sparkproject.jetty.server.handler.ContextHandler [] - Started o.s.j.s.ServletContextHandler@41e3cc07{/metrics/json,null,AVAILABLE,@Spark}
+2025-04-02T15:01:50,908 [dispatcher-event-loop-1] INFO  org.sparkproject.jetty.server.handler.ContextHandler [] - Started o.s.j.s.ServletContextHandler@5ae015a7{/metrics/json,null,AVAILABLE,@Spark}
+2025-04-02T15:01:50,940 [netty-rpc-connection-0] INFO  org.apache.spark.network.client.TransportClientFactory [] - Successfully created connection to spark-master/172.18.0.2:7077 after 29 ms (0 ms spent in bootstraps)
+2025-04-02T15:01:50,956 [netty-rpc-connection-0] INFO  org.apache.spark.network.client.TransportClientFactory [] - Successfully created connection to spark-master/172.18.0.2:7077 after 27 ms (0 ms spent in bootstraps)
+2025-04-02T15:01:51,006 [dispatcher-event-loop-9] INFO  org.apache.spark.deploy.master.Master [] - Registering worker 172.18.0.3:42425 with 2 cores, 3.0 GiB RAM
+2025-04-02T15:01:51,013 [dispatcher-event-loop-9] INFO  org.apache.spark.deploy.master.Master [] - Registering worker 172.18.0.4:33947 with 2 cores, 3.0 GiB RAM
+2025-04-02T15:01:51,014 [dispatcher-event-loop-9] INFO  org.apache.spark.deploy.master.Master [] - Registering worker 172.18.0.5:39551 with 2 cores, 3.0 GiB RAM
+2025-04-02T15:01:51,018 [dispatcher-event-loop-7] INFO  org.apache.spark.deploy.worker.Worker [] - Successfully registered with master spark://07562851e9bf:7077
+2025-04-02T15:01:51,022 [dispatcher-event-loop-5] INFO  org.apache.spark.deploy.worker.Worker [] - Successfully registered with master spark://07562851e9bf:7077
+2025-04-02T15:01:51,023 [dispatcher-event-loop-6] INFO  org.apache.spark.deploy.worker.Worker [] - Successfully registered with master spark://07562851e9bf:7077
