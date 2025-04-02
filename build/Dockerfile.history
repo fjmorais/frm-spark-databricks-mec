@@ -5,7 +5,7 @@ ARG spark_version=${spark_version:-"3.5.0"} \
     spark_conf=${spark_conf:-"/etc/spark/conf"} \
     created_date="`date -u +\"%Y-%m-%dT%H:%M:%SZ\"`"
 
-LABEL author="Ranga Reddy"
+LABEL author="Luan Moreno"
 LABEL image="spark-history-server"
 LABEL build_date="${created_date}"
 LABEL version="${spark_version}"

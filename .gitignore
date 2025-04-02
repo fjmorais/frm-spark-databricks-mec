@@ -1,7 +1,6 @@
 .venv
 venv
 .idea/
-storage/
 .DS_Store
 src/utils/__pycache__/
 src/__pycache__/
