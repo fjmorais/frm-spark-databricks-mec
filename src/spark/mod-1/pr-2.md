@@ -57,8 +57,6 @@ Esta interface permite:
 - Verificar planos de execução de consultas
 - Analisar o armazenamento em cache
 
-![Spark UI](https://spark.apache.org/docs/latest/img/JobPageDetail.png)
-
 ## Trabalhando com o Spark-Shell
 
 Ao iniciar o Spark-Shell, você já terá disponíveis as seguintes variáveis:
