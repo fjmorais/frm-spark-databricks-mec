@@ -2239,3 +2239,1105 @@
 2025-04-02T18:07:58,440 [shutdown-hook-0] INFO  org.apache.spark.util.ShutdownHookManager [] - Deleting directory /tmp/spark-ec61dc08-1fde-410a-bfe0-5500d45ee519/pyspark-2a3b9c4b-f5cc-43c7-a201-91c86f440e9d
 2025-04-02T18:07:58,443 [shutdown-hook-0] INFO  org.apache.spark.util.ShutdownHookManager [] - Deleting directory /tmp/spark-ec61dc08-1fde-410a-bfe0-5500d45ee519
 2025-04-02T18:07:58,445 [shutdown-hook-0] INFO  org.apache.spark.util.ShutdownHookManager [] - Deleting directory /tmp/spark-fa591a8b-24d5-4ac8-81ad-417552d69a11
+2025-04-02T18:13:28,083 [Thread-4] INFO  org.apache.spark.SparkContext [] - Running Spark version 3.5.5
+2025-04-02T18:13:28,086 [Thread-4] INFO  org.apache.spark.SparkContext [] - OS info Linux, 6.10.14-linuxkit, aarch64
+2025-04-02T18:13:28,087 [Thread-4] INFO  org.apache.spark.SparkContext [] - Java version 17.0.14
+2025-04-02T18:13:28,099 [Thread-4] INFO  org.apache.spark.resource.ResourceUtils [] - ==============================================================
+2025-04-02T18:13:28,100 [Thread-4] INFO  org.apache.spark.resource.ResourceUtils [] - No custom resources configured for spark.driver.
+2025-04-02T18:13:28,101 [Thread-4] INFO  org.apache.spark.resource.ResourceUtils [] - ==============================================================
+2025-04-02T18:13:28,101 [Thread-4] INFO  org.apache.spark.SparkContext [] - Submitted application: get-users-json.py
+2025-04-02T18:13:28,110 [Thread-4] INFO  org.apache.spark.resource.ResourceProfile [] - Default ResourceProfile created, executor resources: Map(memory -> name: memory, amount: 1024, script: , vendor: , offHeap -> name: offHeap, amount: 0, script: , vendor: ), task resources: Map(cpus -> name: cpus, amount: 1.0)
+2025-04-02T18:13:28,114 [Thread-4] INFO  org.apache.spark.resource.ResourceProfile [] - Limiting resource is cpu
+2025-04-02T18:13:28,114 [Thread-4] INFO  org.apache.spark.resource.ResourceProfileManager [] - Added ResourceProfile id: 0
+2025-04-02T18:13:28,140 [Thread-4] INFO  org.apache.spark.SecurityManager [] - Changing view acls to: root,spark
+2025-04-02T18:13:28,142 [Thread-4] INFO  org.apache.spark.SecurityManager [] - Changing modify acls to: root,spark
+2025-04-02T18:13:28,142 [Thread-4] INFO  org.apache.spark.SecurityManager [] - Changing view acls groups to: 
+2025-04-02T18:13:28,143 [Thread-4] INFO  org.apache.spark.SecurityManager [] - Changing modify acls groups to: 
+2025-04-02T18:13:28,143 [Thread-4] INFO  org.apache.spark.SecurityManager [] - SecurityManager: authentication disabled; ui acls disabled; users with view permissions: root, spark; groups with view permissions: EMPTY; users with modify permissions: root, spark; groups with modify permissions: EMPTY
+2025-04-02T18:13:28,170 [Thread-4] WARN  org.apache.hadoop.util.NativeCodeLoader [] - Unable to load native-hadoop library for your platform... using builtin-java classes where applicable
+2025-04-02T18:13:28,284 [Thread-4] INFO  org.apache.spark.util.Utils [] - Successfully started service 'sparkDriver' on port 45893.
+2025-04-02T18:13:28,295 [Thread-4] INFO  org.apache.spark.SparkEnv [] - Registering MapOutputTracker
+2025-04-02T18:13:28,309 [Thread-4] INFO  org.apache.spark.SparkEnv [] - Registering BlockManagerMaster
+2025-04-02T18:13:28,317 [Thread-4] INFO  org.apache.spark.storage.BlockManagerMasterEndpoint [] - Using org.apache.spark.storage.DefaultTopologyMapper for getting topology information
+2025-04-02T18:13:28,317 [Thread-4] INFO  org.apache.spark.storage.BlockManagerMasterEndpoint [] - BlockManagerMasterEndpoint up
+2025-04-02T18:13:28,319 [Thread-4] INFO  org.apache.spark.SparkEnv [] - Registering BlockManagerMasterHeartbeat
+2025-04-02T18:13:28,329 [Thread-4] INFO  org.apache.spark.storage.DiskBlockManager [] - Created local directory at /tmp/blockmgr-50fa62c0-1509-41d3-92be-60d20cdc479d
+2025-04-02T18:13:28,336 [Thread-4] INFO  org.apache.spark.storage.memory.MemoryStore [] - MemoryStore started with capacity 434.4 MiB
+2025-04-02T18:13:28,343 [Thread-4] INFO  org.apache.spark.SparkEnv [] - Registering OutputCommitCoordinator
+2025-04-02T18:13:28,361 [Thread-4] INFO  org.sparkproject.jetty.util.log [] - Logging initialized @1280ms to org.sparkproject.jetty.util.log.Slf4jLog
+2025-04-02T18:13:28,401 [Thread-4] INFO  org.apache.spark.ui.JettyUtils [] - Start Jetty 0.0.0.0:4040 for SparkUI
+2025-04-02T18:13:28,406 [Thread-4] INFO  org.sparkproject.jetty.server.Server [] - jetty-9.4.56.v20240826; built: 2024-08-26T17:15:05.868Z; git: ec6782ff5ead824dabdcf47fa98f90a4aedff401; jvm 17.0.14+10-LTS
+2025-04-02T18:13:28,414 [Thread-4] INFO  org.sparkproject.jetty.server.Server [] - Started @1334ms
+2025-04-02T18:13:28,427 [Thread-4] INFO  org.sparkproject.jetty.server.AbstractConnector [] - Started ServerConnector@31cf0f59{HTTP/1.1, (http/1.1)}{0.0.0.0:4040}
+2025-04-02T18:13:28,428 [Thread-4] INFO  org.apache.spark.util.Utils [] - Successfully started service 'SparkUI' on port 4040.
+2025-04-02T18:13:28,437 [Thread-4] INFO  org.sparkproject.jetty.server.handler.ContextHandler [] - Started o.s.j.s.ServletContextHandler@452b22b3{/,null,AVAILABLE,@Spark}
+2025-04-02T18:13:28,487 [appclient-register-master-threadpool-0] INFO  org.apache.spark.deploy.client.StandaloneAppClient$ClientEndpoint [] - Connecting to master spark://spark-master:7077...
+2025-04-02T18:13:28,509 [netty-rpc-connection-0] INFO  org.apache.spark.network.client.TransportClientFactory [] - Successfully created connection to spark-master/172.18.0.2:7077 after 12 ms (0 ms spent in bootstraps)
+2025-04-02T18:13:28,544 [dispatcher-event-loop-2] INFO  org.apache.spark.deploy.master.Master [] - Registering app get-users-json.py
+2025-04-02T18:13:28,553 [dispatcher-event-loop-2] INFO  org.apache.spark.deploy.master.Master [] - Registered app get-users-json.py with ID app-20250402181328-0007
+2025-04-02T18:13:28,555 [dispatcher-event-loop-2] INFO  org.apache.spark.deploy.master.Master [] - Start scheduling for app app-20250402181328-0007 with rpId: 0
+2025-04-02T18:13:28,558 [dispatcher-event-loop-1] INFO  org.apache.spark.scheduler.cluster.StandaloneSchedulerBackend [] - Connected to Spark cluster with app ID app-20250402181328-0007
+2025-04-02T18:13:28,558 [dispatcher-event-loop-2] INFO  org.apache.spark.deploy.master.Master [] - Launching executor app-20250402181328-0007/0 on worker worker-20250402174822-172.18.0.4-37899
+2025-04-02T18:13:28,560 [dispatcher-event-loop-2] INFO  org.apache.spark.deploy.master.Master [] - Launching executor app-20250402181328-0007/1 on worker worker-20250402174822-172.18.0.5-45421
+2025-04-02T18:13:28,564 [Thread-4] INFO  org.apache.spark.util.Utils [] - Successfully started service 'org.apache.spark.network.netty.NettyBlockTransferService' on port 35837.
+2025-04-02T18:13:28,564 [dispatcher-event-loop-2] INFO  org.apache.spark.deploy.master.Master [] - Launching executor app-20250402181328-0007/2 on worker worker-20250402174822-172.18.0.3-35613
+2025-04-02T18:13:28,564 [Thread-4] INFO  org.apache.spark.network.netty.NettyBlockTransferService [] - Server created on eff501c685cd:35837
+2025-04-02T18:13:28,566 [Thread-4] INFO  org.apache.spark.storage.BlockManager [] - Using org.apache.spark.storage.RandomBlockReplicationPolicy for block replication policy
+2025-04-02T18:13:28,566 [dispatcher-event-loop-5] INFO  org.apache.spark.deploy.client.StandaloneAppClient$ClientEndpoint [] - Executor added: app-20250402181328-0007/0 on worker-20250402174822-172.18.0.4-37899 (172.18.0.4:37899) with 2 core(s)
+2025-04-02T18:13:28,568 [dispatcher-event-loop-5] INFO  org.apache.spark.scheduler.cluster.StandaloneSchedulerBackend [] - Granted executor ID app-20250402181328-0007/0 on hostPort 172.18.0.4:37899 with 2 core(s), 1024.0 MiB RAM
+2025-04-02T18:13:28,568 [dispatcher-event-loop-5] INFO  org.apache.spark.deploy.client.StandaloneAppClient$ClientEndpoint [] - Executor added: app-20250402181328-0007/1 on worker-20250402174822-172.18.0.5-45421 (172.18.0.5:45421) with 2 core(s)
+2025-04-02T18:13:28,569 [dispatcher-event-loop-5] INFO  org.apache.spark.scheduler.cluster.StandaloneSchedulerBackend [] - Granted executor ID app-20250402181328-0007/1 on hostPort 172.18.0.5:45421 with 2 core(s), 1024.0 MiB RAM
+2025-04-02T18:13:28,570 [dispatcher-event-loop-5] INFO  org.apache.spark.deploy.client.StandaloneAppClient$ClientEndpoint [] - Executor added: app-20250402181328-0007/2 on worker-20250402174822-172.18.0.3-35613 (172.18.0.3:35613) with 2 core(s)
+2025-04-02T18:13:28,570 [dispatcher-event-loop-5] INFO  org.apache.spark.scheduler.cluster.StandaloneSchedulerBackend [] - Granted executor ID app-20250402181328-0007/2 on hostPort 172.18.0.3:35613 with 2 core(s), 1024.0 MiB RAM
+2025-04-02T18:13:28,571 [Thread-4] INFO  org.apache.spark.storage.BlockManagerMaster [] - Registering BlockManager BlockManagerId(driver, eff501c685cd, 35837, None)
+2025-04-02T18:13:28,574 [dispatcher-event-loop-3] INFO  org.apache.spark.deploy.worker.Worker [] - Asked to launch executor app-20250402181328-0007/2 for get-users-json.py
+2025-04-02T18:13:28,574 [dispatcher-event-loop-2] INFO  org.apache.spark.deploy.worker.Worker [] - Asked to launch executor app-20250402181328-0007/0 for get-users-json.py
+2025-04-02T18:13:28,575 [dispatcher-BlockManagerMaster] INFO  org.apache.spark.storage.BlockManagerMasterEndpoint [] - Registering block manager eff501c685cd:35837 with 434.4 MiB RAM, BlockManagerId(driver, eff501c685cd, 35837, None)
+2025-04-02T18:13:28,574 [dispatcher-event-loop-3] INFO  org.apache.spark.deploy.worker.Worker [] - Asked to launch executor app-20250402181328-0007/1 for get-users-json.py
+2025-04-02T18:13:28,577 [Thread-4] INFO  org.apache.spark.storage.BlockManagerMaster [] - Registered BlockManager BlockManagerId(driver, eff501c685cd, 35837, None)
+2025-04-02T18:13:28,578 [Thread-4] INFO  org.apache.spark.storage.BlockManager [] - Initialized BlockManager: BlockManagerId(driver, eff501c685cd, 35837, None)
+2025-04-02T18:13:28,579 [ExecutorRunner for app-20250402181328-0007/2] INFO  org.apache.spark.SecurityManager [] - Changing view acls to: spark
+2025-04-02T18:13:28,579 [ExecutorRunner for app-20250402181328-0007/1] INFO  org.apache.spark.SecurityManager [] - Changing view acls to: spark
+2025-04-02T18:13:28,580 [ExecutorRunner for app-20250402181328-0007/0] INFO  org.apache.spark.SecurityManager [] - Changing view acls to: spark
+2025-04-02T18:13:28,580 [ExecutorRunner for app-20250402181328-0007/1] INFO  org.apache.spark.SecurityManager [] - Changing modify acls to: spark
+2025-04-02T18:13:28,580 [ExecutorRunner for app-20250402181328-0007/2] INFO  org.apache.spark.SecurityManager [] - Changing modify acls to: spark
+2025-04-02T18:13:28,580 [ExecutorRunner for app-20250402181328-0007/0] INFO  org.apache.spark.SecurityManager [] - Changing modify acls to: spark
+2025-04-02T18:13:28,580 [ExecutorRunner for app-20250402181328-0007/1] INFO  org.apache.spark.SecurityManager [] - Changing view acls groups to: 
+2025-04-02T18:13:28,580 [ExecutorRunner for app-20250402181328-0007/2] INFO  org.apache.spark.SecurityManager [] - Changing view acls groups to: 
+2025-04-02T18:13:28,581 [ExecutorRunner for app-20250402181328-0007/0] INFO  org.apache.spark.SecurityManager [] - Changing view acls groups to: 
+2025-04-02T18:13:28,581 [ExecutorRunner for app-20250402181328-0007/1] INFO  org.apache.spark.SecurityManager [] - Changing modify acls groups to: 
+2025-04-02T18:13:28,581 [ExecutorRunner for app-20250402181328-0007/0] INFO  org.apache.spark.SecurityManager [] - Changing modify acls groups to: 
+2025-04-02T18:13:28,581 [ExecutorRunner for app-20250402181328-0007/2] INFO  org.apache.spark.SecurityManager [] - Changing modify acls groups to: 
+2025-04-02T18:13:28,581 [ExecutorRunner for app-20250402181328-0007/1] INFO  org.apache.spark.SecurityManager [] - SecurityManager: authentication disabled; ui acls disabled; users with view permissions: spark; groups with view permissions: EMPTY; users with modify permissions: spark; groups with modify permissions: EMPTY
+2025-04-02T18:13:28,581 [ExecutorRunner for app-20250402181328-0007/2] INFO  org.apache.spark.SecurityManager [] - SecurityManager: authentication disabled; ui acls disabled; users with view permissions: spark; groups with view permissions: EMPTY; users with modify permissions: spark; groups with modify permissions: EMPTY
+2025-04-02T18:13:28,581 [ExecutorRunner for app-20250402181328-0007/0] INFO  org.apache.spark.SecurityManager [] - SecurityManager: authentication disabled; ui acls disabled; users with view permissions: spark; groups with view permissions: EMPTY; users with modify permissions: spark; groups with modify permissions: EMPTY
+2025-04-02T18:13:28,592 [ExecutorRunner for app-20250402181328-0007/1] INFO  org.apache.spark.deploy.worker.ExecutorRunner [] - Launch command: "/opt/bitnami/java/bin/java" "-cp" "/opt/bitnami/spark/conf/:/opt/bitnami/spark/jars/*" "-Xmx1024M" "-Dspark.driver.port=45893" "-Djava.net.preferIPv6Addresses=false" "-XX:+IgnoreUnrecognizedVMOptions" "--add-opens=java.base/java.lang=ALL-UNNAMED" "--add-opens=java.base/java.lang.invoke=ALL-UNNAMED" "--add-opens=java.base/java.lang.reflect=ALL-UNNAMED" "--add-opens=java.base/java.io=ALL-UNNAMED" "--add-opens=java.base/java.net=ALL-UNNAMED" "--add-opens=java.base/java.nio=ALL-UNNAMED" "--add-opens=java.base/java.util=ALL-UNNAMED" "--add-opens=java.base/java.util.concurrent=ALL-UNNAMED" "--add-opens=java.base/java.util.concurrent.atomic=ALL-UNNAMED" "--add-opens=java.base/jdk.internal.ref=ALL-UNNAMED" "--add-opens=java.base/sun.nio.ch=ALL-UNNAMED" "--add-opens=java.base/sun.nio.cs=ALL-UNNAMED" "--add-opens=java.base/sun.security.action=ALL-UNNAMED" "--add-opens=java.base/sun.util.calendar=ALL-UNNAMED" "--add-opens=java.security.jgss/sun.security.krb5=ALL-UNNAMED" "-Djdk.reflect.useDirectMethodHandle=false" "org.apache.spark.executor.CoarseGrainedExecutorBackend" "--driver-url" "spark://CoarseGrainedScheduler@eff501c685cd:45893" "--executor-id" "1" "--hostname" "172.18.0.5" "--cores" "2" "--app-id" "app-20250402181328-0007" "--worker-url" "spark://Worker@172.18.0.5:45421" "--resourceProfileId" "0"
+2025-04-02T18:13:28,592 [ExecutorRunner for app-20250402181328-0007/2] INFO  org.apache.spark.deploy.worker.ExecutorRunner [] - Launch command: "/opt/bitnami/java/bin/java" "-cp" "/opt/bitnami/spark/conf/:/opt/bitnami/spark/jars/*" "-Xmx1024M" "-Dspark.driver.port=45893" "-Djava.net.preferIPv6Addresses=false" "-XX:+IgnoreUnrecognizedVMOptions" "--add-opens=java.base/java.lang=ALL-UNNAMED" "--add-opens=java.base/java.lang.invoke=ALL-UNNAMED" "--add-opens=java.base/java.lang.reflect=ALL-UNNAMED" "--add-opens=java.base/java.io=ALL-UNNAMED" "--add-opens=java.base/java.net=ALL-UNNAMED" "--add-opens=java.base/java.nio=ALL-UNNAMED" "--add-opens=java.base/java.util=ALL-UNNAMED" "--add-opens=java.base/java.util.concurrent=ALL-UNNAMED" "--add-opens=java.base/java.util.concurrent.atomic=ALL-UNNAMED" "--add-opens=java.base/jdk.internal.ref=ALL-UNNAMED" "--add-opens=java.base/sun.nio.ch=ALL-UNNAMED" "--add-opens=java.base/sun.nio.cs=ALL-UNNAMED" "--add-opens=java.base/sun.security.action=ALL-UNNAMED" "--add-opens=java.base/sun.util.calendar=ALL-UNNAMED" "--add-opens=java.security.jgss/sun.security.krb5=ALL-UNNAMED" "-Djdk.reflect.useDirectMethodHandle=false" "org.apache.spark.executor.CoarseGrainedExecutorBackend" "--driver-url" "spark://CoarseGrainedScheduler@eff501c685cd:45893" "--executor-id" "2" "--hostname" "172.18.0.3" "--cores" "2" "--app-id" "app-20250402181328-0007" "--worker-url" "spark://Worker@172.18.0.3:35613" "--resourceProfileId" "0"
+2025-04-02T18:13:28,594 [ExecutorRunner for app-20250402181328-0007/0] INFO  org.apache.spark.deploy.worker.ExecutorRunner [] - Launch command: "/opt/bitnami/java/bin/java" "-cp" "/opt/bitnami/spark/conf/:/opt/bitnami/spark/jars/*" "-Xmx1024M" "-Dspark.driver.port=45893" "-Djava.net.preferIPv6Addresses=false" "-XX:+IgnoreUnrecognizedVMOptions" "--add-opens=java.base/java.lang=ALL-UNNAMED" "--add-opens=java.base/java.lang.invoke=ALL-UNNAMED" "--add-opens=java.base/java.lang.reflect=ALL-UNNAMED" "--add-opens=java.base/java.io=ALL-UNNAMED" "--add-opens=java.base/java.net=ALL-UNNAMED" "--add-opens=java.base/java.nio=ALL-UNNAMED" "--add-opens=java.base/java.util=ALL-UNNAMED" "--add-opens=java.base/java.util.concurrent=ALL-UNNAMED" "--add-opens=java.base/java.util.concurrent.atomic=ALL-UNNAMED" "--add-opens=java.base/jdk.internal.ref=ALL-UNNAMED" "--add-opens=java.base/sun.nio.ch=ALL-UNNAMED" "--add-opens=java.base/sun.nio.cs=ALL-UNNAMED" "--add-opens=java.base/sun.security.action=ALL-UNNAMED" "--add-opens=java.base/sun.util.calendar=ALL-UNNAMED" "--add-opens=java.security.jgss/sun.security.krb5=ALL-UNNAMED" "-Djdk.reflect.useDirectMethodHandle=false" "org.apache.spark.executor.CoarseGrainedExecutorBackend" "--driver-url" "spark://CoarseGrainedScheduler@eff501c685cd:45893" "--executor-id" "0" "--hostname" "172.18.0.4" "--cores" "2" "--app-id" "app-20250402181328-0007" "--worker-url" "spark://Worker@172.18.0.4:37899" "--resourceProfileId" "0"
+2025-04-02T18:13:28,607 [dispatcher-event-loop-0] INFO  org.apache.spark.deploy.master.Master [] - Start scheduling for app app-20250402181328-0007 with rpId: 0
+2025-04-02T18:13:28,609 [dispatcher-event-loop-0] INFO  org.apache.spark.deploy.master.Master [] - Start scheduling for app app-20250402181328-0007 with rpId: 0
+2025-04-02T18:13:28,610 [dispatcher-event-loop-0] INFO  org.apache.spark.deploy.master.Master [] - Start scheduling for app app-20250402181328-0007 with rpId: 0
+2025-04-02T18:13:28,615 [dispatcher-event-loop-6] INFO  org.apache.spark.deploy.client.StandaloneAppClient$ClientEndpoint [] - Executor updated: app-20250402181328-0007/2 is now RUNNING
+2025-04-02T18:13:28,615 [dispatcher-event-loop-6] INFO  org.apache.spark.deploy.client.StandaloneAppClient$ClientEndpoint [] - Executor updated: app-20250402181328-0007/1 is now RUNNING
+2025-04-02T18:13:28,616 [dispatcher-event-loop-3] INFO  org.apache.spark.deploy.client.StandaloneAppClient$ClientEndpoint [] - Executor updated: app-20250402181328-0007/0 is now RUNNING
+2025-04-02T18:13:28,712 [Thread-4] INFO  org.apache.spark.deploy.history.SingleEventLogFileWriter [] - Logging events to file:/opt/bitnami/spark/logs/events/app-20250402181328-0007.inprogress
+2025-04-02T18:13:28,789 [Thread-4] INFO  org.sparkproject.jetty.server.handler.ContextHandler [] - Stopped o.s.j.s.ServletContextHandler@452b22b3{/,null,STOPPED,@Spark}
+2025-04-02T18:13:28,790 [Thread-4] INFO  org.sparkproject.jetty.server.handler.ContextHandler [] - Started o.s.j.s.ServletContextHandler@75bb34ed{/jobs,null,AVAILABLE,@Spark}
+2025-04-02T18:13:28,791 [Thread-4] INFO  org.sparkproject.jetty.server.handler.ContextHandler [] - Started o.s.j.s.ServletContextHandler@3621e1aa{/jobs/json,null,AVAILABLE,@Spark}
+2025-04-02T18:13:28,792 [Thread-4] INFO  org.sparkproject.jetty.server.handler.ContextHandler [] - Started o.s.j.s.ServletContextHandler@3e8d448a{/jobs/job,null,AVAILABLE,@Spark}
+2025-04-02T18:13:28,794 [Thread-4] INFO  org.sparkproject.jetty.server.handler.ContextHandler [] - Started o.s.j.s.ServletContextHandler@10523da1{/jobs/job/json,null,AVAILABLE,@Spark}
+2025-04-02T18:13:28,795 [Thread-4] INFO  org.sparkproject.jetty.server.handler.ContextHandler [] - Started o.s.j.s.ServletContextHandler@53d0226{/stages,null,AVAILABLE,@Spark}
+2025-04-02T18:13:28,798 [Thread-4] INFO  org.sparkproject.jetty.server.handler.ContextHandler [] - Started o.s.j.s.ServletContextHandler@268a70af{/stages/json,null,AVAILABLE,@Spark}
+2025-04-02T18:13:28,800 [Thread-4] INFO  org.sparkproject.jetty.server.handler.ContextHandler [] - Started o.s.j.s.ServletContextHandler@f6d21d8{/stages/stage,null,AVAILABLE,@Spark}
+2025-04-02T18:13:28,802 [Thread-4] INFO  org.sparkproject.jetty.server.handler.ContextHandler [] - Started o.s.j.s.ServletContextHandler@2a90e79b{/stages/stage/json,null,AVAILABLE,@Spark}
+2025-04-02T18:13:28,803 [Thread-4] INFO  org.sparkproject.jetty.server.handler.ContextHandler [] - Started o.s.j.s.ServletContextHandler@631a4ad3{/stages/pool,null,AVAILABLE,@Spark}
+2025-04-02T18:13:28,804 [Thread-4] INFO  org.sparkproject.jetty.server.handler.ContextHandler [] - Started o.s.j.s.ServletContextHandler@3fa75811{/stages/pool/json,null,AVAILABLE,@Spark}
+2025-04-02T18:13:28,805 [Thread-4] INFO  org.sparkproject.jetty.server.handler.ContextHandler [] - Started o.s.j.s.ServletContextHandler@757c84bd{/storage,null,AVAILABLE,@Spark}
+2025-04-02T18:13:28,807 [Thread-4] INFO  org.sparkproject.jetty.server.handler.ContextHandler [] - Started o.s.j.s.ServletContextHandler@54d39fd5{/storage/json,null,AVAILABLE,@Spark}
+2025-04-02T18:13:28,808 [Thread-4] INFO  org.sparkproject.jetty.server.handler.ContextHandler [] - Started o.s.j.s.ServletContextHandler@9c7c151{/storage/rdd,null,AVAILABLE,@Spark}
+2025-04-02T18:13:28,809 [Thread-4] INFO  org.sparkproject.jetty.server.handler.ContextHandler [] - Started o.s.j.s.ServletContextHandler@19dad2bc{/storage/rdd/json,null,AVAILABLE,@Spark}
+2025-04-02T18:13:28,810 [Thread-4] INFO  org.sparkproject.jetty.server.handler.ContextHandler [] - Started o.s.j.s.ServletContextHandler@49f49630{/environment,null,AVAILABLE,@Spark}
+2025-04-02T18:13:28,811 [Thread-4] INFO  org.sparkproject.jetty.server.handler.ContextHandler [] - Started o.s.j.s.ServletContextHandler@2977d8bd{/environment/json,null,AVAILABLE,@Spark}
+2025-04-02T18:13:28,812 [Thread-4] INFO  org.sparkproject.jetty.server.handler.ContextHandler [] - Started o.s.j.s.ServletContextHandler@4ab0beea{/executors,null,AVAILABLE,@Spark}
+2025-04-02T18:13:28,813 [Thread-4] INFO  org.sparkproject.jetty.server.handler.ContextHandler [] - Started o.s.j.s.ServletContextHandler@6765e27{/executors/json,null,AVAILABLE,@Spark}
+2025-04-02T18:13:28,814 [Thread-4] INFO  org.sparkproject.jetty.server.handler.ContextHandler [] - Started o.s.j.s.ServletContextHandler@29cf2b0b{/executors/threadDump,null,AVAILABLE,@Spark}
+2025-04-02T18:13:28,815 [Thread-4] INFO  org.sparkproject.jetty.server.handler.ContextHandler [] - Started o.s.j.s.ServletContextHandler@12d42261{/executors/threadDump/json,null,AVAILABLE,@Spark}
+2025-04-02T18:13:28,815 [Thread-4] INFO  org.sparkproject.jetty.server.handler.ContextHandler [] - Started o.s.j.s.ServletContextHandler@18f84a25{/executors/heapHistogram,null,AVAILABLE,@Spark}
+2025-04-02T18:13:28,816 [Thread-4] INFO  org.sparkproject.jetty.server.handler.ContextHandler [] - Started o.s.j.s.ServletContextHandler@334cdb3d{/executors/heapHistogram/json,null,AVAILABLE,@Spark}
+2025-04-02T18:13:28,820 [Thread-4] INFO  org.sparkproject.jetty.server.handler.ContextHandler [] - Started o.s.j.s.ServletContextHandler@5c0ff471{/static,null,AVAILABLE,@Spark}
+2025-04-02T18:13:28,821 [Thread-4] INFO  org.sparkproject.jetty.server.handler.ContextHandler [] - Started o.s.j.s.ServletContextHandler@3609ec7f{/,null,AVAILABLE,@Spark}
+2025-04-02T18:13:28,822 [Thread-4] INFO  org.sparkproject.jetty.server.handler.ContextHandler [] - Started o.s.j.s.ServletContextHandler@441c17e0{/api,null,AVAILABLE,@Spark}
+2025-04-02T18:13:28,824 [Thread-4] INFO  org.sparkproject.jetty.server.handler.ContextHandler [] - Started o.s.j.s.ServletContextHandler@44bc0e0d{/jobs/job/kill,null,AVAILABLE,@Spark}
+2025-04-02T18:13:28,824 [Thread-4] INFO  org.sparkproject.jetty.server.handler.ContextHandler [] - Started o.s.j.s.ServletContextHandler@5be72d3{/stages/stage/kill,null,AVAILABLE,@Spark}
+2025-04-02T18:13:28,828 [Thread-4] INFO  org.sparkproject.jetty.server.handler.ContextHandler [] - Started o.s.j.s.ServletContextHandler@178a0804{/metrics/json,null,AVAILABLE,@Spark}
+2025-04-02T18:13:28,829 [Thread-4] INFO  org.apache.spark.scheduler.cluster.StandaloneSchedulerBackend [] - SchedulerBackend is ready for scheduling beginning after reached minRegisteredResourcesRatio: 0.0
+2025-04-02T18:13:28,936 [Thread-4] INFO  org.apache.spark.sql.internal.SharedState [] - Setting hive.metastore.warehouse.dir ('null') to the value of spark.sql.warehouse.dir.
+2025-04-02T18:13:28,939 [Thread-4] INFO  org.apache.spark.sql.internal.SharedState [] - Warehouse path is 'file:/opt/bitnami/spark/spark-warehouse'.
+2025-04-02T18:13:28,953 [Thread-4] INFO  org.sparkproject.jetty.server.handler.ContextHandler [] - Started o.s.j.s.ServletContextHandler@45c3258d{/SQL,null,AVAILABLE,@Spark}
+2025-04-02T18:13:28,957 [Thread-4] INFO  org.sparkproject.jetty.server.handler.ContextHandler [] - Started o.s.j.s.ServletContextHandler@39d1f49f{/SQL/json,null,AVAILABLE,@Spark}
+2025-04-02T18:13:28,958 [Thread-4] INFO  org.sparkproject.jetty.server.handler.ContextHandler [] - Started o.s.j.s.ServletContextHandler@62801cba{/SQL/execution,null,AVAILABLE,@Spark}
+2025-04-02T18:13:28,962 [Thread-4] INFO  org.sparkproject.jetty.server.handler.ContextHandler [] - Started o.s.j.s.ServletContextHandler@3996c420{/SQL/execution/json,null,AVAILABLE,@Spark}
+2025-04-02T18:13:28,963 [Thread-4] INFO  org.sparkproject.jetty.server.handler.ContextHandler [] - Started o.s.j.s.ServletContextHandler@2ea2c1fa{/static/sql,null,AVAILABLE,@Spark}
+2025-04-02T18:13:29,226 [main] INFO  org.apache.spark.executor.CoarseGrainedExecutorBackend [] - Started daemon with process name: 534@44b70a14a7a1
+2025-04-02T18:13:29,231 [main] INFO  org.apache.spark.util.SignalUtils [] - Registering signal handler for TERM
+2025-04-02T18:13:29,232 [main] INFO  org.apache.spark.util.SignalUtils [] - Registering signal handler for HUP
+2025-04-02T18:13:29,232 [main] INFO  org.apache.spark.util.SignalUtils [] - Registering signal handler for INT
+2025-04-02T18:13:29,232 [main] INFO  org.apache.spark.executor.CoarseGrainedExecutorBackend [] - Started daemon with process name: 524@046119187e0d
+2025-04-02T18:13:29,237 [main] INFO  org.apache.spark.util.SignalUtils [] - Registering signal handler for TERM
+2025-04-02T18:13:29,238 [main] INFO  org.apache.spark.util.SignalUtils [] - Registering signal handler for HUP
+2025-04-02T18:13:29,238 [main] INFO  org.apache.spark.util.SignalUtils [] - Registering signal handler for INT
+2025-04-02T18:13:29,274 [main] INFO  org.apache.spark.executor.CoarseGrainedExecutorBackend [] - Started daemon with process name: 523@d332fd2e5338
+2025-04-02T18:13:29,279 [main] INFO  org.apache.spark.util.SignalUtils [] - Registering signal handler for TERM
+2025-04-02T18:13:29,279 [main] INFO  org.apache.spark.util.SignalUtils [] - Registering signal handler for HUP
+2025-04-02T18:13:29,280 [main] INFO  org.apache.spark.util.SignalUtils [] - Registering signal handler for INT
+2025-04-02T18:13:29,390 [main] WARN  org.apache.hadoop.util.NativeCodeLoader [] - Unable to load native-hadoop library for your platform... using builtin-java classes where applicable
+2025-04-02T18:13:29,404 [Thread-4] INFO  org.apache.spark.sql.execution.datasources.InMemoryFileIndex [] - It took 24 ms to list leaf files for 1 paths.
+2025-04-02T18:13:29,406 [main] WARN  org.apache.hadoop.util.NativeCodeLoader [] - Unable to load native-hadoop library for your platform... using builtin-java classes where applicable
+2025-04-02T18:13:29,434 [Thread-4] INFO  org.apache.spark.sql.execution.datasources.InMemoryFileIndex [] - It took 1 ms to list leaf files for 1 paths.
+2025-04-02T18:13:29,443 [main] INFO  org.apache.spark.SecurityManager [] - Changing view acls to: spark
+2025-04-02T18:13:29,444 [main] INFO  org.apache.spark.SecurityManager [] - Changing modify acls to: spark
+2025-04-02T18:13:29,446 [main] INFO  org.apache.spark.SecurityManager [] - Changing view acls groups to: 
+2025-04-02T18:13:29,447 [main] INFO  org.apache.spark.SecurityManager [] - Changing modify acls groups to: 
+2025-04-02T18:13:29,447 [main] INFO  org.apache.spark.SecurityManager [] - SecurityManager: authentication disabled; ui acls disabled; users with view permissions: spark; groups with view permissions: EMPTY; users with modify permissions: spark; groups with modify permissions: EMPTY
+2025-04-02T18:13:29,458 [main] WARN  org.apache.hadoop.util.NativeCodeLoader [] - Unable to load native-hadoop library for your platform... using builtin-java classes where applicable
+2025-04-02T18:13:29,471 [main] INFO  org.apache.spark.SecurityManager [] - Changing view acls to: spark
+2025-04-02T18:13:29,472 [main] INFO  org.apache.spark.SecurityManager [] - Changing modify acls to: spark
+2025-04-02T18:13:29,473 [main] INFO  org.apache.spark.SecurityManager [] - Changing view acls groups to: 
+2025-04-02T18:13:29,474 [main] INFO  org.apache.spark.SecurityManager [] - Changing modify acls groups to: 
+2025-04-02T18:13:29,474 [main] INFO  org.apache.spark.SecurityManager [] - SecurityManager: authentication disabled; ui acls disabled; users with view permissions: spark; groups with view permissions: EMPTY; users with modify permissions: spark; groups with modify permissions: EMPTY
+2025-04-02T18:13:29,509 [main] INFO  org.apache.spark.SecurityManager [] - Changing view acls to: spark
+2025-04-02T18:13:29,510 [main] INFO  org.apache.spark.SecurityManager [] - Changing modify acls to: spark
+2025-04-02T18:13:29,510 [main] INFO  org.apache.spark.SecurityManager [] - Changing view acls groups to: 
+2025-04-02T18:13:29,511 [main] INFO  org.apache.spark.SecurityManager [] - Changing modify acls groups to: 
+2025-04-02T18:13:29,511 [main] INFO  org.apache.spark.SecurityManager [] - SecurityManager: authentication disabled; ui acls disabled; users with view permissions: spark; groups with view permissions: EMPTY; users with modify permissions: spark; groups with modify permissions: EMPTY
+2025-04-02T18:13:29,615 [netty-rpc-connection-0] INFO  org.apache.spark.network.client.TransportClientFactory [] - Successfully created connection to eff501c685cd/172.18.0.2:45893 after 30 ms (0 ms spent in bootstraps)
+2025-04-02T18:13:29,635 [netty-rpc-connection-0] INFO  org.apache.spark.network.client.TransportClientFactory [] - Successfully created connection to eff501c685cd/172.18.0.2:45893 after 28 ms (0 ms spent in bootstraps)
+2025-04-02T18:13:29,651 [netty-rpc-connection-0] INFO  org.apache.spark.network.client.TransportClientFactory [] - Successfully created connection to eff501c685cd/172.18.0.2:45893 after 30 ms (0 ms spent in bootstraps)
+2025-04-02T18:13:29,663 [main] INFO  org.apache.spark.SecurityManager [] - Changing view acls to: spark
+2025-04-02T18:13:29,663 [main] INFO  org.apache.spark.SecurityManager [] - Changing modify acls to: spark
+2025-04-02T18:13:29,664 [main] INFO  org.apache.spark.SecurityManager [] - Changing view acls groups to: 
+2025-04-02T18:13:29,664 [main] INFO  org.apache.spark.SecurityManager [] - Changing modify acls groups to: 
+2025-04-02T18:13:29,664 [main] INFO  org.apache.spark.SecurityManager [] - SecurityManager: authentication disabled; ui acls disabled; users with view permissions: spark; groups with view permissions: EMPTY; users with modify permissions: spark; groups with modify permissions: EMPTY
+2025-04-02T18:13:29,690 [main] INFO  org.apache.spark.SecurityManager [] - Changing view acls to: spark
+2025-04-02T18:13:29,690 [main] INFO  org.apache.spark.SecurityManager [] - Changing modify acls to: spark
+2025-04-02T18:13:29,691 [main] INFO  org.apache.spark.SecurityManager [] - Changing view acls groups to: 
+2025-04-02T18:13:29,691 [main] INFO  org.apache.spark.SecurityManager [] - Changing modify acls groups to: 
+2025-04-02T18:13:29,691 [main] INFO  org.apache.spark.SecurityManager [] - SecurityManager: authentication disabled; ui acls disabled; users with view permissions: spark; groups with view permissions: EMPTY; users with modify permissions: spark; groups with modify permissions: EMPTY
+2025-04-02T18:13:29,701 [netty-rpc-connection-0] INFO  org.apache.spark.network.client.TransportClientFactory [] - Successfully created connection to eff501c685cd/172.18.0.2:45893 after 2 ms (0 ms spent in bootstraps)
+2025-04-02T18:13:29,704 [main] INFO  org.apache.spark.SecurityManager [] - Changing view acls to: spark
+2025-04-02T18:13:29,704 [main] INFO  org.apache.spark.SecurityManager [] - Changing modify acls to: spark
+2025-04-02T18:13:29,705 [main] INFO  org.apache.spark.SecurityManager [] - Changing view acls groups to: 
+2025-04-02T18:13:29,705 [main] INFO  org.apache.spark.SecurityManager [] - Changing modify acls groups to: 
+2025-04-02T18:13:29,705 [main] INFO  org.apache.spark.SecurityManager [] - SecurityManager: authentication disabled; ui acls disabled; users with view permissions: spark; groups with view permissions: EMPTY; users with modify permissions: spark; groups with modify permissions: EMPTY
+2025-04-02T18:13:29,724 [netty-rpc-connection-0] INFO  org.apache.spark.network.client.TransportClientFactory [] - Successfully created connection to eff501c685cd/172.18.0.2:45893 after 3 ms (0 ms spent in bootstraps)
+2025-04-02T18:13:29,735 [netty-rpc-connection-0] INFO  org.apache.spark.network.client.TransportClientFactory [] - Successfully created connection to eff501c685cd/172.18.0.2:45893 after 3 ms (0 ms spent in bootstraps)
+2025-04-02T18:13:29,747 [main] INFO  org.apache.spark.storage.DiskBlockManager [] - Created local directory at /tmp/spark-ff6e6ccd-2eba-41e9-9cb2-1191e12d2a96/executor-52eabd04-bba1-40d7-abe8-84044832c93a/blockmgr-912a21b5-53fb-48b0-b31e-6b0ebf81c1fd
+2025-04-02T18:13:29,765 [main] INFO  org.apache.spark.storage.memory.MemoryStore [] - MemoryStore started with capacity 434.4 MiB
+2025-04-02T18:13:29,770 [main] INFO  org.apache.spark.storage.DiskBlockManager [] - Created local directory at /tmp/spark-e157e6e8-8f40-4d96-851c-cefa427a2493/executor-2d87c1f3-a10f-439a-96a0-e386b529f5d5/blockmgr-079c7ad9-622f-4fa1-b0fd-c64a6951e80f
+2025-04-02T18:13:29,773 [main] INFO  org.apache.spark.storage.DiskBlockManager [] - Created local directory at /tmp/spark-cc0a9846-f448-4700-b9cc-18627fb6d92e/executor-634a2d60-e74e-40a6-948e-a56539d2f642/blockmgr-c92f5199-fd57-486e-a5ca-f86e673ad4b3
+2025-04-02T18:13:29,787 [main] INFO  org.apache.spark.storage.memory.MemoryStore [] - MemoryStore started with capacity 434.4 MiB
+2025-04-02T18:13:29,791 [main] INFO  org.apache.spark.storage.memory.MemoryStore [] - MemoryStore started with capacity 434.4 MiB
+2025-04-02T18:13:29,851 [dispatcher-Executor] INFO  org.apache.spark.executor.CoarseGrainedExecutorBackend [] - Connecting to driver: spark://CoarseGrainedScheduler@eff501c685cd:45893
+2025-04-02T18:13:29,851 [main] INFO  org.apache.spark.deploy.worker.WorkerWatcher [] - Connecting to worker spark://Worker@172.18.0.3:35613
+2025-04-02T18:13:29,857 [dispatcher-Executor] INFO  org.apache.spark.resource.ResourceUtils [] - ==============================================================
+2025-04-02T18:13:29,858 [dispatcher-Executor] INFO  org.apache.spark.resource.ResourceUtils [] - No custom resources configured for spark.executor.
+2025-04-02T18:13:29,859 [dispatcher-Executor] INFO  org.apache.spark.resource.ResourceUtils [] - ==============================================================
+2025-04-02T18:13:29,860 [netty-rpc-connection-1] INFO  org.apache.spark.network.client.TransportClientFactory [] - Successfully created connection to /172.18.0.3:35613 after 2 ms (0 ms spent in bootstraps)
+2025-04-02T18:13:29,861 [dispatcher-event-loop-0] INFO  org.apache.spark.deploy.worker.WorkerWatcher [] - Successfully connected to spark://Worker@172.18.0.3:35613
+2025-04-02T18:13:29,875 [dispatcher-Executor] INFO  org.apache.spark.executor.CoarseGrainedExecutorBackend [] - Connecting to driver: spark://CoarseGrainedScheduler@eff501c685cd:45893
+2025-04-02T18:13:29,875 [main] INFO  org.apache.spark.deploy.worker.WorkerWatcher [] - Connecting to worker spark://Worker@172.18.0.4:37899
+2025-04-02T18:13:29,877 [dispatcher-CoarseGrainedScheduler] INFO  org.apache.spark.scheduler.cluster.StandaloneSchedulerBackend$StandaloneDriverEndpoint [] - Registered executor NettyRpcEndpointRef(spark-client://Executor) (172.18.0.3:45966) with ID 2,  ResourceProfileId 0
+2025-04-02T18:13:29,878 [main] INFO  org.apache.spark.deploy.worker.WorkerWatcher [] - Connecting to worker spark://Worker@172.18.0.5:45421
+2025-04-02T18:13:29,878 [dispatcher-Executor] INFO  org.apache.spark.executor.CoarseGrainedExecutorBackend [] - Connecting to driver: spark://CoarseGrainedScheduler@eff501c685cd:45893
+2025-04-02T18:13:29,879 [netty-rpc-connection-1] INFO  org.apache.spark.network.client.TransportClientFactory [] - Successfully created connection to /172.18.0.4:37899 after 1 ms (0 ms spent in bootstraps)
+2025-04-02T18:13:29,883 [dispatcher-Executor] INFO  org.apache.spark.resource.ResourceUtils [] - ==============================================================
+2025-04-02T18:13:29,883 [dispatcher-event-loop-1] INFO  org.apache.spark.deploy.worker.WorkerWatcher [] - Successfully connected to spark://Worker@172.18.0.4:37899
+2025-04-02T18:13:29,883 [dispatcher-Executor] INFO  org.apache.spark.resource.ResourceUtils [] - No custom resources configured for spark.executor.
+2025-04-02T18:13:29,884 [dispatcher-event-loop-0] INFO  org.apache.spark.deploy.worker.WorkerWatcher [] - Successfully connected to spark://Worker@172.18.0.5:45421
+2025-04-02T18:13:29,884 [netty-rpc-connection-1] INFO  org.apache.spark.network.client.TransportClientFactory [] - Successfully created connection to /172.18.0.5:45421 after 2 ms (0 ms spent in bootstraps)
+2025-04-02T18:13:29,886 [dispatcher-Executor] INFO  org.apache.spark.resource.ResourceUtils [] - ==============================================================
+2025-04-02T18:13:29,884 [dispatcher-Executor] INFO  org.apache.spark.resource.ResourceUtils [] - ==============================================================
+2025-04-02T18:13:29,886 [dispatcher-Executor] INFO  org.apache.spark.executor.CoarseGrainedExecutorBackend [] - Successfully registered with driver
+2025-04-02T18:13:29,886 [dispatcher-Executor] INFO  org.apache.spark.resource.ResourceUtils [] - No custom resources configured for spark.executor.
+2025-04-02T18:13:29,887 [dispatcher-Executor] INFO  org.apache.spark.resource.ResourceUtils [] - ==============================================================
+2025-04-02T18:13:29,888 [dispatcher-Executor] INFO  org.apache.spark.executor.Executor [] - Starting executor ID 2 on host 172.18.0.3
+2025-04-02T18:13:29,889 [dispatcher-Executor] INFO  org.apache.spark.executor.Executor [] - OS info Linux, 6.10.14-linuxkit, aarch64
+2025-04-02T18:13:29,890 [dispatcher-Executor] INFO  org.apache.spark.executor.Executor [] - Java version 17.0.14
+2025-04-02T18:13:29,897 [dispatcher-CoarseGrainedScheduler] INFO  org.apache.spark.scheduler.cluster.StandaloneSchedulerBackend$StandaloneDriverEndpoint [] - Registered executor NettyRpcEndpointRef(spark-client://Executor) (172.18.0.4:51280) with ID 0,  ResourceProfileId 0
+2025-04-02T18:13:29,901 [dispatcher-CoarseGrainedScheduler] INFO  org.apache.spark.scheduler.cluster.StandaloneSchedulerBackend$StandaloneDriverEndpoint [] - Registered executor NettyRpcEndpointRef(spark-client://Executor) (172.18.0.5:60012) with ID 1,  ResourceProfileId 0
+2025-04-02T18:13:29,901 [dispatcher-Executor] INFO  org.apache.spark.executor.CoarseGrainedExecutorBackend [] - Successfully registered with driver
+2025-04-02T18:13:29,903 [dispatcher-Executor] INFO  org.apache.spark.executor.Executor [] - Starting executor ID 0 on host 172.18.0.4
+2025-04-02T18:13:29,904 [dispatcher-Executor] INFO  org.apache.spark.executor.Executor [] - OS info Linux, 6.10.14-linuxkit, aarch64
+2025-04-02T18:13:29,904 [dispatcher-Executor] INFO  org.apache.spark.executor.CoarseGrainedExecutorBackend [] - Successfully registered with driver
+2025-04-02T18:13:29,904 [dispatcher-Executor] INFO  org.apache.spark.executor.Executor [] - Java version 17.0.14
+2025-04-02T18:13:29,906 [dispatcher-Executor] INFO  org.apache.spark.executor.Executor [] - Starting executor ID 1 on host 172.18.0.5
+2025-04-02T18:13:29,906 [dispatcher-Executor] INFO  org.apache.spark.executor.Executor [] - OS info Linux, 6.10.14-linuxkit, aarch64
+2025-04-02T18:13:29,907 [dispatcher-Executor] INFO  org.apache.spark.executor.Executor [] - Java version 17.0.14
+2025-04-02T18:13:29,911 [dispatcher-Executor] INFO  org.apache.spark.util.Utils [] - Successfully started service 'org.apache.spark.network.netty.NettyBlockTransferService' on port 33439.
+2025-04-02T18:13:29,913 [dispatcher-Executor] INFO  org.apache.spark.network.netty.NettyBlockTransferService [] - Server created on 172.18.0.3:33439
+2025-04-02T18:13:29,914 [dispatcher-Executor] INFO  org.apache.spark.storage.BlockManager [] - Using org.apache.spark.storage.RandomBlockReplicationPolicy for block replication policy
+2025-04-02T18:13:29,917 [dispatcher-Executor] INFO  org.apache.spark.storage.BlockManagerMaster [] - Registering BlockManager BlockManagerId(2, 172.18.0.3, 33439, None)
+2025-04-02T18:13:29,925 [dispatcher-BlockManagerMaster] INFO  org.apache.spark.storage.BlockManagerMasterEndpoint [] - Registering block manager 172.18.0.3:33439 with 434.4 MiB RAM, BlockManagerId(2, 172.18.0.3, 33439, None)
+2025-04-02T18:13:29,928 [dispatcher-Executor] INFO  org.apache.spark.storage.BlockManagerMaster [] - Registered BlockManager BlockManagerId(2, 172.18.0.3, 33439, None)
+2025-04-02T18:13:29,929 [dispatcher-Executor] INFO  org.apache.spark.util.Utils [] - Successfully started service 'org.apache.spark.network.netty.NettyBlockTransferService' on port 35731.
+2025-04-02T18:13:29,929 [dispatcher-Executor] INFO  org.apache.spark.storage.BlockManager [] - Initialized BlockManager: BlockManagerId(2, 172.18.0.3, 33439, None)
+2025-04-02T18:13:29,929 [dispatcher-Executor] INFO  org.apache.spark.network.netty.NettyBlockTransferService [] - Server created on 172.18.0.4:35731
+2025-04-02T18:13:29,930 [dispatcher-Executor] INFO  org.apache.spark.util.Utils [] - Successfully started service 'org.apache.spark.network.netty.NettyBlockTransferService' on port 44275.
+2025-04-02T18:13:29,931 [dispatcher-Executor] INFO  org.apache.spark.storage.BlockManager [] - Using org.apache.spark.storage.RandomBlockReplicationPolicy for block replication policy
+2025-04-02T18:13:29,931 [dispatcher-Executor] INFO  org.apache.spark.network.netty.NettyBlockTransferService [] - Server created on 172.18.0.5:44275
+2025-04-02T18:13:29,932 [dispatcher-Executor] INFO  org.apache.spark.storage.BlockManager [] - Using org.apache.spark.storage.RandomBlockReplicationPolicy for block replication policy
+2025-04-02T18:13:29,934 [dispatcher-Executor] INFO  org.apache.spark.executor.Executor [] - Starting executor with user classpath (userClassPathFirst = false): ''
+2025-04-02T18:13:29,934 [dispatcher-Executor] INFO  org.apache.spark.storage.BlockManagerMaster [] - Registering BlockManager BlockManagerId(0, 172.18.0.4, 35731, None)
+2025-04-02T18:13:29,934 [dispatcher-Executor] INFO  org.apache.spark.executor.Executor [] - Created or updated repl class loader org.apache.spark.util.MutableURLClassLoader@6b23ed6d for default.
+2025-04-02T18:13:29,936 [dispatcher-Executor] INFO  org.apache.spark.storage.BlockManagerMaster [] - Registering BlockManager BlockManagerId(1, 172.18.0.5, 44275, None)
+2025-04-02T18:13:29,938 [dispatcher-BlockManagerMaster] INFO  org.apache.spark.storage.BlockManagerMasterEndpoint [] - Registering block manager 172.18.0.4:35731 with 434.4 MiB RAM, BlockManagerId(0, 172.18.0.4, 35731, None)
+2025-04-02T18:13:29,940 [dispatcher-BlockManagerMaster] INFO  org.apache.spark.storage.BlockManagerMasterEndpoint [] - Registering block manager 172.18.0.5:44275 with 434.4 MiB RAM, BlockManagerId(1, 172.18.0.5, 44275, None)
+2025-04-02T18:13:29,942 [dispatcher-Executor] INFO  org.apache.spark.storage.BlockManagerMaster [] - Registered BlockManager BlockManagerId(0, 172.18.0.4, 35731, None)
+2025-04-02T18:13:29,943 [dispatcher-Executor] INFO  org.apache.spark.storage.BlockManagerMaster [] - Registered BlockManager BlockManagerId(1, 172.18.0.5, 44275, None)
+2025-04-02T18:13:29,943 [dispatcher-Executor] INFO  org.apache.spark.storage.BlockManager [] - Initialized BlockManager: BlockManagerId(0, 172.18.0.4, 35731, None)
+2025-04-02T18:13:29,944 [dispatcher-Executor] INFO  org.apache.spark.storage.BlockManager [] - Initialized BlockManager: BlockManagerId(1, 172.18.0.5, 44275, None)
+2025-04-02T18:13:29,949 [dispatcher-Executor] INFO  org.apache.spark.executor.Executor [] - Starting executor with user classpath (userClassPathFirst = false): ''
+2025-04-02T18:13:29,949 [dispatcher-Executor] INFO  org.apache.spark.executor.Executor [] - Starting executor with user classpath (userClassPathFirst = false): ''
+2025-04-02T18:13:29,950 [dispatcher-Executor] INFO  org.apache.spark.executor.Executor [] - Created or updated repl class loader org.apache.spark.util.MutableURLClassLoader@7d829763 for default.
+2025-04-02T18:13:29,950 [dispatcher-Executor] INFO  org.apache.spark.executor.Executor [] - Created or updated repl class loader org.apache.spark.util.MutableURLClassLoader@5ea4d5e4 for default.
+2025-04-02T18:13:30,385 [Thread-4] INFO  org.apache.spark.sql.execution.datasources.FileSourceStrategy [] - Pushed Filters: 
+2025-04-02T18:13:30,386 [Thread-4] INFO  org.apache.spark.sql.execution.datasources.FileSourceStrategy [] - Post-Scan Filters: 
+2025-04-02T18:13:30,455 [Thread-4] INFO  org.apache.spark.storage.memory.MemoryStore [] - Block broadcast_0 stored as values in memory (estimated size 200.2 KiB, free 434.2 MiB)
+2025-04-02T18:13:30,479 [Thread-4] INFO  org.apache.spark.storage.memory.MemoryStore [] - Block broadcast_0_piece0 stored as bytes in memory (estimated size 34.5 KiB, free 434.2 MiB)
+2025-04-02T18:13:30,481 [dispatcher-BlockManagerMaster] INFO  org.apache.spark.storage.BlockManagerInfo [] - Added broadcast_0_piece0 in memory on eff501c685cd:35837 (size: 34.5 KiB, free: 434.4 MiB)
+2025-04-02T18:13:30,483 [Thread-4] INFO  org.apache.spark.SparkContext [] - Created broadcast 0 from json at <unknown>:0
+2025-04-02T18:13:30,488 [Thread-4] INFO  org.apache.spark.sql.execution.FileSourceScanExec [] - Planning scan with bin packing, max size: 4194304 bytes, open cost is considered as scanning 4194304 bytes.
+2025-04-02T18:13:30,545 [Thread-4] INFO  org.apache.spark.SparkContext [] - Starting job: json at <unknown>:0
+2025-04-02T18:13:30,554 [dag-scheduler-event-loop] INFO  org.apache.spark.scheduler.DAGScheduler [] - Got job 0 (json at <unknown>:0) with 1 output partitions
+2025-04-02T18:13:30,555 [dag-scheduler-event-loop] INFO  org.apache.spark.scheduler.DAGScheduler [] - Final stage: ResultStage 0 (json at <unknown>:0)
+2025-04-02T18:13:30,555 [dag-scheduler-event-loop] INFO  org.apache.spark.scheduler.DAGScheduler [] - Parents of final stage: List()
+2025-04-02T18:13:30,556 [dag-scheduler-event-loop] INFO  org.apache.spark.scheduler.DAGScheduler [] - Missing parents: List()
+2025-04-02T18:13:30,558 [dag-scheduler-event-loop] INFO  org.apache.spark.scheduler.DAGScheduler [] - Submitting ResultStage 0 (MapPartitionsRDD[3] at json at <unknown>:0), which has no missing parents
+2025-04-02T18:13:30,592 [dag-scheduler-event-loop] INFO  org.apache.spark.storage.memory.MemoryStore [] - Block broadcast_1 stored as values in memory (estimated size 16.5 KiB, free 434.2 MiB)
+2025-04-02T18:13:30,594 [dag-scheduler-event-loop] INFO  org.apache.spark.storage.memory.MemoryStore [] - Block broadcast_1_piece0 stored as bytes in memory (estimated size 7.7 KiB, free 434.1 MiB)
+2025-04-02T18:13:30,595 [dispatcher-BlockManagerMaster] INFO  org.apache.spark.storage.BlockManagerInfo [] - Added broadcast_1_piece0 in memory on eff501c685cd:35837 (size: 7.7 KiB, free: 434.4 MiB)
+2025-04-02T18:13:30,595 [dag-scheduler-event-loop] INFO  org.apache.spark.SparkContext [] - Created broadcast 1 from broadcast at DAGScheduler.scala:1585
+2025-04-02T18:13:30,602 [dag-scheduler-event-loop] INFO  org.apache.spark.scheduler.DAGScheduler [] - Submitting 1 missing tasks from ResultStage 0 (MapPartitionsRDD[3] at json at <unknown>:0) (first 15 tasks are for partitions Vector(0))
+2025-04-02T18:13:30,603 [dag-scheduler-event-loop] INFO  org.apache.spark.scheduler.TaskSchedulerImpl [] - Adding task set 0.0 with 1 tasks resource profile 0
+2025-04-02T18:13:30,614 [dispatcher-CoarseGrainedScheduler] INFO  org.apache.spark.scheduler.TaskSetManager [] - Starting task 0.0 in stage 0.0 (TID 0) (172.18.0.3, executor 2, partition 0, PROCESS_LOCAL, 9610 bytes) 
+2025-04-02T18:13:30,624 [dispatcher-Executor] INFO  org.apache.spark.executor.CoarseGrainedExecutorBackend [] - Got assigned task 0
+2025-04-02T18:13:30,628 [Executor task launch worker for task 0.0 in stage 0.0 (TID 0)] INFO  org.apache.spark.executor.Executor [] - Running task 0.0 in stage 0.0 (TID 0)
+2025-04-02T18:13:30,666 [Executor task launch worker for task 0.0 in stage 0.0 (TID 0)] INFO  org.apache.spark.broadcast.TorrentBroadcast [] - Started reading broadcast variable 1 with 1 pieces (estimated total size 4.0 MiB)
+2025-04-02T18:13:30,685 [Executor task launch worker for task 0.0 in stage 0.0 (TID 0)] INFO  org.apache.spark.network.client.TransportClientFactory [] - Successfully created connection to eff501c685cd/172.18.0.2:35837 after 1 ms (0 ms spent in bootstraps)
+2025-04-02T18:13:30,704 [Executor task launch worker for task 0.0 in stage 0.0 (TID 0)] INFO  org.apache.spark.storage.memory.MemoryStore [] - Block broadcast_1_piece0 stored as bytes in memory (estimated size 7.7 KiB, free 434.4 MiB)
+2025-04-02T18:13:30,707 [dispatcher-BlockManagerMaster] INFO  org.apache.spark.storage.BlockManagerInfo [] - Added broadcast_1_piece0 in memory on 172.18.0.3:33439 (size: 7.7 KiB, free: 434.4 MiB)
+2025-04-02T18:13:30,708 [Executor task launch worker for task 0.0 in stage 0.0 (TID 0)] INFO  org.apache.spark.broadcast.TorrentBroadcast [] - Reading broadcast variable 1 took 42 ms
+2025-04-02T18:13:30,736 [Executor task launch worker for task 0.0 in stage 0.0 (TID 0)] INFO  org.apache.spark.storage.memory.MemoryStore [] - Block broadcast_1 stored as values in memory (estimated size 16.5 KiB, free 434.4 MiB)
+2025-04-02T18:13:30,870 [Executor task launch worker for task 0.0 in stage 0.0 (TID 0)] INFO  org.apache.spark.sql.execution.datasources.FileScanRDD [] - Reading File path: file:///opt/bitnami/spark/storage/users.json, range: 0-330, partition values: [empty row]
+2025-04-02T18:13:30,992 [Executor task launch worker for task 0.0 in stage 0.0 (TID 0)] INFO  org.apache.spark.sql.catalyst.expressions.codegen.CodeGenerator [] - Code generated in 73.107208 ms
+2025-04-02T18:13:30,993 [Executor task launch worker for task 0.0 in stage 0.0 (TID 0)] INFO  org.apache.spark.broadcast.TorrentBroadcast [] - Started reading broadcast variable 0 with 1 pieces (estimated total size 4.0 MiB)
+2025-04-02T18:13:30,998 [Executor task launch worker for task 0.0 in stage 0.0 (TID 0)] INFO  org.apache.spark.storage.memory.MemoryStore [] - Block broadcast_0_piece0 stored as bytes in memory (estimated size 34.5 KiB, free 434.3 MiB)
+2025-04-02T18:13:30,999 [dispatcher-BlockManagerMaster] INFO  org.apache.spark.storage.BlockManagerInfo [] - Added broadcast_0_piece0 in memory on 172.18.0.3:33439 (size: 34.5 KiB, free: 434.4 MiB)
+2025-04-02T18:13:31,000 [Executor task launch worker for task 0.0 in stage 0.0 (TID 0)] INFO  org.apache.spark.broadcast.TorrentBroadcast [] - Reading broadcast variable 0 took 6 ms
+2025-04-02T18:13:31,028 [Executor task launch worker for task 0.0 in stage 0.0 (TID 0)] INFO  org.apache.spark.storage.memory.MemoryStore [] - Block broadcast_0 stored as values in memory (estimated size 377.3 KiB, free 434.0 MiB)
+2025-04-02T18:13:31,103 [Executor task launch worker for task 0.0 in stage 0.0 (TID 0)] INFO  org.apache.spark.executor.Executor [] - Finished task 0.0 in stage 0.0 (TID 0). 2292 bytes result sent to driver
+2025-04-02T18:13:31,111 [task-result-getter-0] INFO  org.apache.spark.scheduler.TaskSetManager [] - Finished task 0.0 in stage 0.0 (TID 0) in 500 ms on 172.18.0.3 (executor 2) (1/1)
+2025-04-02T18:13:31,112 [task-result-getter-0] INFO  org.apache.spark.scheduler.TaskSchedulerImpl [] - Removed TaskSet 0.0, whose tasks have all completed, from pool 
+2025-04-02T18:13:31,115 [dag-scheduler-event-loop] INFO  org.apache.spark.scheduler.DAGScheduler [] - ResultStage 0 (json at <unknown>:0) finished in 0.550 s
+2025-04-02T18:13:31,117 [dag-scheduler-event-loop] INFO  org.apache.spark.scheduler.DAGScheduler [] - Job 0 is finished. Cancelling potential speculative or zombie tasks for this job
+2025-04-02T18:13:31,117 [dag-scheduler-event-loop] INFO  org.apache.spark.scheduler.TaskSchedulerImpl [] - Killing all running tasks in stage 0: Stage finished
+2025-04-02T18:13:31,118 [Thread-4] INFO  org.apache.spark.scheduler.DAGScheduler [] - Job 0 finished: json at <unknown>:0, took 0.573311 s
+2025-04-02T18:13:31,150 [dispatcher-BlockManagerMaster] INFO  org.apache.spark.storage.BlockManagerInfo [] - Removed broadcast_0_piece0 on eff501c685cd:35837 in memory (size: 34.5 KiB, free: 434.4 MiB)
+2025-04-02T18:13:31,152 [dispatcher-BlockManagerMaster] INFO  org.apache.spark.storage.BlockManagerInfo [] - Removed broadcast_0_piece0 on 172.18.0.3:33439 in memory (size: 34.5 KiB, free: 434.4 MiB)
+2025-04-02T18:13:31,160 [dispatcher-BlockManagerMaster] INFO  org.apache.spark.storage.BlockManagerInfo [] - Removed broadcast_1_piece0 on eff501c685cd:35837 in memory (size: 7.7 KiB, free: 434.4 MiB)
+2025-04-02T18:13:31,162 [dispatcher-BlockManagerMaster] INFO  org.apache.spark.storage.BlockManagerInfo [] - Removed broadcast_1_piece0 on 172.18.0.3:33439 in memory (size: 7.7 KiB, free: 434.4 MiB)
+2025-04-02T18:13:31,195 [Thread-4] INFO  org.apache.spark.sql.execution.datasources.FileSourceStrategy [] - Pushed Filters: 
+2025-04-02T18:13:31,195 [Thread-4] INFO  org.apache.spark.sql.execution.datasources.FileSourceStrategy [] - Post-Scan Filters: 
+2025-04-02T18:13:31,347 [Thread-4] INFO  org.apache.spark.sql.catalyst.expressions.codegen.CodeGenerator [] - Code generated in 80.463209 ms
+2025-04-02T18:13:31,350 [Thread-4] INFO  org.apache.spark.storage.memory.MemoryStore [] - Block broadcast_2 stored as values in memory (estimated size 200.1 KiB, free 434.2 MiB)
+2025-04-02T18:13:31,354 [Thread-4] INFO  org.apache.spark.storage.memory.MemoryStore [] - Block broadcast_2_piece0 stored as bytes in memory (estimated size 34.5 KiB, free 434.2 MiB)
+2025-04-02T18:13:31,355 [dispatcher-BlockManagerMaster] INFO  org.apache.spark.storage.BlockManagerInfo [] - Added broadcast_2_piece0 in memory on eff501c685cd:35837 (size: 34.5 KiB, free: 434.4 MiB)
+2025-04-02T18:13:31,356 [Thread-4] INFO  org.apache.spark.SparkContext [] - Created broadcast 2 from count at <unknown>:0
+2025-04-02T18:13:31,357 [Thread-4] INFO  org.apache.spark.sql.execution.FileSourceScanExec [] - Planning scan with bin packing, max size: 4194304 bytes, open cost is considered as scanning 4194304 bytes.
+2025-04-02T18:13:31,371 [dag-scheduler-event-loop] INFO  org.apache.spark.scheduler.DAGScheduler [] - Registering RDD 7 (count at <unknown>:0) as input to shuffle 0
+2025-04-02T18:13:31,373 [dag-scheduler-event-loop] INFO  org.apache.spark.scheduler.DAGScheduler [] - Got map stage job 1 (count at <unknown>:0) with 1 output partitions
+2025-04-02T18:13:31,374 [dag-scheduler-event-loop] INFO  org.apache.spark.scheduler.DAGScheduler [] - Final stage: ShuffleMapStage 1 (count at <unknown>:0)
+2025-04-02T18:13:31,374 [dag-scheduler-event-loop] INFO  org.apache.spark.scheduler.DAGScheduler [] - Parents of final stage: List()
+2025-04-02T18:13:31,375 [dag-scheduler-event-loop] INFO  org.apache.spark.scheduler.DAGScheduler [] - Missing parents: List()
+2025-04-02T18:13:31,376 [dag-scheduler-event-loop] INFO  org.apache.spark.scheduler.DAGScheduler [] - Submitting ShuffleMapStage 1 (MapPartitionsRDD[7] at count at <unknown>:0), which has no missing parents
+2025-04-02T18:13:31,383 [dag-scheduler-event-loop] INFO  org.apache.spark.storage.memory.MemoryStore [] - Block broadcast_3 stored as values in memory (estimated size 17.0 KiB, free 434.2 MiB)
+2025-04-02T18:13:31,384 [dag-scheduler-event-loop] INFO  org.apache.spark.storage.memory.MemoryStore [] - Block broadcast_3_piece0 stored as bytes in memory (estimated size 8.3 KiB, free 434.1 MiB)
+2025-04-02T18:13:31,385 [dispatcher-BlockManagerMaster] INFO  org.apache.spark.storage.BlockManagerInfo [] - Added broadcast_3_piece0 in memory on eff501c685cd:35837 (size: 8.3 KiB, free: 434.4 MiB)
+2025-04-02T18:13:31,385 [dag-scheduler-event-loop] INFO  org.apache.spark.SparkContext [] - Created broadcast 3 from broadcast at DAGScheduler.scala:1585
+2025-04-02T18:13:31,386 [dag-scheduler-event-loop] INFO  org.apache.spark.scheduler.DAGScheduler [] - Submitting 1 missing tasks from ShuffleMapStage 1 (MapPartitionsRDD[7] at count at <unknown>:0) (first 15 tasks are for partitions Vector(0))
+2025-04-02T18:13:31,387 [dag-scheduler-event-loop] INFO  org.apache.spark.scheduler.TaskSchedulerImpl [] - Adding task set 1.0 with 1 tasks resource profile 0
+2025-04-02T18:13:31,388 [dispatcher-CoarseGrainedScheduler] INFO  org.apache.spark.scheduler.TaskSetManager [] - Starting task 0.0 in stage 1.0 (TID 1) (172.18.0.3, executor 2, partition 0, PROCESS_LOCAL, 9599 bytes) 
+2025-04-02T18:13:31,390 [dispatcher-Executor] INFO  org.apache.spark.executor.CoarseGrainedExecutorBackend [] - Got assigned task 1
+2025-04-02T18:13:31,390 [Executor task launch worker for task 0.0 in stage 1.0 (TID 1)] INFO  org.apache.spark.executor.Executor [] - Running task 0.0 in stage 1.0 (TID 1)
+2025-04-02T18:13:31,398 [Executor task launch worker for task 0.0 in stage 1.0 (TID 1)] INFO  org.apache.spark.broadcast.TorrentBroadcast [] - Started reading broadcast variable 3 with 1 pieces (estimated total size 4.0 MiB)
+2025-04-02T18:13:31,402 [Executor task launch worker for task 0.0 in stage 1.0 (TID 1)] INFO  org.apache.spark.storage.memory.MemoryStore [] - Block broadcast_3_piece0 stored as bytes in memory (estimated size 8.3 KiB, free 434.4 MiB)
+2025-04-02T18:13:31,404 [dispatcher-BlockManagerMaster] INFO  org.apache.spark.storage.BlockManagerInfo [] - Added broadcast_3_piece0 in memory on 172.18.0.3:33439 (size: 8.3 KiB, free: 434.4 MiB)
+2025-04-02T18:13:31,405 [Executor task launch worker for task 0.0 in stage 1.0 (TID 1)] INFO  org.apache.spark.broadcast.TorrentBroadcast [] - Reading broadcast variable 3 took 5 ms
+2025-04-02T18:13:31,405 [Executor task launch worker for task 0.0 in stage 1.0 (TID 1)] INFO  org.apache.spark.storage.memory.MemoryStore [] - Block broadcast_3 stored as values in memory (estimated size 17.0 KiB, free 434.4 MiB)
+2025-04-02T18:13:31,446 [Executor task launch worker for task 0.0 in stage 1.0 (TID 1)] INFO  org.apache.spark.sql.catalyst.expressions.codegen.CodeGenerator [] - Code generated in 11.376208 ms
+2025-04-02T18:13:31,451 [Executor task launch worker for task 0.0 in stage 1.0 (TID 1)] INFO  org.apache.spark.sql.execution.datasources.FileScanRDD [] - Reading File path: file:///opt/bitnami/spark/storage/users.json, range: 0-330, partition values: [empty row]
+2025-04-02T18:13:31,456 [Executor task launch worker for task 0.0 in stage 1.0 (TID 1)] INFO  org.apache.spark.sql.catalyst.expressions.codegen.CodeGenerator [] - Code generated in 3.911333 ms
+2025-04-02T18:13:31,462 [Executor task launch worker for task 0.0 in stage 1.0 (TID 1)] INFO  org.apache.spark.broadcast.TorrentBroadcast [] - Started reading broadcast variable 2 with 1 pieces (estimated total size 4.0 MiB)
+2025-04-02T18:13:31,466 [Executor task launch worker for task 0.0 in stage 1.0 (TID 1)] INFO  org.apache.spark.storage.memory.MemoryStore [] - Block broadcast_2_piece0 stored as bytes in memory (estimated size 34.5 KiB, free 434.3 MiB)
+2025-04-02T18:13:31,468 [dispatcher-BlockManagerMaster] INFO  org.apache.spark.storage.BlockManagerInfo [] - Added broadcast_2_piece0 in memory on 172.18.0.3:33439 (size: 34.5 KiB, free: 434.4 MiB)
+2025-04-02T18:13:31,469 [Executor task launch worker for task 0.0 in stage 1.0 (TID 1)] INFO  org.apache.spark.broadcast.TorrentBroadcast [] - Reading broadcast variable 2 took 6 ms
+2025-04-02T18:13:31,473 [Executor task launch worker for task 0.0 in stage 1.0 (TID 1)] INFO  org.apache.spark.storage.memory.MemoryStore [] - Block broadcast_2 stored as values in memory (estimated size 377.3 KiB, free 434.0 MiB)
+2025-04-02T18:13:31,497 [Executor task launch worker for task 0.0 in stage 1.0 (TID 1)] INFO  org.apache.spark.executor.Executor [] - Finished task 0.0 in stage 1.0 (TID 1). 1964 bytes result sent to driver
+2025-04-02T18:13:31,502 [task-result-getter-1] INFO  org.apache.spark.scheduler.TaskSetManager [] - Finished task 0.0 in stage 1.0 (TID 1) in 114 ms on 172.18.0.3 (executor 2) (1/1)
+2025-04-02T18:13:31,502 [task-result-getter-1] INFO  org.apache.spark.scheduler.TaskSchedulerImpl [] - Removed TaskSet 1.0, whose tasks have all completed, from pool 
+2025-04-02T18:13:31,503 [dag-scheduler-event-loop] INFO  org.apache.spark.scheduler.DAGScheduler [] - ShuffleMapStage 1 (count at <unknown>:0) finished in 0.126 s
+2025-04-02T18:13:31,504 [dag-scheduler-event-loop] INFO  org.apache.spark.scheduler.DAGScheduler [] - looking for newly runnable stages
+2025-04-02T18:13:31,504 [dag-scheduler-event-loop] INFO  org.apache.spark.scheduler.DAGScheduler [] - running: Set()
+2025-04-02T18:13:31,504 [dag-scheduler-event-loop] INFO  org.apache.spark.scheduler.DAGScheduler [] - waiting: Set()
+2025-04-02T18:13:31,504 [dag-scheduler-event-loop] INFO  org.apache.spark.scheduler.DAGScheduler [] - failed: Set()
+2025-04-02T18:13:31,528 [Thread-4] INFO  org.apache.spark.sql.catalyst.expressions.codegen.CodeGenerator [] - Code generated in 8.219042 ms
+2025-04-02T18:13:31,539 [Thread-4] INFO  org.apache.spark.SparkContext [] - Starting job: count at <unknown>:0
+2025-04-02T18:13:31,541 [dag-scheduler-event-loop] INFO  org.apache.spark.scheduler.DAGScheduler [] - Got job 2 (count at <unknown>:0) with 1 output partitions
+2025-04-02T18:13:31,541 [dag-scheduler-event-loop] INFO  org.apache.spark.scheduler.DAGScheduler [] - Final stage: ResultStage 3 (count at <unknown>:0)
+2025-04-02T18:13:31,541 [dag-scheduler-event-loop] INFO  org.apache.spark.scheduler.DAGScheduler [] - Parents of final stage: List(ShuffleMapStage 2)
+2025-04-02T18:13:31,541 [dag-scheduler-event-loop] INFO  org.apache.spark.scheduler.DAGScheduler [] - Missing parents: List()
+2025-04-02T18:13:31,542 [dag-scheduler-event-loop] INFO  org.apache.spark.scheduler.DAGScheduler [] - Submitting ResultStage 3 (MapPartitionsRDD[10] at count at <unknown>:0), which has no missing parents
+2025-04-02T18:13:31,547 [dag-scheduler-event-loop] INFO  org.apache.spark.storage.memory.MemoryStore [] - Block broadcast_4 stored as values in memory (estimated size 12.5 KiB, free 434.1 MiB)
+2025-04-02T18:13:31,552 [dag-scheduler-event-loop] INFO  org.apache.spark.storage.memory.MemoryStore [] - Block broadcast_4_piece0 stored as bytes in memory (estimated size 6.0 KiB, free 434.1 MiB)
+2025-04-02T18:13:31,553 [dispatcher-BlockManagerMaster] INFO  org.apache.spark.storage.BlockManagerInfo [] - Added broadcast_4_piece0 in memory on eff501c685cd:35837 (size: 6.0 KiB, free: 434.4 MiB)
+2025-04-02T18:13:31,553 [dispatcher-BlockManagerMaster] INFO  org.apache.spark.storage.BlockManagerInfo [] - Removed broadcast_3_piece0 on eff501c685cd:35837 in memory (size: 8.3 KiB, free: 434.4 MiB)
+2025-04-02T18:13:31,554 [dag-scheduler-event-loop] INFO  org.apache.spark.SparkContext [] - Created broadcast 4 from broadcast at DAGScheduler.scala:1585
+2025-04-02T18:13:31,554 [dag-scheduler-event-loop] INFO  org.apache.spark.scheduler.DAGScheduler [] - Submitting 1 missing tasks from ResultStage 3 (MapPartitionsRDD[10] at count at <unknown>:0) (first 15 tasks are for partitions Vector(0))
+2025-04-02T18:13:31,555 [dispatcher-BlockManagerMaster] INFO  org.apache.spark.storage.BlockManagerInfo [] - Removed broadcast_3_piece0 on 172.18.0.3:33439 in memory (size: 8.3 KiB, free: 434.4 MiB)
+2025-04-02T18:13:31,555 [dag-scheduler-event-loop] INFO  org.apache.spark.scheduler.TaskSchedulerImpl [] - Adding task set 3.0 with 1 tasks resource profile 0
+2025-04-02T18:13:31,558 [dispatcher-CoarseGrainedScheduler] INFO  org.apache.spark.scheduler.TaskSetManager [] - Starting task 0.0 in stage 3.0 (TID 2) (172.18.0.3, executor 2, partition 0, NODE_LOCAL, 9003 bytes) 
+2025-04-02T18:13:31,560 [dispatcher-Executor] INFO  org.apache.spark.executor.CoarseGrainedExecutorBackend [] - Got assigned task 2
+2025-04-02T18:13:31,561 [Executor task launch worker for task 0.0 in stage 3.0 (TID 2)] INFO  org.apache.spark.executor.Executor [] - Running task 0.0 in stage 3.0 (TID 2)
+2025-04-02T18:13:31,563 [Executor task launch worker for task 0.0 in stage 3.0 (TID 2)] INFO  org.apache.spark.MapOutputTrackerWorker [] - Updating epoch to 1 and clearing cache
+2025-04-02T18:13:31,564 [Executor task launch worker for task 0.0 in stage 3.0 (TID 2)] INFO  org.apache.spark.broadcast.TorrentBroadcast [] - Started reading broadcast variable 4 with 1 pieces (estimated total size 4.0 MiB)
+2025-04-02T18:13:31,570 [Executor task launch worker for task 0.0 in stage 3.0 (TID 2)] INFO  org.apache.spark.storage.memory.MemoryStore [] - Block broadcast_4_piece0 stored as bytes in memory (estimated size 6.0 KiB, free 434.0 MiB)
+2025-04-02T18:13:31,571 [dispatcher-BlockManagerMaster] INFO  org.apache.spark.storage.BlockManagerInfo [] - Added broadcast_4_piece0 in memory on 172.18.0.3:33439 (size: 6.0 KiB, free: 434.4 MiB)
+2025-04-02T18:13:31,572 [Executor task launch worker for task 0.0 in stage 3.0 (TID 2)] INFO  org.apache.spark.broadcast.TorrentBroadcast [] - Reading broadcast variable 4 took 7 ms
+2025-04-02T18:13:31,573 [Executor task launch worker for task 0.0 in stage 3.0 (TID 2)] INFO  org.apache.spark.storage.memory.MemoryStore [] - Block broadcast_4 stored as values in memory (estimated size 12.5 KiB, free 434.0 MiB)
+2025-04-02T18:13:31,581 [Executor task launch worker for task 0.0 in stage 3.0 (TID 2)] INFO  org.apache.spark.MapOutputTrackerWorker [] - Don't have map outputs for shuffle 0, fetching them
+2025-04-02T18:13:31,582 [Executor task launch worker for task 0.0 in stage 3.0 (TID 2)] INFO  org.apache.spark.MapOutputTrackerWorker [] - Doing the fetch; tracker endpoint = NettyRpcEndpointRef(spark://MapOutputTracker@eff501c685cd:45893)
+2025-04-02T18:13:31,585 [dispatcher-event-loop-1] INFO  org.apache.spark.MapOutputTrackerMasterEndpoint [] - Asked to send map output locations for shuffle 0 to 172.18.0.3:45966
+2025-04-02T18:13:31,602 [Executor task launch worker for task 0.0 in stage 3.0 (TID 2)] INFO  org.apache.spark.MapOutputTrackerWorker [] - Got the map output locations
+2025-04-02T18:13:31,615 [Executor task launch worker for task 0.0 in stage 3.0 (TID 2)] INFO  org.apache.spark.storage.ShuffleBlockFetcherIterator [] - Getting 1 (60.0 B) non-empty blocks including 1 (60.0 B) local and 0 (0.0 B) host-local and 0 (0.0 B) push-merged-local and 0 (0.0 B) remote blocks
+2025-04-02T18:13:31,616 [Executor task launch worker for task 0.0 in stage 3.0 (TID 2)] INFO  org.apache.spark.storage.ShuffleBlockFetcherIterator [] - Started 0 remote fetches in 6 ms
+2025-04-02T18:13:31,626 [Executor task launch worker for task 0.0 in stage 3.0 (TID 2)] INFO  org.apache.spark.sql.catalyst.expressions.codegen.CodeGenerator [] - Code generated in 6.990667 ms
+2025-04-02T18:13:31,633 [Executor task launch worker for task 0.0 in stage 3.0 (TID 2)] INFO  org.apache.spark.executor.Executor [] - Finished task 0.0 in stage 3.0 (TID 2). 4038 bytes result sent to driver
+2025-04-02T18:13:31,638 [task-result-getter-2] INFO  org.apache.spark.scheduler.TaskSetManager [] - Finished task 0.0 in stage 3.0 (TID 2) in 81 ms on 172.18.0.3 (executor 2) (1/1)
+2025-04-02T18:13:31,638 [task-result-getter-2] INFO  org.apache.spark.scheduler.TaskSchedulerImpl [] - Removed TaskSet 3.0, whose tasks have all completed, from pool 
+2025-04-02T18:13:31,639 [dag-scheduler-event-loop] INFO  org.apache.spark.scheduler.DAGScheduler [] - ResultStage 3 (count at <unknown>:0) finished in 0.093 s
+2025-04-02T18:13:31,639 [dag-scheduler-event-loop] INFO  org.apache.spark.scheduler.DAGScheduler [] - Job 2 is finished. Cancelling potential speculative or zombie tasks for this job
+2025-04-02T18:13:31,639 [dag-scheduler-event-loop] INFO  org.apache.spark.scheduler.TaskSchedulerImpl [] - Killing all running tasks in stage 3: Stage finished
+2025-04-02T18:13:31,640 [Thread-4] INFO  org.apache.spark.scheduler.DAGScheduler [] - Job 2 finished: count at <unknown>:0, took 0.100092 s
+2025-04-02T18:13:31,676 [Thread-4] INFO  org.apache.spark.sql.execution.datasources.FileSourceStrategy [] - Pushed Filters: 
+2025-04-02T18:13:31,677 [Thread-4] INFO  org.apache.spark.sql.execution.datasources.FileSourceStrategy [] - Post-Scan Filters: 
+2025-04-02T18:13:31,710 [Thread-4] INFO  org.apache.spark.sql.catalyst.expressions.codegen.CodeGenerator [] - Code generated in 14.104125 ms
+2025-04-02T18:13:31,713 [Thread-4] INFO  org.apache.spark.storage.memory.MemoryStore [] - Block broadcast_5 stored as values in memory (estimated size 200.1 KiB, free 434.0 MiB)
+2025-04-02T18:13:31,718 [dispatcher-BlockManagerMaster] INFO  org.apache.spark.storage.BlockManagerInfo [] - Removed broadcast_2_piece0 on eff501c685cd:35837 in memory (size: 34.5 KiB, free: 434.4 MiB)
+2025-04-02T18:13:31,719 [Thread-4] INFO  org.apache.spark.storage.memory.MemoryStore [] - Block broadcast_5_piece0 stored as bytes in memory (estimated size 34.5 KiB, free 434.2 MiB)
+2025-04-02T18:13:31,720 [dispatcher-BlockManagerMaster] INFO  org.apache.spark.storage.BlockManagerInfo [] - Added broadcast_5_piece0 in memory on eff501c685cd:35837 (size: 34.5 KiB, free: 434.4 MiB)
+2025-04-02T18:13:31,721 [dispatcher-BlockManagerMaster] INFO  org.apache.spark.storage.BlockManagerInfo [] - Removed broadcast_2_piece0 on 172.18.0.3:33439 in memory (size: 34.5 KiB, free: 434.4 MiB)
+2025-04-02T18:13:31,721 [Thread-4] INFO  org.apache.spark.SparkContext [] - Created broadcast 5 from showString at <unknown>:0
+2025-04-02T18:13:31,722 [Thread-4] INFO  org.apache.spark.sql.execution.FileSourceScanExec [] - Planning scan with bin packing, max size: 4194304 bytes, open cost is considered as scanning 4194304 bytes.
+2025-04-02T18:13:31,724 [dispatcher-BlockManagerMaster] INFO  org.apache.spark.storage.BlockManagerInfo [] - Removed broadcast_4_piece0 on eff501c685cd:35837 in memory (size: 6.0 KiB, free: 434.4 MiB)
+2025-04-02T18:13:31,729 [dispatcher-BlockManagerMaster] INFO  org.apache.spark.storage.BlockManagerInfo [] - Removed broadcast_4_piece0 on 172.18.0.3:33439 in memory (size: 6.0 KiB, free: 434.4 MiB)
+2025-04-02T18:13:31,731 [Thread-4] INFO  org.apache.spark.SparkContext [] - Starting job: showString at <unknown>:0
+2025-04-02T18:13:31,732 [dag-scheduler-event-loop] INFO  org.apache.spark.scheduler.DAGScheduler [] - Got job 3 (showString at <unknown>:0) with 1 output partitions
+2025-04-02T18:13:31,732 [dag-scheduler-event-loop] INFO  org.apache.spark.scheduler.DAGScheduler [] - Final stage: ResultStage 4 (showString at <unknown>:0)
+2025-04-02T18:13:31,732 [dag-scheduler-event-loop] INFO  org.apache.spark.scheduler.DAGScheduler [] - Parents of final stage: List()
+2025-04-02T18:13:31,733 [dag-scheduler-event-loop] INFO  org.apache.spark.scheduler.DAGScheduler [] - Missing parents: List()
+2025-04-02T18:13:31,733 [dag-scheduler-event-loop] INFO  org.apache.spark.scheduler.DAGScheduler [] - Submitting ResultStage 4 (MapPartitionsRDD[14] at showString at <unknown>:0), which has no missing parents
+2025-04-02T18:13:31,735 [dag-scheduler-event-loop] INFO  org.apache.spark.storage.memory.MemoryStore [] - Block broadcast_6 stored as values in memory (estimated size 18.0 KiB, free 434.2 MiB)
+2025-04-02T18:13:31,738 [dag-scheduler-event-loop] INFO  org.apache.spark.storage.memory.MemoryStore [] - Block broadcast_6_piece0 stored as bytes in memory (estimated size 7.8 KiB, free 434.1 MiB)
+2025-04-02T18:13:31,740 [dispatcher-BlockManagerMaster] INFO  org.apache.spark.storage.BlockManagerInfo [] - Added broadcast_6_piece0 in memory on eff501c685cd:35837 (size: 7.8 KiB, free: 434.4 MiB)
+2025-04-02T18:13:31,741 [dag-scheduler-event-loop] INFO  org.apache.spark.SparkContext [] - Created broadcast 6 from broadcast at DAGScheduler.scala:1585
+2025-04-02T18:13:31,745 [dag-scheduler-event-loop] INFO  org.apache.spark.scheduler.DAGScheduler [] - Submitting 1 missing tasks from ResultStage 4 (MapPartitionsRDD[14] at showString at <unknown>:0) (first 15 tasks are for partitions Vector(0))
+2025-04-02T18:13:31,745 [dag-scheduler-event-loop] INFO  org.apache.spark.scheduler.TaskSchedulerImpl [] - Adding task set 4.0 with 1 tasks resource profile 0
+2025-04-02T18:13:31,746 [dispatcher-CoarseGrainedScheduler] INFO  org.apache.spark.scheduler.TaskSetManager [] - Starting task 0.0 in stage 4.0 (TID 3) (172.18.0.5, executor 1, partition 0, PROCESS_LOCAL, 9610 bytes) 
+2025-04-02T18:13:31,751 [dispatcher-Executor] INFO  org.apache.spark.executor.CoarseGrainedExecutorBackend [] - Got assigned task 3
+2025-04-02T18:13:31,756 [Executor task launch worker for task 0.0 in stage 4.0 (TID 3)] INFO  org.apache.spark.executor.Executor [] - Running task 0.0 in stage 4.0 (TID 3)
+2025-04-02T18:13:31,780 [Executor task launch worker for task 0.0 in stage 4.0 (TID 3)] INFO  org.apache.spark.MapOutputTrackerWorker [] - Updating epoch to 1 and clearing cache
+2025-04-02T18:13:31,803 [Executor task launch worker for task 0.0 in stage 4.0 (TID 3)] INFO  org.apache.spark.broadcast.TorrentBroadcast [] - Started reading broadcast variable 6 with 1 pieces (estimated total size 4.0 MiB)
+2025-04-02T18:13:31,818 [Executor task launch worker for task 0.0 in stage 4.0 (TID 3)] INFO  org.apache.spark.network.client.TransportClientFactory [] - Successfully created connection to eff501c685cd/172.18.0.2:35837 after 1 ms (0 ms spent in bootstraps)
+2025-04-02T18:13:31,836 [Executor task launch worker for task 0.0 in stage 4.0 (TID 3)] INFO  org.apache.spark.storage.memory.MemoryStore [] - Block broadcast_6_piece0 stored as bytes in memory (estimated size 7.8 KiB, free 434.4 MiB)
+2025-04-02T18:13:31,840 [dispatcher-BlockManagerMaster] INFO  org.apache.spark.storage.BlockManagerInfo [] - Added broadcast_6_piece0 in memory on 172.18.0.5:44275 (size: 7.8 KiB, free: 434.4 MiB)
+2025-04-02T18:13:31,842 [Executor task launch worker for task 0.0 in stage 4.0 (TID 3)] INFO  org.apache.spark.broadcast.TorrentBroadcast [] - Reading broadcast variable 6 took 39 ms
+2025-04-02T18:13:31,865 [Executor task launch worker for task 0.0 in stage 4.0 (TID 3)] INFO  org.apache.spark.storage.memory.MemoryStore [] - Block broadcast_6 stored as values in memory (estimated size 18.0 KiB, free 434.4 MiB)
+2025-04-02T18:13:32,111 [Executor task launch worker for task 0.0 in stage 4.0 (TID 3)] INFO  org.apache.spark.sql.catalyst.expressions.codegen.CodeGenerator [] - Code generated in 89.978584 ms
+2025-04-02T18:13:32,113 [Executor task launch worker for task 0.0 in stage 4.0 (TID 3)] INFO  org.apache.spark.sql.execution.datasources.FileScanRDD [] - Reading File path: file:///opt/bitnami/spark/storage/users.json, range: 0-330, partition values: [empty row]
+2025-04-02T18:13:32,169 [Executor task launch worker for task 0.0 in stage 4.0 (TID 3)] INFO  org.apache.spark.sql.catalyst.expressions.codegen.CodeGenerator [] - Code generated in 23.149 ms
+2025-04-02T18:13:32,177 [Executor task launch worker for task 0.0 in stage 4.0 (TID 3)] INFO  org.apache.spark.broadcast.TorrentBroadcast [] - Started reading broadcast variable 5 with 1 pieces (estimated total size 4.0 MiB)
+2025-04-02T18:13:32,182 [Executor task launch worker for task 0.0 in stage 4.0 (TID 3)] INFO  org.apache.spark.storage.memory.MemoryStore [] - Block broadcast_5_piece0 stored as bytes in memory (estimated size 34.5 KiB, free 434.3 MiB)
+2025-04-02T18:13:32,184 [dispatcher-BlockManagerMaster] INFO  org.apache.spark.storage.BlockManagerInfo [] - Added broadcast_5_piece0 in memory on 172.18.0.5:44275 (size: 34.5 KiB, free: 434.4 MiB)
+2025-04-02T18:13:32,185 [Executor task launch worker for task 0.0 in stage 4.0 (TID 3)] INFO  org.apache.spark.broadcast.TorrentBroadcast [] - Reading broadcast variable 5 took 7 ms
+2025-04-02T18:13:32,212 [Executor task launch worker for task 0.0 in stage 4.0 (TID 3)] INFO  org.apache.spark.storage.memory.MemoryStore [] - Block broadcast_5 stored as values in memory (estimated size 377.3 KiB, free 434.0 MiB)
+2025-04-02T18:13:32,283 [Executor task launch worker for task 0.0 in stage 4.0 (TID 3)] INFO  org.apache.spark.executor.Executor [] - Finished task 0.0 in stage 4.0 (TID 3). 1878 bytes result sent to driver
+2025-04-02T18:13:32,286 [task-result-getter-3] INFO  org.apache.spark.scheduler.TaskSetManager [] - Finished task 0.0 in stage 4.0 (TID 3) in 540 ms on 172.18.0.5 (executor 1) (1/1)
+2025-04-02T18:13:32,286 [task-result-getter-3] INFO  org.apache.spark.scheduler.TaskSchedulerImpl [] - Removed TaskSet 4.0, whose tasks have all completed, from pool 
+2025-04-02T18:13:32,287 [dag-scheduler-event-loop] INFO  org.apache.spark.scheduler.DAGScheduler [] - ResultStage 4 (showString at <unknown>:0) finished in 0.553 s
+2025-04-02T18:13:32,289 [dag-scheduler-event-loop] INFO  org.apache.spark.scheduler.DAGScheduler [] - Job 3 is finished. Cancelling potential speculative or zombie tasks for this job
+2025-04-02T18:13:32,289 [dag-scheduler-event-loop] INFO  org.apache.spark.scheduler.TaskSchedulerImpl [] - Killing all running tasks in stage 4: Stage finished
+2025-04-02T18:13:32,289 [Thread-4] INFO  org.apache.spark.scheduler.DAGScheduler [] - Job 3 finished: showString at <unknown>:0, took 0.557840 s
+2025-04-02T18:13:32,320 [Thread-4] INFO  org.apache.spark.sql.catalyst.expressions.codegen.CodeGenerator [] - Code generated in 23.644084 ms
+2025-04-02T18:13:32,329 [Thread-4] INFO  org.apache.spark.SparkContext [] - SparkContext is stopping with exitCode 0.
+2025-04-02T18:13:32,333 [Thread-4] INFO  org.sparkproject.jetty.server.AbstractConnector [] - Stopped Spark@31cf0f59{HTTP/1.1, (http/1.1)}{0.0.0.0:4040}
+2025-04-02T18:13:32,334 [Thread-4] INFO  org.apache.spark.ui.SparkUI [] - Stopped Spark web UI at http://eff501c685cd:4040
+2025-04-02T18:13:32,336 [Thread-4] INFO  org.apache.spark.scheduler.cluster.StandaloneSchedulerBackend [] - Shutting down all executors
+2025-04-02T18:13:32,336 [dispatcher-CoarseGrainedScheduler] INFO  org.apache.spark.scheduler.cluster.StandaloneSchedulerBackend$StandaloneDriverEndpoint [] - Asking each executor to shut down
+2025-04-02T18:13:32,339 [dispatcher-Executor] INFO  org.apache.spark.executor.CoarseGrainedExecutorBackend [] - Driver commanded a shutdown
+2025-04-02T18:13:32,340 [dispatcher-Executor] INFO  org.apache.spark.executor.CoarseGrainedExecutorBackend [] - Driver commanded a shutdown
+2025-04-02T18:13:32,340 [dispatcher-Executor] INFO  org.apache.spark.executor.CoarseGrainedExecutorBackend [] - Driver commanded a shutdown
+2025-04-02T18:13:32,342 [dispatcher-event-loop-5] INFO  org.apache.spark.deploy.master.Master [] - Received unregister request from application app-20250402181328-0007
+2025-04-02T18:13:32,342 [dispatcher-event-loop-5] INFO  org.apache.spark.deploy.master.Master [] - Removing app app-20250402181328-0007
+2025-04-02T18:13:32,344 [dispatcher-event-loop-7] INFO  org.apache.spark.deploy.worker.Worker [] - Asked to kill executor app-20250402181328-0007/2
+2025-04-02T18:13:32,345 [ExecutorRunner for app-20250402181328-0007/2] INFO  org.apache.spark.deploy.worker.ExecutorRunner [] - Runner thread for executor app-20250402181328-0007/2 interrupted
+2025-04-02T18:13:32,346 [ExecutorRunner for app-20250402181328-0007/2] INFO  org.apache.spark.deploy.worker.ExecutorRunner [] - Killing process!
+2025-04-02T18:13:32,346 [dispatcher-event-loop-8] INFO  org.apache.spark.deploy.worker.Worker [] - Asked to kill executor app-20250402181328-0007/0
+2025-04-02T18:13:32,347 [ExecutorRunner for app-20250402181328-0007/0] INFO  org.apache.spark.deploy.worker.ExecutorRunner [] - Runner thread for executor app-20250402181328-0007/0 interrupted
+2025-04-02T18:13:32,347 [SIGTERM handler] ERROR org.apache.spark.executor.CoarseGrainedExecutorBackend [] - RECEIVED SIGNAL TERM
+2025-04-02T18:13:32,348 [dispatcher-event-loop-9] INFO  org.apache.spark.deploy.worker.Worker [] - Asked to kill executor app-20250402181328-0007/1
+2025-04-02T18:13:32,348 [ExecutorRunner for app-20250402181328-0007/0] INFO  org.apache.spark.deploy.worker.ExecutorRunner [] - Killing process!
+2025-04-02T18:13:32,351 [ExecutorRunner for app-20250402181328-0007/1] INFO  org.apache.spark.deploy.worker.ExecutorRunner [] - Runner thread for executor app-20250402181328-0007/1 interrupted
+2025-04-02T18:13:32,351 [SIGTERM handler] ERROR org.apache.spark.executor.CoarseGrainedExecutorBackend [] - RECEIVED SIGNAL TERM
+2025-04-02T18:13:32,351 [CoarseGrainedExecutorBackend-stop-executor] INFO  org.apache.spark.storage.memory.MemoryStore [] - MemoryStore cleared
+2025-04-02T18:13:32,362 [CoarseGrainedExecutorBackend-stop-executor] INFO  org.apache.spark.storage.memory.MemoryStore [] - MemoryStore cleared
+2025-04-02T18:13:32,370 [ExecutorRunner for app-20250402181328-0007/1] INFO  org.apache.spark.deploy.worker.ExecutorRunner [] - Killing process!
+2025-04-02T18:13:32,355 [CoarseGrainedExecutorBackend-stop-executor] INFO  org.apache.spark.storage.memory.MemoryStore [] - MemoryStore cleared
+2025-04-02T18:13:32,355 [shutdown-hook-0] INFO  org.apache.spark.util.ShutdownHookManager [] - Shutdown hook called
+2025-04-02T18:13:32,371 [CoarseGrainedExecutorBackend-stop-executor] INFO  org.apache.spark.storage.BlockManager [] - BlockManager stopped
+2025-04-02T18:13:32,371 [CoarseGrainedExecutorBackend-stop-executor] INFO  org.apache.spark.storage.BlockManager [] - BlockManager stopped
+2025-04-02T18:13:32,371 [CoarseGrainedExecutorBackend-stop-executor] INFO  org.apache.spark.storage.BlockManager [] - BlockManager stopped
+2025-04-02T18:13:32,371 [SIGTERM handler] ERROR org.apache.spark.executor.CoarseGrainedExecutorBackend [] - RECEIVED SIGNAL TERM
+2025-04-02T18:13:32,373 [shutdown-hook-0] INFO  org.apache.spark.util.ShutdownHookManager [] - Shutdown hook called
+2025-04-02T18:13:32,374 [shutdown-hook-0] INFO  org.apache.spark.util.ShutdownHookManager [] - Shutdown hook called
+2025-04-02T18:13:32,375 [dispatcher-event-loop-4] INFO  org.apache.spark.MapOutputTrackerMasterEndpoint [] - MapOutputTrackerMasterEndpoint stopped!
+2025-04-02T18:13:32,383 [Thread-4] INFO  org.apache.spark.storage.memory.MemoryStore [] - MemoryStore cleared
+2025-04-02T18:13:32,383 [Thread-4] INFO  org.apache.spark.storage.BlockManager [] - BlockManager stopped
+2025-04-02T18:13:32,385 [Thread-4] INFO  org.apache.spark.storage.BlockManagerMaster [] - BlockManagerMaster stopped
+2025-04-02T18:13:32,386 [dispatcher-event-loop-4] INFO  org.apache.spark.deploy.worker.Worker [] - Executor app-20250402181328-0007/0 finished with state KILLED exitStatus 143
+2025-04-02T18:13:32,387 [dispatcher-event-loop-1] INFO  org.apache.spark.scheduler.OutputCommitCoordinator$OutputCommitCoordinatorEndpoint [] - OutputCommitCoordinator stopped!
+2025-04-02T18:13:32,387 [dispatcher-event-loop-4] INFO  org.apache.spark.network.shuffle.ExternalShuffleBlockResolver [] - Clean up non-shuffle and non-RDD files associated with the finished executor 0
+2025-04-02T18:13:32,387 [dispatcher-event-loop-4] INFO  org.apache.spark.network.shuffle.ExternalShuffleBlockResolver [] - Executor is not registered (appId=app-20250402181328-0007, execId=0)
+2025-04-02T18:13:32,388 [dispatcher-event-loop-4] INFO  org.apache.spark.network.shuffle.ExternalShuffleBlockResolver [] - Application app-20250402181328-0007 removed, cleanupLocalDirs = true
+2025-04-02T18:13:32,388 [worker-cleanup-thread] INFO  org.apache.spark.deploy.worker.Worker [] - Cleaning up local directories for application app-20250402181328-0007
+2025-04-02T18:13:32,389 [dispatcher-event-loop-2] INFO  org.apache.spark.deploy.worker.Worker [] - Executor app-20250402181328-0007/2 finished with state KILLED exitStatus 143
+2025-04-02T18:13:32,389 [dispatcher-event-loop-6] WARN  org.apache.spark.deploy.master.Master [] - Got status update for unknown executor app-20250402181328-0007/0
+2025-04-02T18:13:32,389 [dispatcher-event-loop-6] WARN  org.apache.spark.deploy.master.Master [] - Got status update for unknown executor app-20250402181328-0007/2
+2025-04-02T18:13:32,390 [dispatcher-event-loop-2] INFO  org.apache.spark.network.shuffle.ExternalShuffleBlockResolver [] - Clean up non-shuffle and non-RDD files associated with the finished executor 2
+2025-04-02T18:13:32,391 [dispatcher-event-loop-2] INFO  org.apache.spark.network.shuffle.ExternalShuffleBlockResolver [] - Executor is not registered (appId=app-20250402181328-0007, execId=2)
+2025-04-02T18:13:32,391 [dispatcher-event-loop-4] INFO  org.apache.spark.deploy.master.Master [] - 172.18.0.2:35898 got disassociated, removing it.
+2025-04-02T18:13:32,391 [dispatcher-event-loop-4] INFO  org.apache.spark.deploy.master.Master [] - eff501c685cd:45893 got disassociated, removing it.
+2025-04-02T18:13:32,391 [dispatcher-event-loop-2] INFO  org.apache.spark.network.shuffle.ExternalShuffleBlockResolver [] - Application app-20250402181328-0007 removed, cleanupLocalDirs = true
+2025-04-02T18:13:32,392 [worker-cleanup-thread] INFO  org.apache.spark.deploy.worker.Worker [] - Cleaning up local directories for application app-20250402181328-0007
+2025-04-02T18:13:32,395 [Thread-4] INFO  org.apache.spark.SparkContext [] - Successfully stopped SparkContext
+2025-04-02T18:13:32,400 [dispatcher-event-loop-2] INFO  org.apache.spark.deploy.worker.Worker [] - Executor app-20250402181328-0007/1 finished with state KILLED exitStatus 143
+2025-04-02T18:13:32,400 [dispatcher-event-loop-2] INFO  org.apache.spark.network.shuffle.ExternalShuffleBlockResolver [] - Clean up non-shuffle and non-RDD files associated with the finished executor 1
+2025-04-02T18:13:32,401 [dispatcher-event-loop-2] INFO  org.apache.spark.network.shuffle.ExternalShuffleBlockResolver [] - Executor is not registered (appId=app-20250402181328-0007, execId=1)
+2025-04-02T18:13:32,401 [dispatcher-event-loop-2] INFO  org.apache.spark.network.shuffle.ExternalShuffleBlockResolver [] - Application app-20250402181328-0007 removed, cleanupLocalDirs = true
+2025-04-02T18:13:32,401 [worker-cleanup-thread] INFO  org.apache.spark.deploy.worker.Worker [] - Cleaning up local directories for application app-20250402181328-0007
+2025-04-02T18:13:32,401 [dispatcher-event-loop-7] WARN  org.apache.spark.deploy.master.Master [] - Got status update for unknown executor app-20250402181328-0007/1
+2025-04-02T18:13:32,900 [shutdown-hook-0] INFO  org.apache.spark.util.ShutdownHookManager [] - Shutdown hook called
+2025-04-02T18:13:32,901 [shutdown-hook-0] INFO  org.apache.spark.util.ShutdownHookManager [] - Deleting directory /tmp/spark-e06ebaff-a920-4d68-8a7b-bc0b335c2c27
+2025-04-02T18:13:32,904 [shutdown-hook-0] INFO  org.apache.spark.util.ShutdownHookManager [] - Deleting directory /tmp/spark-61fec45e-e062-4214-ab86-11e28f68b717/pyspark-6ef089ce-8ff4-467e-9eb4-0c342200be99
+2025-04-02T18:13:32,907 [shutdown-hook-0] INFO  org.apache.spark.util.ShutdownHookManager [] - Deleting directory /tmp/spark-61fec45e-e062-4214-ab86-11e28f68b717
+2025-04-03T11:06:53,122 [main] INFO  org.apache.spark.deploy.worker.Worker [] - Started daemon with process name: 41@44b70a14a7a1
+2025-04-03T11:06:53,122 [main] INFO  org.apache.spark.deploy.worker.Worker [] - Started daemon with process name: 41@d332fd2e5338
+2025-04-03T11:06:53,122 [main] INFO  org.apache.spark.deploy.worker.Worker [] - Started daemon with process name: 41@046119187e0d
+2025-04-03T11:06:53,122 [main] INFO  org.apache.spark.deploy.master.Master [] - Started daemon with process name: 43@eff501c685cd
+2025-04-03T11:06:53,128 [main] INFO  org.apache.spark.util.SignalUtils [] - Registering signal handler for TERM
+2025-04-03T11:06:53,129 [main] INFO  org.apache.spark.util.SignalUtils [] - Registering signal handler for TERM
+2025-04-03T11:06:53,129 [main] INFO  org.apache.spark.util.SignalUtils [] - Registering signal handler for TERM
+2025-04-03T11:06:53,129 [main] INFO  org.apache.spark.util.SignalUtils [] - Registering signal handler for HUP
+2025-04-03T11:06:53,130 [main] INFO  org.apache.spark.util.SignalUtils [] - Registering signal handler for INT
+2025-04-03T11:06:53,130 [main] INFO  org.apache.spark.util.SignalUtils [] - Registering signal handler for TERM
+2025-04-03T11:06:53,130 [main] INFO  org.apache.spark.util.SignalUtils [] - Registering signal handler for HUP
+2025-04-03T11:06:53,130 [main] INFO  org.apache.spark.util.SignalUtils [] - Registering signal handler for HUP
+2025-04-03T11:06:53,130 [main] INFO  org.apache.spark.util.SignalUtils [] - Registering signal handler for HUP
+2025-04-03T11:06:53,130 [main] INFO  org.apache.spark.util.SignalUtils [] - Registering signal handler for INT
+2025-04-03T11:06:53,130 [main] INFO  org.apache.spark.util.SignalUtils [] - Registering signal handler for INT
+2025-04-03T11:06:53,131 [main] INFO  org.apache.spark.util.SignalUtils [] - Registering signal handler for INT
+2025-04-03T11:06:53,255 [main] INFO  org.apache.spark.SecurityManager [] - Changing view acls to: spark
+2025-04-03T11:06:53,255 [main] INFO  org.apache.spark.SecurityManager [] - Changing view acls to: spark
+2025-04-03T11:06:53,256 [main] INFO  org.apache.spark.SecurityManager [] - Changing modify acls to: spark
+2025-04-03T11:06:53,256 [main] INFO  org.apache.spark.SecurityManager [] - Changing modify acls to: spark
+2025-04-03T11:06:53,256 [main] INFO  org.apache.spark.SecurityManager [] - Changing view acls groups to: 
+2025-04-03T11:06:53,257 [main] INFO  org.apache.spark.SecurityManager [] - Changing view acls groups to: 
+2025-04-03T11:06:53,257 [main] INFO  org.apache.spark.SecurityManager [] - Changing modify acls groups to: 
+2025-04-03T11:06:53,258 [main] INFO  org.apache.spark.SecurityManager [] - Changing view acls to: spark
+2025-04-03T11:06:53,257 [main] INFO  org.apache.spark.SecurityManager [] - Changing modify acls groups to: 
+2025-04-03T11:06:53,258 [main] INFO  org.apache.spark.SecurityManager [] - SecurityManager: authentication disabled; ui acls disabled; users with view permissions: spark; groups with view permissions: EMPTY; users with modify permissions: spark; groups with modify permissions: EMPTY
+2025-04-03T11:06:53,259 [main] INFO  org.apache.spark.SecurityManager [] - SecurityManager: authentication disabled; ui acls disabled; users with view permissions: spark; groups with view permissions: EMPTY; users with modify permissions: spark; groups with modify permissions: EMPTY
+2025-04-03T11:06:53,260 [main] INFO  org.apache.spark.SecurityManager [] - Changing modify acls to: spark
+2025-04-03T11:06:53,260 [main] INFO  org.apache.spark.SecurityManager [] - Changing view acls to: spark
+2025-04-03T11:06:53,260 [main] INFO  org.apache.spark.SecurityManager [] - Changing view acls groups to: 
+2025-04-03T11:06:53,260 [main] INFO  org.apache.spark.SecurityManager [] - Changing modify acls to: spark
+2025-04-03T11:06:53,260 [main] INFO  org.apache.spark.SecurityManager [] - Changing modify acls groups to: 
+2025-04-03T11:06:53,261 [main] INFO  org.apache.spark.SecurityManager [] - Changing view acls groups to: 
+2025-04-03T11:06:53,261 [main] INFO  org.apache.spark.SecurityManager [] - SecurityManager: authentication disabled; ui acls disabled; users with view permissions: spark; groups with view permissions: EMPTY; users with modify permissions: spark; groups with modify permissions: EMPTY
+2025-04-03T11:06:53,261 [main] INFO  org.apache.spark.SecurityManager [] - Changing modify acls groups to: 
+2025-04-03T11:06:53,262 [main] INFO  org.apache.spark.SecurityManager [] - SecurityManager: authentication disabled; ui acls disabled; users with view permissions: spark; groups with view permissions: EMPTY; users with modify permissions: spark; groups with modify permissions: EMPTY
+2025-04-03T11:06:53,386 [main] WARN  org.apache.hadoop.util.NativeCodeLoader [] - Unable to load native-hadoop library for your platform... using builtin-java classes where applicable
+2025-04-03T11:06:53,387 [main] WARN  org.apache.hadoop.util.NativeCodeLoader [] - Unable to load native-hadoop library for your platform... using builtin-java classes where applicable
+2025-04-03T11:06:53,387 [main] WARN  org.apache.hadoop.util.NativeCodeLoader [] - Unable to load native-hadoop library for your platform... using builtin-java classes where applicable
+2025-04-03T11:06:53,387 [main] WARN  org.apache.hadoop.util.NativeCodeLoader [] - Unable to load native-hadoop library for your platform... using builtin-java classes where applicable
+2025-04-03T11:06:53,639 [main] INFO  org.apache.spark.util.Utils [] - Successfully started service 'sparkMaster' on port 7077.
+2025-04-03T11:06:53,639 [main] INFO  org.apache.spark.util.Utils [] - Successfully started service 'sparkWorker' on port 44683.
+2025-04-03T11:06:53,640 [main] INFO  org.apache.spark.util.Utils [] - Successfully started service 'sparkWorker' on port 41383.
+2025-04-03T11:06:53,641 [main] INFO  org.apache.spark.deploy.worker.Worker [] - Worker decommissioning not enabled.
+2025-04-03T11:06:53,642 [main] INFO  org.apache.spark.util.Utils [] - Successfully started service 'sparkWorker' on port 35919.
+2025-04-03T11:06:53,643 [main] INFO  org.apache.spark.deploy.worker.Worker [] - Worker decommissioning not enabled.
+2025-04-03T11:06:53,645 [main] INFO  org.apache.spark.deploy.worker.Worker [] - Worker decommissioning not enabled.
+2025-04-03T11:06:53,652 [dispatcher-event-loop-1] INFO  org.apache.spark.deploy.master.Master [] - Starting Spark master at spark://eff501c685cd:7077
+2025-04-03T11:06:53,656 [dispatcher-event-loop-1] INFO  org.apache.spark.deploy.master.Master [] - Running Spark version 3.5.5
+2025-04-03T11:06:53,690 [dispatcher-event-loop-1] INFO  org.sparkproject.jetty.util.log [] - Logging initialized @1488ms to org.sparkproject.jetty.util.log.Slf4jLog
+2025-04-03T11:06:53,739 [dispatcher-event-loop-1] INFO  org.apache.spark.ui.JettyUtils [] - Start Jetty 0.0.0.0:8080 for MasterUI
+2025-04-03T11:06:53,753 [dispatcher-event-loop-1] INFO  org.sparkproject.jetty.server.Server [] - jetty-9.4.56.v20240826; built: 2024-08-26T17:15:05.868Z; git: ec6782ff5ead824dabdcf47fa98f90a4aedff401; jvm 17.0.14+10-LTS
+2025-04-03T11:06:53,755 [dispatcher-event-loop-1] INFO  org.apache.spark.deploy.worker.Worker [] - Starting Spark worker 172.18.0.4:41383 with 2 cores, 3.0 GiB RAM
+2025-04-03T11:06:53,756 [dispatcher-event-loop-1] INFO  org.apache.spark.deploy.worker.Worker [] - Starting Spark worker 172.18.0.3:44683 with 2 cores, 3.0 GiB RAM
+2025-04-03T11:06:53,756 [dispatcher-event-loop-1] INFO  org.apache.spark.deploy.worker.Worker [] - Starting Spark worker 172.18.0.5:35919 with 2 cores, 3.0 GiB RAM
+2025-04-03T11:06:53,760 [dispatcher-event-loop-1] INFO  org.apache.spark.deploy.worker.Worker [] - Running Spark version 3.5.5
+2025-04-03T11:06:53,760 [dispatcher-event-loop-1] INFO  org.apache.spark.deploy.worker.Worker [] - Running Spark version 3.5.5
+2025-04-03T11:06:53,761 [dispatcher-event-loop-1] INFO  org.apache.spark.deploy.worker.Worker [] - Spark home: /opt/bitnami/spark
+2025-04-03T11:06:53,761 [dispatcher-event-loop-1] INFO  org.apache.spark.deploy.worker.Worker [] - Spark home: /opt/bitnami/spark
+2025-04-03T11:06:53,761 [dispatcher-event-loop-1] INFO  org.apache.spark.deploy.worker.Worker [] - Running Spark version 3.5.5
+2025-04-03T11:06:53,762 [dispatcher-event-loop-1] INFO  org.apache.spark.deploy.worker.Worker [] - Spark home: /opt/bitnami/spark
+2025-04-03T11:06:53,770 [dispatcher-event-loop-1] INFO  org.apache.spark.resource.ResourceUtils [] - ==============================================================
+2025-04-03T11:06:53,770 [dispatcher-event-loop-1] INFO  org.sparkproject.jetty.server.Server [] - Started @1568ms
+2025-04-03T11:06:53,771 [dispatcher-event-loop-1] INFO  org.apache.spark.resource.ResourceUtils [] - No custom resources configured for spark.worker.
+2025-04-03T11:06:53,772 [dispatcher-event-loop-1] INFO  org.apache.spark.resource.ResourceUtils [] - ==============================================================
+2025-04-03T11:06:53,772 [dispatcher-event-loop-1] INFO  org.apache.spark.resource.ResourceUtils [] - ==============================================================
+2025-04-03T11:06:53,773 [dispatcher-event-loop-1] INFO  org.apache.spark.resource.ResourceUtils [] - No custom resources configured for spark.worker.
+2025-04-03T11:06:53,774 [dispatcher-event-loop-1] INFO  org.apache.spark.resource.ResourceUtils [] - ==============================================================
+2025-04-03T11:06:53,775 [dispatcher-event-loop-1] INFO  org.apache.spark.resource.ResourceUtils [] - ==============================================================
+2025-04-03T11:06:53,776 [dispatcher-event-loop-1] INFO  org.apache.spark.resource.ResourceUtils [] - No custom resources configured for spark.worker.
+2025-04-03T11:06:53,776 [dispatcher-event-loop-1] INFO  org.apache.spark.resource.ResourceUtils [] - ==============================================================
+2025-04-03T11:06:53,793 [dispatcher-event-loop-1] INFO  org.sparkproject.jetty.util.log [] - Logging initialized @1591ms to org.sparkproject.jetty.util.log.Slf4jLog
+2025-04-03T11:06:53,795 [dispatcher-event-loop-1] INFO  org.sparkproject.jetty.util.log [] - Logging initialized @1593ms to org.sparkproject.jetty.util.log.Slf4jLog
+2025-04-03T11:06:53,797 [dispatcher-event-loop-1] INFO  org.sparkproject.jetty.util.log [] - Logging initialized @1594ms to org.sparkproject.jetty.util.log.Slf4jLog
+2025-04-03T11:06:53,808 [dispatcher-event-loop-1] INFO  org.sparkproject.jetty.server.AbstractConnector [] - Started ServerConnector@30bea994{HTTP/1.1, (http/1.1)}{0.0.0.0:8080}
+2025-04-03T11:06:53,811 [dispatcher-event-loop-1] INFO  org.apache.spark.util.Utils [] - Successfully started service 'MasterUI' on port 8080.
+2025-04-03T11:06:53,815 [dispatcher-event-loop-1] INFO  org.apache.spark.ui.JettyUtils [] - Start Jetty 0.0.0.0:8081 for WorkerUI
+2025-04-03T11:06:53,819 [dispatcher-event-loop-1] INFO  org.apache.spark.ui.JettyUtils [] - Start Jetty 0.0.0.0:8081 for WorkerUI
+2025-04-03T11:06:53,821 [dispatcher-event-loop-1] INFO  org.apache.spark.ui.JettyUtils [] - Start Jetty 0.0.0.0:8081 for WorkerUI
+2025-04-03T11:06:53,823 [dispatcher-event-loop-1] INFO  org.sparkproject.jetty.server.Server [] - jetty-9.4.56.v20240826; built: 2024-08-26T17:15:05.868Z; git: ec6782ff5ead824dabdcf47fa98f90a4aedff401; jvm 17.0.14+10-LTS
+2025-04-03T11:06:53,826 [dispatcher-event-loop-1] INFO  org.sparkproject.jetty.server.Server [] - jetty-9.4.56.v20240826; built: 2024-08-26T17:15:05.868Z; git: ec6782ff5ead824dabdcf47fa98f90a4aedff401; jvm 17.0.14+10-LTS
+2025-04-03T11:06:53,829 [dispatcher-event-loop-1] INFO  org.sparkproject.jetty.server.Server [] - jetty-9.4.56.v20240826; built: 2024-08-26T17:15:05.868Z; git: ec6782ff5ead824dabdcf47fa98f90a4aedff401; jvm 17.0.14+10-LTS
+2025-04-03T11:06:53,830 [dispatcher-event-loop-1] INFO  org.sparkproject.jetty.server.handler.ContextHandler [] - Started o.s.j.s.ServletContextHandler@6d806880{/app,null,AVAILABLE,@Spark}
+2025-04-03T11:06:53,834 [dispatcher-event-loop-1] INFO  org.sparkproject.jetty.server.Server [] - Started @1632ms
+2025-04-03T11:06:53,834 [dispatcher-event-loop-1] INFO  org.sparkproject.jetty.server.handler.ContextHandler [] - Started o.s.j.s.ServletContextHandler@1e2381f1{/app/json,null,AVAILABLE,@Spark}
+2025-04-03T11:06:53,839 [dispatcher-event-loop-1] INFO  org.sparkproject.jetty.server.handler.ContextHandler [] - Started o.s.j.s.ServletContextHandler@524bdc10{/,null,AVAILABLE,@Spark}
+2025-04-03T11:06:53,839 [dispatcher-event-loop-1] INFO  org.sparkproject.jetty.server.Server [] - Started @1637ms
+2025-04-03T11:06:53,842 [dispatcher-event-loop-1] INFO  org.sparkproject.jetty.server.Server [] - Started @1639ms
+2025-04-03T11:06:53,843 [dispatcher-event-loop-1] INFO  org.sparkproject.jetty.server.handler.ContextHandler [] - Started o.s.j.s.ServletContextHandler@7f9a72e9{/json,null,AVAILABLE,@Spark}
+2025-04-03T11:06:53,852 [dispatcher-event-loop-1] INFO  org.sparkproject.jetty.server.handler.ContextHandler [] - Started o.s.j.s.ServletContextHandler@c08b680{/static,null,AVAILABLE,@Spark}
+2025-04-03T11:06:53,854 [dispatcher-event-loop-1] INFO  org.sparkproject.jetty.server.handler.ContextHandler [] - Started o.s.j.s.ServletContextHandler@22a0b759{/app/kill,null,AVAILABLE,@Spark}
+2025-04-03T11:06:53,856 [dispatcher-event-loop-1] INFO  org.sparkproject.jetty.server.handler.ContextHandler [] - Started o.s.j.s.ServletContextHandler@131e620e{/driver/kill,null,AVAILABLE,@Spark}
+2025-04-03T11:06:53,858 [dispatcher-event-loop-1] INFO  org.sparkproject.jetty.server.handler.ContextHandler [] - Started o.s.j.s.ServletContextHandler@3b694c18{/workers/kill,null,AVAILABLE,@Spark}
+2025-04-03T11:06:53,859 [dispatcher-event-loop-1] INFO  org.apache.spark.deploy.master.ui.MasterWebUI [] - Bound MasterWebUI to 0.0.0.0, and started at http://eff501c685cd:8080
+2025-04-03T11:06:53,860 [dispatcher-event-loop-1] INFO  org.sparkproject.jetty.server.AbstractConnector [] - Started ServerConnector@997a9c0{HTTP/1.1, (http/1.1)}{0.0.0.0:8081}
+2025-04-03T11:06:53,861 [dispatcher-event-loop-1] INFO  org.apache.spark.util.Utils [] - Successfully started service 'WorkerUI' on port 8081.
+2025-04-03T11:06:53,863 [dispatcher-event-loop-1] INFO  org.sparkproject.jetty.server.AbstractConnector [] - Started ServerConnector@6f91db70{HTTP/1.1, (http/1.1)}{0.0.0.0:8081}
+2025-04-03T11:06:53,864 [dispatcher-event-loop-1] INFO  org.apache.spark.util.Utils [] - Successfully started service 'WorkerUI' on port 8081.
+2025-04-03T11:06:53,870 [dispatcher-event-loop-1] INFO  org.sparkproject.jetty.server.AbstractConnector [] - Started ServerConnector@32f349ce{HTTP/1.1, (http/1.1)}{0.0.0.0:8081}
+2025-04-03T11:06:53,870 [dispatcher-event-loop-1] INFO  org.apache.spark.util.Utils [] - Successfully started service 'WorkerUI' on port 8081.
+2025-04-03T11:06:53,880 [dispatcher-event-loop-1] INFO  org.sparkproject.jetty.server.handler.ContextHandler [] - Started o.s.j.s.ServletContextHandler@18295cbe{/logPage,null,AVAILABLE,@Spark}
+2025-04-03T11:06:53,880 [dispatcher-event-loop-1] INFO  org.sparkproject.jetty.server.handler.ContextHandler [] - Started o.s.j.s.ServletContextHandler@6cc54f30{/logPage,null,AVAILABLE,@Spark}
+2025-04-03T11:06:53,882 [dispatcher-event-loop-1] INFO  org.sparkproject.jetty.server.handler.ContextHandler [] - Started o.s.j.s.ServletContextHandler@3c6b4af1{/logPage/json,null,AVAILABLE,@Spark}
+2025-04-03T11:06:53,882 [dispatcher-event-loop-1] INFO  org.sparkproject.jetty.server.handler.ContextHandler [] - Started o.s.j.s.ServletContextHandler@7dfd8d89{/logPage/json,null,AVAILABLE,@Spark}
+2025-04-03T11:06:53,884 [dispatcher-event-loop-1] INFO  org.sparkproject.jetty.server.handler.ContextHandler [] - Started o.s.j.s.ServletContextHandler@49c57e56{/,null,AVAILABLE,@Spark}
+2025-04-03T11:06:53,885 [dispatcher-event-loop-1] INFO  org.sparkproject.jetty.server.handler.ContextHandler [] - Started o.s.j.s.ServletContextHandler@2222d743{/,null,AVAILABLE,@Spark}
+2025-04-03T11:06:53,885 [dispatcher-event-loop-1] INFO  org.sparkproject.jetty.server.handler.ContextHandler [] - Started o.s.j.s.ServletContextHandler@26f2e89a{/json,null,AVAILABLE,@Spark}
+2025-04-03T11:06:53,886 [dispatcher-event-loop-1] INFO  org.sparkproject.jetty.server.handler.ContextHandler [] - Started o.s.j.s.ServletContextHandler@32dfd8dd{/json,null,AVAILABLE,@Spark}
+2025-04-03T11:06:53,886 [dispatcher-event-loop-1] INFO  org.sparkproject.jetty.server.handler.ContextHandler [] - Started o.s.j.s.ServletContextHandler@40b2a79{/logPage,null,AVAILABLE,@Spark}
+2025-04-03T11:06:53,889 [dispatcher-event-loop-1] INFO  org.sparkproject.jetty.server.handler.ContextHandler [] - Started o.s.j.s.ServletContextHandler@6dde3319{/logPage/json,null,AVAILABLE,@Spark}
+2025-04-03T11:06:53,889 [dispatcher-event-loop-1] INFO  org.sparkproject.jetty.server.handler.ContextHandler [] - Started o.s.j.s.ServletContextHandler@17d69a74{/static,null,AVAILABLE,@Spark}
+2025-04-03T11:06:53,889 [dispatcher-event-loop-1] INFO  org.sparkproject.jetty.server.handler.ContextHandler [] - Started o.s.j.s.ServletContextHandler@77c00757{/,null,AVAILABLE,@Spark}
+2025-04-03T11:06:53,890 [dispatcher-event-loop-1] INFO  org.sparkproject.jetty.server.handler.ContextHandler [] - Started o.s.j.s.ServletContextHandler@5b0b6693{/log,null,AVAILABLE,@Spark}
+2025-04-03T11:06:53,891 [dispatcher-event-loop-1] INFO  org.sparkproject.jetty.server.handler.ContextHandler [] - Started o.s.j.s.ServletContextHandler@215858d4{/static,null,AVAILABLE,@Spark}
+2025-04-03T11:06:53,892 [dispatcher-event-loop-1] INFO  org.sparkproject.jetty.server.handler.ContextHandler [] - Started o.s.j.s.ServletContextHandler@6a856a80{/log,null,AVAILABLE,@Spark}
+2025-04-03T11:06:53,892 [dispatcher-event-loop-1] INFO  org.sparkproject.jetty.server.handler.ContextHandler [] - Started o.s.j.s.ServletContextHandler@5c10655c{/json,null,AVAILABLE,@Spark}
+2025-04-03T11:06:53,893 [dispatcher-event-loop-1] INFO  org.apache.spark.deploy.worker.ui.WorkerWebUI [] - Bound WorkerWebUI to 0.0.0.0, and started at http://44b70a14a7a1:8081
+2025-04-03T11:06:53,894 [dispatcher-event-loop-1] INFO  org.apache.spark.deploy.worker.ui.WorkerWebUI [] - Bound WorkerWebUI to 0.0.0.0, and started at http://d332fd2e5338:8081
+2025-04-03T11:06:53,895 [worker-register-master-threadpool-0] INFO  org.apache.spark.deploy.worker.Worker [] - Connecting to master spark-master:7077...
+2025-04-03T11:06:53,896 [worker-register-master-threadpool-0] INFO  org.apache.spark.deploy.worker.Worker [] - Connecting to master spark-master:7077...
+2025-04-03T11:06:53,897 [dispatcher-event-loop-1] INFO  org.sparkproject.jetty.server.handler.ContextHandler [] - Started o.s.j.s.ServletContextHandler@15786c52{/static,null,AVAILABLE,@Spark}
+2025-04-03T11:06:53,899 [dispatcher-event-loop-1] INFO  org.sparkproject.jetty.server.handler.ContextHandler [] - Started o.s.j.s.ServletContextHandler@606f9005{/log,null,AVAILABLE,@Spark}
+2025-04-03T11:06:53,901 [dispatcher-event-loop-1] INFO  org.apache.spark.deploy.worker.ui.WorkerWebUI [] - Bound WorkerWebUI to 0.0.0.0, and started at http://046119187e0d:8081
+2025-04-03T11:06:53,902 [worker-register-master-threadpool-0] INFO  org.apache.spark.deploy.worker.Worker [] - Connecting to master spark-master:7077...
+2025-04-03T11:06:53,909 [dispatcher-event-loop-1] INFO  org.sparkproject.jetty.server.handler.ContextHandler [] - Started o.s.j.s.ServletContextHandler@172bfbb0{/metrics/json,null,AVAILABLE,@Spark}
+2025-04-03T11:06:53,910 [dispatcher-event-loop-1] INFO  org.sparkproject.jetty.server.handler.ContextHandler [] - Started o.s.j.s.ServletContextHandler@dbacdca{/metrics/json,null,AVAILABLE,@Spark}
+2025-04-03T11:06:53,912 [dispatcher-event-loop-1] INFO  org.sparkproject.jetty.server.handler.ContextHandler [] - Started o.s.j.s.ServletContextHandler@677501a{/metrics/json,null,AVAILABLE,@Spark}
+2025-04-03T11:06:53,945 [dispatcher-event-loop-1] INFO  org.sparkproject.jetty.server.handler.ContextHandler [] - Started o.s.j.s.ServletContextHandler@658fcf1d{/metrics/master/json,null,AVAILABLE,@Spark}
+2025-04-03T11:06:53,947 [dispatcher-event-loop-1] INFO  org.sparkproject.jetty.server.handler.ContextHandler [] - Started o.s.j.s.ServletContextHandler@6c8470b8{/metrics/applications/json,null,AVAILABLE,@Spark}
+2025-04-03T11:06:53,948 [netty-rpc-connection-0] INFO  org.apache.spark.network.client.TransportClientFactory [] - Successfully created connection to spark-master/172.18.0.2:7077 after 24 ms (0 ms spent in bootstraps)
+2025-04-03T11:06:53,957 [netty-rpc-connection-0] INFO  org.apache.spark.network.client.TransportClientFactory [] - Successfully created connection to spark-master/172.18.0.2:7077 after 26 ms (0 ms spent in bootstraps)
+2025-04-03T11:06:53,964 [netty-rpc-connection-0] INFO  org.apache.spark.network.client.TransportClientFactory [] - Successfully created connection to spark-master/172.18.0.2:7077 after 27 ms (0 ms spent in bootstraps)
+2025-04-03T11:06:53,971 [dispatcher-event-loop-1] INFO  org.apache.spark.deploy.master.Master [] - I have been elected leader! New state: ALIVE
+2025-04-03T11:06:54,031 [dispatcher-event-loop-0] INFO  org.apache.spark.deploy.master.Master [] - Registering worker 172.18.0.3:44683 with 2 cores, 3.0 GiB RAM
+2025-04-03T11:06:54,037 [dispatcher-event-loop-0] INFO  org.apache.spark.deploy.master.Master [] - Registering worker 172.18.0.4:41383 with 2 cores, 3.0 GiB RAM
+2025-04-03T11:06:54,039 [dispatcher-event-loop-0] INFO  org.apache.spark.deploy.master.Master [] - Registering worker 172.18.0.5:35919 with 2 cores, 3.0 GiB RAM
+2025-04-03T11:06:54,041 [dispatcher-event-loop-6] INFO  org.apache.spark.deploy.worker.Worker [] - Successfully registered with master spark://eff501c685cd:7077
+2025-04-03T11:06:54,046 [dispatcher-event-loop-5] INFO  org.apache.spark.deploy.worker.Worker [] - Successfully registered with master spark://eff501c685cd:7077
+2025-04-03T11:06:54,050 [dispatcher-event-loop-6] INFO  org.apache.spark.deploy.worker.Worker [] - Successfully registered with master spark://eff501c685cd:7077
+2025-04-03T11:16:52,310 [shutdown-hook-0] INFO  org.apache.spark.util.ShutdownHookManager [] - Shutdown hook called
+2025-04-03T11:16:52,312 [shutdown-hook-0] INFO  org.apache.spark.util.ShutdownHookManager [] - Deleting directory /tmp/spark-9ac47821-8a8b-4ef4-b75a-2dbfe214c5cc
+2025-04-03T11:17:10,198 [Thread-4] INFO  org.apache.spark.SparkContext [] - Running Spark version 3.5.5
+2025-04-03T11:17:10,200 [Thread-4] INFO  org.apache.spark.SparkContext [] - OS info Linux, 6.10.14-linuxkit, aarch64
+2025-04-03T11:17:10,200 [Thread-4] INFO  org.apache.spark.SparkContext [] - Java version 17.0.14
+2025-04-03T11:17:10,210 [Thread-4] INFO  org.apache.spark.resource.ResourceUtils [] - ==============================================================
+2025-04-03T11:17:10,211 [Thread-4] INFO  org.apache.spark.resource.ResourceUtils [] - No custom resources configured for spark.driver.
+2025-04-03T11:17:10,211 [Thread-4] INFO  org.apache.spark.resource.ResourceUtils [] - ==============================================================
+2025-04-03T11:17:10,212 [Thread-4] INFO  org.apache.spark.SparkContext [] - Submitted application: get-users-json.py
+2025-04-03T11:17:10,220 [Thread-4] INFO  org.apache.spark.resource.ResourceProfile [] - Default ResourceProfile created, executor resources: Map(memory -> name: memory, amount: 1024, script: , vendor: , offHeap -> name: offHeap, amount: 0, script: , vendor: ), task resources: Map(cpus -> name: cpus, amount: 1.0)
+2025-04-03T11:17:10,224 [Thread-4] INFO  org.apache.spark.resource.ResourceProfile [] - Limiting resource is cpu
+2025-04-03T11:17:10,224 [Thread-4] INFO  org.apache.spark.resource.ResourceProfileManager [] - Added ResourceProfile id: 0
+2025-04-03T11:17:10,247 [Thread-4] INFO  org.apache.spark.SecurityManager [] - Changing view acls to: root,spark
+2025-04-03T11:17:10,247 [Thread-4] INFO  org.apache.spark.SecurityManager [] - Changing modify acls to: root,spark
+2025-04-03T11:17:10,248 [Thread-4] INFO  org.apache.spark.SecurityManager [] - Changing view acls groups to: 
+2025-04-03T11:17:10,248 [Thread-4] INFO  org.apache.spark.SecurityManager [] - Changing modify acls groups to: 
+2025-04-03T11:17:10,248 [Thread-4] INFO  org.apache.spark.SecurityManager [] - SecurityManager: authentication disabled; ui acls disabled; users with view permissions: root, spark; groups with view permissions: EMPTY; users with modify permissions: root, spark; groups with modify permissions: EMPTY
+2025-04-03T11:17:10,272 [Thread-4] WARN  org.apache.hadoop.util.NativeCodeLoader [] - Unable to load native-hadoop library for your platform... using builtin-java classes where applicable
+2025-04-03T11:17:10,371 [Thread-4] INFO  org.apache.spark.util.Utils [] - Successfully started service 'sparkDriver' on port 33937.
+2025-04-03T11:17:10,388 [Thread-4] INFO  org.apache.spark.SparkEnv [] - Registering MapOutputTracker
+2025-04-03T11:17:10,405 [Thread-4] INFO  org.apache.spark.SparkEnv [] - Registering BlockManagerMaster
+2025-04-03T11:17:10,411 [Thread-4] INFO  org.apache.spark.storage.BlockManagerMasterEndpoint [] - Using org.apache.spark.storage.DefaultTopologyMapper for getting topology information
+2025-04-03T11:17:10,412 [Thread-4] INFO  org.apache.spark.storage.BlockManagerMasterEndpoint [] - BlockManagerMasterEndpoint up
+2025-04-03T11:17:10,414 [Thread-4] INFO  org.apache.spark.SparkEnv [] - Registering BlockManagerMasterHeartbeat
+2025-04-03T11:17:10,424 [Thread-4] INFO  org.apache.spark.storage.DiskBlockManager [] - Created local directory at /tmp/blockmgr-1333f479-7930-41f3-821c-804aed0fad40
+2025-04-03T11:17:10,431 [Thread-4] INFO  org.apache.spark.storage.memory.MemoryStore [] - MemoryStore started with capacity 434.4 MiB
+2025-04-03T11:17:10,437 [Thread-4] INFO  org.apache.spark.SparkEnv [] - Registering OutputCommitCoordinator
+2025-04-03T11:17:10,454 [Thread-4] INFO  org.sparkproject.jetty.util.log [] - Logging initialized @1252ms to org.sparkproject.jetty.util.log.Slf4jLog
+2025-04-03T11:17:10,490 [Thread-4] INFO  org.apache.spark.ui.JettyUtils [] - Start Jetty 0.0.0.0:4040 for SparkUI
+2025-04-03T11:17:10,494 [Thread-4] INFO  org.sparkproject.jetty.server.Server [] - jetty-9.4.56.v20240826; built: 2024-08-26T17:15:05.868Z; git: ec6782ff5ead824dabdcf47fa98f90a4aedff401; jvm 17.0.14+10-LTS
+2025-04-03T11:17:10,501 [Thread-4] INFO  org.sparkproject.jetty.server.Server [] - Started @1299ms
+2025-04-03T11:17:10,512 [Thread-4] INFO  org.sparkproject.jetty.server.AbstractConnector [] - Started ServerConnector@4c8fc038{HTTP/1.1, (http/1.1)}{0.0.0.0:4040}
+2025-04-03T11:17:10,512 [Thread-4] INFO  org.apache.spark.util.Utils [] - Successfully started service 'SparkUI' on port 4040.
+2025-04-03T11:17:10,521 [Thread-4] INFO  org.sparkproject.jetty.server.handler.ContextHandler [] - Started o.s.j.s.ServletContextHandler@6936a4d4{/,null,AVAILABLE,@Spark}
+2025-04-03T11:17:10,569 [appclient-register-master-threadpool-0] INFO  org.apache.spark.deploy.client.StandaloneAppClient$ClientEndpoint [] - Connecting to master spark://spark-master:7077...
+2025-04-03T11:17:10,588 [netty-rpc-connection-0] INFO  org.apache.spark.network.client.TransportClientFactory [] - Successfully created connection to spark-master/172.18.0.2:7077 after 10 ms (0 ms spent in bootstraps)
+2025-04-03T11:17:10,639 [dispatcher-event-loop-9] INFO  org.apache.spark.deploy.master.Master [] - Registering app get-users-json.py
+2025-04-03T11:17:10,649 [dispatcher-event-loop-9] INFO  org.apache.spark.deploy.master.Master [] - Registered app get-users-json.py with ID app-20250403111710-0000
+2025-04-03T11:17:10,652 [dispatcher-event-loop-9] INFO  org.apache.spark.deploy.master.Master [] - Start scheduling for app app-20250403111710-0000 with rpId: 0
+2025-04-03T11:17:10,654 [dispatcher-event-loop-0] INFO  org.apache.spark.scheduler.cluster.StandaloneSchedulerBackend [] - Connected to Spark cluster with app ID app-20250403111710-0000
+2025-04-03T11:17:10,659 [Thread-4] INFO  org.apache.spark.util.Utils [] - Successfully started service 'org.apache.spark.network.netty.NettyBlockTransferService' on port 41815.
+2025-04-03T11:17:10,659 [Thread-4] INFO  org.apache.spark.network.netty.NettyBlockTransferService [] - Server created on eff501c685cd:41815
+2025-04-03T11:17:10,660 [dispatcher-event-loop-9] INFO  org.apache.spark.deploy.master.Master [] - Launching executor app-20250403111710-0000/0 on worker worker-20250403110653-172.18.0.5-35919
+2025-04-03T11:17:10,660 [Thread-4] INFO  org.apache.spark.storage.BlockManager [] - Using org.apache.spark.storage.RandomBlockReplicationPolicy for block replication policy
+2025-04-03T11:17:10,663 [dispatcher-event-loop-9] INFO  org.apache.spark.deploy.master.Master [] - Launching executor app-20250403111710-0000/1 on worker worker-20250403110653-172.18.0.3-44683
+2025-04-03T11:17:10,664 [Thread-4] INFO  org.apache.spark.storage.BlockManagerMaster [] - Registering BlockManager BlockManagerId(driver, eff501c685cd, 41815, None)
+2025-04-03T11:17:10,665 [dispatcher-event-loop-9] INFO  org.apache.spark.deploy.client.StandaloneAppClient$ClientEndpoint [] - Executor added: app-20250403111710-0000/0 on worker-20250403110653-172.18.0.5-35919 (172.18.0.5:35919) with 2 core(s)
+2025-04-03T11:17:10,666 [dispatcher-event-loop-9] INFO  org.apache.spark.deploy.master.Master [] - Launching executor app-20250403111710-0000/2 on worker worker-20250403110653-172.18.0.4-41383
+2025-04-03T11:17:10,667 [dispatcher-event-loop-9] INFO  org.apache.spark.scheduler.cluster.StandaloneSchedulerBackend [] - Granted executor ID app-20250403111710-0000/0 on hostPort 172.18.0.5:35919 with 2 core(s), 1024.0 MiB RAM
+2025-04-03T11:17:10,667 [dispatcher-event-loop-9] INFO  org.apache.spark.deploy.client.StandaloneAppClient$ClientEndpoint [] - Executor added: app-20250403111710-0000/1 on worker-20250403110653-172.18.0.3-44683 (172.18.0.3:44683) with 2 core(s)
+2025-04-03T11:17:10,668 [dispatcher-event-loop-9] INFO  org.apache.spark.scheduler.cluster.StandaloneSchedulerBackend [] - Granted executor ID app-20250403111710-0000/1 on hostPort 172.18.0.3:44683 with 2 core(s), 1024.0 MiB RAM
+2025-04-03T11:17:10,668 [dispatcher-BlockManagerMaster] INFO  org.apache.spark.storage.BlockManagerMasterEndpoint [] - Registering block manager eff501c685cd:41815 with 434.4 MiB RAM, BlockManagerId(driver, eff501c685cd, 41815, None)
+2025-04-03T11:17:10,669 [Thread-4] INFO  org.apache.spark.storage.BlockManagerMaster [] - Registered BlockManager BlockManagerId(driver, eff501c685cd, 41815, None)
+2025-04-03T11:17:10,669 [dispatcher-event-loop-6] INFO  org.apache.spark.deploy.client.StandaloneAppClient$ClientEndpoint [] - Executor added: app-20250403111710-0000/2 on worker-20250403110653-172.18.0.4-41383 (172.18.0.4:41383) with 2 core(s)
+2025-04-03T11:17:10,670 [dispatcher-event-loop-6] INFO  org.apache.spark.scheduler.cluster.StandaloneSchedulerBackend [] - Granted executor ID app-20250403111710-0000/2 on hostPort 172.18.0.4:41383 with 2 core(s), 1024.0 MiB RAM
+2025-04-03T11:17:10,670 [Thread-4] INFO  org.apache.spark.storage.BlockManager [] - Initialized BlockManager: BlockManagerId(driver, eff501c685cd, 41815, None)
+2025-04-03T11:17:10,694 [dispatcher-event-loop-9] INFO  org.apache.spark.deploy.worker.Worker [] - Asked to launch executor app-20250403111710-0000/0 for get-users-json.py
+2025-04-03T11:17:10,705 [dispatcher-event-loop-9] INFO  org.apache.spark.deploy.worker.Worker [] - Asked to launch executor app-20250403111710-0000/2 for get-users-json.py
+2025-04-03T11:17:10,705 [dispatcher-event-loop-9] INFO  org.apache.spark.deploy.worker.Worker [] - Asked to launch executor app-20250403111710-0000/1 for get-users-json.py
+2025-04-03T11:17:10,714 [ExecutorRunner for app-20250403111710-0000/0] INFO  org.apache.spark.SecurityManager [] - Changing view acls to: spark
+2025-04-03T11:17:10,714 [ExecutorRunner for app-20250403111710-0000/0] INFO  org.apache.spark.SecurityManager [] - Changing modify acls to: spark
+2025-04-03T11:17:10,715 [ExecutorRunner for app-20250403111710-0000/0] INFO  org.apache.spark.SecurityManager [] - Changing view acls groups to: 
+2025-04-03T11:17:10,716 [ExecutorRunner for app-20250403111710-0000/0] INFO  org.apache.spark.SecurityManager [] - Changing modify acls groups to: 
+2025-04-03T11:17:10,716 [ExecutorRunner for app-20250403111710-0000/0] INFO  org.apache.spark.SecurityManager [] - SecurityManager: authentication disabled; ui acls disabled; users with view permissions: spark; groups with view permissions: EMPTY; users with modify permissions: spark; groups with modify permissions: EMPTY
+2025-04-03T11:17:10,722 [ExecutorRunner for app-20250403111710-0000/2] INFO  org.apache.spark.SecurityManager [] - Changing view acls to: spark
+2025-04-03T11:17:10,726 [ExecutorRunner for app-20250403111710-0000/2] INFO  org.apache.spark.SecurityManager [] - Changing modify acls to: spark
+2025-04-03T11:17:10,726 [ExecutorRunner for app-20250403111710-0000/1] INFO  org.apache.spark.SecurityManager [] - Changing view acls to: spark
+2025-04-03T11:17:10,726 [ExecutorRunner for app-20250403111710-0000/2] INFO  org.apache.spark.SecurityManager [] - Changing view acls groups to: 
+2025-04-03T11:17:10,726 [ExecutorRunner for app-20250403111710-0000/1] INFO  org.apache.spark.SecurityManager [] - Changing modify acls to: spark
+2025-04-03T11:17:10,726 [ExecutorRunner for app-20250403111710-0000/2] INFO  org.apache.spark.SecurityManager [] - Changing modify acls groups to: 
+2025-04-03T11:17:10,726 [ExecutorRunner for app-20250403111710-0000/1] INFO  org.apache.spark.SecurityManager [] - Changing view acls groups to: 
+2025-04-03T11:17:10,727 [ExecutorRunner for app-20250403111710-0000/2] INFO  org.apache.spark.SecurityManager [] - SecurityManager: authentication disabled; ui acls disabled; users with view permissions: spark; groups with view permissions: EMPTY; users with modify permissions: spark; groups with modify permissions: EMPTY
+2025-04-03T11:17:10,727 [ExecutorRunner for app-20250403111710-0000/1] INFO  org.apache.spark.SecurityManager [] - Changing modify acls groups to: 
+2025-04-03T11:17:10,727 [ExecutorRunner for app-20250403111710-0000/1] INFO  org.apache.spark.SecurityManager [] - SecurityManager: authentication disabled; ui acls disabled; users with view permissions: spark; groups with view permissions: EMPTY; users with modify permissions: spark; groups with modify permissions: EMPTY
+2025-04-03T11:17:10,727 [ExecutorRunner for app-20250403111710-0000/0] INFO  org.apache.spark.deploy.worker.ExecutorRunner [] - Launch command: "/opt/bitnami/java/bin/java" "-cp" "/opt/bitnami/spark/conf/:/opt/bitnami/spark/jars/*" "-Xmx1024M" "-Dspark.driver.port=33937" "-Djava.net.preferIPv6Addresses=false" "-XX:+IgnoreUnrecognizedVMOptions" "--add-opens=java.base/java.lang=ALL-UNNAMED" "--add-opens=java.base/java.lang.invoke=ALL-UNNAMED" "--add-opens=java.base/java.lang.reflect=ALL-UNNAMED" "--add-opens=java.base/java.io=ALL-UNNAMED" "--add-opens=java.base/java.net=ALL-UNNAMED" "--add-opens=java.base/java.nio=ALL-UNNAMED" "--add-opens=java.base/java.util=ALL-UNNAMED" "--add-opens=java.base/java.util.concurrent=ALL-UNNAMED" "--add-opens=java.base/java.util.concurrent.atomic=ALL-UNNAMED" "--add-opens=java.base/jdk.internal.ref=ALL-UNNAMED" "--add-opens=java.base/sun.nio.ch=ALL-UNNAMED" "--add-opens=java.base/sun.nio.cs=ALL-UNNAMED" "--add-opens=java.base/sun.security.action=ALL-UNNAMED" "--add-opens=java.base/sun.util.calendar=ALL-UNNAMED" "--add-opens=java.security.jgss/sun.security.krb5=ALL-UNNAMED" "-Djdk.reflect.useDirectMethodHandle=false" "org.apache.spark.executor.CoarseGrainedExecutorBackend" "--driver-url" "spark://CoarseGrainedScheduler@eff501c685cd:33937" "--executor-id" "0" "--hostname" "172.18.0.5" "--cores" "2" "--app-id" "app-20250403111710-0000" "--worker-url" "spark://Worker@172.18.0.5:35919" "--resourceProfileId" "0"
+2025-04-03T11:17:10,740 [ExecutorRunner for app-20250403111710-0000/2] INFO  org.apache.spark.deploy.worker.ExecutorRunner [] - Launch command: "/opt/bitnami/java/bin/java" "-cp" "/opt/bitnami/spark/conf/:/opt/bitnami/spark/jars/*" "-Xmx1024M" "-Dspark.driver.port=33937" "-Djava.net.preferIPv6Addresses=false" "-XX:+IgnoreUnrecognizedVMOptions" "--add-opens=java.base/java.lang=ALL-UNNAMED" "--add-opens=java.base/java.lang.invoke=ALL-UNNAMED" "--add-opens=java.base/java.lang.reflect=ALL-UNNAMED" "--add-opens=java.base/java.io=ALL-UNNAMED" "--add-opens=java.base/java.net=ALL-UNNAMED" "--add-opens=java.base/java.nio=ALL-UNNAMED" "--add-opens=java.base/java.util=ALL-UNNAMED" "--add-opens=java.base/java.util.concurrent=ALL-UNNAMED" "--add-opens=java.base/java.util.concurrent.atomic=ALL-UNNAMED" "--add-opens=java.base/jdk.internal.ref=ALL-UNNAMED" "--add-opens=java.base/sun.nio.ch=ALL-UNNAMED" "--add-opens=java.base/sun.nio.cs=ALL-UNNAMED" "--add-opens=java.base/sun.security.action=ALL-UNNAMED" "--add-opens=java.base/sun.util.calendar=ALL-UNNAMED" "--add-opens=java.security.jgss/sun.security.krb5=ALL-UNNAMED" "-Djdk.reflect.useDirectMethodHandle=false" "org.apache.spark.executor.CoarseGrainedExecutorBackend" "--driver-url" "spark://CoarseGrainedScheduler@eff501c685cd:33937" "--executor-id" "2" "--hostname" "172.18.0.4" "--cores" "2" "--app-id" "app-20250403111710-0000" "--worker-url" "spark://Worker@172.18.0.4:41383" "--resourceProfileId" "0"
+2025-04-03T11:17:10,741 [ExecutorRunner for app-20250403111710-0000/1] INFO  org.apache.spark.deploy.worker.ExecutorRunner [] - Launch command: "/opt/bitnami/java/bin/java" "-cp" "/opt/bitnami/spark/conf/:/opt/bitnami/spark/jars/*" "-Xmx1024M" "-Dspark.driver.port=33937" "-Djava.net.preferIPv6Addresses=false" "-XX:+IgnoreUnrecognizedVMOptions" "--add-opens=java.base/java.lang=ALL-UNNAMED" "--add-opens=java.base/java.lang.invoke=ALL-UNNAMED" "--add-opens=java.base/java.lang.reflect=ALL-UNNAMED" "--add-opens=java.base/java.io=ALL-UNNAMED" "--add-opens=java.base/java.net=ALL-UNNAMED" "--add-opens=java.base/java.nio=ALL-UNNAMED" "--add-opens=java.base/java.util=ALL-UNNAMED" "--add-opens=java.base/java.util.concurrent=ALL-UNNAMED" "--add-opens=java.base/java.util.concurrent.atomic=ALL-UNNAMED" "--add-opens=java.base/jdk.internal.ref=ALL-UNNAMED" "--add-opens=java.base/sun.nio.ch=ALL-UNNAMED" "--add-opens=java.base/sun.nio.cs=ALL-UNNAMED" "--add-opens=java.base/sun.security.action=ALL-UNNAMED" "--add-opens=java.base/sun.util.calendar=ALL-UNNAMED" "--add-opens=java.security.jgss/sun.security.krb5=ALL-UNNAMED" "-Djdk.reflect.useDirectMethodHandle=false" "org.apache.spark.executor.CoarseGrainedExecutorBackend" "--driver-url" "spark://CoarseGrainedScheduler@eff501c685cd:33937" "--executor-id" "1" "--hostname" "172.18.0.3" "--cores" "2" "--app-id" "app-20250403111710-0000" "--worker-url" "spark://Worker@172.18.0.3:44683" "--resourceProfileId" "0"
+2025-04-03T11:17:10,761 [dispatcher-event-loop-6] INFO  org.apache.spark.deploy.master.Master [] - Start scheduling for app app-20250403111710-0000 with rpId: 0
+2025-04-03T11:17:10,762 [dispatcher-event-loop-6] INFO  org.apache.spark.deploy.master.Master [] - Start scheduling for app app-20250403111710-0000 with rpId: 0
+2025-04-03T11:17:10,763 [dispatcher-event-loop-6] INFO  org.apache.spark.deploy.master.Master [] - Start scheduling for app app-20250403111710-0000 with rpId: 0
+2025-04-03T11:17:10,775 [dispatcher-event-loop-5] INFO  org.apache.spark.deploy.client.StandaloneAppClient$ClientEndpoint [] - Executor updated: app-20250403111710-0000/1 is now RUNNING
+2025-04-03T11:17:10,776 [dispatcher-event-loop-5] INFO  org.apache.spark.deploy.client.StandaloneAppClient$ClientEndpoint [] - Executor updated: app-20250403111710-0000/2 is now RUNNING
+2025-04-03T11:17:10,776 [dispatcher-event-loop-5] INFO  org.apache.spark.deploy.client.StandaloneAppClient$ClientEndpoint [] - Executor updated: app-20250403111710-0000/0 is now RUNNING
+2025-04-03T11:17:10,840 [Thread-4] INFO  org.apache.spark.deploy.history.SingleEventLogFileWriter [] - Logging events to file:/opt/bitnami/spark/logs/events/app-20250403111710-0000.inprogress
+2025-04-03T11:17:10,938 [Thread-4] INFO  org.sparkproject.jetty.server.handler.ContextHandler [] - Stopped o.s.j.s.ServletContextHandler@6936a4d4{/,null,STOPPED,@Spark}
+2025-04-03T11:17:10,942 [Thread-4] INFO  org.sparkproject.jetty.server.handler.ContextHandler [] - Started o.s.j.s.ServletContextHandler@70cb1bad{/jobs,null,AVAILABLE,@Spark}
+2025-04-03T11:17:10,945 [Thread-4] INFO  org.sparkproject.jetty.server.handler.ContextHandler [] - Started o.s.j.s.ServletContextHandler@19a87ff{/jobs/json,null,AVAILABLE,@Spark}
+2025-04-03T11:17:10,946 [Thread-4] INFO  org.sparkproject.jetty.server.handler.ContextHandler [] - Started o.s.j.s.ServletContextHandler@3cbc056d{/jobs/job,null,AVAILABLE,@Spark}
+2025-04-03T11:17:10,947 [Thread-4] INFO  org.sparkproject.jetty.server.handler.ContextHandler [] - Started o.s.j.s.ServletContextHandler@677a2a06{/jobs/job/json,null,AVAILABLE,@Spark}
+2025-04-03T11:17:10,948 [Thread-4] INFO  org.sparkproject.jetty.server.handler.ContextHandler [] - Started o.s.j.s.ServletContextHandler@3464795a{/stages,null,AVAILABLE,@Spark}
+2025-04-03T11:17:10,949 [Thread-4] INFO  org.sparkproject.jetty.server.handler.ContextHandler [] - Started o.s.j.s.ServletContextHandler@2524538d{/stages/json,null,AVAILABLE,@Spark}
+2025-04-03T11:17:10,950 [Thread-4] INFO  org.sparkproject.jetty.server.handler.ContextHandler [] - Started o.s.j.s.ServletContextHandler@2e64cf26{/stages/stage,null,AVAILABLE,@Spark}
+2025-04-03T11:17:10,951 [Thread-4] INFO  org.sparkproject.jetty.server.handler.ContextHandler [] - Started o.s.j.s.ServletContextHandler@554b8b8f{/stages/stage/json,null,AVAILABLE,@Spark}
+2025-04-03T11:17:10,952 [Thread-4] INFO  org.sparkproject.jetty.server.handler.ContextHandler [] - Started o.s.j.s.ServletContextHandler@2999c94d{/stages/pool,null,AVAILABLE,@Spark}
+2025-04-03T11:17:10,954 [Thread-4] INFO  org.sparkproject.jetty.server.handler.ContextHandler [] - Started o.s.j.s.ServletContextHandler@4419ac1b{/stages/pool/json,null,AVAILABLE,@Spark}
+2025-04-03T11:17:10,955 [Thread-4] INFO  org.sparkproject.jetty.server.handler.ContextHandler [] - Started o.s.j.s.ServletContextHandler@639c2043{/storage,null,AVAILABLE,@Spark}
+2025-04-03T11:17:10,957 [Thread-4] INFO  org.sparkproject.jetty.server.handler.ContextHandler [] - Started o.s.j.s.ServletContextHandler@1d92d3ed{/storage/json,null,AVAILABLE,@Spark}
+2025-04-03T11:17:10,958 [Thread-4] INFO  org.sparkproject.jetty.server.handler.ContextHandler [] - Started o.s.j.s.ServletContextHandler@5971c6e1{/storage/rdd,null,AVAILABLE,@Spark}
+2025-04-03T11:17:10,962 [Thread-4] INFO  org.sparkproject.jetty.server.handler.ContextHandler [] - Started o.s.j.s.ServletContextHandler@50f75e45{/storage/rdd/json,null,AVAILABLE,@Spark}
+2025-04-03T11:17:10,964 [Thread-4] INFO  org.sparkproject.jetty.server.handler.ContextHandler [] - Started o.s.j.s.ServletContextHandler@3764b1de{/environment,null,AVAILABLE,@Spark}
+2025-04-03T11:17:10,965 [Thread-4] INFO  org.sparkproject.jetty.server.handler.ContextHandler [] - Started o.s.j.s.ServletContextHandler@935399c{/environment/json,null,AVAILABLE,@Spark}
+2025-04-03T11:17:10,966 [Thread-4] INFO  org.sparkproject.jetty.server.handler.ContextHandler [] - Started o.s.j.s.ServletContextHandler@52de9c13{/executors,null,AVAILABLE,@Spark}
+2025-04-03T11:17:10,966 [Thread-4] INFO  org.sparkproject.jetty.server.handler.ContextHandler [] - Started o.s.j.s.ServletContextHandler@435aa0cf{/executors/json,null,AVAILABLE,@Spark}
+2025-04-03T11:17:10,967 [Thread-4] INFO  org.sparkproject.jetty.server.handler.ContextHandler [] - Started o.s.j.s.ServletContextHandler@14e9b10a{/executors/threadDump,null,AVAILABLE,@Spark}
+2025-04-03T11:17:10,969 [Thread-4] INFO  org.sparkproject.jetty.server.handler.ContextHandler [] - Started o.s.j.s.ServletContextHandler@7db882c8{/executors/threadDump/json,null,AVAILABLE,@Spark}
+2025-04-03T11:17:10,970 [Thread-4] INFO  org.sparkproject.jetty.server.handler.ContextHandler [] - Started o.s.j.s.ServletContextHandler@1aa51b31{/executors/heapHistogram,null,AVAILABLE,@Spark}
+2025-04-03T11:17:10,971 [Thread-4] INFO  org.sparkproject.jetty.server.handler.ContextHandler [] - Started o.s.j.s.ServletContextHandler@58e6c4f3{/executors/heapHistogram/json,null,AVAILABLE,@Spark}
+2025-04-03T11:17:10,976 [Thread-4] INFO  org.sparkproject.jetty.server.handler.ContextHandler [] - Started o.s.j.s.ServletContextHandler@458765c6{/static,null,AVAILABLE,@Spark}
+2025-04-03T11:17:10,977 [Thread-4] INFO  org.sparkproject.jetty.server.handler.ContextHandler [] - Started o.s.j.s.ServletContextHandler@4d05f11c{/,null,AVAILABLE,@Spark}
+2025-04-03T11:17:10,980 [Thread-4] INFO  org.sparkproject.jetty.server.handler.ContextHandler [] - Started o.s.j.s.ServletContextHandler@3d3791a8{/api,null,AVAILABLE,@Spark}
+2025-04-03T11:17:10,981 [Thread-4] INFO  org.sparkproject.jetty.server.handler.ContextHandler [] - Started o.s.j.s.ServletContextHandler@5aec2f71{/jobs/job/kill,null,AVAILABLE,@Spark}
+2025-04-03T11:17:10,981 [Thread-4] INFO  org.sparkproject.jetty.server.handler.ContextHandler [] - Started o.s.j.s.ServletContextHandler@237879ea{/stages/stage/kill,null,AVAILABLE,@Spark}
+2025-04-03T11:17:10,986 [Thread-4] INFO  org.sparkproject.jetty.server.handler.ContextHandler [] - Started o.s.j.s.ServletContextHandler@7c6546b3{/metrics/json,null,AVAILABLE,@Spark}
+2025-04-03T11:17:10,987 [Thread-4] INFO  org.apache.spark.scheduler.cluster.StandaloneSchedulerBackend [] - SchedulerBackend is ready for scheduling beginning after reached minRegisteredResourcesRatio: 0.0
+2025-04-03T11:17:11,177 [Thread-4] INFO  org.apache.spark.sql.internal.SharedState [] - Setting hive.metastore.warehouse.dir ('null') to the value of spark.sql.warehouse.dir.
+2025-04-03T11:17:11,181 [Thread-4] INFO  org.apache.spark.sql.internal.SharedState [] - Warehouse path is 'file:/opt/bitnami/spark/spark-warehouse'.
+2025-04-03T11:17:11,194 [Thread-4] INFO  org.sparkproject.jetty.server.handler.ContextHandler [] - Started o.s.j.s.ServletContextHandler@5a15f746{/SQL,null,AVAILABLE,@Spark}
+2025-04-03T11:17:11,195 [Thread-4] INFO  org.sparkproject.jetty.server.handler.ContextHandler [] - Started o.s.j.s.ServletContextHandler@67db3ec7{/SQL/json,null,AVAILABLE,@Spark}
+2025-04-03T11:17:11,196 [Thread-4] INFO  org.sparkproject.jetty.server.handler.ContextHandler [] - Started o.s.j.s.ServletContextHandler@2d3e454d{/SQL/execution,null,AVAILABLE,@Spark}
+2025-04-03T11:17:11,200 [Thread-4] INFO  org.sparkproject.jetty.server.handler.ContextHandler [] - Started o.s.j.s.ServletContextHandler@43e23cb3{/SQL/execution/json,null,AVAILABLE,@Spark}
+2025-04-03T11:17:11,205 [Thread-4] INFO  org.sparkproject.jetty.server.handler.ContextHandler [] - Started o.s.j.s.ServletContextHandler@8032dac{/static/sql,null,AVAILABLE,@Spark}
+2025-04-03T11:17:11,406 [main] INFO  org.apache.spark.executor.CoarseGrainedExecutorBackend [] - Started daemon with process name: 120@046119187e0d
+2025-04-03T11:17:11,411 [main] INFO  org.apache.spark.util.SignalUtils [] - Registering signal handler for TERM
+2025-04-03T11:17:11,411 [main] INFO  org.apache.spark.util.SignalUtils [] - Registering signal handler for HUP
+2025-04-03T11:17:11,412 [main] INFO  org.apache.spark.util.SignalUtils [] - Registering signal handler for INT
+2025-04-03T11:17:11,418 [main] INFO  org.apache.spark.executor.CoarseGrainedExecutorBackend [] - Started daemon with process name: 121@44b70a14a7a1
+2025-04-03T11:17:11,420 [main] INFO  org.apache.spark.executor.CoarseGrainedExecutorBackend [] - Started daemon with process name: 121@d332fd2e5338
+2025-04-03T11:17:11,422 [main] INFO  org.apache.spark.util.SignalUtils [] - Registering signal handler for TERM
+2025-04-03T11:17:11,423 [main] INFO  org.apache.spark.util.SignalUtils [] - Registering signal handler for HUP
+2025-04-03T11:17:11,423 [main] INFO  org.apache.spark.util.SignalUtils [] - Registering signal handler for INT
+2025-04-03T11:17:11,424 [main] INFO  org.apache.spark.util.SignalUtils [] - Registering signal handler for TERM
+2025-04-03T11:17:11,427 [main] INFO  org.apache.spark.util.SignalUtils [] - Registering signal handler for HUP
+2025-04-03T11:17:11,427 [main] INFO  org.apache.spark.util.SignalUtils [] - Registering signal handler for INT
+2025-04-03T11:17:11,576 [main] WARN  org.apache.hadoop.util.NativeCodeLoader [] - Unable to load native-hadoop library for your platform... using builtin-java classes where applicable
+2025-04-03T11:17:11,586 [main] WARN  org.apache.hadoop.util.NativeCodeLoader [] - Unable to load native-hadoop library for your platform... using builtin-java classes where applicable
+2025-04-03T11:17:11,609 [main] WARN  org.apache.hadoop.util.NativeCodeLoader [] - Unable to load native-hadoop library for your platform... using builtin-java classes where applicable
+2025-04-03T11:17:11,639 [main] INFO  org.apache.spark.SecurityManager [] - Changing view acls to: spark
+2025-04-03T11:17:11,643 [main] INFO  org.apache.spark.SecurityManager [] - Changing modify acls to: spark
+2025-04-03T11:17:11,641 [main] INFO  org.apache.spark.SecurityManager [] - Changing view acls to: spark
+2025-04-03T11:17:11,643 [main] INFO  org.apache.spark.SecurityManager [] - Changing view acls groups to: 
+2025-04-03T11:17:11,644 [main] INFO  org.apache.spark.SecurityManager [] - Changing modify acls to: spark
+2025-04-03T11:17:11,645 [main] INFO  org.apache.spark.SecurityManager [] - Changing modify acls groups to: 
+2025-04-03T11:17:11,645 [main] INFO  org.apache.spark.SecurityManager [] - SecurityManager: authentication disabled; ui acls disabled; users with view permissions: spark; groups with view permissions: EMPTY; users with modify permissions: spark; groups with modify permissions: EMPTY
+2025-04-03T11:17:11,645 [main] INFO  org.apache.spark.SecurityManager [] - Changing view acls groups to: 
+2025-04-03T11:17:11,646 [main] INFO  org.apache.spark.SecurityManager [] - Changing modify acls groups to: 
+2025-04-03T11:17:11,646 [main] INFO  org.apache.spark.SecurityManager [] - SecurityManager: authentication disabled; ui acls disabled; users with view permissions: spark; groups with view permissions: EMPTY; users with modify permissions: spark; groups with modify permissions: EMPTY
+2025-04-03T11:17:11,647 [main] INFO  org.apache.spark.SecurityManager [] - Changing view acls to: spark
+2025-04-03T11:17:11,647 [main] INFO  org.apache.spark.SecurityManager [] - Changing modify acls to: spark
+2025-04-03T11:17:11,648 [main] INFO  org.apache.spark.SecurityManager [] - Changing view acls groups to: 
+2025-04-03T11:17:11,648 [main] INFO  org.apache.spark.SecurityManager [] - Changing modify acls groups to: 
+2025-04-03T11:17:11,648 [main] INFO  org.apache.spark.SecurityManager [] - SecurityManager: authentication disabled; ui acls disabled; users with view permissions: spark; groups with view permissions: EMPTY; users with modify permissions: spark; groups with modify permissions: EMPTY
+2025-04-03T11:17:11,741 [Thread-4] INFO  org.apache.spark.sql.execution.datasources.InMemoryFileIndex [] - It took 22 ms to list leaf files for 1 paths.
+2025-04-03T11:17:11,773 [Thread-4] INFO  org.apache.spark.sql.execution.datasources.InMemoryFileIndex [] - It took 1 ms to list leaf files for 1 paths.
+2025-04-03T11:17:11,795 [netty-rpc-connection-0] INFO  org.apache.spark.network.client.TransportClientFactory [] - Successfully created connection to eff501c685cd/172.18.0.2:33937 after 31 ms (0 ms spent in bootstraps)
+2025-04-03T11:17:11,807 [netty-rpc-connection-0] INFO  org.apache.spark.network.client.TransportClientFactory [] - Successfully created connection to eff501c685cd/172.18.0.2:33937 after 32 ms (0 ms spent in bootstraps)
+2025-04-03T11:17:11,808 [netty-rpc-connection-0] INFO  org.apache.spark.network.client.TransportClientFactory [] - Successfully created connection to eff501c685cd/172.18.0.2:33937 after 33 ms (0 ms spent in bootstraps)
+2025-04-03T11:17:11,857 [main] INFO  org.apache.spark.SecurityManager [] - Changing view acls to: spark
+2025-04-03T11:17:11,858 [main] INFO  org.apache.spark.SecurityManager [] - Changing modify acls to: spark
+2025-04-03T11:17:11,858 [main] INFO  org.apache.spark.SecurityManager [] - Changing view acls groups to: 
+2025-04-03T11:17:11,858 [main] INFO  org.apache.spark.SecurityManager [] - Changing modify acls groups to: 
+2025-04-03T11:17:11,858 [main] INFO  org.apache.spark.SecurityManager [] - Changing view acls to: spark
+2025-04-03T11:17:11,858 [main] INFO  org.apache.spark.SecurityManager [] - SecurityManager: authentication disabled; ui acls disabled; users with view permissions: spark; groups with view permissions: EMPTY; users with modify permissions: spark; groups with modify permissions: EMPTY
+2025-04-03T11:17:11,859 [main] INFO  org.apache.spark.SecurityManager [] - Changing modify acls to: spark
+2025-04-03T11:17:11,859 [main] INFO  org.apache.spark.SecurityManager [] - Changing view acls groups to: 
+2025-04-03T11:17:11,859 [main] INFO  org.apache.spark.SecurityManager [] - Changing modify acls groups to: 
+2025-04-03T11:17:11,859 [main] INFO  org.apache.spark.SecurityManager [] - SecurityManager: authentication disabled; ui acls disabled; users with view permissions: spark; groups with view permissions: EMPTY; users with modify permissions: spark; groups with modify permissions: EMPTY
+2025-04-03T11:17:11,859 [main] INFO  org.apache.spark.SecurityManager [] - Changing view acls to: spark
+2025-04-03T11:17:11,860 [main] INFO  org.apache.spark.SecurityManager [] - Changing modify acls to: spark
+2025-04-03T11:17:11,860 [main] INFO  org.apache.spark.SecurityManager [] - Changing view acls groups to: 
+2025-04-03T11:17:11,860 [main] INFO  org.apache.spark.SecurityManager [] - Changing modify acls groups to: 
+2025-04-03T11:17:11,860 [main] INFO  org.apache.spark.SecurityManager [] - SecurityManager: authentication disabled; ui acls disabled; users with view permissions: spark; groups with view permissions: EMPTY; users with modify permissions: spark; groups with modify permissions: EMPTY
+2025-04-03T11:17:11,892 [netty-rpc-connection-0] INFO  org.apache.spark.network.client.TransportClientFactory [] - Successfully created connection to eff501c685cd/172.18.0.2:33937 after 1 ms (0 ms spent in bootstraps)
+2025-04-03T11:17:11,893 [netty-rpc-connection-0] INFO  org.apache.spark.network.client.TransportClientFactory [] - Successfully created connection to eff501c685cd/172.18.0.2:33937 after 3 ms (0 ms spent in bootstraps)
+2025-04-03T11:17:11,899 [netty-rpc-connection-0] INFO  org.apache.spark.network.client.TransportClientFactory [] - Successfully created connection to eff501c685cd/172.18.0.2:33937 after 3 ms (0 ms spent in bootstraps)
+2025-04-03T11:17:11,940 [main] INFO  org.apache.spark.storage.DiskBlockManager [] - Created local directory at /tmp/spark-c12d4332-91d3-41ef-8045-01892d31bff0/executor-1b42979d-2e89-4835-b944-6b00513241fd/blockmgr-72cbfdfb-ccac-4e08-a7d7-65de5feab184
+2025-04-03T11:17:11,944 [main] INFO  org.apache.spark.storage.DiskBlockManager [] - Created local directory at /tmp/spark-c8fbf1bf-4b4c-4bb0-8c16-cb33574a8da9/executor-d5f5f810-03e2-4712-b86e-b9c462db060e/blockmgr-b0e2d280-4acb-43d0-af8a-7ef9b595ec1c
+2025-04-03T11:17:11,945 [main] INFO  org.apache.spark.storage.DiskBlockManager [] - Created local directory at /tmp/spark-7145b0e8-332c-4c1d-852d-da3117b690ed/executor-f4c34601-9dc1-4b7c-ae6d-10d0c36e4de8/blockmgr-27ca1956-8432-4bce-add8-f9b1d848818e
+2025-04-03T11:17:11,960 [main] INFO  org.apache.spark.storage.memory.MemoryStore [] - MemoryStore started with capacity 434.4 MiB
+2025-04-03T11:17:11,964 [main] INFO  org.apache.spark.storage.memory.MemoryStore [] - MemoryStore started with capacity 434.4 MiB
+2025-04-03T11:17:11,970 [main] INFO  org.apache.spark.storage.memory.MemoryStore [] - MemoryStore started with capacity 434.4 MiB
+2025-04-03T11:17:12,041 [dispatcher-Executor] INFO  org.apache.spark.executor.CoarseGrainedExecutorBackend [] - Connecting to driver: spark://CoarseGrainedScheduler@eff501c685cd:33937
+2025-04-03T11:17:12,041 [main] INFO  org.apache.spark.deploy.worker.WorkerWatcher [] - Connecting to worker spark://Worker@172.18.0.3:44683
+2025-04-03T11:17:12,047 [netty-rpc-connection-1] INFO  org.apache.spark.network.client.TransportClientFactory [] - Successfully created connection to /172.18.0.3:44683 after 1 ms (0 ms spent in bootstraps)
+2025-04-03T11:17:12,048 [dispatcher-Executor] INFO  org.apache.spark.executor.CoarseGrainedExecutorBackend [] - Connecting to driver: spark://CoarseGrainedScheduler@eff501c685cd:33937
+2025-04-03T11:17:12,048 [main] INFO  org.apache.spark.deploy.worker.WorkerWatcher [] - Connecting to worker spark://Worker@172.18.0.5:35919
+2025-04-03T11:17:12,049 [dispatcher-Executor] INFO  org.apache.spark.executor.CoarseGrainedExecutorBackend [] - Connecting to driver: spark://CoarseGrainedScheduler@eff501c685cd:33937
+2025-04-03T11:17:12,049 [dispatcher-event-loop-1] INFO  org.apache.spark.deploy.worker.WorkerWatcher [] - Successfully connected to spark://Worker@172.18.0.3:44683
+2025-04-03T11:17:12,050 [main] INFO  org.apache.spark.deploy.worker.WorkerWatcher [] - Connecting to worker spark://Worker@172.18.0.4:41383
+2025-04-03T11:17:12,054 [netty-rpc-connection-1] INFO  org.apache.spark.network.client.TransportClientFactory [] - Successfully created connection to /172.18.0.5:35919 after 3 ms (0 ms spent in bootstraps)
+2025-04-03T11:17:12,054 [dispatcher-event-loop-0] INFO  org.apache.spark.deploy.worker.WorkerWatcher [] - Successfully connected to spark://Worker@172.18.0.5:35919
+2025-04-03T11:17:12,055 [dispatcher-Executor] INFO  org.apache.spark.resource.ResourceUtils [] - ==============================================================
+2025-04-03T11:17:12,055 [dispatcher-Executor] INFO  org.apache.spark.resource.ResourceUtils [] - ==============================================================
+2025-04-03T11:17:12,056 [dispatcher-Executor] INFO  org.apache.spark.resource.ResourceUtils [] - No custom resources configured for spark.executor.
+2025-04-03T11:17:12,056 [dispatcher-Executor] INFO  org.apache.spark.resource.ResourceUtils [] - ==============================================================
+2025-04-03T11:17:12,056 [dispatcher-Executor] INFO  org.apache.spark.resource.ResourceUtils [] - No custom resources configured for spark.executor.
+2025-04-03T11:17:12,057 [dispatcher-Executor] INFO  org.apache.spark.resource.ResourceUtils [] - ==============================================================
+2025-04-03T11:17:12,058 [dispatcher-event-loop-1] INFO  org.apache.spark.deploy.worker.WorkerWatcher [] - Successfully connected to spark://Worker@172.18.0.4:41383
+2025-04-03T11:17:12,058 [netty-rpc-connection-1] INFO  org.apache.spark.network.client.TransportClientFactory [] - Successfully created connection to /172.18.0.4:41383 after 2 ms (0 ms spent in bootstraps)
+2025-04-03T11:17:12,060 [dispatcher-Executor] INFO  org.apache.spark.resource.ResourceUtils [] - No custom resources configured for spark.executor.
+2025-04-03T11:17:12,061 [dispatcher-Executor] INFO  org.apache.spark.resource.ResourceUtils [] - ==============================================================
+2025-04-03T11:17:12,060 [dispatcher-Executor] INFO  org.apache.spark.resource.ResourceUtils [] - ==============================================================
+2025-04-03T11:17:12,078 [dispatcher-CoarseGrainedScheduler] INFO  org.apache.spark.scheduler.cluster.StandaloneSchedulerBackend$StandaloneDriverEndpoint [] - Registered executor NettyRpcEndpointRef(spark-client://Executor) (172.18.0.5:52150) with ID 0,  ResourceProfileId 0
+2025-04-03T11:17:12,080 [dispatcher-CoarseGrainedScheduler] INFO  org.apache.spark.scheduler.cluster.StandaloneSchedulerBackend$StandaloneDriverEndpoint [] - Registered executor NettyRpcEndpointRef(spark-client://Executor) (172.18.0.4:36280) with ID 2,  ResourceProfileId 0
+2025-04-03T11:17:12,082 [dispatcher-CoarseGrainedScheduler] INFO  org.apache.spark.scheduler.cluster.StandaloneSchedulerBackend$StandaloneDriverEndpoint [] - Registered executor NettyRpcEndpointRef(spark-client://Executor) (172.18.0.3:48616) with ID 1,  ResourceProfileId 0
+2025-04-03T11:17:12,083 [dispatcher-Executor] INFO  org.apache.spark.executor.CoarseGrainedExecutorBackend [] - Successfully registered with driver
+2025-04-03T11:17:12,085 [dispatcher-Executor] INFO  org.apache.spark.executor.CoarseGrainedExecutorBackend [] - Successfully registered with driver
+2025-04-03T11:17:12,085 [dispatcher-Executor] INFO  org.apache.spark.executor.Executor [] - Starting executor ID 0 on host 172.18.0.5
+2025-04-03T11:17:12,085 [dispatcher-Executor] INFO  org.apache.spark.executor.CoarseGrainedExecutorBackend [] - Successfully registered with driver
+2025-04-03T11:17:12,086 [dispatcher-Executor] INFO  org.apache.spark.executor.Executor [] - OS info Linux, 6.10.14-linuxkit, aarch64
+2025-04-03T11:17:12,086 [dispatcher-Executor] INFO  org.apache.spark.executor.Executor [] - Java version 17.0.14
+2025-04-03T11:17:12,087 [dispatcher-Executor] INFO  org.apache.spark.executor.Executor [] - Starting executor ID 2 on host 172.18.0.4
+2025-04-03T11:17:12,088 [dispatcher-Executor] INFO  org.apache.spark.executor.Executor [] - Starting executor ID 1 on host 172.18.0.3
+2025-04-03T11:17:12,088 [dispatcher-Executor] INFO  org.apache.spark.executor.Executor [] - OS info Linux, 6.10.14-linuxkit, aarch64
+2025-04-03T11:17:12,088 [dispatcher-Executor] INFO  org.apache.spark.executor.Executor [] - Java version 17.0.14
+2025-04-03T11:17:12,088 [dispatcher-Executor] INFO  org.apache.spark.executor.Executor [] - OS info Linux, 6.10.14-linuxkit, aarch64
+2025-04-03T11:17:12,089 [dispatcher-Executor] INFO  org.apache.spark.executor.Executor [] - Java version 17.0.14
+2025-04-03T11:17:12,107 [dispatcher-Executor] INFO  org.apache.spark.util.Utils [] - Successfully started service 'org.apache.spark.network.netty.NettyBlockTransferService' on port 42647.
+2025-04-03T11:17:12,107 [dispatcher-Executor] INFO  org.apache.spark.network.netty.NettyBlockTransferService [] - Server created on 172.18.0.5:42647
+2025-04-03T11:17:12,108 [dispatcher-Executor] INFO  org.apache.spark.util.Utils [] - Successfully started service 'org.apache.spark.network.netty.NettyBlockTransferService' on port 33069.
+2025-04-03T11:17:12,108 [dispatcher-Executor] INFO  org.apache.spark.network.netty.NettyBlockTransferService [] - Server created on 172.18.0.3:33069
+2025-04-03T11:17:12,109 [dispatcher-Executor] INFO  org.apache.spark.storage.BlockManager [] - Using org.apache.spark.storage.RandomBlockReplicationPolicy for block replication policy
+2025-04-03T11:17:12,110 [dispatcher-Executor] INFO  org.apache.spark.storage.BlockManager [] - Using org.apache.spark.storage.RandomBlockReplicationPolicy for block replication policy
+2025-04-03T11:17:12,111 [dispatcher-Executor] INFO  org.apache.spark.util.Utils [] - Successfully started service 'org.apache.spark.network.netty.NettyBlockTransferService' on port 35537.
+2025-04-03T11:17:12,112 [dispatcher-Executor] INFO  org.apache.spark.storage.BlockManagerMaster [] - Registering BlockManager BlockManagerId(0, 172.18.0.5, 42647, None)
+2025-04-03T11:17:12,111 [dispatcher-Executor] INFO  org.apache.spark.network.netty.NettyBlockTransferService [] - Server created on 172.18.0.4:35537
+2025-04-03T11:17:12,113 [dispatcher-Executor] INFO  org.apache.spark.storage.BlockManagerMaster [] - Registering BlockManager BlockManagerId(1, 172.18.0.3, 33069, None)
+2025-04-03T11:17:12,113 [dispatcher-Executor] INFO  org.apache.spark.storage.BlockManager [] - Using org.apache.spark.storage.RandomBlockReplicationPolicy for block replication policy
+2025-04-03T11:17:12,117 [dispatcher-Executor] INFO  org.apache.spark.storage.BlockManagerMaster [] - Registering BlockManager BlockManagerId(2, 172.18.0.4, 35537, None)
+2025-04-03T11:17:12,120 [dispatcher-BlockManagerMaster] INFO  org.apache.spark.storage.BlockManagerMasterEndpoint [] - Registering block manager 172.18.0.3:33069 with 434.4 MiB RAM, BlockManagerId(1, 172.18.0.3, 33069, None)
+2025-04-03T11:17:12,122 [dispatcher-BlockManagerMaster] INFO  org.apache.spark.storage.BlockManagerMasterEndpoint [] - Registering block manager 172.18.0.5:42647 with 434.4 MiB RAM, BlockManagerId(0, 172.18.0.5, 42647, None)
+2025-04-03T11:17:12,122 [dispatcher-BlockManagerMaster] INFO  org.apache.spark.storage.BlockManagerMasterEndpoint [] - Registering block manager 172.18.0.4:35537 with 434.4 MiB RAM, BlockManagerId(2, 172.18.0.4, 35537, None)
+2025-04-03T11:17:12,123 [dispatcher-Executor] INFO  org.apache.spark.storage.BlockManagerMaster [] - Registered BlockManager BlockManagerId(1, 172.18.0.3, 33069, None)
+2025-04-03T11:17:12,124 [dispatcher-Executor] INFO  org.apache.spark.storage.BlockManager [] - Initialized BlockManager: BlockManagerId(1, 172.18.0.3, 33069, None)
+2025-04-03T11:17:12,125 [dispatcher-Executor] INFO  org.apache.spark.storage.BlockManagerMaster [] - Registered BlockManager BlockManagerId(2, 172.18.0.4, 35537, None)
+2025-04-03T11:17:12,125 [dispatcher-Executor] INFO  org.apache.spark.storage.BlockManagerMaster [] - Registered BlockManager BlockManagerId(0, 172.18.0.5, 42647, None)
+2025-04-03T11:17:12,126 [dispatcher-Executor] INFO  org.apache.spark.storage.BlockManager [] - Initialized BlockManager: BlockManagerId(2, 172.18.0.4, 35537, None)
+2025-04-03T11:17:12,127 [dispatcher-Executor] INFO  org.apache.spark.storage.BlockManager [] - Initialized BlockManager: BlockManagerId(0, 172.18.0.5, 42647, None)
+2025-04-03T11:17:12,129 [dispatcher-Executor] INFO  org.apache.spark.executor.Executor [] - Starting executor with user classpath (userClassPathFirst = false): ''
+2025-04-03T11:17:12,130 [dispatcher-Executor] INFO  org.apache.spark.executor.Executor [] - Created or updated repl class loader org.apache.spark.util.MutableURLClassLoader@2c7500be for default.
+2025-04-03T11:17:12,131 [dispatcher-Executor] INFO  org.apache.spark.executor.Executor [] - Starting executor with user classpath (userClassPathFirst = false): ''
+2025-04-03T11:17:12,131 [dispatcher-Executor] INFO  org.apache.spark.executor.Executor [] - Starting executor with user classpath (userClassPathFirst = false): ''
+2025-04-03T11:17:12,131 [dispatcher-Executor] INFO  org.apache.spark.executor.Executor [] - Created or updated repl class loader org.apache.spark.util.MutableURLClassLoader@5cc8e804 for default.
+2025-04-03T11:17:12,132 [dispatcher-Executor] INFO  org.apache.spark.executor.Executor [] - Created or updated repl class loader org.apache.spark.util.MutableURLClassLoader@55ecdbab for default.
+2025-04-03T11:17:12,724 [Thread-4] INFO  org.apache.spark.sql.execution.datasources.FileSourceStrategy [] - Pushed Filters: 
+2025-04-03T11:17:12,725 [Thread-4] INFO  org.apache.spark.sql.execution.datasources.FileSourceStrategy [] - Post-Scan Filters: 
+2025-04-03T11:17:12,792 [Thread-4] INFO  org.apache.spark.storage.memory.MemoryStore [] - Block broadcast_0 stored as values in memory (estimated size 200.2 KiB, free 434.2 MiB)
+2025-04-03T11:17:12,812 [Thread-4] INFO  org.apache.spark.storage.memory.MemoryStore [] - Block broadcast_0_piece0 stored as bytes in memory (estimated size 34.4 KiB, free 434.2 MiB)
+2025-04-03T11:17:12,813 [dispatcher-BlockManagerMaster] INFO  org.apache.spark.storage.BlockManagerInfo [] - Added broadcast_0_piece0 in memory on eff501c685cd:41815 (size: 34.4 KiB, free: 434.4 MiB)
+2025-04-03T11:17:12,815 [Thread-4] INFO  org.apache.spark.SparkContext [] - Created broadcast 0 from json at <unknown>:0
+2025-04-03T11:17:12,819 [Thread-4] INFO  org.apache.spark.sql.execution.FileSourceScanExec [] - Planning scan with bin packing, max size: 4194304 bytes, open cost is considered as scanning 4194304 bytes.
+2025-04-03T11:17:12,874 [Thread-4] INFO  org.apache.spark.SparkContext [] - Starting job: json at <unknown>:0
+2025-04-03T11:17:12,885 [dag-scheduler-event-loop] INFO  org.apache.spark.scheduler.DAGScheduler [] - Got job 0 (json at <unknown>:0) with 1 output partitions
+2025-04-03T11:17:12,885 [dag-scheduler-event-loop] INFO  org.apache.spark.scheduler.DAGScheduler [] - Final stage: ResultStage 0 (json at <unknown>:0)
+2025-04-03T11:17:12,886 [dag-scheduler-event-loop] INFO  org.apache.spark.scheduler.DAGScheduler [] - Parents of final stage: List()
+2025-04-03T11:17:12,886 [dag-scheduler-event-loop] INFO  org.apache.spark.scheduler.DAGScheduler [] - Missing parents: List()
+2025-04-03T11:17:12,888 [dag-scheduler-event-loop] INFO  org.apache.spark.scheduler.DAGScheduler [] - Submitting ResultStage 0 (MapPartitionsRDD[3] at json at <unknown>:0), which has no missing parents
+2025-04-03T11:17:12,920 [dag-scheduler-event-loop] INFO  org.apache.spark.storage.memory.MemoryStore [] - Block broadcast_1 stored as values in memory (estimated size 16.5 KiB, free 434.2 MiB)
+2025-04-03T11:17:12,922 [dag-scheduler-event-loop] INFO  org.apache.spark.storage.memory.MemoryStore [] - Block broadcast_1_piece0 stored as bytes in memory (estimated size 7.7 KiB, free 434.1 MiB)
+2025-04-03T11:17:12,922 [dispatcher-BlockManagerMaster] INFO  org.apache.spark.storage.BlockManagerInfo [] - Added broadcast_1_piece0 in memory on eff501c685cd:41815 (size: 7.7 KiB, free: 434.4 MiB)
+2025-04-03T11:17:12,923 [dag-scheduler-event-loop] INFO  org.apache.spark.SparkContext [] - Created broadcast 1 from broadcast at DAGScheduler.scala:1585
+2025-04-03T11:17:12,930 [dag-scheduler-event-loop] INFO  org.apache.spark.scheduler.DAGScheduler [] - Submitting 1 missing tasks from ResultStage 0 (MapPartitionsRDD[3] at json at <unknown>:0) (first 15 tasks are for partitions Vector(0))
+2025-04-03T11:17:12,931 [dag-scheduler-event-loop] INFO  org.apache.spark.scheduler.TaskSchedulerImpl [] - Adding task set 0.0 with 1 tasks resource profile 0
+2025-04-03T11:17:12,941 [dispatcher-CoarseGrainedScheduler] INFO  org.apache.spark.scheduler.TaskSetManager [] - Starting task 0.0 in stage 0.0 (TID 0) (172.18.0.3, executor 1, partition 0, PROCESS_LOCAL, 9610 bytes) 
+2025-04-03T11:17:12,950 [dispatcher-Executor] INFO  org.apache.spark.executor.CoarseGrainedExecutorBackend [] - Got assigned task 0
+2025-04-03T11:17:12,954 [Executor task launch worker for task 0.0 in stage 0.0 (TID 0)] INFO  org.apache.spark.executor.Executor [] - Running task 0.0 in stage 0.0 (TID 0)
+2025-04-03T11:17:12,990 [Executor task launch worker for task 0.0 in stage 0.0 (TID 0)] INFO  org.apache.spark.broadcast.TorrentBroadcast [] - Started reading broadcast variable 1 with 1 pieces (estimated total size 4.0 MiB)
+2025-04-03T11:17:13,009 [Executor task launch worker for task 0.0 in stage 0.0 (TID 0)] INFO  org.apache.spark.network.client.TransportClientFactory [] - Successfully created connection to eff501c685cd/172.18.0.2:41815 after 0 ms (0 ms spent in bootstraps)
+2025-04-03T11:17:13,028 [Executor task launch worker for task 0.0 in stage 0.0 (TID 0)] INFO  org.apache.spark.storage.memory.MemoryStore [] - Block broadcast_1_piece0 stored as bytes in memory (estimated size 7.7 KiB, free 434.4 MiB)
+2025-04-03T11:17:13,030 [dispatcher-BlockManagerMaster] INFO  org.apache.spark.storage.BlockManagerInfo [] - Added broadcast_1_piece0 in memory on 172.18.0.3:33069 (size: 7.7 KiB, free: 434.4 MiB)
+2025-04-03T11:17:13,032 [Executor task launch worker for task 0.0 in stage 0.0 (TID 0)] INFO  org.apache.spark.broadcast.TorrentBroadcast [] - Reading broadcast variable 1 took 41 ms
+2025-04-03T11:17:13,059 [Executor task launch worker for task 0.0 in stage 0.0 (TID 0)] INFO  org.apache.spark.storage.memory.MemoryStore [] - Block broadcast_1 stored as values in memory (estimated size 16.5 KiB, free 434.4 MiB)
+2025-04-03T11:17:13,200 [Executor task launch worker for task 0.0 in stage 0.0 (TID 0)] INFO  org.apache.spark.sql.execution.datasources.FileScanRDD [] - Reading File path: file:///opt/bitnami/spark/storage/users.json, range: 0-330, partition values: [empty row]
+2025-04-03T11:17:13,328 [Executor task launch worker for task 0.0 in stage 0.0 (TID 0)] INFO  org.apache.spark.sql.catalyst.expressions.codegen.CodeGenerator [] - Code generated in 77.166875 ms
+2025-04-03T11:17:13,329 [Executor task launch worker for task 0.0 in stage 0.0 (TID 0)] INFO  org.apache.spark.broadcast.TorrentBroadcast [] - Started reading broadcast variable 0 with 1 pieces (estimated total size 4.0 MiB)
+2025-04-03T11:17:13,334 [Executor task launch worker for task 0.0 in stage 0.0 (TID 0)] INFO  org.apache.spark.storage.memory.MemoryStore [] - Block broadcast_0_piece0 stored as bytes in memory (estimated size 34.4 KiB, free 434.3 MiB)
+2025-04-03T11:17:13,335 [dispatcher-BlockManagerMaster] INFO  org.apache.spark.storage.BlockManagerInfo [] - Added broadcast_0_piece0 in memory on 172.18.0.3:33069 (size: 34.4 KiB, free: 434.4 MiB)
+2025-04-03T11:17:13,336 [Executor task launch worker for task 0.0 in stage 0.0 (TID 0)] INFO  org.apache.spark.broadcast.TorrentBroadcast [] - Reading broadcast variable 0 took 5 ms
+2025-04-03T11:17:13,363 [Executor task launch worker for task 0.0 in stage 0.0 (TID 0)] INFO  org.apache.spark.storage.memory.MemoryStore [] - Block broadcast_0 stored as values in memory (estimated size 377.3 KiB, free 434.0 MiB)
+2025-04-03T11:17:13,416 [Executor task launch worker for task 0.0 in stage 0.0 (TID 0)] INFO  org.apache.spark.executor.Executor [] - Finished task 0.0 in stage 0.0 (TID 0). 2292 bytes result sent to driver
+2025-04-03T11:17:13,424 [task-result-getter-0] INFO  org.apache.spark.scheduler.TaskSetManager [] - Finished task 0.0 in stage 0.0 (TID 0) in 487 ms on 172.18.0.3 (executor 1) (1/1)
+2025-04-03T11:17:13,428 [task-result-getter-0] INFO  org.apache.spark.scheduler.TaskSchedulerImpl [] - Removed TaskSet 0.0, whose tasks have all completed, from pool 
+2025-04-03T11:17:13,431 [dag-scheduler-event-loop] INFO  org.apache.spark.scheduler.DAGScheduler [] - ResultStage 0 (json at <unknown>:0) finished in 0.537 s
+2025-04-03T11:17:13,432 [dag-scheduler-event-loop] INFO  org.apache.spark.scheduler.DAGScheduler [] - Job 0 is finished. Cancelling potential speculative or zombie tasks for this job
+2025-04-03T11:17:13,432 [dag-scheduler-event-loop] INFO  org.apache.spark.scheduler.TaskSchedulerImpl [] - Killing all running tasks in stage 0: Stage finished
+2025-04-03T11:17:13,434 [Thread-4] INFO  org.apache.spark.scheduler.DAGScheduler [] - Job 0 finished: json at <unknown>:0, took 0.559083 s
+2025-04-03T11:17:13,508 [Thread-4] INFO  org.apache.spark.sql.execution.datasources.FileSourceStrategy [] - Pushed Filters: 
+2025-04-03T11:17:13,509 [Thread-4] INFO  org.apache.spark.sql.execution.datasources.FileSourceStrategy [] - Post-Scan Filters: 
+2025-04-03T11:17:13,659 [Thread-4] INFO  org.apache.spark.sql.catalyst.expressions.codegen.CodeGenerator [] - Code generated in 87.612458 ms
+2025-04-03T11:17:13,662 [Thread-4] INFO  org.apache.spark.storage.memory.MemoryStore [] - Block broadcast_2 stored as values in memory (estimated size 200.1 KiB, free 434.0 MiB)
+2025-04-03T11:17:13,666 [Thread-4] INFO  org.apache.spark.storage.memory.MemoryStore [] - Block broadcast_2_piece0 stored as bytes in memory (estimated size 34.4 KiB, free 433.9 MiB)
+2025-04-03T11:17:13,667 [dispatcher-BlockManagerMaster] INFO  org.apache.spark.storage.BlockManagerInfo [] - Added broadcast_2_piece0 in memory on eff501c685cd:41815 (size: 34.4 KiB, free: 434.3 MiB)
+2025-04-03T11:17:13,667 [Thread-4] INFO  org.apache.spark.SparkContext [] - Created broadcast 2 from count at <unknown>:0
+2025-04-03T11:17:13,669 [Thread-4] INFO  org.apache.spark.sql.execution.FileSourceScanExec [] - Planning scan with bin packing, max size: 4194304 bytes, open cost is considered as scanning 4194304 bytes.
+2025-04-03T11:17:13,687 [dag-scheduler-event-loop] INFO  org.apache.spark.scheduler.DAGScheduler [] - Registering RDD 7 (count at <unknown>:0) as input to shuffle 0
+2025-04-03T11:17:13,689 [dag-scheduler-event-loop] INFO  org.apache.spark.scheduler.DAGScheduler [] - Got map stage job 1 (count at <unknown>:0) with 1 output partitions
+2025-04-03T11:17:13,689 [dag-scheduler-event-loop] INFO  org.apache.spark.scheduler.DAGScheduler [] - Final stage: ShuffleMapStage 1 (count at <unknown>:0)
+2025-04-03T11:17:13,689 [dag-scheduler-event-loop] INFO  org.apache.spark.scheduler.DAGScheduler [] - Parents of final stage: List()
+2025-04-03T11:17:13,690 [dag-scheduler-event-loop] INFO  org.apache.spark.scheduler.DAGScheduler [] - Missing parents: List()
+2025-04-03T11:17:13,690 [dag-scheduler-event-loop] INFO  org.apache.spark.scheduler.DAGScheduler [] - Submitting ShuffleMapStage 1 (MapPartitionsRDD[7] at count at <unknown>:0), which has no missing parents
+2025-04-03T11:17:13,696 [dag-scheduler-event-loop] INFO  org.apache.spark.storage.memory.MemoryStore [] - Block broadcast_3 stored as values in memory (estimated size 17.0 KiB, free 433.9 MiB)
+2025-04-03T11:17:13,697 [dag-scheduler-event-loop] INFO  org.apache.spark.storage.memory.MemoryStore [] - Block broadcast_3_piece0 stored as bytes in memory (estimated size 8.3 KiB, free 433.9 MiB)
+2025-04-03T11:17:13,698 [dispatcher-BlockManagerMaster] INFO  org.apache.spark.storage.BlockManagerInfo [] - Added broadcast_3_piece0 in memory on eff501c685cd:41815 (size: 8.3 KiB, free: 434.3 MiB)
+2025-04-03T11:17:13,698 [dag-scheduler-event-loop] INFO  org.apache.spark.SparkContext [] - Created broadcast 3 from broadcast at DAGScheduler.scala:1585
+2025-04-03T11:17:13,699 [dag-scheduler-event-loop] INFO  org.apache.spark.scheduler.DAGScheduler [] - Submitting 1 missing tasks from ShuffleMapStage 1 (MapPartitionsRDD[7] at count at <unknown>:0) (first 15 tasks are for partitions Vector(0))
+2025-04-03T11:17:13,699 [dag-scheduler-event-loop] INFO  org.apache.spark.scheduler.TaskSchedulerImpl [] - Adding task set 1.0 with 1 tasks resource profile 0
+2025-04-03T11:17:13,701 [dispatcher-CoarseGrainedScheduler] INFO  org.apache.spark.scheduler.TaskSetManager [] - Starting task 0.0 in stage 1.0 (TID 1) (172.18.0.4, executor 2, partition 0, PROCESS_LOCAL, 9599 bytes) 
+2025-04-03T11:17:13,706 [dispatcher-Executor] INFO  org.apache.spark.executor.CoarseGrainedExecutorBackend [] - Got assigned task 1
+2025-04-03T11:17:13,709 [Executor task launch worker for task 0.0 in stage 1.0 (TID 1)] INFO  org.apache.spark.executor.Executor [] - Running task 0.0 in stage 1.0 (TID 1)
+2025-04-03T11:17:13,744 [Executor task launch worker for task 0.0 in stage 1.0 (TID 1)] INFO  org.apache.spark.broadcast.TorrentBroadcast [] - Started reading broadcast variable 3 with 1 pieces (estimated total size 4.0 MiB)
+2025-04-03T11:17:13,759 [Executor task launch worker for task 0.0 in stage 1.0 (TID 1)] INFO  org.apache.spark.network.client.TransportClientFactory [] - Successfully created connection to eff501c685cd/172.18.0.2:41815 after 1 ms (0 ms spent in bootstraps)
+2025-04-03T11:17:13,777 [Executor task launch worker for task 0.0 in stage 1.0 (TID 1)] INFO  org.apache.spark.storage.memory.MemoryStore [] - Block broadcast_3_piece0 stored as bytes in memory (estimated size 8.3 KiB, free 434.4 MiB)
+2025-04-03T11:17:13,782 [dispatcher-BlockManagerMaster] INFO  org.apache.spark.storage.BlockManagerInfo [] - Added broadcast_3_piece0 in memory on 172.18.0.4:35537 (size: 8.3 KiB, free: 434.4 MiB)
+2025-04-03T11:17:13,785 [Executor task launch worker for task 0.0 in stage 1.0 (TID 1)] INFO  org.apache.spark.broadcast.TorrentBroadcast [] - Reading broadcast variable 3 took 40 ms
+2025-04-03T11:17:13,804 [Executor task launch worker for task 0.0 in stage 1.0 (TID 1)] INFO  org.apache.spark.storage.memory.MemoryStore [] - Block broadcast_3 stored as values in memory (estimated size 17.0 KiB, free 434.4 MiB)
+2025-04-03T11:17:14,022 [Executor task launch worker for task 0.0 in stage 1.0 (TID 1)] INFO  org.apache.spark.sql.catalyst.expressions.codegen.CodeGenerator [] - Code generated in 80.259792 ms
+2025-04-03T11:17:14,028 [Executor task launch worker for task 0.0 in stage 1.0 (TID 1)] INFO  org.apache.spark.sql.execution.datasources.FileScanRDD [] - Reading File path: file:///opt/bitnami/spark/storage/users.json, range: 0-330, partition values: [empty row]
+2025-04-03T11:17:14,043 [Executor task launch worker for task 0.0 in stage 1.0 (TID 1)] INFO  org.apache.spark.sql.catalyst.expressions.codegen.CodeGenerator [] - Code generated in 5.552708 ms
+2025-04-03T11:17:14,052 [Executor task launch worker for task 0.0 in stage 1.0 (TID 1)] INFO  org.apache.spark.broadcast.TorrentBroadcast [] - Started reading broadcast variable 2 with 1 pieces (estimated total size 4.0 MiB)
+2025-04-03T11:17:14,056 [Executor task launch worker for task 0.0 in stage 1.0 (TID 1)] INFO  org.apache.spark.storage.memory.MemoryStore [] - Block broadcast_2_piece0 stored as bytes in memory (estimated size 34.4 KiB, free 434.3 MiB)
+2025-04-03T11:17:14,058 [dispatcher-BlockManagerMaster] INFO  org.apache.spark.storage.BlockManagerInfo [] - Added broadcast_2_piece0 in memory on 172.18.0.4:35537 (size: 34.4 KiB, free: 434.4 MiB)
+2025-04-03T11:17:14,058 [Executor task launch worker for task 0.0 in stage 1.0 (TID 1)] INFO  org.apache.spark.broadcast.TorrentBroadcast [] - Reading broadcast variable 2 took 5 ms
+2025-04-03T11:17:14,083 [Executor task launch worker for task 0.0 in stage 1.0 (TID 1)] INFO  org.apache.spark.storage.memory.MemoryStore [] - Block broadcast_2 stored as values in memory (estimated size 377.3 KiB, free 434.0 MiB)
+2025-04-03T11:17:14,155 [Executor task launch worker for task 0.0 in stage 1.0 (TID 1)] INFO  org.apache.spark.executor.Executor [] - Finished task 0.0 in stage 1.0 (TID 1). 2007 bytes result sent to driver
+2025-04-03T11:17:14,160 [task-result-getter-1] INFO  org.apache.spark.scheduler.TaskSetManager [] - Finished task 0.0 in stage 1.0 (TID 1) in 460 ms on 172.18.0.4 (executor 2) (1/1)
+2025-04-03T11:17:14,160 [task-result-getter-1] INFO  org.apache.spark.scheduler.TaskSchedulerImpl [] - Removed TaskSet 1.0, whose tasks have all completed, from pool 
+2025-04-03T11:17:14,161 [dag-scheduler-event-loop] INFO  org.apache.spark.scheduler.DAGScheduler [] - ShuffleMapStage 1 (count at <unknown>:0) finished in 0.470 s
+2025-04-03T11:17:14,162 [dag-scheduler-event-loop] INFO  org.apache.spark.scheduler.DAGScheduler [] - looking for newly runnable stages
+2025-04-03T11:17:14,162 [dag-scheduler-event-loop] INFO  org.apache.spark.scheduler.DAGScheduler [] - running: Set()
+2025-04-03T11:17:14,162 [dag-scheduler-event-loop] INFO  org.apache.spark.scheduler.DAGScheduler [] - waiting: Set()
+2025-04-03T11:17:14,163 [dag-scheduler-event-loop] INFO  org.apache.spark.scheduler.DAGScheduler [] - failed: Set()
+2025-04-03T11:17:14,183 [Thread-4] INFO  org.apache.spark.sql.catalyst.expressions.codegen.CodeGenerator [] - Code generated in 8.3165 ms
+2025-04-03T11:17:14,195 [Thread-4] INFO  org.apache.spark.SparkContext [] - Starting job: count at <unknown>:0
+2025-04-03T11:17:14,196 [dag-scheduler-event-loop] INFO  org.apache.spark.scheduler.DAGScheduler [] - Got job 2 (count at <unknown>:0) with 1 output partitions
+2025-04-03T11:17:14,197 [dag-scheduler-event-loop] INFO  org.apache.spark.scheduler.DAGScheduler [] - Final stage: ResultStage 3 (count at <unknown>:0)
+2025-04-03T11:17:14,197 [dag-scheduler-event-loop] INFO  org.apache.spark.scheduler.DAGScheduler [] - Parents of final stage: List(ShuffleMapStage 2)
+2025-04-03T11:17:14,197 [dag-scheduler-event-loop] INFO  org.apache.spark.scheduler.DAGScheduler [] - Missing parents: List()
+2025-04-03T11:17:14,197 [dag-scheduler-event-loop] INFO  org.apache.spark.scheduler.DAGScheduler [] - Submitting ResultStage 3 (MapPartitionsRDD[10] at count at <unknown>:0), which has no missing parents
+2025-04-03T11:17:14,202 [dag-scheduler-event-loop] INFO  org.apache.spark.storage.memory.MemoryStore [] - Block broadcast_4 stored as values in memory (estimated size 12.5 KiB, free 433.9 MiB)
+2025-04-03T11:17:14,207 [dag-scheduler-event-loop] INFO  org.apache.spark.storage.memory.MemoryStore [] - Block broadcast_4_piece0 stored as bytes in memory (estimated size 6.0 KiB, free 433.9 MiB)
+2025-04-03T11:17:14,208 [dispatcher-BlockManagerMaster] INFO  org.apache.spark.storage.BlockManagerInfo [] - Added broadcast_4_piece0 in memory on eff501c685cd:41815 (size: 6.0 KiB, free: 434.3 MiB)
+2025-04-03T11:17:14,208 [dag-scheduler-event-loop] INFO  org.apache.spark.SparkContext [] - Created broadcast 4 from broadcast at DAGScheduler.scala:1585
+2025-04-03T11:17:14,212 [dag-scheduler-event-loop] INFO  org.apache.spark.scheduler.DAGScheduler [] - Submitting 1 missing tasks from ResultStage 3 (MapPartitionsRDD[10] at count at <unknown>:0) (first 15 tasks are for partitions Vector(0))
+2025-04-03T11:17:14,212 [dag-scheduler-event-loop] INFO  org.apache.spark.scheduler.TaskSchedulerImpl [] - Adding task set 3.0 with 1 tasks resource profile 0
+2025-04-03T11:17:14,215 [dispatcher-CoarseGrainedScheduler] INFO  org.apache.spark.scheduler.TaskSetManager [] - Starting task 0.0 in stage 3.0 (TID 2) (172.18.0.4, executor 2, partition 0, NODE_LOCAL, 9003 bytes) 
+2025-04-03T11:17:14,216 [dispatcher-BlockManagerMaster] INFO  org.apache.spark.storage.BlockManagerInfo [] - Removed broadcast_0_piece0 on eff501c685cd:41815 in memory (size: 34.4 KiB, free: 434.3 MiB)
+2025-04-03T11:17:14,217 [dispatcher-Executor] INFO  org.apache.spark.executor.CoarseGrainedExecutorBackend [] - Got assigned task 2
+2025-04-03T11:17:14,218 [Executor task launch worker for task 0.0 in stage 3.0 (TID 2)] INFO  org.apache.spark.executor.Executor [] - Running task 0.0 in stage 3.0 (TID 2)
+2025-04-03T11:17:14,220 [dispatcher-BlockManagerMaster] INFO  org.apache.spark.storage.BlockManagerInfo [] - Removed broadcast_0_piece0 on 172.18.0.3:33069 in memory (size: 34.4 KiB, free: 434.4 MiB)
+2025-04-03T11:17:14,222 [Executor task launch worker for task 0.0 in stage 3.0 (TID 2)] INFO  org.apache.spark.MapOutputTrackerWorker [] - Updating epoch to 1 and clearing cache
+2025-04-03T11:17:14,227 [dispatcher-BlockManagerMaster] INFO  org.apache.spark.storage.BlockManagerInfo [] - Removed broadcast_1_piece0 on eff501c685cd:41815 in memory (size: 7.7 KiB, free: 434.4 MiB)
+2025-04-03T11:17:14,230 [dispatcher-BlockManagerMaster] INFO  org.apache.spark.storage.BlockManagerInfo [] - Removed broadcast_1_piece0 on 172.18.0.3:33069 in memory (size: 7.7 KiB, free: 434.4 MiB)
+2025-04-03T11:17:14,241 [dispatcher-BlockManagerMaster] INFO  org.apache.spark.storage.BlockManagerInfo [] - Removed broadcast_3_piece0 on eff501c685cd:41815 in memory (size: 8.3 KiB, free: 434.4 MiB)
+2025-04-03T11:17:14,243 [Executor task launch worker for task 0.0 in stage 3.0 (TID 2)] INFO  org.apache.spark.broadcast.TorrentBroadcast [] - Started reading broadcast variable 4 with 1 pieces (estimated total size 4.0 MiB)
+2025-04-03T11:17:14,248 [Executor task launch worker for task 0.0 in stage 3.0 (TID 2)] INFO  org.apache.spark.storage.memory.MemoryStore [] - Block broadcast_4_piece0 stored as bytes in memory (estimated size 6.0 KiB, free 434.0 MiB)
+2025-04-03T11:17:14,250 [dispatcher-BlockManagerMaster] INFO  org.apache.spark.storage.BlockManagerInfo [] - Added broadcast_4_piece0 in memory on 172.18.0.4:35537 (size: 6.0 KiB, free: 434.4 MiB)
+2025-04-03T11:17:14,251 [dispatcher-BlockManagerMaster] INFO  org.apache.spark.storage.BlockManagerInfo [] - Removed broadcast_3_piece0 on 172.18.0.4:35537 in memory (size: 8.3 KiB, free: 434.4 MiB)
+2025-04-03T11:17:14,251 [Executor task launch worker for task 0.0 in stage 3.0 (TID 2)] INFO  org.apache.spark.broadcast.TorrentBroadcast [] - Reading broadcast variable 4 took 7 ms
+2025-04-03T11:17:14,252 [Executor task launch worker for task 0.0 in stage 3.0 (TID 2)] INFO  org.apache.spark.storage.memory.MemoryStore [] - Block broadcast_4 stored as values in memory (estimated size 12.5 KiB, free 434.0 MiB)
+2025-04-03T11:17:14,274 [Executor task launch worker for task 0.0 in stage 3.0 (TID 2)] INFO  org.apache.spark.MapOutputTrackerWorker [] - Don't have map outputs for shuffle 0, fetching them
+2025-04-03T11:17:14,275 [Executor task launch worker for task 0.0 in stage 3.0 (TID 2)] INFO  org.apache.spark.MapOutputTrackerWorker [] - Doing the fetch; tracker endpoint = NettyRpcEndpointRef(spark://MapOutputTracker@eff501c685cd:33937)
+2025-04-03T11:17:14,279 [dispatcher-event-loop-9] INFO  org.apache.spark.MapOutputTrackerMasterEndpoint [] - Asked to send map output locations for shuffle 0 to 172.18.0.4:36280
+2025-04-03T11:17:14,299 [Executor task launch worker for task 0.0 in stage 3.0 (TID 2)] INFO  org.apache.spark.MapOutputTrackerWorker [] - Got the map output locations
+2025-04-03T11:17:14,309 [Executor task launch worker for task 0.0 in stage 3.0 (TID 2)] INFO  org.apache.spark.storage.ShuffleBlockFetcherIterator [] - Getting 1 (60.0 B) non-empty blocks including 1 (60.0 B) local and 0 (0.0 B) host-local and 0 (0.0 B) push-merged-local and 0 (0.0 B) remote blocks
+2025-04-03T11:17:14,310 [Executor task launch worker for task 0.0 in stage 3.0 (TID 2)] INFO  org.apache.spark.storage.ShuffleBlockFetcherIterator [] - Started 0 remote fetches in 4 ms
+2025-04-03T11:17:14,320 [Executor task launch worker for task 0.0 in stage 3.0 (TID 2)] INFO  org.apache.spark.sql.catalyst.expressions.codegen.CodeGenerator [] - Code generated in 8.259209 ms
+2025-04-03T11:17:14,327 [Executor task launch worker for task 0.0 in stage 3.0 (TID 2)] INFO  org.apache.spark.executor.Executor [] - Finished task 0.0 in stage 3.0 (TID 2). 4081 bytes result sent to driver
+2025-04-03T11:17:14,331 [task-result-getter-2] INFO  org.apache.spark.scheduler.TaskSetManager [] - Finished task 0.0 in stage 3.0 (TID 2) in 117 ms on 172.18.0.4 (executor 2) (1/1)
+2025-04-03T11:17:14,331 [task-result-getter-2] INFO  org.apache.spark.scheduler.TaskSchedulerImpl [] - Removed TaskSet 3.0, whose tasks have all completed, from pool 
+2025-04-03T11:17:14,331 [dag-scheduler-event-loop] INFO  org.apache.spark.scheduler.DAGScheduler [] - ResultStage 3 (count at <unknown>:0) finished in 0.130 s
+2025-04-03T11:17:14,332 [dag-scheduler-event-loop] INFO  org.apache.spark.scheduler.DAGScheduler [] - Job 2 is finished. Cancelling potential speculative or zombie tasks for this job
+2025-04-03T11:17:14,332 [dag-scheduler-event-loop] INFO  org.apache.spark.scheduler.TaskSchedulerImpl [] - Killing all running tasks in stage 3: Stage finished
+2025-04-03T11:17:14,333 [Thread-4] INFO  org.apache.spark.scheduler.DAGScheduler [] - Job 2 finished: count at <unknown>:0, took 0.137231 s
+2025-04-03T11:17:14,364 [Thread-4] INFO  org.apache.spark.sql.execution.datasources.FileSourceStrategy [] - Pushed Filters: 
+2025-04-03T11:17:14,364 [Thread-4] INFO  org.apache.spark.sql.execution.datasources.FileSourceStrategy [] - Post-Scan Filters: 
+2025-04-03T11:17:14,394 [Thread-4] INFO  org.apache.spark.sql.catalyst.expressions.codegen.CodeGenerator [] - Code generated in 12.203333 ms
+2025-04-03T11:17:14,396 [Thread-4] INFO  org.apache.spark.storage.memory.MemoryStore [] - Block broadcast_5 stored as values in memory (estimated size 200.1 KiB, free 434.0 MiB)
+2025-04-03T11:17:14,401 [dispatcher-BlockManagerMaster] INFO  org.apache.spark.storage.BlockManagerInfo [] - Removed broadcast_2_piece0 on eff501c685cd:41815 in memory (size: 34.4 KiB, free: 434.4 MiB)
+2025-04-03T11:17:14,402 [Thread-4] INFO  org.apache.spark.storage.memory.MemoryStore [] - Block broadcast_5_piece0 stored as bytes in memory (estimated size 34.4 KiB, free 434.2 MiB)
+2025-04-03T11:17:14,403 [dispatcher-BlockManagerMaster] INFO  org.apache.spark.storage.BlockManagerInfo [] - Removed broadcast_2_piece0 on 172.18.0.4:35537 in memory (size: 34.4 KiB, free: 434.4 MiB)
+2025-04-03T11:17:14,403 [dispatcher-BlockManagerMaster] INFO  org.apache.spark.storage.BlockManagerInfo [] - Added broadcast_5_piece0 in memory on eff501c685cd:41815 (size: 34.4 KiB, free: 434.4 MiB)
+2025-04-03T11:17:14,404 [Thread-4] INFO  org.apache.spark.SparkContext [] - Created broadcast 5 from showString at <unknown>:0
+2025-04-03T11:17:14,405 [Thread-4] INFO  org.apache.spark.sql.execution.FileSourceScanExec [] - Planning scan with bin packing, max size: 4194304 bytes, open cost is considered as scanning 4194304 bytes.
+2025-04-03T11:17:14,408 [dispatcher-BlockManagerMaster] INFO  org.apache.spark.storage.BlockManagerInfo [] - Removed broadcast_4_piece0 on eff501c685cd:41815 in memory (size: 6.0 KiB, free: 434.4 MiB)
+2025-04-03T11:17:14,411 [dispatcher-BlockManagerMaster] INFO  org.apache.spark.storage.BlockManagerInfo [] - Removed broadcast_4_piece0 on 172.18.0.4:35537 in memory (size: 6.0 KiB, free: 434.4 MiB)
+2025-04-03T11:17:14,412 [Thread-4] INFO  org.apache.spark.SparkContext [] - Starting job: showString at <unknown>:0
+2025-04-03T11:17:14,414 [dag-scheduler-event-loop] INFO  org.apache.spark.scheduler.DAGScheduler [] - Got job 3 (showString at <unknown>:0) with 1 output partitions
+2025-04-03T11:17:14,415 [dag-scheduler-event-loop] INFO  org.apache.spark.scheduler.DAGScheduler [] - Final stage: ResultStage 4 (showString at <unknown>:0)
+2025-04-03T11:17:14,416 [dag-scheduler-event-loop] INFO  org.apache.spark.scheduler.DAGScheduler [] - Parents of final stage: List()
+2025-04-03T11:17:14,416 [dag-scheduler-event-loop] INFO  org.apache.spark.scheduler.DAGScheduler [] - Missing parents: List()
+2025-04-03T11:17:14,422 [dag-scheduler-event-loop] INFO  org.apache.spark.scheduler.DAGScheduler [] - Submitting ResultStage 4 (MapPartitionsRDD[14] at showString at <unknown>:0), which has no missing parents
+2025-04-03T11:17:14,423 [dag-scheduler-event-loop] INFO  org.apache.spark.storage.memory.MemoryStore [] - Block broadcast_6 stored as values in memory (estimated size 18.0 KiB, free 434.2 MiB)
+2025-04-03T11:17:14,426 [dag-scheduler-event-loop] INFO  org.apache.spark.storage.memory.MemoryStore [] - Block broadcast_6_piece0 stored as bytes in memory (estimated size 7.8 KiB, free 434.1 MiB)
+2025-04-03T11:17:14,427 [dispatcher-BlockManagerMaster] INFO  org.apache.spark.storage.BlockManagerInfo [] - Added broadcast_6_piece0 in memory on eff501c685cd:41815 (size: 7.8 KiB, free: 434.4 MiB)
+2025-04-03T11:17:14,427 [dag-scheduler-event-loop] INFO  org.apache.spark.SparkContext [] - Created broadcast 6 from broadcast at DAGScheduler.scala:1585
+2025-04-03T11:17:14,427 [dag-scheduler-event-loop] INFO  org.apache.spark.scheduler.DAGScheduler [] - Submitting 1 missing tasks from ResultStage 4 (MapPartitionsRDD[14] at showString at <unknown>:0) (first 15 tasks are for partitions Vector(0))
+2025-04-03T11:17:14,428 [dag-scheduler-event-loop] INFO  org.apache.spark.scheduler.TaskSchedulerImpl [] - Adding task set 4.0 with 1 tasks resource profile 0
+2025-04-03T11:17:14,428 [dispatcher-CoarseGrainedScheduler] INFO  org.apache.spark.scheduler.TaskSetManager [] - Starting task 0.0 in stage 4.0 (TID 3) (172.18.0.4, executor 2, partition 0, PROCESS_LOCAL, 9610 bytes) 
+2025-04-03T11:17:14,430 [dispatcher-Executor] INFO  org.apache.spark.executor.CoarseGrainedExecutorBackend [] - Got assigned task 3
+2025-04-03T11:17:14,430 [Executor task launch worker for task 0.0 in stage 4.0 (TID 3)] INFO  org.apache.spark.executor.Executor [] - Running task 0.0 in stage 4.0 (TID 3)
+2025-04-03T11:17:14,432 [Executor task launch worker for task 0.0 in stage 4.0 (TID 3)] INFO  org.apache.spark.broadcast.TorrentBroadcast [] - Started reading broadcast variable 6 with 1 pieces (estimated total size 4.0 MiB)
+2025-04-03T11:17:14,435 [Executor task launch worker for task 0.0 in stage 4.0 (TID 3)] INFO  org.apache.spark.storage.memory.MemoryStore [] - Block broadcast_6_piece0 stored as bytes in memory (estimated size 7.8 KiB, free 434.4 MiB)
+2025-04-03T11:17:14,437 [dispatcher-BlockManagerMaster] INFO  org.apache.spark.storage.BlockManagerInfo [] - Added broadcast_6_piece0 in memory on 172.18.0.4:35537 (size: 7.8 KiB, free: 434.4 MiB)
+2025-04-03T11:17:14,438 [Executor task launch worker for task 0.0 in stage 4.0 (TID 3)] INFO  org.apache.spark.broadcast.TorrentBroadcast [] - Reading broadcast variable 6 took 5 ms
+2025-04-03T11:17:14,439 [Executor task launch worker for task 0.0 in stage 4.0 (TID 3)] INFO  org.apache.spark.storage.memory.MemoryStore [] - Block broadcast_6 stored as values in memory (estimated size 18.0 KiB, free 434.4 MiB)
+2025-04-03T11:17:14,455 [Executor task launch worker for task 0.0 in stage 4.0 (TID 3)] INFO  org.apache.spark.sql.catalyst.expressions.codegen.CodeGenerator [] - Code generated in 13.020041 ms
+2025-04-03T11:17:14,456 [Executor task launch worker for task 0.0 in stage 4.0 (TID 3)] INFO  org.apache.spark.sql.execution.datasources.FileScanRDD [] - Reading File path: file:///opt/bitnami/spark/storage/users.json, range: 0-330, partition values: [empty row]
+2025-04-03T11:17:14,492 [Executor task launch worker for task 0.0 in stage 4.0 (TID 3)] INFO  org.apache.spark.sql.catalyst.expressions.codegen.CodeGenerator [] - Code generated in 18.458833 ms
+2025-04-03T11:17:14,493 [Executor task launch worker for task 0.0 in stage 4.0 (TID 3)] INFO  org.apache.spark.broadcast.TorrentBroadcast [] - Started reading broadcast variable 5 with 1 pieces (estimated total size 4.0 MiB)
+2025-04-03T11:17:14,497 [Executor task launch worker for task 0.0 in stage 4.0 (TID 3)] INFO  org.apache.spark.storage.memory.MemoryStore [] - Block broadcast_5_piece0 stored as bytes in memory (estimated size 34.4 KiB, free 434.3 MiB)
+2025-04-03T11:17:14,498 [dispatcher-BlockManagerMaster] INFO  org.apache.spark.storage.BlockManagerInfo [] - Added broadcast_5_piece0 in memory on 172.18.0.4:35537 (size: 34.4 KiB, free: 434.4 MiB)
+2025-04-03T11:17:14,499 [Executor task launch worker for task 0.0 in stage 4.0 (TID 3)] INFO  org.apache.spark.broadcast.TorrentBroadcast [] - Reading broadcast variable 5 took 5 ms
+2025-04-03T11:17:14,503 [Executor task launch worker for task 0.0 in stage 4.0 (TID 3)] INFO  org.apache.spark.storage.memory.MemoryStore [] - Block broadcast_5 stored as values in memory (estimated size 377.3 KiB, free 434.0 MiB)
+2025-04-03T11:17:14,510 [Executor task launch worker for task 0.0 in stage 4.0 (TID 3)] INFO  org.apache.spark.executor.Executor [] - Finished task 0.0 in stage 4.0 (TID 3). 1792 bytes result sent to driver
+2025-04-03T11:17:14,513 [task-result-getter-3] INFO  org.apache.spark.scheduler.TaskSetManager [] - Finished task 0.0 in stage 4.0 (TID 3) in 85 ms on 172.18.0.4 (executor 2) (1/1)
+2025-04-03T11:17:14,513 [task-result-getter-3] INFO  org.apache.spark.scheduler.TaskSchedulerImpl [] - Removed TaskSet 4.0, whose tasks have all completed, from pool 
+2025-04-03T11:17:14,513 [dag-scheduler-event-loop] INFO  org.apache.spark.scheduler.DAGScheduler [] - ResultStage 4 (showString at <unknown>:0) finished in 0.091 s
+2025-04-03T11:17:14,514 [dag-scheduler-event-loop] INFO  org.apache.spark.scheduler.DAGScheduler [] - Job 3 is finished. Cancelling potential speculative or zombie tasks for this job
+2025-04-03T11:17:14,514 [dag-scheduler-event-loop] INFO  org.apache.spark.scheduler.TaskSchedulerImpl [] - Killing all running tasks in stage 4: Stage finished
+2025-04-03T11:17:14,514 [Thread-4] INFO  org.apache.spark.scheduler.DAGScheduler [] - Job 3 finished: showString at <unknown>:0, took 0.102400 s
+2025-04-03T11:17:14,542 [Thread-4] INFO  org.apache.spark.sql.catalyst.expressions.codegen.CodeGenerator [] - Code generated in 19.941875 ms
+2025-04-03T11:17:14,546 [Thread-4] INFO  org.apache.spark.SparkContext [] - SparkContext is stopping with exitCode 0.
+2025-04-03T11:17:14,551 [Thread-4] INFO  org.sparkproject.jetty.server.AbstractConnector [] - Stopped Spark@4c8fc038{HTTP/1.1, (http/1.1)}{0.0.0.0:4040}
+2025-04-03T11:17:14,553 [Thread-4] INFO  org.apache.spark.ui.SparkUI [] - Stopped Spark web UI at http://eff501c685cd:4040
+2025-04-03T11:17:14,555 [Thread-4] INFO  org.apache.spark.scheduler.cluster.StandaloneSchedulerBackend [] - Shutting down all executors
+2025-04-03T11:17:14,555 [dispatcher-CoarseGrainedScheduler] INFO  org.apache.spark.scheduler.cluster.StandaloneSchedulerBackend$StandaloneDriverEndpoint [] - Asking each executor to shut down
+2025-04-03T11:17:14,558 [dispatcher-Executor] INFO  org.apache.spark.executor.CoarseGrainedExecutorBackend [] - Driver commanded a shutdown
+2025-04-03T11:17:14,558 [dispatcher-Executor] INFO  org.apache.spark.executor.CoarseGrainedExecutorBackend [] - Driver commanded a shutdown
+2025-04-03T11:17:14,558 [dispatcher-Executor] INFO  org.apache.spark.executor.CoarseGrainedExecutorBackend [] - Driver commanded a shutdown
+2025-04-03T11:17:14,560 [dispatcher-event-loop-0] INFO  org.apache.spark.deploy.master.Master [] - Received unregister request from application app-20250403111710-0000
+2025-04-03T11:17:14,561 [dispatcher-event-loop-0] INFO  org.apache.spark.deploy.master.Master [] - Removing app app-20250403111710-0000
+2025-04-03T11:17:14,566 [CoarseGrainedExecutorBackend-stop-executor] INFO  org.apache.spark.storage.memory.MemoryStore [] - MemoryStore cleared
+2025-04-03T11:17:14,567 [CoarseGrainedExecutorBackend-stop-executor] INFO  org.apache.spark.storage.memory.MemoryStore [] - MemoryStore cleared
+2025-04-03T11:17:14,568 [CoarseGrainedExecutorBackend-stop-executor] INFO  org.apache.spark.storage.memory.MemoryStore [] - MemoryStore cleared
+2025-04-03T11:17:14,569 [dispatcher-event-loop-4] INFO  org.apache.spark.deploy.worker.Worker [] - Asked to kill executor app-20250403111710-0000/2
+2025-04-03T11:17:14,570 [dispatcher-event-loop-4] INFO  org.apache.spark.deploy.worker.Worker [] - Asked to kill executor app-20250403111710-0000/1
+2025-04-03T11:17:14,599 [CoarseGrainedExecutorBackend-stop-executor] INFO  org.apache.spark.storage.BlockManager [] - BlockManager stopped
+2025-04-03T11:17:14,570 [dispatcher-event-loop-4] INFO  org.apache.spark.deploy.worker.Worker [] - Asked to kill executor app-20250403111710-0000/0
+2025-04-03T11:17:14,599 [CoarseGrainedExecutorBackend-stop-executor] INFO  org.apache.spark.storage.BlockManager [] - BlockManager stopped
+2025-04-03T11:17:14,599 [CoarseGrainedExecutorBackend-stop-executor] INFO  org.apache.spark.storage.BlockManager [] - BlockManager stopped
+2025-04-03T11:17:14,601 [ExecutorRunner for app-20250403111710-0000/0] INFO  org.apache.spark.deploy.worker.ExecutorRunner [] - Runner thread for executor app-20250403111710-0000/0 interrupted
+2025-04-03T11:17:14,600 [ExecutorRunner for app-20250403111710-0000/2] INFO  org.apache.spark.deploy.worker.ExecutorRunner [] - Runner thread for executor app-20250403111710-0000/2 interrupted
+2025-04-03T11:17:14,600 [ExecutorRunner for app-20250403111710-0000/1] INFO  org.apache.spark.deploy.worker.ExecutorRunner [] - Runner thread for executor app-20250403111710-0000/1 interrupted
+2025-04-03T11:17:14,603 [dispatcher-event-loop-2] INFO  org.apache.spark.MapOutputTrackerMasterEndpoint [] - MapOutputTrackerMasterEndpoint stopped!
+2025-04-03T11:17:14,603 [shutdown-hook-0] INFO  org.apache.spark.util.ShutdownHookManager [] - Shutdown hook called
+2025-04-03T11:17:14,604 [shutdown-hook-0] INFO  org.apache.spark.util.ShutdownHookManager [] - Shutdown hook called
+2025-04-03T11:17:14,603 [ExecutorRunner for app-20250403111710-0000/0] INFO  org.apache.spark.deploy.worker.ExecutorRunner [] - Killing process!
+2025-04-03T11:17:14,604 [ExecutorRunner for app-20250403111710-0000/1] INFO  org.apache.spark.deploy.worker.ExecutorRunner [] - Killing process!
+2025-04-03T11:17:14,604 [ExecutorRunner for app-20250403111710-0000/2] INFO  org.apache.spark.deploy.worker.ExecutorRunner [] - Killing process!
+2025-04-03T11:17:14,604 [shutdown-hook-0] INFO  org.apache.spark.util.ShutdownHookManager [] - Shutdown hook called
+2025-04-03T11:17:14,606 [SIGTERM handler] ERROR org.apache.spark.executor.CoarseGrainedExecutorBackend [] - RECEIVED SIGNAL TERM
+2025-04-03T11:17:14,606 [SIGTERM handler] ERROR org.apache.spark.executor.CoarseGrainedExecutorBackend [] - RECEIVED SIGNAL TERM
+2025-04-03T11:17:14,606 [SIGTERM handler] ERROR org.apache.spark.executor.CoarseGrainedExecutorBackend [] - RECEIVED SIGNAL TERM
+2025-04-03T11:17:14,611 [Thread-4] INFO  org.apache.spark.storage.memory.MemoryStore [] - MemoryStore cleared
+2025-04-03T11:17:14,611 [Thread-4] INFO  org.apache.spark.storage.BlockManager [] - BlockManager stopped
+2025-04-03T11:17:14,614 [Thread-4] INFO  org.apache.spark.storage.BlockManagerMaster [] - BlockManagerMaster stopped
+2025-04-03T11:17:14,615 [dispatcher-event-loop-5] INFO  org.apache.spark.scheduler.OutputCommitCoordinator$OutputCommitCoordinatorEndpoint [] - OutputCommitCoordinator stopped!
+2025-04-03T11:17:14,618 [dispatcher-event-loop-2] INFO  org.apache.spark.deploy.master.Master [] - 172.18.0.2:45982 got disassociated, removing it.
+2025-04-03T11:17:14,619 [dispatcher-event-loop-2] INFO  org.apache.spark.deploy.master.Master [] - eff501c685cd:33937 got disassociated, removing it.
+2025-04-03T11:17:14,619 [dispatcher-event-loop-8] INFO  org.apache.spark.deploy.worker.Worker [] - Executor app-20250403111710-0000/0 finished with state KILLED exitStatus 0
+2025-04-03T11:17:14,620 [Thread-4] INFO  org.apache.spark.SparkContext [] - Successfully stopped SparkContext
+2025-04-03T11:17:14,620 [dispatcher-event-loop-8] INFO  org.apache.spark.network.shuffle.ExternalShuffleBlockResolver [] - Clean up non-shuffle and non-RDD files associated with the finished executor 0
+2025-04-03T11:17:14,620 [dispatcher-event-loop-2] WARN  org.apache.spark.deploy.master.Master [] - Got status update for unknown executor app-20250403111710-0000/0
+2025-04-03T11:17:14,621 [dispatcher-event-loop-8] INFO  org.apache.spark.deploy.worker.Worker [] - Executor app-20250403111710-0000/2 finished with state KILLED exitStatus 0
+2025-04-03T11:17:14,621 [dispatcher-event-loop-2] WARN  org.apache.spark.deploy.master.Master [] - Got status update for unknown executor app-20250403111710-0000/2
+2025-04-03T11:17:14,621 [dispatcher-event-loop-8] INFO  org.apache.spark.network.shuffle.ExternalShuffleBlockResolver [] - Executor is not registered (appId=app-20250403111710-0000, execId=0)
+2025-04-03T11:17:14,621 [dispatcher-event-loop-8] INFO  org.apache.spark.network.shuffle.ExternalShuffleBlockResolver [] - Clean up non-shuffle and non-RDD files associated with the finished executor 2
+2025-04-03T11:17:14,622 [dispatcher-event-loop-8] INFO  org.apache.spark.network.shuffle.ExternalShuffleBlockResolver [] - Executor is not registered (appId=app-20250403111710-0000, execId=2)
+2025-04-03T11:17:14,622 [dispatcher-event-loop-8] INFO  org.apache.spark.deploy.worker.Worker [] - Executor app-20250403111710-0000/1 finished with state KILLED exitStatus 0
+2025-04-03T11:17:14,622 [dispatcher-event-loop-8] INFO  org.apache.spark.network.shuffle.ExternalShuffleBlockResolver [] - Application app-20250403111710-0000 removed, cleanupLocalDirs = true
+2025-04-03T11:17:14,622 [worker-cleanup-thread] INFO  org.apache.spark.deploy.worker.Worker [] - Cleaning up local directories for application app-20250403111710-0000
+2025-04-03T11:17:14,623 [dispatcher-event-loop-8] INFO  org.apache.spark.network.shuffle.ExternalShuffleBlockResolver [] - Clean up non-shuffle and non-RDD files associated with the finished executor 1
+2025-04-03T11:17:14,623 [worker-cleanup-thread] INFO  org.apache.spark.deploy.worker.Worker [] - Cleaning up local directories for application app-20250403111710-0000
+2025-04-03T11:17:14,623 [dispatcher-event-loop-8] INFO  org.apache.spark.network.shuffle.ExternalShuffleBlockResolver [] - Application app-20250403111710-0000 removed, cleanupLocalDirs = true
+2025-04-03T11:17:14,623 [dispatcher-event-loop-5] WARN  org.apache.spark.deploy.master.Master [] - Got status update for unknown executor app-20250403111710-0000/1
+2025-04-03T11:17:14,623 [dispatcher-event-loop-8] INFO  org.apache.spark.network.shuffle.ExternalShuffleBlockResolver [] - Executor is not registered (appId=app-20250403111710-0000, execId=1)
+2025-04-03T11:17:14,625 [dispatcher-event-loop-8] INFO  org.apache.spark.network.shuffle.ExternalShuffleBlockResolver [] - Application app-20250403111710-0000 removed, cleanupLocalDirs = true
+2025-04-03T11:17:14,625 [worker-cleanup-thread] INFO  org.apache.spark.deploy.worker.Worker [] - Cleaning up local directories for application app-20250403111710-0000
+2025-04-03T11:17:15,069 [shutdown-hook-0] INFO  org.apache.spark.util.ShutdownHookManager [] - Shutdown hook called
+2025-04-03T11:17:15,070 [shutdown-hook-0] INFO  org.apache.spark.util.ShutdownHookManager [] - Deleting directory /tmp/spark-b6befbac-93c2-4c3d-b59b-a838f2017be5/pyspark-a9014a26-220b-4b7f-b27a-a52e1020a15a
+2025-04-03T11:17:15,073 [shutdown-hook-0] INFO  org.apache.spark.util.ShutdownHookManager [] - Deleting directory /tmp/spark-b6befbac-93c2-4c3d-b59b-a838f2017be5
+2025-04-03T11:17:15,074 [shutdown-hook-0] INFO  org.apache.spark.util.ShutdownHookManager [] - Deleting directory /tmp/spark-3fe15a9f-9327-433d-b8e8-c8cd082e1699
+2025-04-03T11:18:14,631 [shutdown-hook-0] INFO  org.apache.spark.util.ShutdownHookManager [] - Shutdown hook called
+2025-04-03T11:18:14,633 [shutdown-hook-0] INFO  org.apache.spark.util.ShutdownHookManager [] - Deleting directory /tmp/spark-12f4bcd9-dff5-4cc1-9f46-32435c92f79c
