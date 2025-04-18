@@ -1,0 +1,270 @@
+{"status_id":1,"order_identifier":"503166d2-79d9-19a2-60d2-8665aca05656","status":{"status_name":"Order Placed","timestamp":1744994228155},"dt_current_timestamp":"2025-04-18 16:37:08.155"}
+{"status_id":2,"order_identifier":"597d6351-f750-3b09-c5ee-97b5dd2f0e46","status":{"status_name":"In Analysis","timestamp":1.744994659176E12},"dt_current_timestamp":"2025-04-18 16:37:08.155"}
+{"status_id":3,"order_identifier":"8518b49d-8e94-aaa2-4c7c-e225bb025af1","status":{"status_name":"Accepted","timestamp":1.744995165847E12},"dt_current_timestamp":"2025-04-18 16:37:08.155"}
+{"status_id":4,"order_identifier":"c309a524-7e2e-6b05-2dba-ddf6fff4dfa3","status":{"status_name":"Preparing","timestamp":1.744995227954E12},"dt_current_timestamp":"2025-04-18 16:37:08.155"}
+{"status_id":5,"order_identifier":"fa296638-4695-f373-d186-f7ea34d33cb7","status":{"status_name":"Ready for Pickup","timestamp":1.744996581392E12},"dt_current_timestamp":"2025-04-18 16:37:08.155"}
+{"status_id":6,"order_identifier":"b7fca1c3-acac-ea38-a32f-3335f1a7bee4","status":{"status_name":"Picked Up","timestamp":1.744997170718E12},"dt_current_timestamp":"2025-04-18 16:37:08.156"}
+{"status_id":7,"order_identifier":"3e1a85ba-335a-4213-2b0e-f0fe7e6afb46","status":{"status_name":"Out for Delivery","timestamp":1.744995941094E12},"dt_current_timestamp":"2025-04-18 16:37:08.156"}
+{"status_id":8,"order_identifier":"c0262404-2c9d-e5ab-179a-05c2a88d1386","status":{"status_name":"Delivered","timestamp":1.744999700924E12},"dt_current_timestamp":"2025-04-18 16:37:08.156"}
+{"status_id":9,"order_identifier":"d81cb0e0-9460-dc40-99ad-a35ce6fb31e5","status":{"status_name":"Completed","timestamp":1.744998051361E12},"dt_current_timestamp":"2025-04-18 16:37:08.156"}
+{"status_id":1,"order_identifier":"49a70c8d-c0e2-233a-358b-423fbc91121d","status":{"status_name":"Order Placed","timestamp":1744994228224},"dt_current_timestamp":"2025-04-18 16:37:08.224"}
+{"status_id":2,"order_identifier":"7ed9236e-7230-bda3-9d9f-a350d9226435","status":{"status_name":"In Analysis","timestamp":1.74499491578E12},"dt_current_timestamp":"2025-04-18 16:37:08.224"}
+{"status_id":3,"order_identifier":"f6d6de0e-08ec-bf36-23da-7444e85881ff","status":{"status_name":"Accepted","timestamp":1.744995464285E12},"dt_current_timestamp":"2025-04-18 16:37:08.224"}
+{"status_id":4,"order_identifier":"69f74272-4f04-b0ad-4dc4-cd6096f23c7c","status":{"status_name":"Preparing","timestamp":1.744995165847E12},"dt_current_timestamp":"2025-04-18 16:37:08.224"}
+{"status_id":5,"order_identifier":"b6d981df-9ed9-16ae-bb77-7fae0a9a9547","status":{"status_name":"Ready for Pickup","timestamp":1.744995651938E12},"dt_current_timestamp":"2025-04-18 16:37:08.224"}
+{"status_id":6,"order_identifier":"53240152-3ff6-9689-9b19-e036db4583cd","status":{"status_name":"Picked Up","timestamp":1.744997036855E12},"dt_current_timestamp":"2025-04-18 16:37:08.224"}
+{"status_id":7,"order_identifier":"36f808d1-e379-9592-4d56-548ae3fe4c13","status":{"status_name":"Out for Delivery","timestamp":1.744997170718E12},"dt_current_timestamp":"2025-04-18 16:37:08.224"}
+{"status_id":8,"order_identifier":"a6305772-1f3d-5195-5d88-6f7cff6d5352","status":{"status_name":"Delivered","timestamp":1.744995941094E12},"dt_current_timestamp":"2025-04-18 16:37:08.224"}
+{"status_id":9,"order_identifier":"018f0a48-6c5c-dd4d-4180-4f49c82e4fa6","status":{"status_name":"Completed","timestamp":1.744999700924E12},"dt_current_timestamp":"2025-04-18 16:37:08.225"}
+{"status_id":1,"order_identifier":"2251e79e-c8e2-589d-6f61-cbc7635a8990","status":{"status_name":"Order Placed","timestamp":1744994228286},"dt_current_timestamp":"2025-04-18 16:37:08.286"}
+{"status_id":2,"order_identifier":"c05cbd6a-5626-510e-a859-d15cc08b4324","status":{"status_name":"In Analysis","timestamp":1.744994228224E12},"dt_current_timestamp":"2025-04-18 16:37:08.286"}
+{"status_id":3,"order_identifier":"ac68ab7f-15c4-0422-fc83-faf4d1c8372f","status":{"status_name":"Accepted","timestamp":1.744995802366E12},"dt_current_timestamp":"2025-04-18 16:37:08.286"}
+{"status_id":4,"order_identifier":"89a58548-b5cf-239e-fa07-e5518bc3a704","status":{"status_name":"Preparing","timestamp":1.744996848745E12},"dt_current_timestamp":"2025-04-18 16:37:08.287"}
+{"status_id":5,"order_identifier":"f9b3fe96-71ed-9312-422a-92870e6db589","status":{"status_name":"Ready for Pickup","timestamp":1.744995612035E12},"dt_current_timestamp":"2025-04-18 16:37:08.287"}
+{"status_id":6,"order_identifier":"db0a0c4e-80d8-fbc5-2f87-b228b24fa003","status":{"status_name":"Picked Up","timestamp":1.744995651938E12},"dt_current_timestamp":"2025-04-18 16:37:08.287"}
+{"status_id":7,"order_identifier":"2f186899-e855-376e-7e0f-5e3871a69094","status":{"status_name":"Out for Delivery","timestamp":1.744998766004E12},"dt_current_timestamp":"2025-04-18 16:37:08.287"}
+{"status_id":8,"order_identifier":"eb3b9ac3-604f-0abf-d957-9445761d1fff","status":{"status_name":"Delivered","timestamp":1.744997170718E12},"dt_current_timestamp":"2025-04-18 16:37:08.287"}
+{"status_id":9,"order_identifier":"a7c872b5-3a15-0792-ddfb-ca787b49a8f6","status":{"status_name":"Completed","timestamp":1.744995941094E12},"dt_current_timestamp":"2025-04-18 16:37:08.287"}
+{"status_id":1,"order_identifier":"ec9d0117-350c-487c-85b6-ca703700c5ee","status":{"status_name":"Order Placed","timestamp":1744994228354},"dt_current_timestamp":"2025-04-18 16:37:08.354"}
+{"status_id":2,"order_identifier":"e46c7234-f19c-aa6e-7840-c5fa559db284","status":{"status_name":"In Analysis","timestamp":1.744994636524E12},"dt_current_timestamp":"2025-04-18 16:37:08.354"}
+{"status_id":3,"order_identifier":"e16403f1-7073-0d90-9c74-f4fef4fa6749","status":{"status_name":"Accepted","timestamp":1.744994980096E12},"dt_current_timestamp":"2025-04-18 16:37:08.354"}
+{"status_id":4,"order_identifier":"407778d2-6a5f-a881-04d1-28b3ca137c34","status":{"status_name":"Preparing","timestamp":1.744995802366E12},"dt_current_timestamp":"2025-04-18 16:37:08.354"}
+{"status_id":5,"order_identifier":"69398cb9-0b82-0660-9172-5525fd235d33","status":{"status_name":"Ready for Pickup","timestamp":1.744997414298E12},"dt_current_timestamp":"2025-04-18 16:37:08.354"}
+{"status_id":6,"order_identifier":"0df728bb-591a-1c18-d63e-a3055bc54102","status":{"status_name":"Picked Up","timestamp":1.744995612035E12},"dt_current_timestamp":"2025-04-18 16:37:08.354"}
+{"status_id":7,"order_identifier":"c85f1767-72e7-ff81-db04-9c65fc32c1e9","status":{"status_name":"Out for Delivery","timestamp":1.744997309164E12},"dt_current_timestamp":"2025-04-18 16:37:08.354"}
+{"status_id":8,"order_identifier":"ce2e1e45-85fe-b32a-da8c-7c5d2874d5c6","status":{"status_name":"Delivered","timestamp":1.744998766004E12},"dt_current_timestamp":"2025-04-18 16:37:08.354"}
+{"status_id":9,"order_identifier":"3f5ee38e-4a9d-7755-4882-cfc28e93efbc","status":{"status_name":"Completed","timestamp":1.744997529917E12},"dt_current_timestamp":"2025-04-18 16:37:08.354"}
+{"status_id":1,"order_identifier":"88fa231f-e427-ce5b-9577-9279fc9d754e","status":{"status_name":"Order Placed","timestamp":1744994228417},"dt_current_timestamp":"2025-04-18 16:37:08.417"}
+{"status_id":2,"order_identifier":"e246d035-09a4-173a-2354-cc697f80f761","status":{"status_name":"In Analysis","timestamp":1.744994876125E12},"dt_current_timestamp":"2025-04-18 16:37:08.417"}
+{"status_id":3,"order_identifier":"3798fc85-fbc1-ab60-9c69-ddebd98882cc","status":{"status_name":"Accepted","timestamp":1.744995388388E12},"dt_current_timestamp":"2025-04-18 16:37:08.417"}
+{"status_id":4,"order_identifier":"4bbec36f-4863-c862-b63a-c6ddb7462a87","status":{"status_name":"Preparing","timestamp":1.744995752046E12},"dt_current_timestamp":"2025-04-18 16:37:08.417"}
+{"status_id":5,"order_identifier":"8de66e8c-4068-e05a-788c-a2fd56c941f9","status":{"status_name":"Ready for Pickup","timestamp":1.744996298573E12},"dt_current_timestamp":"2025-04-18 16:37:08.417"}
+{"status_id":6,"order_identifier":"d8b0fbb0-9634-f669-492d-5b7b2298c6ee","status":{"status_name":"Picked Up","timestamp":1.744997900444E12},"dt_current_timestamp":"2025-04-18 16:37:08.417"}
+{"status_id":7,"order_identifier":"2e2cc064-72f2-a10c-6bf5-34b38126952b","status":{"status_name":"Out for Delivery","timestamp":1.744995612035E12},"dt_current_timestamp":"2025-04-18 16:37:08.417"}
+{"status_id":8,"order_identifier":"3d8fe6b9-8c95-8661-c3bc-93faa063d2cb","status":{"status_name":"Delivered","timestamp":1.744997309164E12},"dt_current_timestamp":"2025-04-18 16:37:08.417"}
+{"status_id":9,"order_identifier":"7c61df70-aa0c-b79a-9c36-cba100611e12","status":{"status_name":"Completed","timestamp":1.744998766004E12},"dt_current_timestamp":"2025-04-18 16:37:08.417"}
+{"status_id":1,"order_identifier":"83ec89d8-6ec1-8eb1-56c7-2bd54cd28f08","status":{"status_name":"Order Placed","timestamp":1744994228479},"dt_current_timestamp":"2025-04-18 16:37:08.479"}
+{"status_id":2,"order_identifier":"60186c63-69cb-2995-b05e-428451a42ec5","status":{"status_name":"In Analysis","timestamp":1.744994738119E12},"dt_current_timestamp":"2025-04-18 16:37:08.479"}
+{"status_id":3,"order_identifier":"6e191265-be2d-9a91-1d70-f0285ee20d07","status":{"status_name":"Accepted","timestamp":1.744995360097E12},"dt_current_timestamp":"2025-04-18 16:37:08.479"}
+{"status_id":4,"order_identifier":"ae4acd29-fdf5-5e18-636c-cccdf9471419","status":{"status_name":"Preparing","timestamp":1.744997184684E12},"dt_current_timestamp":"2025-04-18 16:37:08.479"}
+{"status_id":5,"order_identifier":"9a133845-e80b-be09-2632-8317a05c248c","status":{"status_name":"Ready for Pickup","timestamp":1.744996340317E12},"dt_current_timestamp":"2025-04-18 16:37:08.479"}
+{"status_id":6,"order_identifier":"03e59350-c9d6-9459-03f3-e6a6d8903300","status":{"status_name":"Picked Up","timestamp":1.744996730082E12},"dt_current_timestamp":"2025-04-18 16:37:08.479"}
+{"status_id":7,"order_identifier":"5cbf6861-65c5-06fc-0a74-09a40662db77","status":{"status_name":"Out for Delivery","timestamp":1.744997900444E12},"dt_current_timestamp":"2025-04-18 16:37:08.479"}
+{"status_id":8,"order_identifier":"8726d501-6a9e-b99b-282f-813e27d59c53","status":{"status_name":"Delivered","timestamp":1.744995612035E12},"dt_current_timestamp":"2025-04-18 16:37:08.479"}
+{"status_id":9,"order_identifier":"c89ef775-8ca6-d528-6c83-0312964f3525","status":{"status_name":"Completed","timestamp":1.744997631507E12},"dt_current_timestamp":"2025-04-18 16:37:08.479"}
+{"status_id":1,"order_identifier":"67be3c6a-dbcc-ccbb-79f5-6a1e562a48c2","status":{"status_name":"Order Placed","timestamp":1744994228542},"dt_current_timestamp":"2025-04-18 16:37:08.542"}
+{"status_id":2,"order_identifier":"e1316524-c7b8-6c90-66e1-befcfc2e29ee","status":{"status_name":"In Analysis","timestamp":1.74499489426E12},"dt_current_timestamp":"2025-04-18 16:37:08.542"}
+{"status_id":3,"order_identifier":"fb4f038f-9879-2081-b3b6-60c497eb8ecf","status":{"status_name":"Accepted","timestamp":1.744995609272E12},"dt_current_timestamp":"2025-04-18 16:37:08.542"}
+{"status_id":4,"order_identifier":"be8b7b96-9b67-ba77-0446-40d9116bfe87","status":{"status_name":"Preparing","timestamp":1.744995360097E12},"dt_current_timestamp":"2025-04-18 16:37:08.542"}
+{"status_id":5,"order_identifier":"a61c0d06-7545-f0bc-c811-4680af1c4d42","status":{"status_name":"Ready for Pickup","timestamp":1.744997184684E12},"dt_current_timestamp":"2025-04-18 16:37:08.542"}
+{"status_id":6,"order_identifier":"9b69187c-4350-425d-f618-af315ede28f8","status":{"status_name":"Picked Up","timestamp":1.744996668441E12},"dt_current_timestamp":"2025-04-18 16:37:08.542"}
+{"status_id":7,"order_identifier":"7b1bca45-55a6-1f6b-fd95-9751e5df984e","status":{"status_name":"Out for Delivery","timestamp":1.744997434515E12},"dt_current_timestamp":"2025-04-18 16:37:08.542"}
+{"status_id":8,"order_identifier":"b04241d3-ed96-71bd-45ff-2462c6e982f8","status":{"status_name":"Delivered","timestamp":1.74499833563E12},"dt_current_timestamp":"2025-04-18 16:37:08.542"}
+{"status_id":9,"order_identifier":"7ac739db-1793-b613-a319-7b6345f7fd5e","status":{"status_name":"Completed","timestamp":1.744995612035E12},"dt_current_timestamp":"2025-04-18 16:37:08.542"}
+{"status_id":1,"order_identifier":"cb5d024b-cd36-223e-a800-36b5c364c867","status":{"status_name":"Order Placed","timestamp":1744994228617},"dt_current_timestamp":"2025-04-18 16:37:08.617"}
+{"status_id":2,"order_identifier":"e7046960-f8bc-13f1-baa7-f9c098db6f02","status":{"status_name":"In Analysis","timestamp":1.744994228542E12},"dt_current_timestamp":"2025-04-18 16:37:08.617"}
+{"status_id":3,"order_identifier":"817d6702-fdc6-d210-13f1-5c9bedbde146","status":{"status_name":"Accepted","timestamp":1.74499489426E12},"dt_current_timestamp":"2025-04-18 16:37:08.617"}
+{"status_id":4,"order_identifier":"b6d981df-9ed9-16ae-bb77-7fae0a9a9547","status":{"status_name":"Preparing","timestamp":1.744996454343E12},"dt_current_timestamp":"2025-04-18 16:37:08.617"}
+{"status_id":5,"order_identifier":"e528c665-2687-23df-85c8-68ff512f9e54","status":{"status_name":"Ready for Pickup","timestamp":1.744995360097E12},"dt_current_timestamp":"2025-04-18 16:37:08.617"}
+{"status_id":6,"order_identifier":"503166d2-79d9-19a2-60d2-8665aca05656","status":{"status_name":"Picked Up","timestamp":1.744997747098E12},"dt_current_timestamp":"2025-04-18 16:37:08.617"}
+{"status_id":7,"order_identifier":"0c052c46-06aa-bb91-84f8-f7662cef3846","status":{"status_name":"Out for Delivery","timestamp":1.744996668441E12},"dt_current_timestamp":"2025-04-18 16:37:08.617"}
+{"status_id":8,"order_identifier":"55f410c5-b14f-60ac-a067-adeb6a1e7f3a","status":{"status_name":"Delivered","timestamp":1.744997988611E12},"dt_current_timestamp":"2025-04-18 16:37:08.617"}
+{"status_id":9,"order_identifier":"ffcc0f5f-71e2-0c2f-ec60-d4d3a1850787","status":{"status_name":"Completed","timestamp":1.744998927708E12},"dt_current_timestamp":"2025-04-18 16:37:08.617"}
+{"status_id":1,"order_identifier":"a3ee5129-fe0b-d68e-ae37-59bfc9192b38","status":{"status_name":"Order Placed","timestamp":1744994228680},"dt_current_timestamp":"2025-04-18 16:37:08.680"}
+{"status_id":2,"order_identifier":"9b21c652-96fc-50d4-ee2b-c0141d5e8c88","status":{"status_name":"In Analysis","timestamp":1.744994228617E12},"dt_current_timestamp":"2025-04-18 16:37:08.680"}
+{"status_id":3,"order_identifier":"f0327d47-3160-417d-db06-37fb35575f2c","status":{"status_name":"Accepted","timestamp":1.744994947226E12},"dt_current_timestamp":"2025-04-18 16:37:08.680"}
+{"status_id":4,"order_identifier":"700e3677-104c-31d4-ae54-5ec569afc959","status":{"status_name":"Preparing","timestamp":1.744995581643E12},"dt_current_timestamp":"2025-04-18 16:37:08.680"}
+{"status_id":5,"order_identifier":"57d63b04-158f-e940-50de-e9dd033ec4bb","status":{"status_name":"Ready for Pickup","timestamp":1.744996802579E12},"dt_current_timestamp":"2025-04-18 16:37:08.680"}
+{"status_id":6,"order_identifier":"d1fe7261-6f43-e065-4c94-aabbd4df3ff2","status":{"status_name":"Picked Up","timestamp":1.744995360097E12},"dt_current_timestamp":"2025-04-18 16:37:08.680"}
+{"status_id":7,"order_identifier":"f0f7d49c-ef9d-4611-3ba7-180bef5834d7","status":{"status_name":"Out for Delivery","timestamp":1.744997747098E12},"dt_current_timestamp":"2025-04-18 16:37:08.680"}
+{"status_id":8,"order_identifier":"6695fcbb-bdcf-0cb3-d7f8-e8cc2d8ce42b","status":{"status_name":"Delivered","timestamp":1.744997174789E12},"dt_current_timestamp":"2025-04-18 16:37:08.680"}
+{"status_id":9,"order_identifier":"67d47317-deb1-c6b0-194e-b07e2b8e26ba","status":{"status_name":"Completed","timestamp":1.744997988611E12},"dt_current_timestamp":"2025-04-18 16:37:08.680"}
+{"status_id":1,"order_identifier":"a1e0669c-2f12-adf3-b20c-6d9adcbad76e","status":{"status_name":"Order Placed","timestamp":1744994228743},"dt_current_timestamp":"2025-04-18 16:37:08.743"}
+{"status_id":2,"order_identifier":"d254e8ae-7f3b-b17b-3074-ad9573cd8a0e","status":{"status_name":"In Analysis","timestamp":1.744994919314E12},"dt_current_timestamp":"2025-04-18 16:37:08.743"}
+{"status_id":3,"order_identifier":"cc526b53-4520-6e27-8817-510ab15deca1","status":{"status_name":"Accepted","timestamp":1.744994923201E12},"dt_current_timestamp":"2025-04-18 16:37:08.743"}
+{"status_id":4,"order_identifier":"621af905-8d51-c313-84e5-5fbaa1ce4305","status":{"status_name":"Preparing","timestamp":1.744995738833E12},"dt_current_timestamp":"2025-04-18 16:37:08.743"}
+{"status_id":5,"order_identifier":"be7296b8-6f91-7cf6-e63e-3ef0ea5c5761","status":{"status_name":"Ready for Pickup","timestamp":1.744996012068E12},"dt_current_timestamp":"2025-04-18 16:37:08.743"}
+{"status_id":6,"order_identifier":"31a9c463-f63a-954b-34cb-89fd7d9a292e","status":{"status_name":"Picked Up","timestamp":1.744997311407E12},"dt_current_timestamp":"2025-04-18 16:37:08.743"}
+{"status_id":7,"order_identifier":"550955de-e484-7356-2fb2-6c77a75ff773","status":{"status_name":"Out for Delivery","timestamp":1.744995360097E12},"dt_current_timestamp":"2025-04-18 16:37:08.743"}
+{"status_id":8,"order_identifier":"7bdf7124-a061-4d0d-664d-c26c325b2ed9","status":{"status_name":"Delivered","timestamp":1.744998104269E12},"dt_current_timestamp":"2025-04-18 16:37:08.743"}
+{"status_id":9,"order_identifier":"4c5601ae-e7d1-e0ae-b07c-afe166725621","status":{"status_name":"Completed","timestamp":1.744997737527E12},"dt_current_timestamp":"2025-04-18 16:37:08.743"}
+{"status_id":1,"order_identifier":"520478fb-12c2-56b0-e44e-d7d0d18c3ef6","status":{"status_name":"Order Placed","timestamp":1744994228805},"dt_current_timestamp":"2025-04-18 16:37:08.805"}
+{"status_id":2,"order_identifier":"b7fca1c3-acac-ea38-a32f-3335f1a7bee4","status":{"status_name":"In Analysis","timestamp":1.744994895003E12},"dt_current_timestamp":"2025-04-18 16:37:08.805"}
+{"status_id":3,"order_identifier":"bdddeaac-3fcb-ac19-f2d1-a437e951fe28","status":{"status_name":"Accepted","timestamp":1.744995348525E12},"dt_current_timestamp":"2025-04-18 16:37:08.805"}
+{"status_id":4,"order_identifier":"48a13498-a0d8-2189-cc83-5b8aa1a31a46","status":{"status_name":"Preparing","timestamp":1.744996639761E12},"dt_current_timestamp":"2025-04-18 16:37:08.806"}
+{"status_id":5,"order_identifier":"849ec986-d126-5bb6-6395-d38010cf2894","status":{"status_name":"Ready for Pickup","timestamp":1.744996171343E12},"dt_current_timestamp":"2025-04-18 16:37:08.806"}
+{"status_id":6,"order_identifier":"4b3ecb65-47e7-6fdf-7c53-6b000936a663","status":{"status_name":"Picked Up","timestamp":1.744996517548E12},"dt_current_timestamp":"2025-04-18 16:37:08.806"}
+{"status_id":7,"order_identifier":"d92a4603-c769-4232-da24-25df95420205","status":{"status_name":"Out for Delivery","timestamp":1.744997311407E12},"dt_current_timestamp":"2025-04-18 16:37:08.806"}
+{"status_id":8,"order_identifier":"3f5ee38e-4a9d-7755-4882-cfc28e93efbc","status":{"status_name":"Delivered","timestamp":1.744995845965E12},"dt_current_timestamp":"2025-04-18 16:37:08.806"}
+{"status_id":9,"order_identifier":"3b2cbdfc-5598-e46e-1b79-b5c9362a12c4","status":{"status_name":"Completed","timestamp":1.744998429363E12},"dt_current_timestamp":"2025-04-18 16:37:08.806"}
+{"status_id":1,"order_identifier":"b94c171e-f498-f388-2c68-0d32a411c7da","status":{"status_name":"Order Placed","timestamp":1744994228874},"dt_current_timestamp":"2025-04-18 16:37:08.874"}
+{"status_id":2,"order_identifier":"3808e949-35ef-6caa-a00c-9b5bf62591c5","status":{"status_name":"In Analysis","timestamp":1.744994228805E12},"dt_current_timestamp":"2025-04-18 16:37:08.874"}
+{"status_id":3,"order_identifier":"860990e4-a31b-ccc2-551e-2e915571f2d5","status":{"status_name":"Accepted","timestamp":1.744995475914E12},"dt_current_timestamp":"2025-04-18 16:37:08.874"}
+{"status_id":4,"order_identifier":"99ea4a09-ae10-92cd-a7f5-91dc50d05ee1","status":{"status_name":"Preparing","timestamp":1.744996615006E12},"dt_current_timestamp":"2025-04-18 16:37:08.874"}
+{"status_id":5,"order_identifier":"f6d6de0e-08ec-bf36-23da-7444e85881ff","status":{"status_name":"Ready for Pickup","timestamp":1.74499702383E12},"dt_current_timestamp":"2025-04-18 16:37:08.874"}
+{"status_id":6,"order_identifier":"cb847446-0b88-202c-f4a1-40c49cce1300","status":{"status_name":"Picked Up","timestamp":1.744996171343E12},"dt_current_timestamp":"2025-04-18 16:37:08.874"}
+{"status_id":7,"order_identifier":"2998df02-ae2a-5b75-fcf4-51528a5a2b7e","status":{"status_name":"Out for Delivery","timestamp":1.744996517548E12},"dt_current_timestamp":"2025-04-18 16:37:08.875"}
+{"status_id":8,"order_identifier":"5fc361d6-4801-6b85-d6a3-25332caa1a0c","status":{"status_name":"Delivered","timestamp":1.744997697872E12},"dt_current_timestamp":"2025-04-18 16:37:08.875"}
+{"status_id":9,"order_identifier":"cc526b53-4520-6e27-8817-510ab15deca1","status":{"status_name":"Completed","timestamp":1.744995845965E12},"dt_current_timestamp":"2025-04-18 16:37:08.875"}
+{"status_id":1,"order_identifier":"ae289672-d343-e3d4-7199-8421e065d87c","status":{"status_name":"Order Placed","timestamp":1744994228937},"dt_current_timestamp":"2025-04-18 16:37:08.937"}
+{"status_id":2,"order_identifier":"be8b7b96-9b67-ba77-0446-40d9116bfe87","status":{"status_name":"In Analysis","timestamp":1.744995014393E12},"dt_current_timestamp":"2025-04-18 16:37:08.937"}
+{"status_id":3,"order_identifier":"d2ebd82c-34b1-4b3a-d5b3-982a6e8f1831","status":{"status_name":"Accepted","timestamp":1.744994558034E12},"dt_current_timestamp":"2025-04-18 16:37:08.938"}
+{"status_id":4,"order_identifier":"994c974a-ffb6-6146-c016-a91f172da091","status":{"status_name":"Preparing","timestamp":1.744997080152E12},"dt_current_timestamp":"2025-04-18 16:37:08.938"}
+{"status_id":5,"order_identifier":"f72d4af2-78e5-0c1f-7ca6-d9d69b0804b0","status":{"status_name":"Ready for Pickup","timestamp":1.744997080144E12},"dt_current_timestamp":"2025-04-18 16:37:08.938"}
+{"status_id":6,"order_identifier":"30d5544a-adc5-627d-9db0-5566f4ff6f0a","status":{"status_name":"Picked Up","timestamp":1.744997521057E12},"dt_current_timestamp":"2025-04-18 16:37:08.938"}
+{"status_id":7,"order_identifier":"7b1bca45-55a6-1f6b-fd95-9751e5df984e","status":{"status_name":"Out for Delivery","timestamp":1.744996171343E12},"dt_current_timestamp":"2025-04-18 16:37:08.938"}
+{"status_id":8,"order_identifier":"9d4cadd1-6a63-f147-b509-b17e2503092b","status":{"status_name":"Delivered","timestamp":1.744996517548E12},"dt_current_timestamp":"2025-04-18 16:37:08.938"}
+{"status_id":9,"order_identifier":"1063aff1-e634-a58b-26f3-3ef51737c1b4","status":{"status_name":"Completed","timestamp":1.744998151019E12},"dt_current_timestamp":"2025-04-18 16:37:08.938"}
+{"status_id":1,"order_identifier":"66463931-5afd-c0f5-40e9-ddd5fb9bcdd7","status":{"status_name":"Order Placed","timestamp":1744994229000},"dt_current_timestamp":"2025-04-18 16:37:09.000"}
+{"status_id":2,"order_identifier":"806540b6-1caa-70bc-bccc-07c7345f6fe5","status":{"status_name":"In Analysis","timestamp":1.744994636936E12},"dt_current_timestamp":"2025-04-18 16:37:09.000"}
+{"status_id":3,"order_identifier":"1063aff1-e634-a58b-26f3-3ef51737c1b4","status":{"status_name":"Accepted","timestamp":1.744995368814E12},"dt_current_timestamp":"2025-04-18 16:37:09.000"}
+{"status_id":4,"order_identifier":"d3f88729-d8de-3ffb-73b8-8c86f4f313df","status":{"status_name":"Preparing","timestamp":1.744995662073E12},"dt_current_timestamp":"2025-04-18 16:37:09.001"}
+{"status_id":5,"order_identifier":"bf221d61-a139-8712-c743-00e127fdb0d2","status":{"status_name":"Ready for Pickup","timestamp":1.744997080152E12},"dt_current_timestamp":"2025-04-18 16:37:09.001"}
+{"status_id":6,"order_identifier":"5efb7809-78ac-5694-a278-db980d71ccbe","status":{"status_name":"Picked Up","timestamp":1.744997621601E12},"dt_current_timestamp":"2025-04-18 16:37:09.001"}
+{"status_id":7,"order_identifier":"ca7508c7-6643-077c-2156-d4c1d32ffc53","status":{"status_name":"Out for Delivery","timestamp":1.744998424191E12},"dt_current_timestamp":"2025-04-18 16:37:09.001"}
+{"status_id":8,"order_identifier":"fb4f038f-9879-2081-b3b6-60c497eb8ecf","status":{"status_name":"Delivered","timestamp":1.744996171343E12},"dt_current_timestamp":"2025-04-18 16:37:09.001"}
+{"status_id":9,"order_identifier":"27116d04-4410-b4b2-e5cb-d36ccd078613","status":{"status_name":"Completed","timestamp":1.744997018602E12},"dt_current_timestamp":"2025-04-18 16:37:09.001"}
+{"status_id":1,"order_identifier":"ecdc76c8-251b-56b7-246c-7040f6c31f2a","status":{"status_name":"Order Placed","timestamp":1744994229067},"dt_current_timestamp":"2025-04-18 16:37:09.067"}
+{"status_id":2,"order_identifier":"4968d1b1-3e73-4230-783f-94be1da4c41a","status":{"status_name":"In Analysis","timestamp":1.744994848647E12},"dt_current_timestamp":"2025-04-18 16:37:09.067"}
+{"status_id":3,"order_identifier":"17e089d1-aae7-d110-08b7-7cb9a8bb1620","status":{"status_name":"Accepted","timestamp":1.744994636936E12},"dt_current_timestamp":"2025-04-18 16:37:09.067"}
+{"status_id":4,"order_identifier":"25a8f562-a794-61ae-5f03-7383defab1b4","status":{"status_name":"Preparing","timestamp":1.744995970522E12},"dt_current_timestamp":"2025-04-18 16:37:09.067"}
+{"status_id":5,"order_identifier":"a6305772-1f3d-5195-5d88-6f7cff6d5352","status":{"status_name":"Ready for Pickup","timestamp":1.744995662073E12},"dt_current_timestamp":"2025-04-18 16:37:09.067"}
+{"status_id":6,"order_identifier":"b8c30306-0a63-8bcc-90e4-fb9308aa9549","status":{"status_name":"Picked Up","timestamp":1.744997080152E12},"dt_current_timestamp":"2025-04-18 16:37:09.067"}
+{"status_id":7,"order_identifier":"78e4ccdc-e8b4-cf0e-afeb-323dff9e499d","status":{"status_name":"Out for Delivery","timestamp":1.744997621601E12},"dt_current_timestamp":"2025-04-18 16:37:09.067"}
+{"status_id":8,"order_identifier":"a8f16213-7ded-7db9-6153-c5f173a7b3d6","status":{"status_name":"Delivered","timestamp":1.744998424191E12},"dt_current_timestamp":"2025-04-18 16:37:09.067"}
+{"status_id":9,"order_identifier":"1a575670-c0fc-27e4-5fb2-c1d84abbd88e","status":{"status_name":"Completed","timestamp":1.744996493809E12},"dt_current_timestamp":"2025-04-18 16:37:09.067"}
+{"status_id":1,"order_identifier":"eb6db735-01a1-1492-271b-c9105a57ea7b","status":{"status_name":"Order Placed","timestamp":1744994229129},"dt_current_timestamp":"2025-04-18 16:37:09.129"}
+{"status_id":2,"order_identifier":"6e7cd34f-e4d0-5309-b7a4-c11143fb3455","status":{"status_name":"In Analysis","timestamp":1.744994672516E12},"dt_current_timestamp":"2025-04-18 16:37:09.129"}
+{"status_id":3,"order_identifier":"830ed7e7-9698-633d-5add-2d86fef435c9","status":{"status_name":"Accepted","timestamp":1.744995252675E12},"dt_current_timestamp":"2025-04-18 16:37:09.129"}
+{"status_id":4,"order_identifier":"350d37c1-ccc8-a7f3-7c48-6e4f36aa09e1","status":{"status_name":"Preparing","timestamp":1.744995680214E12},"dt_current_timestamp":"2025-04-18 16:37:09.129"}
+{"status_id":5,"order_identifier":"57fc28bf-5267-93d3-276a-a0b7e54a9530","status":{"status_name":"Ready for Pickup","timestamp":1.744996492781E12},"dt_current_timestamp":"2025-04-18 16:37:09.129"}
+{"status_id":6,"order_identifier":"008e2f77-2837-a96c-42a0-dbade539a5b9","status":{"status_name":"Picked Up","timestamp":1.744996025314E12},"dt_current_timestamp":"2025-04-18 16:37:09.130"}
+{"status_id":7,"order_identifier":"40a2c4df-4c26-3c9a-9587-2512f92ce882","status":{"status_name":"Out for Delivery","timestamp":1.744998332841E12},"dt_current_timestamp":"2025-04-18 16:37:09.130"}
+{"status_id":8,"order_identifier":"4c363465-39a0-92a7-a6d5-fed07858156d","status":{"status_name":"Delivered","timestamp":1.744997621601E12},"dt_current_timestamp":"2025-04-18 16:37:09.130"}
+{"status_id":9,"order_identifier":"25888881-b3f6-7b03-0163-5a75c7fc526f","status":{"status_name":"Completed","timestamp":1.744998914434E12},"dt_current_timestamp":"2025-04-18 16:37:09.130"}
+{"status_id":1,"order_identifier":"fd4c1ff9-92fc-8415-55df-44a30e83271e","status":{"status_name":"Order Placed","timestamp":1744994229205},"dt_current_timestamp":"2025-04-18 16:37:09.205"}
+{"status_id":2,"order_identifier":"eef071b5-e51f-d819-21c6-c0b35809b6cc","status":{"status_name":"In Analysis","timestamp":1.744994229129E12},"dt_current_timestamp":"2025-04-18 16:37:09.205"}
+{"status_id":3,"order_identifier":"89a58548-b5cf-239e-fa07-e5518bc3a704","status":{"status_name":"Accepted","timestamp":1.744995482169E12},"dt_current_timestamp":"2025-04-18 16:37:09.205"}
+{"status_id":4,"order_identifier":"8726d501-6a9e-b99b-282f-813e27d59c53","status":{"status_name":"Preparing","timestamp":1.744996358283E12},"dt_current_timestamp":"2025-04-18 16:37:09.205"}
+{"status_id":5,"order_identifier":"5efb7809-78ac-5694-a278-db980d71ccbe","status":{"status_name":"Ready for Pickup","timestamp":1.744995680214E12},"dt_current_timestamp":"2025-04-18 16:37:09.206"}
+{"status_id":6,"order_identifier":"964381af-ee2a-e79a-561b-b6a66af2e0aa","status":{"status_name":"Picked Up","timestamp":1.744996857769E12},"dt_current_timestamp":"2025-04-18 16:37:09.206"}
+{"status_id":7,"order_identifier":"e79d0ad4-1b57-548a-6ad8-467108411daf","status":{"status_name":"Out for Delivery","timestamp":1.744996983136E12},"dt_current_timestamp":"2025-04-18 16:37:09.206"}
+{"status_id":8,"order_identifier":"d0756554-7780-d14d-a390-424a0857954a","status":{"status_name":"Delivered","timestamp":1.744998332841E12},"dt_current_timestamp":"2025-04-18 16:37:09.206"}
+{"status_id":9,"order_identifier":"138defcb-1c29-14dc-ea2a-4592a812a063","status":{"status_name":"Completed","timestamp":1.744997621601E12},"dt_current_timestamp":"2025-04-18 16:37:09.206"}
+{"status_id":1,"order_identifier":"f90c46bf-5186-fd95-d600-8198b5d81cd1","status":{"status_name":"Order Placed","timestamp":1744994229268},"dt_current_timestamp":"2025-04-18 16:37:09.268"}
+{"status_id":2,"order_identifier":"53240152-3ff6-9689-9b19-e036db4583cd","status":{"status_name":"In Analysis","timestamp":1.744995050161E12},"dt_current_timestamp":"2025-04-18 16:37:09.268"}
+{"status_id":3,"order_identifier":"508bda7d-1e7c-2e87-edbd-4a51f60b4b27","status":{"status_name":"Accepted","timestamp":1.744994738652E12},"dt_current_timestamp":"2025-04-18 16:37:09.268"}
+{"status_id":4,"order_identifier":"a4e19c50-a606-e0dd-673c-f1fcd9ebcb3b","status":{"status_name":"Preparing","timestamp":1.744995482169E12},"dt_current_timestamp":"2025-04-18 16:37:09.268"}
+{"status_id":5,"order_identifier":"c0081d60-5c04-2e9b-a491-40e838320e21","status":{"status_name":"Ready for Pickup","timestamp":1.744996929364E12},"dt_current_timestamp":"2025-04-18 16:37:09.268"}
+{"status_id":6,"order_identifier":"b6d981df-9ed9-16ae-bb77-7fae0a9a9547","status":{"status_name":"Picked Up","timestamp":1.744995680214E12},"dt_current_timestamp":"2025-04-18 16:37:09.268"}
+{"status_id":7,"order_identifier":"f0471a55-023f-feca-ddbe-3ec42d2b0fa9","status":{"status_name":"Out for Delivery","timestamp":1.744996857769E12},"dt_current_timestamp":"2025-04-18 16:37:09.268"}
+{"status_id":8,"order_identifier":"89a58548-b5cf-239e-fa07-e5518bc3a704","status":{"status_name":"Delivered","timestamp":1.744997420858E12},"dt_current_timestamp":"2025-04-18 16:37:09.268"}
+{"status_id":9,"order_identifier":"bd47fab9-453d-b742-9358-8915f464bea1","status":{"status_name":"Completed","timestamp":1.744998332841E12},"dt_current_timestamp":"2025-04-18 16:37:09.268"}
+{"status_id":1,"order_identifier":"56b23bd1-bb17-fca9-a4ff-ba2fc44fa31d","status":{"status_name":"Order Placed","timestamp":1744994229331},"dt_current_timestamp":"2025-04-18 16:37:09.331"}
+{"status_id":2,"order_identifier":"b1a1b6fd-250a-7ffd-78cd-5c80768c8f68","status":{"status_name":"In Analysis","timestamp":1.744994870565E12},"dt_current_timestamp":"2025-04-18 16:37:09.331"}
+{"status_id":3,"order_identifier":"31a9c463-f63a-954b-34cb-89fd7d9a292e","status":{"status_name":"Accepted","timestamp":1.744995486011E12},"dt_current_timestamp":"2025-04-18 16:37:09.331"}
+{"status_id":4,"order_identifier":"b1f8ec2b-6855-368e-f248-72265df6924f","status":{"status_name":"Preparing","timestamp":1.744994738652E12},"dt_current_timestamp":"2025-04-18 16:37:09.331"}
+{"status_id":5,"order_identifier":"0314c1d5-ba1b-80df-987b-8fa60dc75df2","status":{"status_name":"Ready for Pickup","timestamp":1.744995800716E12},"dt_current_timestamp":"2025-04-18 16:37:09.331"}
+{"status_id":6,"order_identifier":"5fc361d6-4801-6b85-d6a3-25332caa1a0c","status":{"status_name":"Picked Up","timestamp":1.744997386807E12},"dt_current_timestamp":"2025-04-18 16:37:09.331"}
+{"status_id":7,"order_identifier":"b5ab9a14-d76d-478f-ad78-b352065a49d6","status":{"status_name":"Out for Delivery","timestamp":1.744996372762E12},"dt_current_timestamp":"2025-04-18 16:37:09.331"}
+{"status_id":8,"order_identifier":"257458a2-0d91-e682-d7d9-7665323db0f3","status":{"status_name":"Delivered","timestamp":1.74499729231E12},"dt_current_timestamp":"2025-04-18 16:37:09.331"}
+{"status_id":9,"order_identifier":"78f2714d-0b6a-5bc4-8ee6-0fc7b5a2701d","status":{"status_name":"Completed","timestamp":1.744997756015E12},"dt_current_timestamp":"2025-04-18 16:37:09.331"}
+{"status_id":1,"order_identifier":"46a0d36d-2d19-bf25-58a4-9974611e7f16","status":{"status_name":"Order Placed","timestamp":1744994229398},"dt_current_timestamp":"2025-04-18 16:37:09.398"}
+{"status_id":2,"order_identifier":"8c2c8395-53d2-1f2d-7988-1b40f2d6faa1","status":{"status_name":"In Analysis","timestamp":1.744994229331E12},"dt_current_timestamp":"2025-04-18 16:37:09.398"}
+{"status_id":3,"order_identifier":"8de66e8c-4068-e05a-788c-a2fd56c941f9","status":{"status_name":"Accepted","timestamp":1.744995418237E12},"dt_current_timestamp":"2025-04-18 16:37:09.398"}
+{"status_id":4,"order_identifier":"381f4546-89e1-6470-3959-3085b4f9a406","status":{"status_name":"Preparing","timestamp":1.744996276801E12},"dt_current_timestamp":"2025-04-18 16:37:09.398"}
+{"status_id":5,"order_identifier":"9649cd96-f315-bfde-7457-7d3f341f4caa","status":{"status_name":"Ready for Pickup","timestamp":1.744994738652E12},"dt_current_timestamp":"2025-04-18 16:37:09.398"}
+{"status_id":6,"order_identifier":"d6cb7d44-4cea-8bd7-6374-22626f2d6838","status":{"status_name":"Picked Up","timestamp":1.744996231559E12},"dt_current_timestamp":"2025-04-18 16:37:09.398"}
+{"status_id":7,"order_identifier":"36c6dfb8-4f9f-a2c2-f9df-be5e391bc521","status":{"status_name":"Out for Delivery","timestamp":1.744997993095E12},"dt_current_timestamp":"2025-04-18 16:37:09.398"}
+{"status_id":8,"order_identifier":"f0f7d49c-ef9d-4611-3ba7-180bef5834d7","status":{"status_name":"Delivered","timestamp":1.744996372762E12},"dt_current_timestamp":"2025-04-18 16:37:09.398"}
+{"status_id":9,"order_identifier":"e827ba05-f878-ed47-518e-829d82588f26","status":{"status_name":"Completed","timestamp":1.74499776675E12},"dt_current_timestamp":"2025-04-18 16:37:09.398"}
+{"status_id":1,"order_identifier":"f72d4af2-78e5-0c1f-7ca6-d9d69b0804b0","status":{"status_name":"Order Placed","timestamp":1744994229462},"dt_current_timestamp":"2025-04-18 16:37:09.462"}
+{"status_id":2,"order_identifier":"ccc00808-c1f9-b97b-efd1-f200e3db7f08","status":{"status_name":"In Analysis","timestamp":1.744994690727E12},"dt_current_timestamp":"2025-04-18 16:37:09.462"}
+{"status_id":3,"order_identifier":"d353eff2-bf1a-3bdf-5d4e-0c05198202be","status":{"status_name":"Accepted","timestamp":1.744994229331E12},"dt_current_timestamp":"2025-04-18 16:37:09.462"}
+{"status_id":4,"order_identifier":"0e146559-2915-d6a7-67d0-6954b73415cf","status":{"status_name":"Preparing","timestamp":1.744996764243E12},"dt_current_timestamp":"2025-04-18 16:37:09.462"}
+{"status_id":5,"order_identifier":"fb4f038f-9879-2081-b3b6-60c497eb8ecf","status":{"status_name":"Ready for Pickup","timestamp":1.744996668142E12},"dt_current_timestamp":"2025-04-18 16:37:09.462"}
+{"status_id":6,"order_identifier":"8dd66882-2610-87bd-147d-ce0d0880818b","status":{"status_name":"Picked Up","timestamp":1.744994738652E12},"dt_current_timestamp":"2025-04-18 16:37:09.463"}
+{"status_id":7,"order_identifier":"40de77f2-85d8-83e5-3319-cc9330f91ac1","status":{"status_name":"Out for Delivery","timestamp":1.744997491212E12},"dt_current_timestamp":"2025-04-18 16:37:09.463"}
+{"status_id":8,"order_identifier":"caf64c28-9442-b0b1-d739-001812dc235c","status":{"status_name":"Delivered","timestamp":1.744998315343E12},"dt_current_timestamp":"2025-04-18 16:37:09.463"}
+{"status_id":9,"order_identifier":"fb52d86c-0e75-33ed-488f-c016517c8ec8","status":{"status_name":"Completed","timestamp":1.744996741767E12},"dt_current_timestamp":"2025-04-18 16:37:09.463"}
+{"status_id":1,"order_identifier":"5951d956-91f3-f796-1236-8b01fa28a0d0","status":{"status_name":"Order Placed","timestamp":1744994229527},"dt_current_timestamp":"2025-04-18 16:37:09.527"}
+{"status_id":2,"order_identifier":"9721c503-4207-a3ca-7e96-360463337945","status":{"status_name":"In Analysis","timestamp":1.744995065499E12},"dt_current_timestamp":"2025-04-18 16:37:09.527"}
+{"status_id":3,"order_identifier":"0f6dc123-44be-3d52-9235-3cc32049631f","status":{"status_name":"Accepted","timestamp":1.744995024014E12},"dt_current_timestamp":"2025-04-18 16:37:09.527"}
+{"status_id":4,"order_identifier":"185d831c-4b28-0ce7-4dad-83cd19146394","status":{"status_name":"Preparing","timestamp":1.744994229331E12},"dt_current_timestamp":"2025-04-18 16:37:09.527"}
+{"status_id":5,"order_identifier":"398c25a1-fe85-05e0-5f07-7f94e19dba35","status":{"status_name":"Ready for Pickup","timestamp":1.744996764243E12},"dt_current_timestamp":"2025-04-18 16:37:09.527"}
+{"status_id":6,"order_identifier":"c0081d60-5c04-2e9b-a491-40e838320e21","status":{"status_name":"Picked Up","timestamp":1.744996668142E12},"dt_current_timestamp":"2025-04-18 16:37:09.527"}
+{"status_id":7,"order_identifier":"f01b2233-d4fe-dd83-0499-a681ed88a6fb","status":{"status_name":"Out for Delivery","timestamp":1.744994738652E12},"dt_current_timestamp":"2025-04-18 16:37:09.527"}
+{"status_id":8,"order_identifier":"b1cf65a9-4146-d1b1-3184-2c357c0c49ab","status":{"status_name":"Delivered","timestamp":1.744997953945E12},"dt_current_timestamp":"2025-04-18 16:37:09.527"}
+{"status_id":9,"order_identifier":"25d3e951-ba3d-daaf-4491-62436a696a25","status":{"status_name":"Completed","timestamp":1.744998315343E12},"dt_current_timestamp":"2025-04-18 16:37:09.527"}
+{"status_id":1,"order_identifier":"d7b2ce45-73b4-ab9a-0488-1426e95b84ae","status":{"status_name":"Order Placed","timestamp":1744994229594},"dt_current_timestamp":"2025-04-18 16:37:09.594"}
+{"status_id":2,"order_identifier":"e2567fbb-2a31-d6af-b055-743d570317a4","status":{"status_name":"In Analysis","timestamp":1.744994829191E12},"dt_current_timestamp":"2025-04-18 16:37:09.594"}
+{"status_id":3,"order_identifier":"3d0bb739-4f58-68ec-1067-d4fa35c08e8c","status":{"status_name":"Accepted","timestamp":1.744995570844E12},"dt_current_timestamp":"2025-04-18 16:37:09.594"}
+{"status_id":4,"order_identifier":"107d31cb-dbed-1063-db3f-e3e285a4d4af","status":{"status_name":"Preparing","timestamp":1.744995024014E12},"dt_current_timestamp":"2025-04-18 16:37:09.594"}
+{"status_id":5,"order_identifier":"58a92217-ded6-2ec0-636e-ed807bf67086","status":{"status_name":"Ready for Pickup","timestamp":1.744994811705E12},"dt_current_timestamp":"2025-04-18 16:37:09.594"}
+{"status_id":6,"order_identifier":"ece9366a-bc74-1316-7218-dd02d87e8e95","status":{"status_name":"Picked Up","timestamp":1.744997087166E12},"dt_current_timestamp":"2025-04-18 16:37:09.594"}
+{"status_id":7,"order_identifier":"6b1f4223-e41c-51ba-deff-703ecf4a9711","status":{"status_name":"Out for Delivery","timestamp":1.744997820514E12},"dt_current_timestamp":"2025-04-18 16:37:09.594"}
+{"status_id":8,"order_identifier":"5986e4e6-6aa9-a585-0693-9d54c2e82ac1","status":{"status_name":"Delivered","timestamp":1.744995221017E12},"dt_current_timestamp":"2025-04-18 16:37:09.594"}
+{"status_id":9,"order_identifier":"b5967f60-5a55-6ce7-09ec-a8ef13782b45","status":{"status_name":"Completed","timestamp":1.744998382422E12},"dt_current_timestamp":"2025-04-18 16:37:09.594"}
+{"status_id":1,"order_identifier":"5616def8-3afa-aeeb-0592-d6a7c2dbd02d","status":{"status_name":"Order Placed","timestamp":1744994229665},"dt_current_timestamp":"2025-04-18 16:37:09.665"}
+{"status_id":2,"order_identifier":"b04241d3-ed96-71bd-45ff-2462c6e982f8","status":{"status_name":"In Analysis","timestamp":1.744994229594E12},"dt_current_timestamp":"2025-04-18 16:37:09.665"}
+{"status_id":3,"order_identifier":"49df6122-feaf-a1c1-081b-690e9a63ec16","status":{"status_name":"Accepted","timestamp":1.744994829191E12},"dt_current_timestamp":"2025-04-18 16:37:09.666"}
+{"status_id":4,"order_identifier":"1ee738de-08ce-976b-8be7-facd5c0c5358","status":{"status_name":"Preparing","timestamp":1.744997226637E12},"dt_current_timestamp":"2025-04-18 16:37:09.666"}
+{"status_id":5,"order_identifier":"eb75f61c-1418-834a-23f2-9f09e0846b47","status":{"status_name":"Ready for Pickup","timestamp":1.744995429237E12},"dt_current_timestamp":"2025-04-18 16:37:09.666"}
+{"status_id":6,"order_identifier":"1f8cb51a-1d62-ad7a-03d5-b2a3e792ee83","status":{"status_name":"Picked Up","timestamp":1.744995236165E12},"dt_current_timestamp":"2025-04-18 16:37:09.666"}
+{"status_id":7,"order_identifier":"cc243075-b81a-aaea-0386-187a632abd0c","status":{"status_name":"Out for Delivery","timestamp":1.744998351243E12},"dt_current_timestamp":"2025-04-18 16:37:09.666"}
+{"status_id":8,"order_identifier":"953b41e3-c8c5-b17d-d9ee-4f0e6784a250","status":{"status_name":"Delivered","timestamp":1.744998290306E12},"dt_current_timestamp":"2025-04-18 16:37:09.666"}
+{"status_id":9,"order_identifier":"93053632-32f7-3fa5-8a5d-60ff26575c39","status":{"status_name":"Completed","timestamp":1.744995693558E12},"dt_current_timestamp":"2025-04-18 16:37:09.666"}
+{"status_id":1,"order_identifier":"bc25d972-e616-85ef-4ac1-a2596c188a30","status":{"status_name":"Order Placed","timestamp":1744994229730},"dt_current_timestamp":"2025-04-18 16:37:09.730"}
+{"status_id":2,"order_identifier":"ae289672-d343-e3d4-7199-8421e065d87c","status":{"status_name":"In Analysis","timestamp":1.744995009677E12},"dt_current_timestamp":"2025-04-18 16:37:09.730"}
+{"status_id":3,"order_identifier":"c940c4c6-dad1-676e-c19f-c74a680a27ce","status":{"status_name":"Accepted","timestamp":1.744994786733E12},"dt_current_timestamp":"2025-04-18 16:37:09.730"}
+{"status_id":4,"order_identifier":"c79f6820-43b3-ab9e-dc8c-2e1293f39283","status":{"status_name":"Preparing","timestamp":1.744994829191E12},"dt_current_timestamp":"2025-04-18 16:37:09.730"}
+{"status_id":5,"order_identifier":"db70e000-014c-61c4-1719-f4517e7d6184","status":{"status_name":"Ready for Pickup","timestamp":1.744997226637E12},"dt_current_timestamp":"2025-04-18 16:37:09.730"}
+{"status_id":6,"order_identifier":"1f2565a1-b087-42d2-b359-02c6fbbd1a12","status":{"status_name":"Picked Up","timestamp":1.744995429237E12},"dt_current_timestamp":"2025-04-18 16:37:09.730"}
+{"status_id":7,"order_identifier":"af0e2e7d-ab24-e4d5-8cf1-513473ff1172","status":{"status_name":"Out for Delivery","timestamp":1.74499689034E12},"dt_current_timestamp":"2025-04-18 16:37:09.730"}
+{"status_id":8,"order_identifier":"ba746761-06a9-c1ca-ed6c-001d6ca32e0f","status":{"status_name":"Delivered","timestamp":1.744998674031E12},"dt_current_timestamp":"2025-04-18 16:37:09.730"}
+{"status_id":9,"order_identifier":"dee68e61-dd6e-479f-071e-9309ab2abbc9","status":{"status_name":"Completed","timestamp":1.744998290306E12},"dt_current_timestamp":"2025-04-18 16:37:09.730"}
+{"status_id":1,"order_identifier":"6be9772a-4e99-e53f-4aab-b15ca7cff4d6","status":{"status_name":"Order Placed","timestamp":1744994229793},"dt_current_timestamp":"2025-04-18 16:37:09.793"}
+{"status_id":2,"order_identifier":"5616def8-3afa-aeeb-0592-d6a7c2dbd02d","status":{"status_name":"In Analysis","timestamp":1.744994572864E12},"dt_current_timestamp":"2025-04-18 16:37:09.793"}
+{"status_id":3,"order_identifier":"0586e9c2-8cd1-126c-8826-73dcd7ccbf92","status":{"status_name":"Accepted","timestamp":1.744995437373E12},"dt_current_timestamp":"2025-04-18 16:37:09.794"}
+{"status_id":4,"order_identifier":"9d4c1a1b-6bb8-b657-f96c-5939a7ddac46","status":{"status_name":"Preparing","timestamp":1.744995445578E12},"dt_current_timestamp":"2025-04-18 16:37:09.794"}
+{"status_id":5,"order_identifier":"4b3ecb65-47e7-6fdf-7c53-6b000936a663","status":{"status_name":"Ready for Pickup","timestamp":1.744995412656E12},"dt_current_timestamp":"2025-04-18 16:37:09.794"}
+{"status_id":6,"order_identifier":"185d831c-4b28-0ce7-4dad-83cd19146394","status":{"status_name":"Picked Up","timestamp":1.744997226637E12},"dt_current_timestamp":"2025-04-18 16:37:09.794"}
+{"status_id":7,"order_identifier":"3c45a403-f8ac-33c4-0346-c788ea505e5a","status":{"status_name":"Out for Delivery","timestamp":1.744995429237E12},"dt_current_timestamp":"2025-04-18 16:37:09.794"}
+{"status_id":8,"order_identifier":"4a9df328-8b99-9a3b-e499-f49fc34589f7","status":{"status_name":"Delivered","timestamp":1.744997424461E12},"dt_current_timestamp":"2025-04-18 16:37:09.794"}
+{"status_id":9,"order_identifier":"49a70c8d-c0e2-233a-358b-423fbc91121d","status":{"status_name":"Completed","timestamp":1.744999040915E12},"dt_current_timestamp":"2025-04-18 16:37:09.794"}
+{"status_id":1,"order_identifier":"fad0270c-ae95-78c4-89f7-403b23229f28","status":{"status_name":"Order Placed","timestamp":1744994229857},"dt_current_timestamp":"2025-04-18 16:37:09.857"}
+{"status_id":2,"order_identifier":"6b057787-174a-43f7-8659-a269cd3da0de","status":{"status_name":"In Analysis","timestamp":1.744994229793E12},"dt_current_timestamp":"2025-04-18 16:37:09.857"}
+{"status_id":3,"order_identifier":"e6c1f0e8-02e5-f575-9af2-b1750d47d7c2","status":{"status_name":"Accepted","timestamp":1.744994936362E12},"dt_current_timestamp":"2025-04-18 16:37:09.858"}
+{"status_id":4,"order_identifier":"b6d90a64-030c-5fe5-a476-1ff6dbe1ab64","status":{"status_name":"Preparing","timestamp":1.744996434921E12},"dt_current_timestamp":"2025-04-18 16:37:09.858"}
+{"status_id":5,"order_identifier":"0f43117b-b92b-3ae5-94e1-e671ad0f16e2","status":{"status_name":"Ready for Pickup","timestamp":1.744995445578E12},"dt_current_timestamp":"2025-04-18 16:37:09.858"}
+{"status_id":6,"order_identifier":"7c61df70-aa0c-b79a-9c36-cba100611e12","status":{"status_name":"Picked Up","timestamp":1.744995741034E12},"dt_current_timestamp":"2025-04-18 16:37:09.858"}
+{"status_id":7,"order_identifier":"a8f16213-7ded-7db9-6153-c5f173a7b3d6","status":{"status_name":"Out for Delivery","timestamp":1.744997226637E12},"dt_current_timestamp":"2025-04-18 16:37:09.858"}
+{"status_id":8,"order_identifier":"7654a850-9b19-817a-3c47-930ef3b1148f","status":{"status_name":"Delivered","timestamp":1.744995744976E12},"dt_current_timestamp":"2025-04-18 16:37:09.858"}
+{"status_id":9,"order_identifier":"a5b07ddd-4b96-c609-d24a-e9c78ba8442d","status":{"status_name":"Completed","timestamp":1.744997424461E12},"dt_current_timestamp":"2025-04-18 16:37:09.858"}
+{"status_id":1,"order_identifier":"5cbf6861-65c5-06fc-0a74-09a40662db77","status":{"status_name":"Order Placed","timestamp":1744994229936},"dt_current_timestamp":"2025-04-18 16:37:09.936"}
+{"status_id":2,"order_identifier":"8b8021b2-da5b-d80a-4093-c8b8e204701a","status":{"status_name":"In Analysis","timestamp":1.74499482004E12},"dt_current_timestamp":"2025-04-18 16:37:09.936"}
+{"status_id":3,"order_identifier":"5f3701bc-bf82-294d-8140-3b7ff791de7e","status":{"status_name":"Accepted","timestamp":1.74499481245E12},"dt_current_timestamp":"2025-04-18 16:37:09.936"}
+{"status_id":4,"order_identifier":"cbec9090-d6be-1397-10a6-7336a239e047","status":{"status_name":"Preparing","timestamp":1.744996213867E12},"dt_current_timestamp":"2025-04-18 16:37:09.937"}
+{"status_id":5,"order_identifier":"06c819ff-e31d-60f9-05f6-aa3fc9916fb7","status":{"status_name":"Ready for Pickup","timestamp":1.744996771745E12},"dt_current_timestamp":"2025-04-18 16:37:09.937"}
+{"status_id":6,"order_identifier":"9f3c7d87-aad5-b1f7-8781-c652d27ff919","status":{"status_name":"Picked Up","timestamp":1.744995861868E12},"dt_current_timestamp":"2025-04-18 16:37:09.937"}
+{"status_id":7,"order_identifier":"7b1bca45-55a6-1f6b-fd95-9751e5df984e","status":{"status_name":"Out for Delivery","timestamp":1.744996479838E12},"dt_current_timestamp":"2025-04-18 16:37:09.937"}
+{"status_id":8,"order_identifier":"f2a82dde-2e63-35a0-1a14-6b42b4035fda","status":{"status_name":"Delivered","timestamp":1.744997226637E12},"dt_current_timestamp":"2025-04-18 16:37:09.937"}
+{"status_id":9,"order_identifier":"6f281f2d-9d92-08a3-2c6e-fa7593100882","status":{"status_name":"Completed","timestamp":1.744996341095E12},"dt_current_timestamp":"2025-04-18 16:37:09.937"}
+{"status_id":1,"order_identifier":"8dd66882-2610-87bd-147d-ce0d0880818b","status":{"status_name":"Order Placed","timestamp":1744994230001},"dt_current_timestamp":"2025-04-18 16:37:10.001"}
+{"status_id":2,"order_identifier":"97164bf4-5bf4-a5d0-c7e7-daad417028e9","status":{"status_name":"In Analysis","timestamp":1.744994538133E12},"dt_current_timestamp":"2025-04-18 16:37:10.001"}
+{"status_id":3,"order_identifier":"e1316524-c7b8-6c90-66e1-befcfc2e29ee","status":{"status_name":"Accepted","timestamp":1.74499482004E12},"dt_current_timestamp":"2025-04-18 16:37:10.001"}
+{"status_id":4,"order_identifier":"4293efb5-9917-c8b2-4790-356f178c71a7","status":{"status_name":"Preparing","timestamp":1.744995707E12},"dt_current_timestamp":"2025-04-18 16:37:10.001"}
+{"status_id":5,"order_identifier":"d7db4dbb-40a9-e77e-dd9d-e61fac3ab1bf","status":{"status_name":"Ready for Pickup","timestamp":1.744996213867E12},"dt_current_timestamp":"2025-04-18 16:37:10.001"}
+{"status_id":6,"order_identifier":"700e3677-104c-31d4-ae54-5ec569afc959","status":{"status_name":"Picked Up","timestamp":1.744997077253E12},"dt_current_timestamp":"2025-04-18 16:37:10.001"}
+{"status_id":7,"order_identifier":"3c45a403-f8ac-33c4-0346-c788ea505e5a","status":{"status_name":"Out for Delivery","timestamp":1.744995861868E12},"dt_current_timestamp":"2025-04-18 16:37:10.001"}
+{"status_id":8,"order_identifier":"6a7464ed-6e06-2a9b-0ab0-38e4b90d129c","status":{"status_name":"Delivered","timestamp":1.744996479838E12},"dt_current_timestamp":"2025-04-18 16:37:10.001"}
+{"status_id":9,"order_identifier":"0f4d412a-fb08-05e7-b38b-4b55d8f2b565","status":{"status_name":"Completed","timestamp":1.744997226637E12},"dt_current_timestamp":"2025-04-18 16:37:10.001"}
+{"status_id":1,"order_identifier":"ae289672-d343-e3d4-7199-8421e065d87c","status":{"status_name":"Order Placed","timestamp":1744994230065},"dt_current_timestamp":"2025-04-18 16:37:10.065"}
+{"status_id":2,"order_identifier":"79357350-6638-ce6a-48d9-99bdd5318882","status":{"status_name":"In Analysis","timestamp":1.744994846607E12},"dt_current_timestamp":"2025-04-18 16:37:10.065"}
+{"status_id":3,"order_identifier":"7b2e2ec4-b5cd-9ecf-ad6f-f8064e97bc21","status":{"status_name":"Accepted","timestamp":1.744994538133E12},"dt_current_timestamp":"2025-04-18 16:37:10.065"}
+{"status_id":4,"order_identifier":"1fd7c2c0-b54e-4c5d-1fd0-4c219aadb343","status":{"status_name":"Preparing","timestamp":1.74499482004E12},"dt_current_timestamp":"2025-04-18 16:37:10.065"}
+{"status_id":5,"order_identifier":"97b44c3a-9b79-07d6-4ad4-457de98ff55b","status":{"status_name":"Ready for Pickup","timestamp":1.744996110856E12},"dt_current_timestamp":"2025-04-18 16:37:10.065"}
+{"status_id":6,"order_identifier":"f124c987-9817-998f-9847-0e1681a60e4f","status":{"status_name":"Picked Up","timestamp":1.744996579458E12},"dt_current_timestamp":"2025-04-18 16:37:10.065"}
+{"status_id":7,"order_identifier":"ba746761-06a9-c1ca-ed6c-001d6ca32e0f","status":{"status_name":"Out for Delivery","timestamp":1.744998047184E12},"dt_current_timestamp":"2025-04-18 16:37:10.065"}
+{"status_id":8,"order_identifier":"93053632-32f7-3fa5-8a5d-60ff26575c39","status":{"status_name":"Delivered","timestamp":1.744996440287E12},"dt_current_timestamp":"2025-04-18 16:37:10.065"}
+{"status_id":9,"order_identifier":"1d343a25-d346-d751-3f2d-8952411f8fcd","status":{"status_name":"Completed","timestamp":1.744996924027E12},"dt_current_timestamp":"2025-04-18 16:37:10.066"}
