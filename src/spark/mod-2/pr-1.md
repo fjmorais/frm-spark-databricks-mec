@@ -58,7 +58,10 @@ Open your browser and navigate to:
 To run a Spark application using the sample data:
 
 ```bash
-docker exec -it spark-master spark-submit /opt/bitnami/spark/scripts/pr-3-app.py
+docker exec -it spark-master /opt/bitnami/spark/bin/spark-submit \
+  --master spark://spark-master:7077 \
+  --deploy-mode client \
+  /opt/bitnami/spark/jobs/app/get-users-json.py
 ```
 
 ## Available Data Files
