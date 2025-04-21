@@ -1,6 +1,0 @@
-{"event_id":"f172d216-7ff7-d6b0-8b1a-c7e9d7ef7751","user_id":1,"event_type":"view","product_id":"PRD-31932","timestamp":"2025-04-18 16:36:50.141","dt_current_timestamp":"2025-04-18 16:36:50.141"}
-{"event_id":"f4804192-d59f-b0f8-2d55-a548386feb3b","user_id":2,"event_type":"view","product_id":"PRD-20590","timestamp":"2025-04-18 16:36:50.151","dt_current_timestamp":"2025-04-18 16:36:50.151"}
-{"event_id":"289077b2-c85e-cc63-bcbc-b844855f8092","user_id":1,"event_type":"add_to_cart","product_id":"PRD-31932","timestamp":"2025-04-18 16:36:50.159","dt_current_timestamp":"2025-04-18 16:36:50.159"}
-{"event_id":"c1d0b2ea-c38f-8ff1-2f2a-562659552363","user_id":4,"event_type":"add_to_cart","product_id":"PRD-50950","timestamp":"2025-04-18 16:36:50.169","dt_current_timestamp":"2025-04-18 16:36:50.169"}
-{"event_id":"7ee97d5f-737b-d11e-0a3a-e60501fd657b","user_id":1,"event_type":"recommendation_served","product_id":"PRD-27023","timestamp":"2025-04-18 16:36:50.177","dt_current_timestamp":"2025-04-18 16:36:50.177"}
-{"event_id":"78ea74b1-df3a-7115-92e0-d2bd9a3957dc","user_id":6,"event_type":"add_to_cart","product_id":"PRD-71802","timestamp":"2025-04-18 16:36:50.191","dt_current_timestamp":"2025-04-18 16:36:50.191"}

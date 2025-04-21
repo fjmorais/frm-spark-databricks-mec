@@ -1,0 +1,308 @@
+This file is a merged representation of the entire codebase, combined into a single document by Repomix.
+
+================================================================
+File Summary
+================================================================
+
+Purpose:
+--------
+This file contains a packed representation of the entire repository's contents.
+It is designed to be easily consumable by AI systems for analysis, code review,
+or other automated processes.
+
+File Format:
+------------
+The content is organized as follows:
+1. This summary section
+2. Repository information
+3. Directory structure
+4. Multiple file entries, each consisting of:
+  a. A separator line (================)
+  b. The file path (File: path/to/file)
+  c. Another separator line
+  d. The full contents of the file
+  e. A blank line
+
+Usage Guidelines:
+-----------------
+- This file should be treated as read-only. Any changes should be made to the
+  original repository files, not this packed version.
+- When processing this file, use the file path to distinguish
+  between different files in the repository.
+- Be aware that this file may contain sensitive information. Handle it with
+  the same level of security as you would the original repository.
+
+Notes:
+------
+- Some files may have been excluded based on .gitignore rules and Repomix's configuration
+- Binary files are not included in this packed representation. Please refer to the Repository Structure section for a complete list of file paths, including binary files
+- Files matching patterns in .gitignore are excluded
+- Files matching default ignore patterns are excluded
+
+Additional Info:
+----------------
+
+================================================================
+Directory Structure
+================================================================
+kafka/
+  events/
+    01JS4W5A7XY65S9Z69BY51BEJ5.jsonl
+  gps/
+    01JS4W5A7ZMYZ5J8F1SJAYTJKP.jsonl
+  orders/
+    01JS4W5A7XY65S9Z69BY51BEJ4.jsonl
+  payments/
+    01JS4W5A7WWZBQ6Y1C465EYR75.jsonl
+  receipts/
+    01JS4W5A7XY65S9Z69BY51BEJ2.jsonl
+  route/
+    01JS4W5A7ZMYZ5J8F1SJAYTJKN.jsonl
+  search/
+    01JS4W5A7XY65S9Z69BY51BEJ3.jsonl
+  shift/
+    01JS4W5A7XY65S9Z69BY51BEJ6.jsonl
+  status/
+    01JS4W5A7YWTYRQKDA7F7N95W0.jsonl
+mongodb/
+  items/
+    01JS4W5AKXGER18A7YBPJMFNPF.jsonl
+  recommendations/
+    01JS4W5A7YWTYRQKDA7F7N95VX.jsonl
+  support/
+    01JS4W5A7YWTYRQKDA7F7N95VV.jsonl
+  users/
+    01JS4W5A7WWZBQ6Y1C465EYR76.jsonl
+mssql/
+  users/
+    01JS4W5A74BK7P4BPTJV1D3MHB.jsonl
+mysql/
+  menu/
+    01JS4W5A7YWTYRQKDA7F7N95VW.jsonl
+  products/
+    01JS4W5A77YVBYMB5TQ69P7R1W.jsonl
+  ratings/
+    01JS4W5A7YWTYRQKDA7F7N95VZ.jsonl
+  restaurants/
+    01JS4W5A7YWTYRQKDA7F7N95VY.jsonl
+postgres/
+  drivers/
+    01JS4W5A74BK7P4BPTJV1D3MHA.jsonl
+  inventory/
+    01JS4W5A77YVBYMB5TQ69P7R1X.jsonl
+users.json
+
+================================================================
+Files
+================================================================
+
+================
+File: kafka/events/01JS4W5A7XY65S9Z69BY51BEJ5.jsonl
+================
+{"event_id":"f4d4ea86-429f-516d-a87f-d9ffbedb1815","payment_id":"6b6faf60-e70b-58ac-6b25-16cc09575b1a","event":{"event_name":"succeeded","timestamp":1.744994219773E12},"dt_current_timestamp":"2025-04-18 16:36:54.188"}
+{"event_id":"a3a2b4a8-65ad-ec8c-44eb-e5645499c43a","payment_id":"a3515316-8fa2-fc6d-24d8-1b392e7df348","event":{"event_name":"settled","timestamp":1.744994222542E12},"dt_current_timestamp":"2025-04-18 16:36:54.188"}
+{"event_id":"a97e7e52-b1e0-3250-c9f8-7f8a0c67c380","payment_id":"722d97ec-6696-776e-d120-a7eb674f9863","event":{"event_name":"closed","timestamp":1.744994223114E12},"dt_current_timestamp":"2025-04-18 16:36:54.188"}
+{"event_id":"06d760e8-06d6-eefa-a456-762eda6e16bc","payment_id":"f537b116-b433-11ae-d268-3cc377f38889","event":{"event_name":"created","timestamp":1744994214210},"dt_current_timestamp":"2025-04-18 16:36:54.210"}
+{"event_id":"58eaa949-8d14-2357-f404-3ecb02196739","payment_id":"9e8d6c6c-7ec7-5739-e707-eac807dc6721","event":{"event_name":"authorized","timestamp":1.74499421711E12},"dt_current_timestamp":"2025-04-18 16:36:54.211"}
+
+================
+File: kafka/gps/01JS4W5A7ZMYZ5J8F1SJAYTJKP.jsonl
+================
+{"direction_deg":2.8667896276030547,"gps_id":"82c1b192-6cf5-15c6-0f1c-a594ca9714d8","timestamp":"2025-04-18 16:36:54.191","altitude":777.2,"order_id":"9721c503-4207-a3ca-7e96-360463337945","lon":-46.612995106188016,"duration_ms":4799.981557875522,"lat":-23.588069548254115,"speed_kph":15,"accuracy_m":34.6,"dt_current_timestamp":"2025-04-18 16:36:54.191"}
+{"direction_deg":172.7902293485581,"gps_id":"e82ae550-1468-2d1e-ced4-0bb4d035b201","timestamp":"2025-04-18 16:36:54.191","altitude":723.3,"order_id":"6f281f2d-9d92-08a3-2c6e-fa7593100882","lon":-46.6488511359034,"duration_ms":4798.623152771222,"lat":-23.570836177678427,"speed_kph":15,"accuracy_m":22.1,"dt_current_timestamp":"2025-04-18 16:36:54.191"}
+{"direction_deg":359.1747948779129,"gps_id":"e93eabde-8946-5a51-52da-2694336fb5d1","timestamp":"2025-04-18 16:36:54.191","altitude":774.7,"order_id":"785885b8-6355-7578-d591-da3a59c5d7b6","lon":-46.61083276384451,"duration_ms":4799.615301454492,"lat":-23.557403397780387,"speed_kph":15,"accuracy_m":7.6,"dt_current_timestamp":"2025-04-18 16:36:54.191"}
+{"direction_deg":180.48120252464008,"gps_id":"75644d13-ed25-fab7-0885-d4afec52dfe2","timestamp":"2025-04-18 16:36:54.191","altitude":738.2,"order_id":"ffeab740-935e-bca4-016a-00eaac9f5b79","lon":-46.63667681663707,"duration_ms":4799.570253746739,"lat":-23.527333916941885,"speed_kph":15,"accuracy_m":8.3,"dt_current_timestamp":"2025-04-18 16:36:54.191"}
+{"direction_deg":0.5133392175804943,"gps_id":"8d82488a-8192-421e-3c09-7be79a396d62","timestamp":"2025-04-18 16:36:54.191","altitude":741.2,"order_id":"dea94a10-d1da-8a67-a7c1-927d63088d62","lon":-46.661603873563884,"duration_ms":4799.90560827758,"lat":-23.59750415331345,"speed_kph":15,"accuracy_m":8.7,"dt_current_timestamp":"2025-04-18 16:36:54.191"}
+
+================
+File: kafka/orders/01JS4W5A7XY65S9Z69BY51BEJ4.jsonl
+================
+{"rating_key":"1f5e855e-f246-c76b-fa47-4e945c11c9c8","restaurant_key":"00.143.186/2691-76","order_id":"d92a4603-c769-4232-da24-25df95420205","driver_key":"cl7502828","order_date":"2021-12-24 12:00:49.730000","user_key":"858.913.591-16","total_amount":60.2,"payment_key":"510c9420-b300-b65d-c9e6-d3a08534d21f","dt_current_timestamp":"2025-04-18 16:36:54.212"}
+{"rating_key":"a86b23e9-8ad2-ff61-ef6d-bc3be25f51ec","restaurant_key":"79.231.345/8715-33","order_id":"407778d2-6a5f-a881-04d1-28b3ca137c34","driver_key":"fm0983658","order_date":"2023-08-04 09:08:44.677000","user_key":"235.027.638-99","total_amount":90.6,"payment_key":"9f7714b1-6912-6cb8-50cd-2c6bc04207a3","dt_current_timestamp":"2025-04-18 16:36:54.239"}
+{"rating_key":"77102cb1-0dc5-1e11-0aa0-fc09e6958c66","restaurant_key":"46.399.521/0384-32","order_id":"b1fbbced-d600-5811-222d-21bc619d9005","driver_key":"jf7067621","order_date":"2022-06-03 19:10:38.850000","user_key":"344.932.625-83","total_amount":104.08,"payment_key":"56d7c4e9-4709-d020-0dd1-b4593077e9f0","dt_current_timestamp":"2025-04-18 16:36:54.259"}
+{"rating_key":"8db91281-f5be-f623-a004-f0cdf96a3e4b","restaurant_key":"83.086.557/6533-31","order_id":"577547f8-28e9-09a3-bede-28d86ead67a2","driver_key":"qo3355308","order_date":"2021-05-10 03:04:23.038000","user_key":"273.975.706-75","total_amount":135.96,"payment_key":"ab3dc266-7cf4-4b96-cb00-3a4180824d1d","dt_current_timestamp":"2025-04-18 16:36:54.280"}
+{"rating_key":"ba170ede-2e08-2580-dce7-5524d885f7dd","restaurant_key":"95.571.532/0599-20","order_id":"05861c1f-ef1d-af3d-b66e-6b3599ee77ef","driver_key":"mg5076007","order_date":"2022-11-14 22:13:41.694000","user_key":"171.445.401-24","total_amount":35.82,"payment_key":"f1d7a3c1-089e-dd58-0cab-93f98c0c440d","dt_current_timestamp":"2025-04-18 16:36:54.301"}
+
+================
+File: kafka/payments/01JS4W5A7WWZBQ6Y1C465EYR75.jsonl
+================
+{"card_brand":"Amex","country":"US","platform_fee":3.03,"failure_reason":"","card_exp_month":8,"currency":"USD","method":"Boleto","receipt_url":"https://www.judson-schumm.biz/","timestamp":"2025-04-18 16:36:54.210","refund_amount":50.31,"card_exp_year":2028,"provider":"PayPal","status":"failed","payment_id":"24f22132-f2b8-6a93-8dba-065f2a7aa48e","order_key":"d8f52536-1039-67b7-25f6-5d56955e2ef7","invoice_id":"INV-21733","net_amount":-6.700000000000001,"captured":true,"refunded":false,"amount":6.31,"capture_timestamp":"2025-04-18 16:36:54.210","card_last4":"4439","tax_amount":4.12,"ip_address":"215.237.163.158","user_agent":"Mozilla/4.0 (compatible; MSIE 6.0; Windows NT 5.1; SV1; .NET CLR 1.1.4322; .NET CLR 2.0.50727)","wallet_provider":"Samsung Pay","provider_fee":5.86,"dt_current_timestamp":"2025-04-18 16:36:54.210"}
+{"card_brand":"Elo","country":"US","platform_fee":4.26,"failure_reason":"processing_error","card_exp_month":7,"currency":"BRL","method":"Boleto","receipt_url":"https://www.victor-boyer.co:35762/?vel=nesciunt&molestiae=praesentium","timestamp":"2025-04-18 16:36:54.237","refund_amount":89.08,"card_exp_year":2028,"provider":"PayPal","status":"succeeded","payment_id":"364b11f1-19a1-2d46-08e1-f86ebbea1ac8","order_key":"8669ea7a-6ed0-b7bc-91a3-398b25fa6c1e","invoice_id":"INV-75284","net_amount":39.46000000000001,"captured":true,"refunded":false,"amount":47.77,"capture_timestamp":"2025-04-18 16:36:54.237","card_last4":"9756","tax_amount":1.61,"ip_address":"54.3.156.126","user_agent":"Mozilla/4.0 (compatible; MSIE 7.0; AOL 9.0; Windows NT 5.1; .NET CLR 1.1.4322)","wallet_provider":"Samsung Pay","provider_fee":2.44,"dt_current_timestamp":"2025-04-18 16:36:54.237"}
+{"card_brand":"Elo","country":"US","platform_fee":2.3,"failure_reason":"expired_card","card_exp_month":1,"currency":"USD","method":"Wallet","receipt_url":"http://www.andreas-williamson.org/","timestamp":"2025-04-18 16:36:54.258","refund_amount":14.43,"card_exp_year":2029,"provider":"PayPal","status":"pending","payment_id":"ea32ee0f-1223-2c8b-a7fd-ad8bc3aaf7c8","order_key":"bc25d972-e616-85ef-4ac1-a2596c188a30","invoice_id":"INV-13969","net_amount":56.89,"captured":true,"refunded":true,"amount":67.89,"capture_timestamp":"2025-04-18 16:36:54.258","card_last4":"1326","tax_amount":4.63,"ip_address":"63.164.197.36","user_agent":"Mozilla/5.0 (iPhone; CPU iPhone OS 11_3 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/11.0 Mobile/15E148 Safari/604.1","wallet_provider":"None","provider_fee":4.07,"dt_current_timestamp":"2025-04-18 16:36:54.258"}
+{"card_brand":"Visa","country":"DE","platform_fee":4.19,"failure_reason":"processing_error","card_exp_month":8,"currency":"EUR","method":"Card","receipt_url":"https://www.richie-olson.io:2893/odio/illo?impedit=impedit&qui=enim","timestamp":"2025-04-18 16:36:54.279","refund_amount":22.81,"card_exp_year":2026,"provider":"PayPal","status":"refunded","payment_id":"bb49f025-e905-e847-9425-2c3d9cc7f75f","order_key":"66463931-5afd-c0f5-40e9-ddd5fb9bcdd7","invoice_id":"INV-23942","net_amount":65.35000000000001,"captured":false,"refunded":false,"amount":77.97,"capture_timestamp":"2025-04-18 16:36:54.279","card_last4":"2522","tax_amount":4.3,"ip_address":"166.164.98.129","user_agent":"Mozilla/5.0 (Windows NT 6.1; WOW64; rv:40.0) Gecko/20100101 Firefox/40.1","wallet_provider":"Apple Pay","provider_fee":4.13,"dt_current_timestamp":"2025-04-18 16:36:54.279"}
+{"card_brand":"Elo","country":"BR","platform_fee":2.12,"failure_reason":"expired_card","card_exp_month":1,"currency":"USD","method":"Wallet","receipt_url":"http://www.caterina-reilly.us/incidunt/veroest","timestamp":"2025-04-18 16:36:54.299","refund_amount":18.46,"card_exp_year":2027,"provider":"Adyen","status":"failed","payment_id":"228663f5-6549-af42-3708-b77f09ba5bed","order_key":"3f53a41c-2438-4e6c-2b31-bf736bb0fc70","invoice_id":"INV-05496","net_amount":21.16,"captured":true,"refunded":true,"amount":32.81,"capture_timestamp":"2025-04-18 16:36:54.299","card_last4":"3641","tax_amount":6.25,"ip_address":"106.69.122.154","user_agent":"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_13_6) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/12.0.1 Safari/605.1.15","wallet_provider":"Apple Pay","provider_fee":3.28,"dt_current_timestamp":"2025-04-18 16:36:54.299"}
+
+================
+File: kafka/receipts/01JS4W5A7XY65S9Z69BY51BEJ2.jsonl
+================
+{"receipt_id":"fa23e73f-7e41-29ff-6b94-656af8139cb1","order_id":"c0081d60-5c04-2e9b-a491-40e838320e21","payment_id":"85ed3ea0-0d07-01b9-6808-482167bc5824","total_amount":65.52,"item_count":2,"receipt_generated_at":"2025-04-18 16:36:54.210"}
+{"receipt_id":"02d80f53-29a9-6bb5-7375-50a5007e8cb1","order_id":"2e2cc064-72f2-a10c-6bf5-34b38126952b","payment_id":"4b9dc6dc-d3d4-ee05-cf0f-8db84c0627da","total_amount":28.56,"item_count":2,"receipt_generated_at":"2025-04-18 16:36:54.237"}
+{"receipt_id":"5793d027-2047-bc06-f0a3-15be7893afa0","order_id":"0e146559-2915-d6a7-67d0-6954b73415cf","payment_id":"56f966c3-f20f-889b-02a3-bc66ff238f10","total_amount":77.67,"item_count":3,"receipt_generated_at":"2025-04-18 16:36:54.258"}
+{"receipt_id":"a255b0dc-7748-725b-a201-789a1915941d","order_id":"e16403f1-7073-0d90-9c74-f4fef4fa6749","payment_id":"0639d7a9-8874-7cb1-3107-5c86d3bc6995","total_amount":23.2,"item_count":3,"receipt_generated_at":"2025-04-18 16:36:54.279"}
+{"receipt_id":"b2431dc8-9384-3152-945f-17fa8b9340bd","order_id":"8f80a6c4-2fdd-8291-6a63-508c4cf948f7","payment_id":"94b6ba30-ba36-d08b-a88f-ccd9fcf0ad20","total_amount":19.3,"item_count":2,"receipt_generated_at":"2025-04-18 16:36:54.299"}
+{"receipt_id":"1512b291-fb13-eab0-bdb4-1d5dce8b68c5","order_id":"27ea6eb2-439d-bba5-67ce-3d2202f48812","payment_id":"361c8de0-97a1-930e-98f1-eb76749825ae","total_amount":130.64,"item_count":2,"receipt_generated_at":"2025-04-18 16:36:54.319"}
+
+================
+File: kafka/route/01JS4W5A7ZMYZ5J8F1SJAYTJKN.jsonl
+================
+{"start_lon":-46.633433,"end_lat":-23.558528,"route_id":"7708560a-e2f3-c504-656e-723222ae9a83","estimated_duration_min":20,"order_id":"25d3e951-ba3d-daaf-4491-62436a696a25","driver_id":119,"distance_km":0.82,"end_time":"2024-01-07 15:14:47","start_lat":-23.570988,"start_time":"2024-01-07 14:57:45","end_lon":-46.629509,"dt_current_timestamp":"2025-04-18 16:36:54.213"}
+{"start_lon":-46.618543,"end_lat":-23.581911,"route_id":"25dbc3f6-89de-b494-5a54-6a53f4185ac7","estimated_duration_min":41,"order_id":"a30fa363-648a-b0c6-b335-c30e7f46230f","driver_id":45,"distance_km":8.58,"end_time":"2023-04-05 18:57:14","start_lat":-23.581792,"start_time":"2023-04-05 18:37:32","end_lon":-46.604029,"dt_current_timestamp":"2025-04-18 16:36:54.239"}
+{"start_lon":-46.627569,"end_lat":-23.596559,"route_id":"b9d153ad-281f-bf42-e25c-33d833e27f7b","estimated_duration_min":23,"order_id":"2f303941-ec51-8f78-ebe1-e4adf5fe2b04","driver_id":4,"distance_km":5.88,"end_time":"2023-12-02 21:57:21","start_lat":-23.593186,"start_time":"2023-12-02 21:33:43","end_lon":-46.642309,"dt_current_timestamp":"2025-04-18 16:36:54.260"}
+{"start_lon":-46.605866,"end_lat":-23.598344,"route_id":"ae867cbc-bf5f-657b-3618-6a97e9a7de13","estimated_duration_min":13,"order_id":"757ed986-d342-a1e1-8aba-f11fa90f5ded","driver_id":259,"distance_km":9.04,"end_time":"2025-01-02 17:02:29","start_lat":-23.574549,"start_time":"2025-01-02 16:45:36","end_lon":-46.633123,"dt_current_timestamp":"2025-04-18 16:36:54.281"}
+{"start_lon":-46.649458,"end_lat":-23.578159,"route_id":"1b074846-6edd-7eab-7281-f661452796c1","estimated_duration_min":24,"order_id":"6d956256-5b2d-8bbe-9bb4-b3983449c7ea","driver_id":326,"distance_km":2.61,"end_time":"2022-04-07 03:16:19","start_lat":-23.59132,"start_time":"2022-04-07 03:06:45","end_lon":-46.629096,"dt_current_timestamp":"2025-04-18 16:36:54.301"}
+
+================
+File: kafka/search/01JS4W5A7XY65S9Z69BY51BEJ3.jsonl
+================
+{"search_id":"1d8cb59d-6692-ab54-3fe5-6b7c39578c69","user_id":154,"query_text":"Velit quia saepe ipsam aut.","filters":"Top Rated","result_count":25,"clicked_product_id":"PRD-13265","timestamp":"2025-04-18 16:36:54.210"}
+{"search_id":"d615bbfd-d2b6-72d8-3f54-b65e8acaf36d","user_id":260,"query_text":"Ullam aperiam quidem.","filters":"Vegetarian","result_count":25,"clicked_product_id":"PRD-52486","timestamp":"2025-04-18 16:36:54.237"}
+{"search_id":"d60cd6ae-9ed4-cc8f-3757-2faa343891cd","user_id":329,"query_text":"Id autem ducimus molestiae.","filters":"Open Now","result_count":34,"clicked_product_id":"PRD-84741","timestamp":"2025-04-18 16:36:54.258"}
+{"search_id":"274ab3f0-c445-2b10-2743-b606c39cff25","user_id":156,"query_text":"Ut unde porro rerum.","filters":"Fast Delivery","result_count":46,"clicked_product_id":"PRD-55946","timestamp":"2025-04-18 16:36:54.279"}
+{"search_id":"49b74dcf-b966-eabf-196b-0324d4198474","user_id":112,"query_text":"Sed voluptates omnis dolore ipsam minima ea.","filters":"Deals","result_count":32,"clicked_product_id":"PRD-87659","timestamp":"2025-04-18 16:36:54.299"}
+
+================
+File: kafka/shift/01JS4W5A7XY65S9Z69BY51BEJ6.jsonl
+================
+{"shift_id":"7ec7a836-e6af-36e7-678e-91216f2835a3","login_method":"Partner Kiosk","city":"Novo Hamburgo","issues_reported":"App Crash","num_orders":4,"shift_duration_min":175.19011666666665,"shift_type":"Morning","region":"BR","driver_id":40,"end_time":"2021-12-04 08:05:02","device_os":"iOS","earnings_brl":73.2,"shift_rating":4.36,"start_time":"2021-12-04 05:09:50","distance_covered_km":42.23,"available":false,"dt_current_timestamp":"2025-04-18 16:36:54.211"}
+{"shift_id":"539c1f52-884a-7a88-df8a-443b5c9cb27c","login_method":"Partner Kiosk","city":"Rosário da Limeira","issues_reported":"Lost GPS","num_orders":1,"shift_duration_min":403.33935,"shift_type":"Overnight","region":"BR","driver_id":90,"end_time":"2024-11-07 01:36:20","device_os":"Android","earnings_brl":14.44,"shift_rating":4.86,"start_time":"2024-11-06 18:52:59","distance_covered_km":48.2,"available":true,"dt_current_timestamp":"2025-04-18 16:36:54.238"}
+{"shift_id":"930e7516-e325-3cd5-52b8-36280f711c27","login_method":"App","city":"São Luís de Montes Belos","issues_reported":"Lost GPS","num_orders":1,"shift_duration_min":358.6961166666667,"shift_type":"Morning","region":"BR","driver_id":96,"end_time":"2024-09-01 03:24:18","device_os":"iOS","earnings_brl":9.17,"shift_rating":3.03,"start_time":"2024-08-31 21:25:37","distance_covered_km":30.25,"available":true,"dt_current_timestamp":"2025-04-18 16:36:54.259"}
+{"shift_id":"5d0f200c-8fe8-b1c6-05fd-02d0f3d7aa31","login_method":"App","city":"Porto Lucena","issues_reported":"Lost GPS","num_orders":4,"shift_duration_min":452.0426166666667,"shift_type":"Afternoon","region":"BR","driver_id":275,"end_time":"2021-07-29 02:06:41","device_os":"Android","earnings_brl":69.04,"shift_rating":4.07,"start_time":"2021-07-28 18:34:38","distance_covered_km":38.17,"available":false,"dt_current_timestamp":"2025-04-18 16:36:54.280"}
+{"shift_id":"577bb04d-c19b-b7d7-3308-518fe0e63167","login_method":"Web","city":"Lagamar","issues_reported":"Accident","num_orders":12,"shift_duration_min":398.07315,"shift_type":"Overnight","region":"BR","driver_id":132,"end_time":"2022-06-23 13:49:11","device_os":"Android","earnings_brl":122.16,"shift_rating":3.55,"start_time":"2022-06-23 07:11:06","distance_covered_km":35.08,"available":true,"dt_current_timestamp":"2025-04-18 16:36:54.300"}
+
+================
+File: kafka/status/01JS4W5A7YWTYRQKDA7F7N95W0.jsonl
+================
+{"status_id":1,"order_identifier":"4b3ecb65-47e7-6fdf-7c53-6b000936a663","status":{"status_name":"Order Placed","timestamp":1744994214239},"dt_current_timestamp":"2025-04-18 16:36:54.239"}
+{"status_id":2,"order_identifier":"96634148-6a17-a52a-4db5-e5a68553e562","status":{"status_name":"In Analysis","timestamp":1.744994214212E12},"dt_current_timestamp":"2025-04-18 16:36:54.239"}
+{"status_id":3,"order_identifier":"ab880f89-ab6d-9246-bcec-91214f4eb146","status":{"status_name":"Accepted","timestamp":1.744995422541E12},"dt_current_timestamp":"2025-04-18 16:36:54.239"}
+{"status_id":4,"order_identifier":"57d63b04-158f-e940-50de-e9dd033ec4bb","status":{"status_name":"Preparing","timestamp":1.744996865196E12},"dt_current_timestamp":"2025-04-18 16:36:54.239"}
+{"status_id":5,"order_identifier":"817d6702-fdc6-d210-13f1-5c9bedbde146","status":{"status_name":"Ready for Pickup","timestamp":1.744995335288E12},"dt_current_timestamp":"2025-04-18 16:36:54.239"}
+{"status_id":6,"order_identifier":"3f53a41c-2438-4e6c-2b31-bf736bb0fc70","status":{"status_name":"Picked Up","timestamp":1.744997087923E12},"dt_current_timestamp":"2025-04-18 16:36:54.239"}
+{"status_id":7,"order_identifier":"0245de90-e0ab-d746-d249-53da3e4de6ec","status":{"status_name":"Out for Delivery","timestamp":1.744997201453E12},"dt_current_timestamp":"2025-04-18 16:36:54.239"}
+{"status_id":8,"order_identifier":"a8f16213-7ded-7db9-6153-c5f173a7b3d6","status":{"status_name":"Delivered","timestamp":1.744997092379E12},"dt_current_timestamp":"2025-04-18 16:36:54.239"}
+{"status_id":9,"order_identifier":"05431420-187a-ad4e-0c4d-0cdb143e2492","status":{"status_name":"Completed","timestamp":1.744997917027E12},"dt_current_timestamp":"2025-04-18 16:36:54.239"}
+{"status_id":1,"order_identifier":"9d4cadd1-6a63-f147-b509-b17e2503092b","status":{"status_name":"Order Placed","timestamp":1744994214259},"dt_current_timestamp":"2025-04-18 16:36:54.259"}
+{"status_id":2,"order_identifier":"0f4d412a-fb08-05e7-b38b-4b55d8f2b565","status":{"status_name":"In Analysis","timestamp":1.744994214239E12},"dt_current_timestamp":"2025-04-18 16:36:54.259"}
+{"status_id":3,"order_identifier":"49a70c8d-c0e2-233a-358b-423fbc91121d","status":{"status_name":"Accepted","timestamp":1.74499454789E12},"dt_current_timestamp":"2025-04-18 16:36:54.259"}
+{"status_id":4,"order_identifier":"1e39b529-1beb-ad70-a6fc-10e47d6560ba","status":{"status_name":"Preparing","timestamp":1.744996901592E12},"dt_current_timestamp":"2025-04-18 16:36:54.260"}
+{"status_id":5,"order_identifier":"5dffbf2f-ec18-f82a-2497-648729a33c39","status":{"status_name":"Ready for Pickup","timestamp":1.744997415391E12},"dt_current_timestamp":"2025-04-18 16:36:54.260"}
+{"status_id":6,"order_identifier":"4a79bcfc-d502-77d2-d90b-87693ff24af6","status":{"status_name":"Picked Up","timestamp":1.744995803401E12},"dt_current_timestamp":"2025-04-18 16:36:54.260"}
+{"status_id":7,"order_identifier":"25888881-b3f6-7b03-0163-5a75c7fc526f","status":{"status_name":"Out for Delivery","timestamp":1.744998739318E12},"dt_current_timestamp":"2025-04-18 16:36:54.260"}
+{"status_id":8,"order_identifier":"8624a0a0-e660-716f-a3f2-490580064d67","status":{"status_name":"Delivered","timestamp":1.744997625848E12},"dt_current_timestamp":"2025-04-18 16:36:54.260"}
+{"status_id":9,"order_identifier":"3875b269-cc2d-c4ed-05b6-ef3fcc9dff28","status":{"status_name":"Completed","timestamp":1.744997092379E12},"dt_current_timestamp":"2025-04-18 16:36:54.260"}
+
+================
+File: mongodb/items/01JS4W5AKXGER18A7YBPJMFNPF.jsonl
+================
+{"product_type":"Side","product_id":"PRD-7337","restaurant_id":80,"discount_applied":7.23,"unit_price":32.03,"quantity":1,"order_id":"597d6351-f750-3b09-c5ee-97b5dd2f0e46","product_name":"Heavy Duty Aluminum Car","is_combo":false,"modifiers":"gluten-free","cuisine_type":"Japanese","subtotal":24.8,"is_vegetarian":false,"order_item_id":"3b7b6ec2-0864-b72a-d68f-e06cdef308b7","dt_current_timestamp":"2025-04-18 16:36:55.880"}
+{"product_type":"Dessert","product_id":"PRD-5977","restaurant_id":272,"discount_applied":7.9,"unit_price":17.57,"quantity":4,"order_id":"4a79bcfc-d502-77d2-d90b-87693ff24af6","product_name":"Awesome Plastic Lamp","is_combo":false,"modifiers":"extra cheese","cuisine_type":"Mexican","subtotal":62.38,"is_vegetarian":false,"order_item_id":"3b6fc4cc-8de5-dd83-dbe9-73ff739ea34e","dt_current_timestamp":"2025-04-18 16:36:55.881"}
+{"product_type":"Dessert","product_id":"PRD-1522","restaurant_id":232,"discount_applied":5.6,"unit_price":17.42,"quantity":1,"order_id":"108c637f-6205-f466-ffca-d9b53c92ba76","product_name":"Rustic Aluminum Plate","is_combo":true,"modifiers":"no onions","cuisine_type":"Chinese","subtotal":11.820000000000002,"is_vegetarian":false,"order_item_id":"f19bd2da-12e6-3732-d8bf-ed43c76a82d8","dt_current_timestamp":"2025-04-18 16:36:55.881"}
+{"product_type":"Side","product_id":"PRD-3967","restaurant_id":294,"discount_applied":1.55,"unit_price":20.05,"quantity":4,"order_id":"a30fa363-648a-b0c6-b335-c30e7f46230f","product_name":"Synergistic Plastic Coat","is_combo":true,"modifiers":"no onions","cuisine_type":"Japanese","subtotal":78.65,"is_vegetarian":true,"order_item_id":"39e6e6df-4e3a-b6ca-3441-f0751a1becba","dt_current_timestamp":"2025-04-18 16:36:55.881"}
+{"product_type":"Side","product_id":"PRD-5382","restaurant_id":167,"discount_applied":7.54,"unit_price":17.99,"quantity":2,"order_id":"67d47317-deb1-c6b0-194e-b07e2b8e26ba","product_name":"Small Marble Coat","is_combo":false,"modifiers":"add bacon","cuisine_type":"Mexican","subtotal":28.439999999999998,"is_vegetarian":true,"order_item_id":"183e79f7-894b-0533-7b55-3b89f44436d1","dt_current_timestamp":"2025-04-18 16:36:55.881"}
+
+================
+File: mongodb/recommendations/01JS4W5A7YWTYRQKDA7F7N95VX.jsonl
+================
+{"event_id":"1fb4a350-3de0-a62e-e5aa-237c693d5767","user_id":86,"event_type":"view","product_id":"PRD-04278","timestamp":"2025-04-18 16:36:54.211","dt_current_timestamp":"2025-04-18 16:36:54.211"}
+{"event_id":"1c7f5b76-0cce-b3e7-c82c-fb534a8e86b9","user_id":246,"event_type":"add_to_cart","product_id":"PRD-23510","timestamp":"2025-04-18 16:36:54.238","dt_current_timestamp":"2025-04-18 16:36:54.238"}
+{"event_id":"ccd4c0a2-e8e5-681f-06ec-e8b13697ca29","user_id":300,"event_type":"recommendation_served","product_id":"PRD-61294","timestamp":"2025-04-18 16:36:54.259","dt_current_timestamp":"2025-04-18 16:36:54.259"}
+{"event_id":"6230310c-093e-848f-8e28-d3f7c65d2479","user_id":142,"event_type":"add_to_cart","product_id":"PRD-03824","timestamp":"2025-04-18 16:36:54.280","dt_current_timestamp":"2025-04-18 16:36:54.280"}
+{"event_id":"42341580-fb31-06c8-9fc2-0ca7cba82090","user_id":302,"event_type":"click","product_id":"PRD-81271","timestamp":"2025-04-18 16:36:54.300","dt_current_timestamp":"2025-04-18 16:36:54.300"}
+
+================
+File: mongodb/support/01JS4W5A7YWTYRQKDA7F7N95VV.jsonl
+================
+{"ticket_id":"2435ef1c-70ee-515c-4a09-72ae6d2a5167","user_id":21,"order_id":"cce2a8e0-ce6c-7ebe-2624-de285f844ebd","category":"Late Delivery","description":"Omnis impedit esse totam aut veniam laborum deserunt. In ipsa beatae. Fugiat ea deleniti perferendis. Quia rerum sit. Aut qui et minus.","status":"Resolved","opened_at":"2025-04-18 16:36:54","dt_current_timestamp":"2025-04-18 16:36:54.211"}
+{"ticket_id":"fc592e26-7ddf-73c7-a1c8-f73d33ff3f1a","user_id":69,"order_id":"afc53804-1de9-d3e4-0a17-b665cd7123a4","category":"Other","description":"Corporis quaerat qui nesciunt. Libero quaerat est velit fugit temporibus. Ea omnis iure nulla iste et est. Vel voluptas ullam pariatur quas quia molestiae.","status":"Open","opened_at":"2025-04-18 16:36:54","dt_current_timestamp":"2025-04-18 16:36:54.238"}
+{"ticket_id":"245be48f-fd97-9393-fbc5-06d16bdc6b55","user_id":84,"order_id":"4dee65ec-cec5-90f5-63b8-330aa4fea00d","category":"Late Delivery","description":"Vel nihil ut dolor ea. Fuga inventore fuga. Eligendi odit fuga placeat nemo provident sit.","status":"Closed","opened_at":"2025-04-18 16:36:54","dt_current_timestamp":"2025-04-18 16:36:54.259"}
+{"ticket_id":"31b6eb16-f8f6-a79c-f8f3-6616ce4817d1","user_id":133,"order_id":"bf221d61-a139-8712-c743-00e127fdb0d2","category":"Payment Issue","description":"Voluptatem doloribus hic aut. Non eum voluptatibus eos facilis. Dicta nemo omnis natus corporis provident facere. Dolor iure praesentium ad consequatur culpa ea.","status":"In Progress","opened_at":"2025-04-18 16:36:54","dt_current_timestamp":"2025-04-18 16:36:54.280"}
+{"ticket_id":"f83f9cf4-23d0-2fa2-2a84-20ce8614c15f","user_id":259,"order_id":"e1ff13e5-23de-fc52-e9e3-7e4a953a1de5","category":"Late Delivery","description":"Illo alias itaque doloremque vel ut sapiente porro. Magni nihil et ipsam a aut numquam praesentium. Voluptatem incidunt rerum animi labore consectetur. Quasi vitae recusandae error facere sed. Fugit aut ut quo omnis libero.","status":"Open","opened_at":"2025-04-18 16:36:54","dt_current_timestamp":"2025-04-18 16:36:54.300"}
+
+================
+File: mongodb/users/01JS4W5A7WWZBQ6Y1C465EYR76.jsonl
+================
+{"user_id":331,"country":"BR","city":"Centro do Guilherme","phone_number":"(18) 2874-2340","email":"matheus.melo@bol.com.br","uuid":"b0e8f49a-44ca-5973-0e70-054c55fa6419","delivery_address":"Sobrado 19 s/n Rodovia Carolina Meireles, Riacho de Santo Antônio, DF 99355-077","cpf":"746.708.331-95","dt_current_timestamp":"2025-04-18 16:36:54.210"}
+{"user_id":332,"country":"BR","city":"Varjota","phone_number":"(67) 4707-2452","email":"vicente.marques@bol.com.br","uuid":"2837058f-539e-bcca-1210-fa27af853bc1","delivery_address":"4405 Alameda Giulia Conceição, Pedra Branca do Amapari, RO 72991-236","cpf":"483.610.056-65","dt_current_timestamp":"2025-04-18 16:36:54.237"}
+{"user_id":333,"country":"BR","city":"Lajeado Novo","phone_number":"(22) 3990-5333","email":"sophia.muniz@yahoo.com","uuid":"5e1eb001-6aed-95ff-278e-af4a2e87861b","delivery_address":"Apto. 272 12714 Ponte Salvador, Fortaleza do Tabocão, SP 31341-250","cpf":"865.424.532-03","dt_current_timestamp":"2025-04-18 16:36:54.258"}
+{"user_id":334,"country":"BR","city":"São Brás","phone_number":"(18) 3707-9755","email":"miguel.hermingues@live.com","uuid":"ae220935-676e-5b20-a0b9-5739e9188d0a","delivery_address":"068 Travessa Marcela Cardoso, Cambuquira, MT 24409-687","cpf":"559.522.437-69","dt_current_timestamp":"2025-04-18 16:36:54.279"}
+{"user_id":335,"country":"BR","city":"Pontão","phone_number":"(75) 4078-2553","email":"julio.bittencourt@gmail.com","uuid":"42f636b7-df40-5d0c-4a1d-c92e0720f2fc","delivery_address":"Quadra 10 4605 Viela Fabiano, Canhotinho, AM 03685-430","cpf":"764.077.502-23","dt_current_timestamp":"2025-04-18 16:36:54.299"}
+
+================
+File: mssql/users/01JS4W5A74BK7P4BPTJV1D3MHB.jsonl
+================
+{"user_id":331,"country":"BR","birthday":"1918-11-09","job":"Agente de Mineração Trainee","phone_number":"(55) 4872-0262","uuid":"c8bb8e2f-e4ae-d19b-a595-d275ad7b4e0f","last_name":"Ferreira","first_name":"Breno","cpf":"906.848.272-79","company_name":"Meireles-Vieira","dt_current_timestamp":"2025-04-18 16:36:54.189"}
+{"user_id":332,"country":"BR","birthday":"1926-06-09","job":"Nacional Técnico de Hospitalidade","phone_number":"(79) 2543-3953","uuid":"d7a3e775-51f3-2210-fa49-f8a48742f945","last_name":"da Terra","first_name":"Rebeca","cpf":"490.426.814-94","company_name":"Goulart, Siqueira e da Fronteira","dt_current_timestamp":"2025-04-18 16:36:54.212"}
+{"user_id":333,"country":"BR","birthday":"1919-11-13","job":"Pleno Agente de Agricultura","phone_number":"(94) 2679-3947","uuid":"39a23ed9-1565-c2c1-f368-b25128b7ac9b","last_name":"Bittencourt","first_name":"Pietra","cpf":"267.220.550-19","company_name":"Simões LTDA","dt_current_timestamp":"2025-04-18 16:36:54.239"}
+{"user_id":334,"country":"BR","birthday":"1931-07-18","job":"Facilitador Hospitalidade Global","phone_number":"(53) 2752-8677","uuid":"ffff875b-7af0-323c-7548-afff9609ed08","last_name":"Moniz","first_name":"Ana Laura","cpf":"432.318.868-34","company_name":"Martins, Barreira e Viana","dt_current_timestamp":"2025-04-18 16:36:54.259"}
+{"user_id":335,"country":"BR","birthday":"1914-04-20","job":"Associado de TI","phone_number":"(35) 2617-1119","uuid":"53fddf63-08a6-030d-5078-6f6da8d62f53","last_name":"da Silveira","first_name":"Janaína","cpf":"222.276.400-42","company_name":"Fernandes, Moniz e Melo","dt_current_timestamp":"2025-04-18 16:36:54.280"}
+{"user_id":336,"country":"BR","birthday":"1916-06-12","job":"Associado Central","phone_number":"(88) 2139-4170","uuid":"99dbf47b-bb50-555a-0e25-99551cf6a6c3","last_name":"Muniz","first_name":"Joaquim","cpf":"015.168.461-47","company_name":"Conceição, Caldas e de Lins","dt_current_timestamp":"2025-04-18 16:36:54.300"}
+
+================
+File: mysql/menu/01JS4W5A7YWTYRQKDA7F7N95VW.jsonl
+================
+{"menu_section_id":"dedcac8e-6b7d-f77f-a1b5-68af5a9b7bc5","restaurant_id":80,"name":"Desserts","description":"Voluptates nobis quia nisi beatae sed veritatis voluptates.","active":true,"dt_current_timestamp":"2025-04-18 16:36:54.211"}
+{"menu_section_id":"5c871ce6-e8e0-d5f5-fabf-fe3a0c6fc559","restaurant_id":116,"name":"Beverages","description":"Quia qui tenetur voluptatibus dolores sit voluptatibus officiis.","active":true,"dt_current_timestamp":"2025-04-18 16:36:54.238"}
+{"menu_section_id":"1e7fa56c-558b-e405-129d-a88dacd04019","restaurant_id":78,"name":"Main Dishes","description":"Necessitatibus autem dolores qui earum.","active":true,"dt_current_timestamp":"2025-04-18 16:36:54.259"}
+{"menu_section_id":"47e5a474-ab3c-72ad-12fd-84974596f135","restaurant_id":30,"name":"Sides","description":"Blanditiis id eius dolores.","active":true,"dt_current_timestamp":"2025-04-18 16:36:54.280"}
+{"menu_section_id":"dacb4102-cf31-3974-97de-823ffc8ca89a","restaurant_id":83,"name":"Combos","description":"Occaecati aliquid iusto tenetur.","active":true,"dt_current_timestamp":"2025-04-18 16:36:54.300"}
+
+================
+File: mysql/products/01JS4W5A77YVBYMB5TQ69P7R1W.jsonl
+================
+{"product_type":"Drink","product_id":"PRD-44656","prep_time_min":21,"flavor_profile":"sour","restaurant_id":25,"tags":"light","name":"Sleek Plastic Coat","unit_cost":13.32,"updated_at":"2025-04-18 16:36:54","calories":1184,"cuisine_type":"Mexican","is_vegetarian":false,"created_at":"2023-01-22 18:54:37","price":48.52,"dt_current_timestamp":"2025-04-18 16:36:54.192","is_gluten_free":true}
+{"product_type":"Combo","product_id":"PRD-86641","prep_time_min":13,"flavor_profile":"umami","restaurant_id":245,"tags":"seasonal","name":"Incredible Wooden Coat","unit_cost":14.92,"updated_at":"2025-04-18 16:36:54","calories":881,"cuisine_type":"American","is_vegetarian":true,"created_at":"2020-12-31 08:59:03","price":35.55,"dt_current_timestamp":"2025-04-18 16:36:54.215","is_gluten_free":false}
+{"product_type":"Combo","product_id":"PRD-19777","prep_time_min":27,"flavor_profile":"sour","restaurant_id":98,"tags":"premium","name":"Enormous Leather Pants","unit_cost":11.06,"updated_at":"2025-04-18 16:36:54","calories":619,"cuisine_type":"Indian","is_vegetarian":true,"created_at":"2020-03-09 00:42:47","price":30.59,"dt_current_timestamp":"2025-04-18 16:36:54.241","is_gluten_free":true}
+{"product_type":"Sauce","product_id":"PRD-26385","prep_time_min":10,"flavor_profile":"spicy","restaurant_id":315,"tags":"combo","name":"Fantastic Wool Car","unit_cost":1.36,"updated_at":"2025-04-18 16:36:54","calories":719,"cuisine_type":"Indian","is_vegetarian":true,"created_at":"2024-07-21 12:56:57","price":34.86,"dt_current_timestamp":"2025-04-18 16:36:54.261","is_gluten_free":true}
+{"product_type":"Side","product_id":"PRD-60405","prep_time_min":26,"flavor_profile":"savory","restaurant_id":228,"tags":"combo","name":"Synergistic Steel Watch","unit_cost":13.51,"updated_at":"2025-04-18 16:36:54","calories":1090,"cuisine_type":"Chinese","is_vegetarian":false,"created_at":"2022-03-29 20:52:31","price":49.05,"dt_current_timestamp":"2025-04-18 16:36:54.282","is_gluten_free":true}
+
+================
+File: mysql/ratings/01JS4W5A7YWTYRQKDA7F7N95VZ.jsonl
+================
+{"rating_id":332,"uuid":"434bf034-ad68-e110-a1df-e68fad56f377","restaurant_identifier":"70.426.651/8476-83","rating":2,"timestamp":"2022-03-27 04:55:07","dt_current_timestamp":"2025-04-18 16:36:54.212"}
+{"rating_id":333,"uuid":"19d95a19-1ca6-e3db-a75d-c448ee645410","restaurant_identifier":"16.856.924/1485-60","rating":2,"timestamp":"2024-05-03 16:18:38","dt_current_timestamp":"2025-04-18 16:36:54.239"}
+{"rating_id":334,"uuid":"b496b983-0bb8-cff4-3048-4163d8fca2b7","restaurant_identifier":"52.525.358/3089-85","rating":2,"timestamp":"2022-06-15 11:19:37","dt_current_timestamp":"2025-04-18 16:36:54.259"}
+{"rating_id":335,"uuid":"d55bf982-a4b5-e8d6-7fcd-44ac569c3b22","restaurant_identifier":"21.763.657/8486-76","rating":4,"timestamp":"2025-04-13 05:05:12","dt_current_timestamp":"2025-04-18 16:36:54.280"}
+{"rating_id":336,"uuid":"ac902d9a-3246-0100-5db7-e693833232af","restaurant_identifier":"53.533.689/5168-45","rating":1,"timestamp":"2024-11-17 07:02:17","dt_current_timestamp":"2025-04-18 16:36:54.300"}
+{"rating_id":337,"uuid":"ef1e69db-e469-195b-3482-e7442b013fb9","restaurant_identifier":"81.271.960/9334-08","rating":3,"timestamp":"2023-02-01 12:10:59","dt_current_timestamp":"2025-04-18 16:36:54.320"}
+
+================
+File: mysql/restaurants/01JS4W5A7YWTYRQKDA7F7N95VY.jsonl
+================
+{"country":"BR","city":"Lontras","restaurant_id":332,"phone_number":"(34) 4363-7578","cnpj":"42.928.274/6370-22","average_rating":3.1,"name":"da Bandeira-Rameira Restaurante","uuid":"1e360b2e-25cb-c62c-6fb1-18429c72c775","address":"34780 Alameda Margarida Freitas\nCanutama - CE\n56056-606","opening_time":"10:00 AM","cuisine_type":"Indian","closing_time":"11:00 PM","num_reviews":2029,"dt_current_timestamp":"2025-04-18 16:36:54.212"}
+{"country":"BR","city":"Guarará","restaurant_id":333,"phone_number":"(95) 5426-6799","cnpj":"71.334.463/0006-58","average_rating":4.2,"name":"Paes S.A. Restaurante","uuid":"6f99c6b9-1f53-1de1-b768-9339b5191b1b","address":"83467 Travessa Marcelo Franco\nLebon Régis - GO\n34597-577","opening_time":"10:00 AM","cuisine_type":"Italian","closing_time":"10:00 PM","num_reviews":4020,"dt_current_timestamp":"2025-04-18 16:36:54.239"}
+{"country":"BR","city":"Júlio Mesquita","restaurant_id":334,"phone_number":"(97) 2121-9834","cnpj":"54.199.498/9126-96","average_rating":4.3,"name":"Fontes LTDA Restaurante","uuid":"24187016-37fa-db6f-fd47-7b21e2d23313","address":"3095 Rua Gabrielly\nCacoal - SC\n18400-351","opening_time":"10:00 AM","cuisine_type":"Indian","closing_time":"11:00 PM","num_reviews":5018,"dt_current_timestamp":"2025-04-18 16:36:54.259"}
+{"country":"BR","city":"Astorga","restaurant_id":335,"phone_number":"(24) 2099-2275","cnpj":"33.233.771/3522-77","average_rating":0.2,"name":"Barreto EIRELI Restaurante","uuid":"b9a9028b-cc61-29e5-5857-0e43193767ad","address":"3426 Ponte Eduardo Godins\nSão Vicente de Minas - AC\n57385-521","opening_time":"09:00 AM","cuisine_type":"French","closing_time":"11:00 PM","num_reviews":6030,"dt_current_timestamp":"2025-04-18 16:36:54.280"}
+{"country":"BR","city":"Wenceslau Guimarães","restaurant_id":336,"phone_number":"(71) 4817-8926","cnpj":"98.379.537/7499-61","average_rating":2.0,"name":"Viana-Videira Restaurante","uuid":"16aedbb9-a19d-cda9-627d-c151480bfb5c","address":"42553 Avenida Ryan Ramalho\nFormiga - PR\n26713-935","opening_time":"10:00 AM","cuisine_type":"Italian","closing_time":"11:00 PM","num_reviews":7132,"dt_current_timestamp":"2025-04-18 16:36:54.300"}
+{"country":"BR","city":"Correntina","restaurant_id":337,"phone_number":"(33) 5928-8116","cnpj":"96.670.978/7941-13","average_rating":1.4,"name":"Mendes LTDA Restaurante","uuid":"d38ac49f-f350-fc76-b13d-4ca3d55c1f72","address":"9189 Viela Emilly Bonfim\nOrindiúva - RN\n50008-478","opening_time":"09:00 AM","cuisine_type":"Italian","closing_time":"08:00 PM","num_reviews":1463,"dt_current_timestamp":"2025-04-18 16:36:54.320"}
+
+================
+File: postgres/drivers/01JS4W5A74BK7P4BPTJV1D3MHA.jsonl
+================
+{"country":"BR","date_birth":"1987-04-18","city":"Itaguara","vehicle_year":2006,"phone_number":"(49) 3003-6255","license_number":"qu7194948","vehicle_make":"Soares, Simões e da Costa","uuid":"ba75155f-0747-064f-8f0d-499547610788","vehicle_model":"Practical Cotton Chair","driver_id":331,"last_name":"da Paz","first_name":"Marli","vehicle_type":"Car","dt_current_timestamp":"2025-04-18 16:36:54.189"}
+{"country":"BR","date_birth":"2147-06-28","city":"Penápolis","vehicle_year":1981,"phone_number":"(75) 3992-6350","license_number":"cb1397775","vehicle_make":"Madeira-da Silveira","uuid":"84b8f8ce-2aa5-797e-0d07-3a42fbd34cc6","vehicle_model":"Sleek Bronze Hat","driver_id":332,"last_name":"Souza","first_name":"Júlio","vehicle_type":"Motorcycle","dt_current_timestamp":"2025-04-18 16:36:54.212"}
+{"country":"BR","date_birth":"2102-03-27","city":"Nanuque","vehicle_year":2001,"phone_number":"(32) 4075-2191","license_number":"oz3592112","vehicle_make":"Sais e Associados","uuid":"40393f5c-a24a-387a-1773-54411e7b716f","vehicle_model":"Ergonomic Rubber Shirt","driver_id":333,"last_name":"Meira","first_name":"Felícia","vehicle_type":"E-Bike","dt_current_timestamp":"2025-04-18 16:36:54.239"}
+{"country":"BR","date_birth":"2011-03-26","city":"Aragoiânia","vehicle_year":2001,"phone_number":"(74) 2465-5421","license_number":"ic4610393","vehicle_make":"Almeida e Associados","uuid":"3a8d5052-324f-6cb7-eb73-ed515f316580","vehicle_model":"Enormous Paper Bottle","driver_id":334,"last_name":"da Barra","first_name":"João Lucas","vehicle_type":"Motorcycle","dt_current_timestamp":"2025-04-18 16:36:54.259"}
+{"country":"BR","date_birth":"1998-11-23","city":"Amaraji","vehicle_year":2017,"phone_number":"(99) 2458-4148","license_number":"fv7183563","vehicle_make":"Alves, Farias e da Maia","uuid":"025e0dfe-2bf4-edc9-d06f-edaea16be9dc","vehicle_model":"Intelligent Bronze Lamp","driver_id":335,"last_name":"Coqueiro","first_name":"Antonia","vehicle_type":"Scooter","dt_current_timestamp":"2025-04-18 16:36:54.280"}
+{"country":"BR","date_birth":"1956-03-22","city":"Iracema","vehicle_year":2008,"phone_number":"(77) 5073-6236","license_number":"yc7831504","vehicle_make":"da Fronteira-Matoso","uuid":"78b6ddbc-bab2-d8e4-03f0-311280387938","vehicle_model":"Ergonomic Plastic Shirt","driver_id":336,"last_name":"Aragão","first_name":"Ígor","vehicle_type":"Car","dt_current_timestamp":"2025-04-18 16:36:54.300"}
+
+================
+File: postgres/inventory/01JS4W5A77YVBYMB5TQ69P7R1X.jsonl
+================
+{"stock_id":"56ebf768-05e2-450a-0b27-66a89ae883a6","restaurant_id":192,"product_id":"PRD-77110","quantity_available":26,"last_updated":"2025-04-18 16:36:54.192"}
+{"stock_id":"70d30fcb-6a8b-3c1a-7c47-c7b3d5e36dd1","restaurant_id":175,"product_id":"PRD-14121","quantity_available":84,"last_updated":"2025-04-18 16:36:54.215"}
+{"stock_id":"7b094576-495c-415a-01ba-b81e3341407c","restaurant_id":265,"product_id":"PRD-17339","quantity_available":58,"last_updated":"2025-04-18 16:36:54.241"}
+{"stock_id":"6d21c9df-0482-05d0-8fe1-ba7f3c68135f","restaurant_id":315,"product_id":"PRD-61176","quantity_available":124,"last_updated":"2025-04-18 16:36:54.261"}
+{"stock_id":"122a14df-9755-3ddf-b143-a5a949ae366f","restaurant_id":255,"product_id":"PRD-31203","quantity_available":158,"last_updated":"2025-04-18 16:36:54.282"}
+{"stock_id":"c75c62d6-f444-3282-7f26-c13345062a7b","restaurant_id":45,"product_id":"PRD-67652","quantity_available":105,"last_updated":"2025-04-18 16:36:54.302"}
+
+
+================
+File: users.json
+================
+{"user_id":1,"country":"BR","city":"Palmas","phone_number":"(51) 4463-9821","email":"ofelia.barbosa@bol.com.br","uuid":"94a1eff2-4dce-c26e-cea4-3c55b1f8418b","delivery_address":"Sobrado 76 0225 Viela Pérola, Córrego do Bom Jesus, AL 13546-174","user_identifier":"709.528.582-65","dt_current_timestamp":"2025-02-05 21:50:45.932"}
+
+
+
+================================================================
+End of Codebase
+================================================================
