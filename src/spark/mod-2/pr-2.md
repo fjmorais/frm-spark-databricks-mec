@@ -1,4 +1,4 @@
-# PR-2: Creating Session and Context in Spark
+# Creating Session and Context in Spark
 
 ## Overview
 
@@ -8,11 +8,11 @@ The SparkSession is the entry point for any Spark application. Configuring it co
 - Scalability
 - Efficient cluster utilization
 
-This practical guide explains how to create and configure SparkSession objects, manage resources properly, and implement best practices for production environments.
+This guide explains how to create and configure SparkSession objects, manage resources properly, and implement best practices for production environments.
 
 ## Prerequisites
 
-- Apache Spark 3.5+ installed (see PR-1)
+- Apache Spark 3.5+ installed
 - Python 3.6+
 - Basic understanding of Spark architecture
 
@@ -85,7 +85,7 @@ spark = SparkSession.builder \
     .getOrCreate()
 
 # Load data from the repository storage
-users_df = spark.read.json("/storage/mongodb/users/01JS4W5A7WWZBQ6Y1C465EYR76.jsonl")
+users_df = spark.read.json("./storage/mongodb/users/01JS4W5A7WWZBQ6Y1C465EYR76.jsonl")
 users_df.show()
 
 # Always stop the session when done
@@ -177,7 +177,7 @@ from spark_manager import SparkManager
 spark = SparkManager.get_session()
 
 # Use it for data processing
-restaurants_df = spark.read.json("/storage/mysql/restaurants/01JS4W5A7YWTYRQKDA7F7N95VY.jsonl")
+restaurants_df = spark.read.json("./storage/mysql/restaurants/01JS4W5A7YWTYRQKDA7F7N95VY.jsonl")
 restaurants_df.show(5)
 
 # Stop when done
@@ -235,7 +235,7 @@ os.environ["SPARK_ENV"] = "dev"  # or "test" or "prod"
 spark = create_session()
 
 # Process data
-drivers_df = spark.read.json("/storage/postgres/drivers/01JS4W5A74BK7P4BPTJV1D3MHA.jsonl")
+drivers_df = spark.read.json("./storage/postgres/drivers/01JS4W5A74BK7P4BPTJV1D3MHA.jsonl")
 print(f"Drivers count: {drivers_df.count()}")
 
 # Clean up
@@ -394,7 +394,7 @@ logging.basicConfig(level=logging.INFO)
 def analyze_restaurants(spark):
     """Analyze restaurant data from UberEats."""
     # Load data from storage directory
-    restaurants = spark.read.json("/storage/mysql/restaurants/01JS4W5A7YWTYRQKDA7F7N95VY.jsonl")
+    restaurants = spark.read.json("./storage/mysql/restaurants/01JS4W5A7YWTYRQKDA7F7N95VY.jsonl")
     
     # Register as temp view for SQL
     restaurants.createOrReplaceTempView("restaurants")
@@ -450,8 +450,8 @@ spark = create_optimized_session()
 
 try:
     # Load data from storage directory
-    restaurants = spark.read.json("/storage/mysql/restaurants/01JS4W5A7YWTYRQKDA7F7N95VY.jsonl")
-    ratings = spark.read.json("/storage/mysql/ratings/01JS4W5A7YWTYRQKDA7F7N95VZ.jsonl")
+    restaurants = spark.read.json("./storage/mysql/restaurants/01JS4W5A7YWTYRQKDA7F7N95VY.jsonl")
+    ratings = spark.read.json("./storage/mysql/ratings/01JS4W5A7YWTYRQKDA7F7N95VZ.jsonl")
     
     # Register temporary views
     restaurants.createOrReplaceTempView("restaurants")
@@ -489,11 +489,11 @@ finally:
 
 ## Exercises
 
-1. **Basic Session**: Create a SparkSession and load the PostgreSQL drivers data from `/storage/postgres/drivers/01JS4W5A74BK7P4BPTJV1D3MHA.jsonl`. Count the number of records and display the first 5 rows.
+1. **Basic Session**: Create a SparkSession and load the PostgreSQL drivers data from `./storage/postgres/drivers/01JS4W5A74BK7P4BPTJV1D3MHA.jsonl`. Count the number of records and display the first 5 rows.
 
-2. **Memory Configuration**: Create a session with optimized memory settings for a machine with 16GB RAM. Load and process the Kafka orders data from `/storage/kafka/orders/01JS4W5A7XY65S9Z69BY51BEJ4.jsonl`.
+2. **Memory Configuration**: Create a session with optimized memory settings for a machine with 16GB RAM. Load and process the Kafka orders data from `./storage/kafka/orders/01JS4W5A7XY65S9Z69BY51BEJ4.jsonl`.
 
-3. **Singleton Implementation**: Implement the singleton pattern for SparkSession management and use it to analyze both restaurant data from `/storage/mysql/restaurants/01JS4W5A7YWTYRQKDA7F7N95VY.jsonl` and ratings data from `/storage/mysql/ratings/01JS4W5A7YWTYRQKDA7F7N95VZ.jsonl`.
+3. **Singleton Implementation**: Implement the singleton pattern for SparkSession management and use it to analyze both restaurant data from `./storage/mysql/restaurants/01JS4W5A7YWTYRQKDA7F7N95VY.jsonl` and ratings data from `./storage/mysql/ratings/01JS4W5A7YWTYRQKDA7F7N95VZ.jsonl`.
 
 4. **Environment-Specific**: Create a script that uses different SparkSession configurations based on an environment variable (`dev`, `test`, `prod`).
 
