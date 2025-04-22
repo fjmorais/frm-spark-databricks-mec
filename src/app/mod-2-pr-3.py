@@ -77,6 +77,8 @@ spark = SparkSession.builder \
 # TODO 2 = create spark context
 sc = spark.sparkContext
 
+for item in sorted(spark.sparkContext.getConf().getAll()):
+    print(f"  {item[0]}: {item[1]}")
 # TODO 3 = the spark code here
 
 # TODO 4 = stop the spark context
