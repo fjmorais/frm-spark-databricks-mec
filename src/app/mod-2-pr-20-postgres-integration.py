@@ -77,25 +77,7 @@ print("Schema of the 'drivers' table:")
 for field in drivers_schema:
     print(f"  - {field.name}: {field.dataType}")
 
-
-# TODO 1 = reading data from PostgreSQL
-try:
-    drivers_df = spark.read.jdbc(
-        url=jdbc_url,
-        table="drivers",
-        properties=connection_properties
-    )
-
-    print(f"Read {drivers_df.count()} records from drivers table")
-
-    drivers_df.printSchema()
-    drivers_df.show(5)
-
-except Exception as e:
-    print(f"Error reading table: {str(e)}")
-    print("Creating example table for demonstration...")
-
-# TODO 2 = writing data to PostgreSQL
+# TODO 5 = complex queries
 drivers_data = [
     ("ABC1234", "(11) 98765-4321", "2023-01-10", "carlos.silva@email.com", 4.8, "Carlos Silva",
      5200.50, "active", "2022-03-15", "DRV-001", 342, "Motorcycle"),
@@ -116,38 +98,7 @@ drivers_df = spark.createDataFrame([
     for d in drivers_data
 ])
 
-drivers_df.write.jdbc(
-    url=jdbc_url,
-    table="drivers",
-    mode="overwrite",
-    properties=connection_properties
-)
 
-print("'drivers' table created with example data!")
-drivers_df.show(5)
-
-# TODO 3 = column selection
-driver_info_df = spark.read.jdbc(
-    url=jdbc_url,
-    table="(SELECT driver_id, name, average_rating, vehicle_type, total_deliveries FROM drivers) AS driver_subset",
-    properties=connection_properties
-)
-
-print("Driver data with selected columns:")
-driver_info_df.show(5)
-
-# TODO 4 = predicate pushdown
-top_drivers_df = spark.read.jdbc(
-    url=jdbc_url,
-    table="drivers",
-    properties=connection_properties,
-    predicates=["average_rating > 4.7"]
-)
-
-print(f"Found {top_drivers_df.count()} highly-rated drivers")
-top_drivers_df.show(5)
-
-# TODO 5 = complex queries
 query = """
     (SELECT 
         d.name, 
@@ -242,5 +193,6 @@ try:
 except Exception as e:
     print(f"Error reading in parallel: {str(e)}")
     print("Continuing with the next examples...")
+
 
 spark.stop()
