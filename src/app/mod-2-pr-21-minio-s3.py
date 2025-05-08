@@ -111,6 +111,73 @@ ratings_schema = StructType([
     StructField("dt_current_timestamp", TimestampType(), True)
 ])
 
+# TODO 1) reading data from MinIO S3
+source_path = "s3a://owshq-shadow-traffic-uber-eats/mysql/ratings"
+ratings_df = spark.read.schema(ratings_schema).json(source_path)
+
+count = ratings_df.count()
+print(f"Successfully read {count} ratings records")
+
+print("\nRatings Schema:")
+ratings_df.printSchema()
+
+print("\nSample Ratings Data:")
+ratings_df.show(5, truncate=False)
+
+print("\nRatings Distribution:")
+ratings_df.groupBy("rating").count().orderBy("rating").show()
+
+# TODO 2) write data to MinIO S3
+ratings_analysis = ratings_df.withColumn(
+    "rating_category",
+    when(col("rating") >= 4, "High")
+    .when(col("rating") >= 3, "Medium")
+    .otherwise("Low")
+)
+
+ratings_time_analysis = ratings_analysis.withColumn(
+    "day_of_week", date_format(col("timestamp"), "EEEE")
+).withColumn(
+    "hour_of_day", hour(col("timestamp"))
+)
+
+print("\nTransformed Data Sample:")
+ratings_time_analysis.show(5, truncate=False)
+
+restaurant_ratings = ratings_df.groupBy("restaurant_identifier").agg(
+    avg("rating").alias("avg_rating"),
+    min("rating").alias("min_rating"),
+    max("rating").alias("max_rating")
+)
+
+print("\nRestaurant Ratings Summary:")
+restaurant_ratings.show(5, truncate=False)
+
+start_time = time.time()
+target_path = "s3a://ubereats-analytics/ratings_parquet"
+
+print(f"\nWriting ratings data to {target_path}...")
+ratings_df.write.mode("overwrite").partitionBy("rating").parquet(target_path)
+print(f"Data written to Parquet in {time.time() - start_time:.2f} seconds")
+
+analysis_path = "s3a://ubereats-analytics/ratings_analysis"
+print(f"\nWriting analysis data to {analysis_path}...")
+start_time = time.time()
+restaurant_ratings.write.mode("overwrite").csv(analysis_path)
+print(f"Analysis data written to CSV in {time.time() - start_time:.2f} seconds")
+
+print("\nVerifying written data by reading it back:")
+parquet_count = spark.read.parquet(target_path).count()
+csv_count = spark.read.csv(analysis_path, header=True, inferSchema=True).count()
+
+print(f"Read {parquet_count} records from Parquet files")
+print(f"Read {csv_count} records from CSV files")
+
+json_path = "s3a://ubereats-analytics/ratings_time_analysis"
+print(f"\nWriting time analysis data to {json_path}...")
+start_time = time.time()
+ratings_time_analysis.write.mode("overwrite").option("compression", "gzip").json(json_path)
+print(f"Time analysis data written to JSON in {time.time() - start_time:.2f} seconds")
 
 # TODO Stop Spark session
 spark.stop()
