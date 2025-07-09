@@ -65,11 +65,11 @@ def setup_demo_table(spark):
 
     # TODO create namespace
     print("📁 creating namespace...")
-    spark.sql("CREATE NAMESPACE IF NOT EXISTS hadoop_catalog.schema_demo")
+    spark.sql("CREATE NAMESPACE IF NOT EXISTS hadoop_catalog.ubereats")
 
     # TODO set catalog context
     spark.catalog.setCurrentCatalog("hadoop_catalog")
-    spark.catalog.setCurrentDatabase("schema_demo")
+    spark.catalog.setCurrentDatabase("ubereats")
 
     # TODO create initial table
     print("🏗️ creating initial products table...")
@@ -253,9 +253,9 @@ def schema_evolution_compatibility(spark):
 
     # TODO Set the correct catalog and database if needed
     spark.catalog.setCurrentCatalog("hadoop_catalog")
-    spark.catalog.setCurrentDatabase("schema_demo")
+    spark.catalog.setCurrentDatabase("ubereats")
 
-    table_fq = "hadoop_catalog.schema_demo.products"
+    table_fq = "hadoop_catalog.ubereats.products"
 
     # TODO Show evolution history
     print("📊 table history showing schema changes:")
@@ -339,7 +339,7 @@ def cleanup_resources(spark):
         spark.sql("DROP TABLE IF EXISTS products")
 
         # TODO drop namespace
-        spark.sql("DROP NAMESPACE IF EXISTS hadoop_catalog.schema_demo CASCADE")
+        spark.sql("DROP NAMESPACE IF EXISTS hadoop_catalog.ubereats CASCADE")
 
         print("✅ demo resources cleaned up successfully!")
 

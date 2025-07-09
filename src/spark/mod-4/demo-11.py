@@ -60,11 +60,11 @@ def setup_namespace(spark):
 
     # TODO create namespace
     print("📁 creating namespace...")
-    spark.sql("CREATE NAMESPACE IF NOT EXISTS hadoop_catalog.ubereats_demo5")
+    spark.sql("CREATE NAMESPACE IF NOT EXISTS hadoop_catalog.ubereats")
 
     # TODO set catalog context
     spark.catalog.setCurrentCatalog("hadoop_catalog")
-    spark.catalog.setCurrentDatabase("ubereats_demo5")
+    spark.catalog.setCurrentDatabase("ubereats")
 
     print("✅ namespace ready!")
 
@@ -74,7 +74,7 @@ def setup_data_for_time_travel(spark):
 
     print("\n=== Setting Up Data for Time Travel ===")
 
-    table_fq = "hadoop_catalog.ubereats_demo5.orders_time_travel"
+    table_fq = "hadoop_catalog.ubereats.orders_time_travel"
 
     # TODO create table
     print("🏗️ creating orders table...")
@@ -144,7 +144,7 @@ def time_travel_spark_sql(spark):
 
     print("\n=== Apache Iceberg: Time Travel with Spark SQL ===")
 
-    table_fq = "hadoop_catalog.ubereats_demo5.orders_time_travel"
+    table_fq = "hadoop_catalog.ubereats.orders_time_travel"
 
     # TODO show current data
     print("🔍 current data state...")
@@ -192,7 +192,7 @@ def time_travel_dataframe_api(spark):
 
     print("\n=== Apache Iceberg: Time Travel with DataFrame API ===")
 
-    table_fq = "hadoop_catalog.ubereats_demo5.orders_time_travel"
+    table_fq = "hadoop_catalog.ubereats.orders_time_travel"
 
     # TODO get snapshot information
     snapshots_df = spark.sql(f"SELECT snapshot_id, committed_at FROM {table_fq}.snapshots ORDER BY committed_at")
@@ -237,7 +237,7 @@ def snapshots_metadata_table(spark):
 
     print("\n=== Apache Iceberg: Snapshots Metadata Table ===")
 
-    table_fq = "hadoop_catalog.ubereats_demo5.orders_time_travel"
+    table_fq = "hadoop_catalog.ubereats.orders_time_travel"
 
     # TODO show all snapshots
     print("🔍 showing all snapshots...")
@@ -283,7 +283,7 @@ def history_metadata_table(spark):
 
     print("\n=== Apache Iceberg: History Metadata Table ===")
 
-    table_fq = "hadoop_catalog.ubereats_demo5.orders_time_travel"
+    table_fq = "hadoop_catalog.ubereats.orders_time_travel"
 
     # TODO show table history
     print("🔍 showing complete table history...")
@@ -330,7 +330,7 @@ def rollback_to_snapshot(spark):
 
     print("\n=== Apache Iceberg: CALL rollback_to_snapshot ===")
 
-    table_fq = "hadoop_catalog.ubereats_demo5.orders_time_travel"
+    table_fq = "hadoop_catalog.ubereats.orders_time_travel"
 
     # TODO show current state
     print("🔍 current state before rollback...")
@@ -390,14 +390,14 @@ def cleanup_resources(spark):
     try:
         # TODO drop tables with fully qualified names
         tables = [
-            'hadoop_catalog.ubereats_demo5.orders_time_travel'
+            'hadoop_catalog.ubereats.orders_time_travel'
         ]
 
         for table in tables:
             spark.sql(f"DROP TABLE IF EXISTS {table}")
 
         # TODO drop namespace
-        spark.sql("DROP NAMESPACE IF EXISTS hadoop_catalog.ubereats_demo5 CASCADE")
+        spark.sql("DROP NAMESPACE IF EXISTS hadoop_catalog.ubereats CASCADE")
 
         print("✅ demo resources cleaned up successfully!")
 

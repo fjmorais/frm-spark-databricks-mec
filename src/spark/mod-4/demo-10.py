@@ -16,6 +16,83 @@ Run with:
 docker exec -it spark-master /opt/bitnami/spark/bin/spark-submit \
   --master spark://spark-master:7077 \
   /opt/bitnami/spark/jobs/spark/mod-4/demo-10.py
+
+Hidden Partitioning Example Output:
+s3a://owshq-catalog/warehouse/ubereats/orders_partitioned/
+├── data/
+│   ├── order_date_month=2024-01/
+│   │   ├── 00000-0-data.parquet
+│   │   └── 00001-0-data.parquet
+│   ├── order_date_month=2024-02/
+│   │   └── 00000-0-data.parquet
+│   └── order_date_month=2024-03/
+│       └── 00000-0-data.parquet
+└── metadata/
+    ├── metadata.json
+    └── snap-123.avro
+
+# does work with partition pruning
+SELECT * FROM orders WHERE order_date >= '2024-02-01' AND order_date < '2024-03-01'
+
+# does not work with partition pruning
+SELECT * FROM orders WHERE user_id = 1001
+SELECT * FROM orders WHERE total_amount > 50.00
+
+-- ✅ Works on both old and new data [hidden partitioning]
+SELECT * FROM orders WHERE order_date >= '2024-01-01'
+
+-- ✅ New partition field provides additional pruning for new data
+SELECT * FROM orders WHERE restaurant_id = 5
+-- Old data: Scans all files in 2024-01/, 2024-02/
+-- New data: Only scans restaurant_id_bucket=1/ within 2024-04/
+
+BEFORE (Spec ID: 0):
+data/
+├── order_date_month=2024-01/
+└── order_date_month=2024-02/
+
+AFTER (Spec ID: 1):
+data/
+├── order_date_month=2024-01/              # Old data unchanged
+├── order_date_month=2024-02/              # Old data unchanged
+└── order_date_month=2024-04/              # New data uses both partitions
+    ├── restaurant_id_bucket=0/
+    ├── restaurant_id_bucket=1/
+    ├── restaurant_id_bucket=2/
+    └── restaurant_id_bucket=3/
+
+# Add Partition Field Example Output:
+INITIAL (unpartitioned):
+data/
+└── 00000-0-data.parquet
+
+AFTER adding category:
+data/
+├── category=Italian/
+├── category=American/
+└── category=Japanese/
+
+AFTER adding year(created_date):
+data/
+├── category=Italian/
+│   ├── created_date_year=2024/
+│   └── created_date_year=2025/
+├── category=American/
+│   └── created_date_year=2024/
+└── category=Japanese/
+    └── created_date_year=2024/
+
+-- ✅ Efficient after adding category partition
+SELECT * FROM products WHERE category = 'Italian'
+-- Only scans: category=Italian/ folder
+
+-- ✅ Efficient after adding year partition
+SELECT * FROM products WHERE created_date >= '2024-01-01'
+-- Only scans: */created_date_year=2024/ folders
+
+-- ✅ Super-efficient with both partitions
+SELECT * FROM products WHERE category = 'Italian' AND created_date >= '2024-01-01'
+-- Only scans: category=Italian/created_date_year=2024/
 """
 
 import base64
@@ -61,11 +138,11 @@ def setup_namespace(spark):
 
     # TODO create namespace
     print("📁 creating namespace...")
-    spark.sql("CREATE NAMESPACE IF NOT EXISTS hadoop_catalog.ubereats_demo4")
+    spark.sql("CREATE NAMESPACE IF NOT EXISTS hadoop_catalog.ubereats")
 
     # TODO set catalog context
     spark.catalog.setCurrentCatalog("hadoop_catalog")
-    spark.catalog.setCurrentDatabase("ubereats_demo4")
+    spark.catalog.setCurrentDatabase("ubereats")
 
     print("✅ namespace ready!")
 
@@ -77,8 +154,8 @@ def hidden_partitioning(spark):
 
     # TODO set the correct catalog and database
     spark.catalog.setCurrentCatalog("hadoop_catalog")
-    spark.catalog.setCurrentDatabase("ubereats_demo4")
-    table_fq = "hadoop_catalog.ubereats_demo4.orders_partitioned"
+    spark.catalog.setCurrentDatabase("ubereats")
+    table_fq = "hadoop_catalog.ubereats.orders_partitioned"
 
     # TODO create table with hidden partitioning
     print("🏗️ creating orders table with hidden partitioning...")
@@ -110,6 +187,7 @@ def hidden_partitioning(spark):
               ('ORD-005', 1005, 2, 41.80, TIMESTAMP('2024-02-28 18:30:00'), 'completed')
               """)
 
+
     # TODO show partition structure
     print("🔍 showing partition structure...")
     spark.sql(f"SELECT * FROM {table_fq}.partitions").show()
@@ -126,7 +204,7 @@ def partition_evolution(spark):
 
     print("\n=== Apache Iceberg: Partition Evolution ===")
 
-    table_fq = "hadoop_catalog.ubereats_demo4.orders_partitioned"
+    table_fq = "hadoop_catalog.ubereats.orders_partitioned"
 
     # TODO Show current partition spec via snapshots/history
     print("🔍 current partition specs in history:")
@@ -164,7 +242,7 @@ def alter_table_add_partition(spark):
 
     print("\n=== Apache Iceberg: ALTER TABLE Add Partition Field ===")
 
-    table_fq = "hadoop_catalog.ubereats_demo4.products"
+    table_fq = "hadoop_catalog.ubereats.products"
 
     # TODO create simple table for demonstration
     print("🏗️ creating products table...")
@@ -212,7 +290,7 @@ def alter_table_drop_partition(spark):
 
     print("\n=== Apache Iceberg: ALTER TABLE Drop Partition Field ===")
 
-    table_fq = "hadoop_catalog.ubereats_demo4.products"
+    table_fq = "hadoop_catalog.ubereats.products"
 
     # TODO show current partitions
     print("🔍 current partition fields...")
@@ -237,11 +315,34 @@ def alter_table_drop_partition(spark):
 
 
 def partition_transform_functions(spark):
-    """Demonstrate Partition Transform Functions"""
+    """Demonstrate Partition Transform Functions
+
+        -- Extract year from timestamp
+        year(activity_date)     → 2024, 2025, etc.
+
+        -- Extract month from timestamp
+        month(activity_date)    → 2024-01, 2024-02, etc.
+
+        -- Extract day from timestamp
+        day(activity_date)      → 2024-01-01, 2024-01-02, etc.
+
+        -- Extract hour from timestamp
+        hour(activity_date)     → 2024-01-01-14, 2024-01-01-15, etc.
+
+        -- Distribute user_id across 10 buckets
+        bucket(10, user_id)
+        -- user_id=12345 → bucket 5 (12345 % 10 = 5)
+        -- user_id=67890 → bucket 0 (67890 % 10 = 0)
+
+        truncate(3, region)
+        -- 'north_america' → 'nor'
+        -- 'south_europe' → 'sou'
+        -- 'east_asia' → 'eas'
+    """
 
     print("\n=== Apache Iceberg: Partition Transform Functions ===")
 
-    table_fq = "hadoop_catalog.ubereats_demo4.user_activity"
+    table_fq = "hadoop_catalog.ubereats.user_activity"
 
     # Create table with non-redundant partition transforms
     print("🏗️ creating table with transform functions...")
@@ -290,11 +391,30 @@ def partition_transform_functions(spark):
 
 
 def partition_pruning(spark):
-    """Demonstrate Partition Pruning"""
+    """Demonstrate Partition Pruning
+
+    SELECT * FROM user_activity
+    WHERE activity_date >= '2024-02-01'
+      AND user_id = 12345
+      AND region LIKE 'north%'
+
+    -- Pruning Result:
+    -- ✅ activity_date_month=2024-02/user_id_bucket=5/region_trunc=nor/
+    -- ❌ All other partition combinations
+
+    SELECT * FROM user_activity
+    WHERE user_id IN (12345, 67890, 11111)
+
+    -- Pruning Result (bucket function):
+    -- ✅ user_id_bucket=0/  # 67890 % 10 = 0
+    -- ✅ user_id_bucket=1/  # 11111 % 10 = 1
+    -- ✅ user_id_bucket=5/  # 12345 % 10 = 5
+    -- ❌ user_id_bucket=2,3,4,6,7,8,9/
+    """
 
     print("\n=== Apache Iceberg: Partition Pruning ===")
 
-    table_fq = "hadoop_catalog.ubereats_demo4.user_activity"
+    table_fq = "hadoop_catalog.ubereats.user_activity"
 
     # TODO enable query metrics
     spark.conf.set("spark.sql.adaptive.enabled", "true")
@@ -325,7 +445,7 @@ def sort_orders(spark):
 
     print("\n=== Apache Iceberg: Sort Orders ===")
 
-    table_fq = "hadoop_catalog.ubereats_demo4.sorted_orders"
+    table_fq = "hadoop_catalog.ubereats.sorted_orders"
 
     # TODO create table with sort order
     print("🏗️ creating table with sort order...")
@@ -368,14 +488,59 @@ def sort_orders(spark):
 
 
 def write_distribution_modes(spark):
-    """Demonstrate Write Distribution Modes"""
+    """Demonstrate Write Distribution Modes
+    1. Hash Distribution Mode:
+    sql-- How it works:
+    -- 1. Calculates hash of partition columns
+    -- 2. Distributes records evenly across Spark tasks
+    -- 3. Each task writes to multiple partitions
+
+    Write Process:
+    Input: 1000 orders across 3 months
+    ↓
+    Hash distribution across 4 Spark tasks:
+    Task 1: 250 orders → writes to month=2024-01/, 2024-02/, 2024-03/
+    Task 2: 250 orders → writes to month=2024-01/, 2024-02/, 2024-03/
+    Task 3: 250 orders → writes to month=2024-01/, 2024-02/, 2024-03/
+    Task 4: 250 orders → writes to month=2024-01/, 2024-02/, 2024-03/
+
+    2. Range Distribution Mode:
+    sql-- How it works:
+    -- 1. Sorts data by partition and sort columns
+    -- 2. Distributes ranges of sorted data to tasks
+    -- 3. Each task typically writes to fewer partitions
+
+    Write Process:
+    Input: 1000 orders sorted by month, then user_id
+    ↓
+    Range distribution:
+    Task 1: month=2024-01 + early user_ids (1001-1250)
+    Task 2: month=2024-01 + later user_ids (1251-1500) + month=2024-02 early users
+    Task 3: month=2024-02 + month=2024-03 early users
+    Task 4: month=2024-03 later users
+
+    3. None Distribution Mode:
+    sql-- How it works:
+    -- 1. No special distribution strategy
+    -- 2. Data written as-is from Spark tasks
+    -- 3. May result in uneven partition sizes
+
+    Write Process:
+    Input: 1000 orders in random order
+    ↓
+    No redistribution:
+    Task 1: Writes whatever data it has
+    Task 2: Writes whatever data it has
+    Task 3: Writes whatever data it has
+    Task 4: Writes whatever data it has
+    """
 
     print("\n=== Apache Iceberg: Write Distribution Modes ===")
 
     # TODO define table names
-    table_hash = "hadoop_catalog.ubereats_demo4.orders_hash"
-    table_range = "hadoop_catalog.ubereats_demo4.orders_range"
-    table_none = "hadoop_catalog.ubereats_demo4.orders_none"
+    table_hash = "hadoop_catalog.ubereats.orders_hash"
+    table_range = "hadoop_catalog.ubereats.orders_range"
+    table_none = "hadoop_catalog.ubereats.orders_none"
 
     # TODO create tables with different distribution modes
     print("🏗️ creating tables with different distribution modes...")
@@ -462,20 +627,20 @@ def cleanup_resources(spark):
     try:
         # TODO drop tables with fully qualified names
         tables = [
-            'hadoop_catalog.ubereats_demo4.orders_partitioned',
-            'hadoop_catalog.ubereats_demo4.products',
-            'hadoop_catalog.ubereats_demo4.user_activity',
-            'hadoop_catalog.ubereats_demo4.sorted_orders',
-            'hadoop_catalog.ubereats_demo4.orders_hash',
-            'hadoop_catalog.ubereats_demo4.orders_range',
-            'hadoop_catalog.ubereats_demo4.orders_none'
+            'hadoop_catalog.ubereats.orders_partitioned',
+            'hadoop_catalog.ubereats.products',
+            'hadoop_catalog.ubereats.user_activity',
+            'hadoop_catalog.ubereats.sorted_orders',
+            'hadoop_catalog.ubereats.orders_hash',
+            'hadoop_catalog.ubereats.orders_range',
+            'hadoop_catalog.ubereats.orders_none'
         ]
 
         for table in tables:
             spark.sql(f"DROP TABLE IF EXISTS {table}")
 
         # TODO drop namespace
-        spark.sql("DROP NAMESPACE IF EXISTS hadoop_catalog.ubereats_demo4 CASCADE")
+        spark.sql("DROP NAMESPACE IF EXISTS hadoop_catalog.ubereats CASCADE")
 
         print("✅ demo resources cleaned up successfully!")
 

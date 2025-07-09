@@ -33,7 +33,6 @@ def spark_session():
     secret_key = base64.b64decode(encoded_secret_key).decode("utf-8")
 
     spark = SparkSession.builder \
-        .appName("IcebergDemo6-DMLOperations") \
         .config("spark.sql.extensions", "org.apache.iceberg.spark.extensions.IcebergSparkSessionExtensions") \
         .config("spark.sql.catalog.hadoop_catalog", "org.apache.iceberg.spark.SparkCatalog") \
         .config("spark.sql.catalog.hadoop_catalog.type", "hadoop") \
@@ -62,11 +61,11 @@ def setup_namespace(spark):
 
     # TODO create namespace
     print("📁 creating namespace...")
-    spark.sql("CREATE NAMESPACE IF NOT EXISTS hadoop_catalog.ubereats_demo6")
+    spark.sql("CREATE NAMESPACE IF NOT EXISTS hadoop_catalog.ubereats")
 
     # TODO set catalog context
     spark.catalog.setCurrentCatalog("hadoop_catalog")
-    spark.catalog.setCurrentDatabase("ubereats_demo6")
+    spark.catalog.setCurrentDatabase("ubereats")
 
     print("✅ namespace ready!")
 
@@ -76,7 +75,7 @@ def dml_operations(spark):
 
     print("\n=== Apache Iceberg: DML Operations ===")
 
-    table_fq = "hadoop_catalog.ubereats_demo6.orders_dml"
+    table_fq = "hadoop_catalog.ubereats.orders_dml"
 
     # TODO create table for DML operations
     print("🏗️ creating orders table for DML operations...")
@@ -165,12 +164,71 @@ def dml_operations(spark):
 
 
 def copy_on_write_vs_merge_on_read(spark):
-    """Demonstrate Copy-on-Write vs. Merge-on-Read"""
+    """Demonstrate Copy-on-Write vs. Merge-on-Read
+
+    COW = Read-heavy workloads
+    MOR = Write-heavy workloads
+
+    Copy-on-Write Mechanics:
+
+    Before UPDATE:
+    File Structure:
+    data/
+    └── data-file-1.parquet
+        ├── ORD-001, 1001, 25.50, 'pending'
+        ├── ORD-002, 1002, 18.75, 'pending'
+        └── ORD-003, 1003, 32.00, 'confirmed'
+
+    After UPDATE (COW):
+    File Structure:
+    data/
+    ├── data-file-1.parquet  # Logically deleted, not physically removed
+    │   ├── ORD-001, 1001, 25.50, 'pending'      # ← Old version
+    │   ├── ORD-002, 1002, 18.75, 'pending'      # ← Old version
+    │   └── ORD-003, 1003, 32.00, 'confirmed'
+    └── data-file-2.parquet  # New file with updated records
+        ├── ORD-001, 1001, 25.50, 'processing'   # ← Updated
+        ├── ORD-002, 1002, 18.75, 'processing'   # ← Updated
+        └── ORD-003, 1003, 32.00, 'confirmed'    # ← Unchanged but rewritten
+
+    SELECT * FROM orders_cow WHERE status = 'processing'
+
+    -- Execution plan:
+    -- 1. Read only data-file-2.parquet
+    -- 2. Apply filter: status = 'processing'
+    -- 3. Return results (simple file scan)
+
+    Merge-on-Read Mechanics:
+    After UPDATE (MOR):
+    File Structure:
+    data/
+    ├── data-file-1.parquet  # Original data remains
+    │   ├── ORD-001, 1001, 25.50, 'pending'
+    │   ├── ORD-002, 1002, 18.75, 'pending'
+    │   └── ORD-003, 1003, 32.00, 'confirmed'
+    └── delete-file-1.parquet  # Delete markers for updated records
+        ├── Delete: ORD-001 (position-based or equality-based)
+        └── Delete: ORD-002 (position-based or equality-based)
+    ├── insert-file-1.parquet  # New versions of updated records
+        ├── ORD-001, 1001, 25.50, 'processing'   # ← New version
+        └── ORD-002, 1002, 18.75, 'processing'   # ← New version
+
+    SELECT * FROM orders_mor WHERE status = 'processing'
+
+    -- Execution plan:
+    -- 1. Read data-file-1.parquet
+    -- 2. Read delete-file-1.parquet
+    -- 3. Read insert-file-1.parquet
+    -- 4. Apply deletes to original data
+    -- 5. Merge with inserted data
+    -- 6. Apply filter: status = 'processing'
+    -- 7. Return results (complex merge operation)
+    """
 
     print("\n=== Apache Iceberg: Copy-on-Write vs. Merge-on-Read ===")
 
     # TODO create Copy-on-Write table
-    table_cow = "hadoop_catalog.ubereats_demo6.orders_cow"
+    table_cow = "hadoop_catalog.ubereats.orders_cow"
     print("🏗️ creating Copy-on-Write table...")
     spark.sql(f"""
               CREATE TABLE IF NOT EXISTS {table_cow}
@@ -188,7 +246,7 @@ def copy_on_write_vs_merge_on_read(spark):
               """)
 
     # TODO create Merge-on-Read table
-    table_mor = "hadoop_catalog.ubereats_demo6.orders_mor"
+    table_mor = "hadoop_catalog.ubereats.orders_mor"
     print("🏗️ creating Merge-on-Read table...")
     spark.sql(f"""
               CREATE TABLE IF NOT EXISTS {table_mor}
@@ -239,7 +297,37 @@ def copy_on_write_vs_merge_on_read(spark):
 
 
 def change_data_capture(spark):
-    table_fq = "hadoop_catalog.ubereats_demo6.users_cdc"
+    """
+    INSERT INTO users_cdc VALUES
+    (1001, 'Alice', 'alice@email.com', 'active'),
+    (1002, 'Bob', 'bob@email.com', 'active')
+
+    -- CDC Records Generated:
+    user_id | name  | email           | status | _change_type | _commit_snapshot_id | _change_ordinal
+    1001    | Alice | alice@email.com | active | INSERT       | 123456789          | 0
+    1002    | Bob   | bob@email.com   | active | INSERT       | 123456789          | 1
+
+    DELETE FROM users_cdc WHERE user_id = 1002
+
+    -- CDC Records Generated:
+    user_id | name | email         | status | _change_type | _commit_snapshot_id | _change_ordinal
+    1002    | Bob  | bob@email.com | active | DELETE       | 123456791          | 0
+
+    -- Track who changed what and when
+    SELECT
+        user_id,
+        _change_type,
+        name,
+        email,
+        status,
+        s.committed_at as change_time
+    FROM users_cdc.changes c
+    JOIN users_cdc.snapshots s ON c._commit_snapshot_id = s.snapshot_id
+    WHERE _change_type IN ('UPDATE_BEFORE', 'UPDATE_AFTER', 'DELETE')
+    ORDER BY change_time DESC
+    """
+
+    table_fq = "hadoop_catalog.ubereats.users_cdc"
     spark.sql(f"DROP TABLE IF EXISTS {table_fq}")
     spark.sql(f'''
         CREATE TABLE {table_fq} (
@@ -290,7 +378,7 @@ def slowly_changing_dimensions(spark):
 
     print("\n=== Apache Iceberg: SCD (Slowly Changing Dimensions) ===")
 
-    table_fq = "hadoop_catalog.ubereats_demo6.restaurant_scd"
+    table_fq = "hadoop_catalog.ubereats.restaurant_scd"
 
     # Create SCD table
     print("🏗️ creating restaurant SCD table...")
@@ -375,7 +463,7 @@ def delete_files_operations(spark):
 
     print("\n=== Apache Iceberg: Delete Files Operations ===")
 
-    table_fq = "hadoop_catalog.ubereats_demo6.orders_deletes"
+    table_fq = "hadoop_catalog.ubereats.orders_deletes"
 
     # 1. Create table for delete operations
     print("🏗️ Creating table for delete operations...")
@@ -445,7 +533,7 @@ def set_current_snapshot(spark):
 
     print("\n=== Apache Iceberg: CALL set_current_snapshot ===")
 
-    table_fq = "hadoop_catalog.ubereats_demo6.orders_snapshot_ops"
+    table_fq = "hadoop_catalog.ubereats.orders_snapshot_ops"
 
     # 1. Create table and generate snapshots
     print("🏗️ Creating table and generating snapshots...")
@@ -509,6 +597,7 @@ def set_current_snapshot(spark):
 
     print("✅ set_current_snapshot demonstrated!")
 
+
 def cleanup_resources(spark):
     """Clean up demo resources"""
 
@@ -517,23 +606,23 @@ def cleanup_resources(spark):
     try:
         # TODO drop tables with fully qualified names
         tables = [
-            'hadoop_catalog.ubereats_demo6.orders_dml',
-            'hadoop_catalog.ubereats_demo6.orders_cow',
-            'hadoop_catalog.ubereats_demo6.orders_mor',
-            'hadoop_catalog.ubereats_demo6.users_cdc',
-            'hadoop_catalog.ubereats_demo6.restaurant_scd',
-            'hadoop_catalog.ubereats_demo6.orders_deletes',
-            'hadoop_catalog.ubereats_demo6.orders_snapshot_ops',
-            'hadoop_catalog.ubereats_demo6.orders_source',
-            'hadoop_catalog.ubereats_demo6.orders_target',
-            'hadoop_catalog.ubereats_demo6.orders_api'
+            'hadoop_catalog.ubereats.orders_dml',
+            'hadoop_catalog.ubereats.orders_cow',
+            'hadoop_catalog.ubereats.orders_mor',
+            'hadoop_catalog.ubereats.users_cdc',
+            'hadoop_catalog.ubereats.restaurant_scd',
+            'hadoop_catalog.ubereats.orders_deletes',
+            'hadoop_catalog.ubereats.orders_snapshot_ops',
+            'hadoop_catalog.ubereats.orders_source',
+            'hadoop_catalog.ubereats.orders_target',
+            'hadoop_catalog.ubereats.orders_api'
         ]
 
         for table in tables:
             spark.sql(f"DROP TABLE IF EXISTS {table}")
 
         # TODO drop namespace
-        spark.sql("DROP NAMESPACE IF EXISTS hadoop_catalog.ubereats_demo6 CASCADE")
+        spark.sql("DROP NAMESPACE IF EXISTS hadoop_catalog.ubereats CASCADE")
 
         print("✅ demo resources cleaned up successfully!")
 

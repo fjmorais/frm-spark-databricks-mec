@@ -67,11 +67,11 @@ def setup_namespace(spark):
 
     # TODO create namespace
     print("📁 creating namespace...")
-    spark.sql("CREATE NAMESPACE IF NOT EXISTS hadoop_catalog.ubereats_demo2")
+    spark.sql("CREATE NAMESPACE IF NOT EXISTS hadoop_catalog.ubereats")
 
     # TODO set catalog context
     spark.catalog.setCurrentCatalog("hadoop_catalog")
-    spark.catalog.setCurrentDatabase("ubereats_demo2")
+    spark.catalog.setCurrentDatabase("ubereats")
 
     print("✅ namespace ready!")
 
@@ -86,18 +86,12 @@ def create_table_sql(spark):
     spark.sql("""
               CREATE TABLE IF NOT EXISTS orders
               (
-                  order_id
-                  STRING,
-                  user_id
-                  INT,
-                  restaurant_id
-                  INT,
-                  total_amount
-                  DOUBLE,
-                  order_date
-                  TIMESTAMP,
-                  status
-                  STRING
+                  order_id STRING,
+                  user_id INT,
+                  restaurant_id INT,
+                  total_amount DOUBLE,
+                  order_date TIMESTAMP,
+                  status STRING
               ) USING iceberg
                   TBLPROPERTIES
               (
@@ -282,7 +276,7 @@ def datasource_v2_api(spark):
     print("📖 reading with DataSourceV2 API...")
     df = spark.read \
         .format("iceberg") \
-        .load("hadoop_catalog.ubereats_demo2.restaurants")
+        .load("hadoop_catalog.ubereats.restaurants")
 
     print(f"📊 restaurants count: {df.count()}")
 
@@ -294,7 +288,7 @@ def datasource_v2_api(spark):
     sample_df.write \
         .format("iceberg") \
         .mode("append") \
-        .save("hadoop_catalog.ubereats_demo2.test_restaurants")
+        .save("hadoop_catalog.ubereats.test_restaurants")
 
     # TODO verify write
     print("🔍 verifying DataSourceV2 write:")
@@ -310,9 +304,9 @@ def iceberg_sql_extensions(spark):
 
     # TODO Set the correct catalog and database if needed
     spark.catalog.setCurrentCatalog("hadoop_catalog")
-    spark.catalog.setCurrentDatabase("ubereats_demo2")
+    spark.catalog.setCurrentDatabase("ubereats")
 
-    table_fq = "hadoop_catalog.ubereats_demo2.restaurants"
+    table_fq = "hadoop_catalog.ubereats.restaurants"
 
     # TODO Show table properties
     print("🔧 showing table properties...")
@@ -380,7 +374,7 @@ def cleanup_resources(spark):
         spark.sql("DROP TABLE IF EXISTS test_restaurants")
 
         # TODO drop namespace
-        spark.sql("DROP NAMESPACE IF EXISTS hadoop_catalog.ubereats_demo2 CASCADE")
+        spark.sql("DROP NAMESPACE IF EXISTS hadoop_catalog.ubereats CASCADE")
 
         print("✅ demo resources cleaned up successfully!")
 

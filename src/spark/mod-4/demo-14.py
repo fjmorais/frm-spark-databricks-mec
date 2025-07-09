@@ -30,7 +30,6 @@ def spark_session():
     secret_key = base64.b64decode(encoded_secret_key).decode("utf-8")
 
     spark = SparkSession.builder \
-        .appName("IcebergDemo8-MaintenanceOptimization") \
         .config("spark.sql.extensions", "org.apache.iceberg.spark.extensions.IcebergSparkSessionExtensions") \
         .config("spark.sql.catalog.hadoop_catalog", "org.apache.iceberg.spark.SparkCatalog") \
         .config("spark.sql.catalog.hadoop_catalog.type", "hadoop") \
@@ -59,21 +58,64 @@ def setup_namespace(spark):
 
     # TODO create namespace
     print("📁 creating namespace...")
-    spark.sql("CREATE NAMESPACE IF NOT EXISTS hadoop_catalog.ubereats_demo8")
+    spark.sql("CREATE NAMESPACE IF NOT EXISTS hadoop_catalog.ubereats")
 
     # TODO set catalog context
     spark.catalog.setCurrentCatalog("hadoop_catalog")
-    spark.catalog.setCurrentDatabase("ubereats_demo8")
+    spark.catalog.setCurrentDatabase("ubereats")
 
     print("✅ namespace ready!")
 
 
 def rewrite_data_files(spark):
-    """Demonstrate CALL rewrite_data_files"""
+    """Demonstrate CALL rewrite_data_files
+
+    -- Basic compaction (consolidates all small files)
+    CALL hadoop_catalog.system.rewrite_data_files(
+        table => 'orders'
+    )
+
+    -- Compaction with specific strategy
+    CALL hadoop_catalog.system.rewrite_data_files(
+        table => 'orders',
+        strategy => 'binpack',                    -- Bin-packing algorithm
+        options => map(
+            'target-file-size-bytes', '134217728', -- 128MB target size
+            'max-file-group-size-bytes', '1073741824', -- 1GB max group
+            'min-file-size-bytes', '67108864'     -- 64MB minimum threshold
+        )
+    )
+
+    -- Partition-specific compaction
+    CALL hadoop_catalog.system.rewrite_data_files(
+        table => 'orders',
+        where => 'status = "completed"',          -- Only compact completed orders
+        strategy => 'binpack'
+    )
+
+    # Production compaction schedule
+    COMPACTION_SCHEDULE = {
+        'high_frequency_tables': {
+            'schedule': 'hourly',
+            'target_file_size': 128 * 1024 * 1024,  # 128MB
+            'small_file_threshold': 10
+        },
+        'medium_frequency_tables': {
+            'schedule': 'daily',
+            'target_file_size': 256 * 1024 * 1024,  # 256MB
+            'small_file_threshold': 20
+        },
+        'low_frequency_tables': {
+            'schedule': 'weekly',
+            'target_file_size': 512 * 1024 * 1024,  # 512MB
+            'small_file_threshold': 50
+        }
+    }
+    """
 
     print("\n=== Apache Iceberg: CALL rewrite_data_files ===")
 
-    table_fq = "hadoop_catalog.ubereats_demo8.orders"
+    table_fq = "hadoop_catalog.ubereats.orders"
 
     # TODO create table and generate small files
     print("🏗️ creating table and generating small files...")
@@ -117,11 +159,46 @@ def rewrite_data_files(spark):
 
 
 def file_compaction_strategies(spark):
-    """Demonstrate File Compaction Strategies"""
+    """Demonstrate File Compaction Strategies
+
+    CALL hadoop_catalog.system.rewrite_data_files(
+    table => 'orders_compaction',
+    strategy => 'sort',
+        options => map(
+            'sort-order', 'order_id ASC, amount DESC',
+            'target-file-size-bytes', '134217728'
+        )
+    )
+
+    CALL hadoop_catalog.system.rewrite_data_files(
+    table => 'orders_compaction',
+    strategy => 'sort',
+        options => map(
+            'sort-order', 'zorder(status, amount)',  -- Multi-dimensional sorting
+            'target-file-size-bytes', '134217728'
+        )
+    )
+
+    -- High-frequency small files from streaming
+    TBLPROPERTIES (
+        'write.target-file-size-bytes' = '67108864',     -- 64MB (smaller for faster commits)
+        'format.version' = '2',
+        'write.delete.mode' = 'merge-on-read'
+    )
+
+    -- Compaction strategy
+    CALL system.rewrite_data_files(
+        strategy => 'binpack',
+        options => map(
+            'target-file-size-bytes', '134217728',       -- 128MB for compaction
+            'max-concurrent-file-group-rewrites', '10'   -- Parallel compaction
+        )
+    )
+    """
 
     print("\n=== Apache Iceberg: File Compaction Strategies ===")
 
-    table_fq = "hadoop_catalog.ubereats_demo8.orders_compaction"
+    table_fq = "hadoop_catalog.ubereats.orders_compaction"
 
     # TODO create table with compaction settings
     print("🏗️ creating table with compaction settings...")
@@ -170,7 +247,7 @@ def fanout_writers(spark):
 
     print("\n=== Apache Iceberg: Fanout Writers ===")
 
-    table_fq = "hadoop_catalog.ubereats_demo8.orders_fanout"
+    table_fq = "hadoop_catalog.ubereats.orders_fanout"
 
     # TODO create table with fanout settings
     print("🏗️ creating table with fanout settings...")
@@ -212,11 +289,53 @@ def fanout_writers(spark):
 
 
 def manifest_caching(spark):
-    """Demonstrate Manifest Caching for Metadata Performance Boost"""
+    """Demonstrate Manifest Caching for Metadata Performance Boost
+
+    sql-- Test query performance with caching
+    SELECT
+        COUNT(*) as total_orders,
+        AVG(amount) as avg_amount,
+        MAX(amount) as max_amount
+    FROM orders
+
+    -- First execution: Cache miss (slower)
+    -- Time: 2.5 seconds
+
+    -- Second execution: Cache hit (faster)
+    -- Time: 0.3 seconds (8x improvement)
+
+
+    Without Manifest Caching:
+    Query Execution:
+    1. Read metadata.json → S3 read
+    2. Read snapshot metadata → S3 read
+    3. Read manifest list → S3 read
+    4. Read manifest files → S3 read (multiple)
+    5. Parse manifest contents → CPU processing
+    6. Plan file access → Memory operations
+
+    Total: 4+ S3 reads + parsing time for each query
+
+    With Manifest Caching:
+    First Query:
+    1. Read metadata.json → S3 read
+    2. Read snapshot metadata → S3 read
+    3. Read manifest list → S3 read
+    4. Read manifest files → S3 read (cached)
+    5. Parse manifest contents → CPU processing (cached)
+    6. Plan file access → Memory operations
+
+    Subsequent Queries:
+    1. Read metadata.json → S3 read
+    2. Access cached manifest data → Memory read
+    3. Plan file access → Memory operations
+
+    Total: 1 S3 read + memory access (10-100x faster)
+    """
 
     print("\n=== Apache Iceberg: Manifest Caching ===")
 
-    table_fq = "hadoop_catalog.ubereats_demo8.orders"
+    table_fq = "hadoop_catalog.ubereats.orders"
 
     # TODO enable manifest caching
     print("🔧 enabling manifest caching...")
@@ -247,7 +366,7 @@ def table_metrics_collection(spark):
 
     print("\n=== Apache Iceberg: Table Metrics Collection ===")
 
-    table_fq = "hadoop_catalog.ubereats_demo8.orders"
+    table_fq = "hadoop_catalog.ubereats.orders"
 
     # TODO show table metrics
     print("🔍 table metrics...")
@@ -297,17 +416,17 @@ def cleanup_resources(spark):
     try:
         # TODO drop tables
         tables = [
-            'hadoop_catalog.ubereats_demo8.orders',
-            'hadoop_catalog.ubereats_demo8.orders_deletes',
-            'hadoop_catalog.ubereats_demo8.orders_compaction',
-            'hadoop_catalog.ubereats_demo8.orders_fanout'
+            'hadoop_catalog.ubereats.orders',
+            'hadoop_catalog.ubereats.orders_deletes',
+            'hadoop_catalog.ubereats.orders_compaction',
+            'hadoop_catalog.ubereats.orders_fanout'
         ]
 
         for table in tables:
             spark.sql(f"DROP TABLE IF EXISTS {table}")
 
         # TODO drop namespace
-        spark.sql("DROP NAMESPACE IF EXISTS hadoop_catalog.ubereats_demo8 CASCADE")
+        spark.sql("DROP NAMESPACE IF EXISTS hadoop_catalog.ubereats CASCADE")
 
         print("✅ demo resources cleaned up successfully!")
 
@@ -326,8 +445,8 @@ def main():
 
     try:
         # TODO run demo sections
-        # setup_namespace(spark)
-        # rewrite_data_files(spark)
+        setup_namespace(spark)
+        rewrite_data_files(spark)
         file_compaction_strategies(spark)
         fanout_writers(spark)
         manifest_caching(spark)

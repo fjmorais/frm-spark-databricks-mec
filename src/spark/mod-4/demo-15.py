@@ -21,6 +21,7 @@ import base64
 from pyspark.sql import SparkSession
 from pyspark.sql.functions import col
 
+
 def spark_session():
     """Create Spark Session with Apache Iceberg and MinIO support"""
 
@@ -30,7 +31,6 @@ def spark_session():
     secret_key = base64.b64decode(encoded_secret_key).decode("utf-8")
 
     spark = SparkSession.builder \
-        .appName("IcebergDemo9-QueryOptimization") \
         .config("spark.sql.extensions", "org.apache.iceberg.spark.extensions.IcebergSparkSessionExtensions") \
         .config("spark.sql.catalog.hadoop_catalog", "org.apache.iceberg.spark.SparkCatalog") \
         .config("spark.sql.catalog.hadoop_catalog.type", "hadoop") \
@@ -51,6 +51,7 @@ def spark_session():
 
     return spark
 
+
 def setup_namespace(spark):
     """Setup namespace for demo"""
 
@@ -58,20 +59,61 @@ def setup_namespace(spark):
 
     # TODO create namespace
     print("📁 creating namespace...")
-    spark.sql("CREATE NAMESPACE IF NOT EXISTS hadoop_catalog.ubereats_demo9")
+    spark.sql("CREATE NAMESPACE IF NOT EXISTS hadoop_catalog.ubereats")
 
     # TODO set catalog context
     spark.catalog.setCurrentCatalog("hadoop_catalog")
-    spark.catalog.setCurrentDatabase("ubereats_demo9")
+    spark.catalog.setCurrentDatabase("ubereats")
 
     print("✅ namespace ready!")
 
+
 def data_skipping_with_statistics(spark):
-    """Demonstrate Data Skipping with Statistics"""
+    """Demonstrate Data Skipping with Statistics
+
+    Iceberg automatically collects statistics for each data file:
+    ├── lower_bounds: Minimum values per column
+    ├── upper_bounds: Maximum values per column
+    ├── null_value_counts: Count of null values per column
+    ├── nan_value_counts: Count of NaN values per column (for floating point)
+    └── distinct_counts: Approximate distinct value counts per column
+
+    Query: SELECT * FROM orders WHERE amount > 50
+
+    Step 1: Query Planning
+    - Spark receives query with predicate: amount > 50
+    - Iceberg provides file-level statistics to Spark
+
+    Step 2: File-Level Filtering
+    File 1: amount range [10.00, 15.00] → SKIP (max < 50)
+    File 2: amount range [100.00, 150.00] → READ (min >= 50)
+    File 3: amount range [25.00, 75.00] → READ (range overlaps)
+
+    Step 3: Data Access
+    - Only read files 2 and 3 (skip file 1 entirely)
+    - Apply filter within selected files
+
+    {
+      "file_path": "s3a://bucket/table/data/file-1.parquet",
+      "lower_bounds": {
+        "1": 10.00,           // amount column (field id 1)
+        "2": "completed"      // status column (field id 2)
+      },
+      "upper_bounds": {
+        "1": 15.00,           // amount column
+        "2": "pending"        // status column
+      },
+      "null_value_counts": {
+        "1": 0,               // amount column
+        "2": 0                // status column
+      },
+      "record_count": 1000
+    }
+    """
 
     print("\n=== Apache Iceberg: Data Skipping with Statistics ===")
 
-    table_fq = "hadoop_catalog.ubereats_demo9.orders"
+    table_fq = "hadoop_catalog.ubereats.orders"
 
     # TODO create table with range-based data
     print("🏗️ creating table...")
@@ -111,15 +153,44 @@ def data_skipping_with_statistics(spark):
 
     print("✅ Data skipping: Only files with amount > 50 are read!")
 
+
 def bloom_filters(spark):
     """
     Demonstrate Iceberg's automatic use of Bloom filters for fast point lookups.
     No special table property is needed—Bloom filters are enabled by default for string columns.
+
+    Bloom Filter Properties:
+    ├── Probabilistic data structure
+    ├── Fast membership testing (O(1) lookup)
+    ├── No false negatives (if item exists, filter will find it)
+    ├── Possible false positives (filter may say item exists when it doesn't)
+    └── Space-efficient representation
+
+    Query: SELECT * FROM orders WHERE order_id = 'ORD-B002'
+
+    Step 1: Bloom Filter Check
+    For each file:
+    - Check file's Bloom filter for 'ORD-B002'
+    - If filter says "definitely not present" → SKIP file
+    - If filter says "maybe present" → READ file
+
+    Step 2: File Access
+    - Only read files where Bloom filter indicates possible match
+    - Apply exact filter within selected files
+
+    Performance Impact:
+    - Without Bloom filter: Read all files, scan all records
+    - With Bloom filter: Read only relevant files (often just 1)
+
+    # Advanced Bloom filter configuration (if needed)
+    spark.conf.set("spark.sql.iceberg.bloom-filter.enabled", "true")
+    spark.conf.set("spark.sql.iceberg.bloom-filter.max-size", "1048576")  # 1MB max per filter
+    spark.conf.set("spark.sql.iceberg.bloom-filter.fpp", "0.01")          # 1% false positive rate
     """
 
     print("\n=== Apache Iceberg: Bloom Filters ===")
 
-    table_fq = "hadoop_catalog.ubereats_demo9.orders_bloom"
+    table_fq = "hadoop_catalog.ubereats.orders_bloom"
 
     # 1. Create the table (no need for special properties)
     print("🏗️ Creating table (Bloom filters are automatic for string columns)...")
@@ -149,11 +220,34 @@ def bloom_filters(spark):
 
 
 def spark_aqe_with_iceberg(spark):
-    """Demonstrate Spark AQE + Iceberg Auto-Optimization"""
+    """Demonstrate Spark AQE + Iceberg Auto-Optimization
+
+    Traditional Query Execution:
+    1. Parse SQL → Generate logical plan
+    2. Optimize logical plan → Generate physical plan
+    3. Execute physical plan (fixed strategy)
+
+    AQE with Iceberg:
+    1. Parse SQL → Generate logical plan
+    2. Optimize with Iceberg statistics → Generate adaptive physical plan
+    3. Execute first stage → Collect runtime statistics
+    4. Re-optimize remaining stages → Adjust execution strategy
+    5. Continue adaptive execution → Optimize each stage dynamically
+
+    # Essential AQE configurations
+    spark.conf.set("spark.sql.adaptive.enabled", "true")
+    spark.conf.set("spark.sql.adaptive.coalescePartitions.enabled", "true")
+    spark.conf.set("spark.sql.adaptive.skewJoin.enabled", "true")
+    spark.conf.set("spark.sql.adaptive.localShuffleReader.enabled", "true")
+
+    # Iceberg-specific optimizations
+    spark.conf.set("spark.sql.iceberg.planning.preserve-data-grouping", "true")
+    spark.conf.set("spark.sql.iceberg.merge.cardinality-check.enabled", "true")
+    """
 
     print("\n=== Apache Iceberg: Spark AQE + Auto-Optimization ===")
 
-    table_fq = "hadoop_catalog.ubereats_demo9.orders"
+    table_fq = "hadoop_catalog.ubereats.orders"
 
     # TODO show AQE settings
     print("🔍 AQE settings...")
@@ -170,12 +264,13 @@ def spark_aqe_with_iceberg(spark):
 
     print("✅ AQE: Automatically optimizes query execution at runtime!")
 
+
 def predicate_pushdown(spark):
     """Demonstrate Predicate Pushdown"""
 
     print("\n=== Apache Iceberg: Predicate Pushdown ===")
 
-    table_fq = "hadoop_catalog.ubereats_demo9.orders_partitioned"
+    table_fq = "hadoop_catalog.ubereats.orders_partitioned"
 
     # TODO create partitioned table
     print("🏗️ creating partitioned table...")
@@ -208,12 +303,13 @@ def predicate_pushdown(spark):
 
     print("✅ Predicate pushdown: Only 'completed' partition is read!")
 
+
 def column_pruning(spark):
     """Demonstrate Column Pruning"""
 
     print("\n=== Apache Iceberg: Column Pruning ===")
 
-    table_fq = "hadoop_catalog.ubereats_demo9.orders_wide"
+    table_fq = "hadoop_catalog.ubereats.orders_wide"
 
     # TODO create table with many columns
     print("🏗️ creating table with many columns...")
@@ -244,12 +340,13 @@ def column_pruning(spark):
 
     print("✅ Column pruning: Only 3 columns read instead of 7!")
 
+
 def dynamic_file_pruning(spark):
     """Demonstrate Dynamic File Pruning"""
 
     print("\n=== Apache Iceberg: Dynamic File Pruning ===")
 
-    table_fq = "hadoop_catalog.ubereats_demo9.orders_partitioned"
+    table_fq = "hadoop_catalog.ubereats.orders_partitioned"
 
     # TODO show total files
     print("🔍 total files in table...")
@@ -261,12 +358,36 @@ def dynamic_file_pruning(spark):
 
     print("✅ Dynamic pruning: Only relevant files are accessed!")
 
+
 def vectorized_reads(spark):
-    """Demonstrate Vectorized Reads"""
+    """Demonstrate Vectorized Reads
+
+    Row-by-Row Processing:
+    ├── Read record 1 → Process → Store result
+    ├── Read record 2 → Process → Store result
+    ├── Read record 3 → Process → Store result
+    └── ... (repeat for each record)
+
+    Vectorized Processing:
+    ├── Read batch of 1000 records → Process batch → Store results
+    ├── Read batch of 1000 records → Process batch → Store results
+    └── ... (process in efficient batches)
+
+    Performance Benefits:
+    - CPU cache efficiency (better data locality)
+    - SIMD instruction utilization (parallel operations)
+    - Reduced function call overhead
+    - Better memory throughput
+
+    # Enable vectorized reads for Iceberg
+    spark.conf.set("spark.sql.iceberg.vectorization.enabled", "true")
+    spark.conf.set("spark.sql.inMemoryColumnarStorage.batchSize", "4096")  # 4K records per batch
+    spark.conf.set("spark.sql.columnVector.offheap.enabled", "true")       # Use off-heap memory
+    """
 
     print("\n=== Apache Iceberg: Vectorized Reads ===")
 
-    table_fq = "hadoop_catalog.ubereats_demo9.orders"
+    table_fq = "hadoop_catalog.ubereats.orders"
 
     # TODO show vectorization setting
     print("🔍 vectorization setting...")
@@ -285,6 +406,7 @@ def vectorized_reads(spark):
 
     print("✅ Vectorized reads: Process data in batches for better performance!")
 
+
 def cleanup_resources(spark):
     """Clean up demo resources"""
 
@@ -293,22 +415,23 @@ def cleanup_resources(spark):
     try:
         # TODO drop tables
         tables = [
-            'hadoop_catalog.ubereats_demo9.orders',
-            'hadoop_catalog.ubereats_demo9.orders_bloom',
-            'hadoop_catalog.ubereats_demo9.orders_partitioned',
-            'hadoop_catalog.ubereats_demo9.orders_wide'
+            'hadoop_catalog.ubereats.orders',
+            'hadoop_catalog.ubereats.orders_bloom',
+            'hadoop_catalog.ubereats.orders_partitioned',
+            'hadoop_catalog.ubereats.orders_wide'
         ]
 
         for table in tables:
             spark.sql(f"DROP TABLE IF EXISTS {table}")
 
         # TODO drop namespace
-        spark.sql("DROP NAMESPACE IF EXISTS hadoop_catalog.ubereats_demo9 CASCADE")
+        spark.sql("DROP NAMESPACE IF EXISTS hadoop_catalog.ubereats CASCADE")
 
         print("✅ demo resources cleaned up successfully!")
 
     except Exception as e:
         print(f"⚠️ cleanup warning: {e}")
+
 
 def main():
     """Main demo execution"""

@@ -30,7 +30,6 @@ def spark_session():
     secret_key = base64.b64decode(encoded_secret_key).decode("utf-8")
 
     spark = SparkSession.builder \
-        .appName("IcebergDemo7-BranchingTagging") \
         .config("spark.sql.extensions", "org.apache.iceberg.spark.extensions.IcebergSparkSessionExtensions") \
         .config("spark.sql.catalog.hadoop_catalog", "org.apache.iceberg.spark.SparkCatalog") \
         .config("spark.sql.catalog.hadoop_catalog.type", "hadoop") \
@@ -59,21 +58,39 @@ def setup_namespace(spark):
 
     # TODO create namespace
     print("📁 creating namespace...")
-    spark.sql("CREATE NAMESPACE IF NOT EXISTS hadoop_catalog.ubereats_demo7")
+    spark.sql("CREATE NAMESPACE IF NOT EXISTS hadoop_catalog.ubereats")
 
     # TODO set catalog context
     spark.catalog.setCurrentCatalog("hadoop_catalog")
-    spark.catalog.setCurrentDatabase("ubereats_demo7")
+    spark.catalog.setCurrentDatabase("ubereats")
 
     print("✅ namespace ready!")
 
 
 def create_branch(spark):
-    """Demonstrate CREATE BRANCH"""
+    """Demonstrate CREATE BRANCH
+
+    Main Branch (orders):
+    ├── Snapshot 1: Initial data
+    ├── Snapshot 2: Additional records
+    └── Snapshot 3: Current state
+
+    Development Branch (orders.branch_development):
+    ├── Snapshot 1: Same as main (shared)
+    ├── Snapshot 2: Same as main (shared)
+    ├── Snapshot 3: Same as main (shared)
+    └── Snapshot 4: Development changes (isolated)
+
+    Feature Branch (orders.branch_feature):
+    ├── Snapshot 1: Same as main (shared)
+    ├── Snapshot 2: Same as main (shared)
+    ├── Snapshot 3: Same as main (shared)
+    └── Snapshot 5: Feature changes (isolated)
+    """
 
     print("\n=== Apache Iceberg: CREATE BRANCH ===")
 
-    table_fq = "hadoop_catalog.ubereats_demo7.orders"
+    table_fq = "hadoop_catalog.ubereats.orders"
 
     # TODO create base table
     print("🏗️ creating base table...")
@@ -114,7 +131,7 @@ def create_tag(spark):
 
     print("\n=== Apache Iceberg: CREATE TAG ===")
 
-    table_fq = "hadoop_catalog.ubereats_demo7.orders"
+    table_fq = "hadoop_catalog.ubereats.orders"
 
     # TODO create tag
     print("🏷️ creating release tag...")
@@ -140,7 +157,7 @@ def writing_to_branches(spark):
 
     print("\n=== Apache Iceberg: Writing to Branches ===")
 
-    table_fq = "hadoop_catalog.ubereats_demo7.orders"
+    table_fq = "hadoop_catalog.ubereats.orders"
 
     # TODO write to development branch
     print("💾 writing to development branch...")
@@ -179,7 +196,7 @@ def branch_retention_policies(spark):
 
     print("\n=== Apache Iceberg: Branch Retention Policies ===")
 
-    table_fq = "hadoop_catalog.ubereats_demo7.orders"
+    table_fq = "hadoop_catalog.ubereats.orders"
     branch_name = "temp"
     retention_days = 7
 
@@ -211,11 +228,29 @@ def branch_retention_policies(spark):
 
 
 def write_audit_publish(spark):
-    """Demonstrate WAP (Write-Audit-Publish)"""
+    """Demonstrate WAP (Write-Audit-Publish)
+
+    WAP Pattern Overview:
+    Write Phase:   Write data to staging branch
+        ↓
+    Audit Phase:   Validate data quality and business rules
+        ↓
+    Publish Phase: Promote validated data to production
+
+    WAP Implementation Architecture:
+    Production Table (orders):
+    ├── Main Branch: Production data (validated, stable)
+    └── Staging Branch: New data (unvalidated, testing)
+
+    WAP Workflow:
+    1. Write → staging branch (isolated)
+    2. Audit → data quality checks on staging
+    3. Publish → merge staging to main (if valid)
+    """
 
     print("\n=== Apache Iceberg: WAP (Write-Audit-Publish) ===")
 
-    table_fq = "hadoop_catalog.ubereats_demo7.orders_wap"
+    table_fq = "hadoop_catalog.ubereats.orders_wap"
 
     # TODO create WAP table
     print("🏗️ creating WAP table...")
@@ -290,15 +325,15 @@ def cleanup_resources(spark):
     try:
         # TODO drop tables
         tables = [
-            'hadoop_catalog.ubereats_demo7.orders',
-            'hadoop_catalog.ubereats_demo7.orders_wap'
+            'hadoop_catalog.ubereats.orders',
+            'hadoop_catalog.ubereats.orders_wap'
         ]
 
         for table in tables:
             spark.sql(f"DROP TABLE IF EXISTS {table}")
 
         # TODO drop namespace
-        spark.sql("DROP NAMESPACE IF EXISTS hadoop_catalog.ubereats_demo7 CASCADE")
+        spark.sql("DROP NAMESPACE IF EXISTS hadoop_catalog.ubereats CASCADE")
 
         print("✅ demo resources cleaned up successfully!")
 
@@ -317,10 +352,10 @@ def main():
 
     try:
         # TODO run demo sections
-        # setup_namespace(spark)
-        # create_branch(spark)
-        # create_tag(spark)
-        # writing_to_branches(spark)
+        setup_namespace(spark)
+        create_branch(spark)
+        create_tag(spark)
+        writing_to_branches(spark)
         branch_retention_policies(spark)
         write_audit_publish(spark)
 
