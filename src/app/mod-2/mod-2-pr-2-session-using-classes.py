@@ -2,8 +2,11 @@
 docker exec -it spark-master /opt/bitnami/spark/bin/spark-submit \
   --master spark://spark-master:7077 \
   --deploy-mode client \
-  /opt/bitnami/spark/jobs/app/mod-2-pr-2-session-using-classes.py
+  /opt/bitnami/spark/jobs/app/mod-2/mod-2-pr-2-session-using-classes.py
 """
+
+# here we create a file named spark_manager.py
+# that will manage the Spark session as a singleton
 
 from spark_manager import SparkManager
 
